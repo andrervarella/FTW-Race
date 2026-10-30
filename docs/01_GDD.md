@@ -21,7 +21,7 @@ Sugestão de fluxo: título → seleção de piloto → pista → corrida → re
 
 ## HUD proposto
 Posição, volta, tempo e velocidade legíveis; minimapa útil. Elementos observados no vídeo não são requisitos automáticos.
-Nitro, combustível, marchas e pit stop dependem de decisão de escopo.
+Nitro Diabo Verde em lata aprovado; regras em 07_NITRO_DIABO_VERDE.md. Duas ativações por corrida são hipótese provisória. Combustível, marchas e pit stop dependem de decisão de escopo.
 
 ## Escopo por etapas
 Primeira fatia proposta: um circuito, dois carros, uma corrida completa com início/fim, arte representativa e som.

@@ -9,5 +9,8 @@ Não houve implementação do jogo.
 4. Pesquisar autódromos e atualizar referências.
 5. Implementar e testar primeira fatia jogável.
 ## Não decididos
-Tela dividida, nitro, combustível/pit stop, número de voltas, dificuldade, multiplayer, título comercial e identidade de marca.
+Quantidade de ativações e balanceamento do nitro, tela dividida, combustível/pit stop, número de voltas, dificuldade, multiplayer, título comercial e identidade de marca.
 O histórico de projetos AV/Diabito não faz parte deste projeto.
+
+## 30/10/2026 — adição de nitro
+Usuário definiu aceleração especial associada à lata de Diabo Verde pré-workout e informou que enviará referências da lata e logos FTW e Diabo Verde. Duas ativações por corrida são interpretação provisória da expressão “duas opções”. Documentação atualizada; nenhuma implementação/teste de jogo realizado.

@@ -6,6 +6,7 @@
 - Cada um tem uma Mercedes; usar as fotos que o usuário fornecer.
 - Disputa entre os dois na primeira versão; outros pilotos poderão ser adicionados depois.
 - Pistas baseadas nos autódromos de Cascavel e Interlagos.
+- Nitro que aumenta a velocidade, associado ao piloto tomando Diabo Verde pré-workout em lata. Referências da lata, logo FTW e logo Diabo Verde serão enviadas.
 - Usar o prompt mestre V2.1 anexado como método de produção.
 - Preparar o GitHub como fonte de contexto para o Codex implementar depois.
 
@@ -21,7 +22,7 @@ AMG Cup Brasil é a grafia correta da categoria citada pelo usuário como MG Cup
 - Disputa: jogador contra CPU, duas pessoas locais ou online.
 - Fotos e identificação visual de cada piloto/carro.
 - Engine, orçamento, controles finais, título comercial e uso de logos.
-- Tela dividida, nitro, combustível/pit stop, número de voltas, dificuldade e áudio.
+- Quantidade de ativações de nitro (proposta provisória: duas por corrida), tela dividida, combustível/pit stop, número de voltas, dificuldade e áudio.
 Não apresentar hipóteses como aprovação. Não fazer questionário de decisões já respondidas.
 
 ## Fora do escopo inicial confirmado

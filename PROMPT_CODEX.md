@@ -17,7 +17,7 @@ Implemente controles responsivos, corrida com estados de largada/ativa/pausa/res
 Separe simulação e renderização; dados de pilotos e pistas devem permitir expansão posterior.
 Primeiro produza uma fatia representativa com uma pista e dois carros; depois complete a segunda pista. Não sacrificar qualidade para gerar volume.
 Produza e integre assets próprios e exportáveis, com consistência de escala, perspectiva e identidade. Sons e música devem ser originais ou licenciados.
-Tela dividida, nitro, combustível e pit stop não são decisões aprovadas. Discuta apenas se essenciais.
+Nitro Diabo Verde em lata está aprovado e deve seguir docs/07_NITRO_DIABO_VERDE.md. A quantidade provisória é duas ativações por corrida, interpretação ainda a confirmar. Referências da lata e logos FTW/Diabo Verde serão fornecidas; não inventar rótulos nem redesenhar logos. Tela dividida, combustível e pit stop não são decisões aprovadas. Discuta apenas se essenciais.
 Registre QA real conforme docs/05_TESTES_E_QA.md. Corrija antes de entregar.
 Entregue fonte, assets, build testado quando possível, instruções, evidências e pendências. Atualize documentação e faça commits.
 Se ambiente impedir compilação ou teste no alvo, diga exatamente o que foi e não foi testado. Não declarar o jogo pronto só porque há código.

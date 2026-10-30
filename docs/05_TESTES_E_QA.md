@@ -19,3 +19,6 @@ Registrar versão/commit, ambiente, passos, resultado PASSOU/FALHOU/NÃO TESTADO
 ## Critério de conclusão
 Escopo acordado jogável, referências visuais respeitadas, assets existentes e integrados, build executado no alvo declarado e nenhuma falha crítica conhecida.
 Pendências devem constar do relatório. Não usar imagens de referência como evidência de jogo funcionando.
+
+## Nitro Diabo Verde
+Cobrir cargas, pressão contínua, duração, retorno à velocidade normal, pausa, reinício, chegada, colisão e regras iguais para ambos os pilotos. Quantidade provisória: duas ativações por corrida, pendente de confirmação. Todos esses testes ainda NÃO TESTADOS.

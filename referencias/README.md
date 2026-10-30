@@ -18,3 +18,6 @@ SHA256 contato: 8813827e1d9c68a8058a3bc0b007050dc8b8d265fe6c4586bac49513001a79ea
 Vídeo fornecido pelo usuário para estudo. Nenhuma licença de redistribuição como conteúdo do jogo foi estabelecida.
 Manter referências separadas dos assets de produção; não embutir o gameplay em builds/publicação.
 Fotos dos pilotos/carros e logos não foram enviados. Não existem sprites, música original ou build do projeto nesta etapa.
+
+## Atualização de referências pendentes
+Também serão enviadas a lata Diabo Verde pré-workout e os logos FTW e Diabo Verde. Destino: marcas-e-produto/. Nenhum arquivo visual desses itens foi recebido até esta atualização.

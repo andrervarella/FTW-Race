@@ -24,3 +24,6 @@ Preservar proporções, rodas, perspectiva, chão, pivô, escala e iluminação 
 Não deformar uma imagem única para simular todos os ângulos.
 Para cada asset registrar caminho, estado, origem/licença, dimensões, pivô e uso.
 Vídeo e contato visual em referencias/ são material de estudo, nunca sprites finais.
+
+## Nitro e marcas — atualização
+Adicionar lata Diabo Verde pré-workout e logos FTW/Diabo Verde conforme arquivos que serão enviados. Preservar originais; não inventar rótulo. Ver 07_NITRO_DIABO_VERDE.md e referencias/marcas-e-produto/.

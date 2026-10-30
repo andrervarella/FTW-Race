@@ -9,7 +9,7 @@ Duas pistas previstas: Cascavel e Interlagos. Pesquisar mapas e referências con
 Não inventar rostos, números, pinturas, patrocinadores ou logos; não presumir endosso oficial.
 Não extrair sprites, músicas ou código de Top Gear para o produto. Vídeo serve apenas à análise.
 O usuário rejeita jogo genérico e Canvas como atalho procedural. Se a engine de navegador usar Canvas/WebGL, explicar e obter aprovação antes de adotá-la. Plataforma e engine ainda não escolhidas.
-Não tratar tela dividida, nitro, combustível, pit stop ou multiplayer como aprovados: foram apenas observados/sugeridos.
+Nitro Diabo Verde em lata aprovado: ler docs/07_NITRO_DIABO_VERDE.md. Duas ativações por corrida são interpretação provisória, não quantidade confirmada. Não tratar tela dividida, combustível, pit stop ou multiplayer como aprovados.
 Produzir assets reais, integrar, rodar e testar. Placeholders apenas identificados e provisórios.
 Não declarar testes, FPS, screenshots, builds ou aprovações inexistentes.
 Descobrir ferramentas realmente disponíveis; GPT público citado não equivale a ferramenta acessível.

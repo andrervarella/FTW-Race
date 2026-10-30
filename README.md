@@ -13,3 +13,6 @@ Base de criação de um jogo arcade de corrida inspirado na experiência de Top 
 ## Ainda faltam
 Fotos dos pilotos e dos carros, pinturas/números/logos; plataforma final; modo de disputa (CPU ou duas pessoas). Não inventar essas escolhas.
 Título comercial e identidade FTW ainda não definidos; FTW-Race é o nome do repositório.
+
+## Atualização: Nitro Diabo Verde
+Power-up de velocidade associado à lata Diabo Verde aprovado. Ver [regras e hipótese de duas ativações](docs/07_NITRO_DIABO_VERDE.md). Referências da lata e logos FTW/Diabo Verde ainda pendentes.
