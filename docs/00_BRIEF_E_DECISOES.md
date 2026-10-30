@@ -18,13 +18,19 @@ Isso confirma a grafia e a participação naquela prova, mas não define pintura
 AMG Cup Brasil é a grafia correta da categoria citada pelo usuário como MG Cup.
 
 ## Pendente, sem bloquear a organização dos materiais
-- Plataforma: navegador/celular, aplicativo Android, computador ou combinação.
+- Distribuição para celular: navegador por link ou aplicativo instalado; sistemas e aparelhos-alvo a definir. Celular e toque já confirmados.
 - Disputa: jogador contra CPU, duas pessoas locais ou online.
 - Fotos e identificação visual de cada piloto/carro.
-- Engine, orçamento, controles finais, título comercial e uso de logos.
+- Engine, orçamento, disposição final dos controles de toque, título comercial e localização dos logos.
 - Quantidade de ativações de nitro (proposta provisória: duas por corrida), tela dividida, combustível/pit stop, número de voltas, dificuldade e áudio.
 Não apresentar hipóteses como aprovação. Não fazer questionário de decisões já respondidas.
 
 ## Fora do escopo inicial confirmado
 Expansão de elenco. Nenhum backend, loja, monetização ou multiplayer online foi solicitado.
 O nome FTW-Race não significa autorização para inventar identidade FTW ou reutilizar materiais de outros projetos.
+
+## Decisões posteriores confirmadas
+- Jogo para celular com comandos na tela.
+- Referências e sprites serão produzidos e revisados neste chat; o repositório deve servir de base ao Codex para integração e testes.
+- Antes de multiplicar sprites, validar câmera, escala e um carro traseiro/curvando. A concordância com esse fluxo não aprova automaticamente artes que ainda não existem.
+Orientação horizontal e layout sugerido dos botões são propostas de trabalho, não exigências expressas do usuário.

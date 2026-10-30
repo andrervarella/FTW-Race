@@ -27,3 +27,6 @@ Vídeo e contato visual em referencias/ são material de estudo, nunca sprites f
 
 ## Nitro e marcas — atualização
 Adicionar lata Diabo Verde pré-workout e logos FTW/Diabo Verde conforme arquivos que serão enviados. Preservar originais; não inventar rótulo. Ver 07_NITRO_DIABO_VERDE.md e referencias/marcas-e-produto/.
+
+## Pipeline aprovado
+Produção e aprovação visual no chat; envio ao GitHub; integração/testes no Codex. Ver 08_MOBILE_E_PIPELINE_DE_SPRITES.md. Não gerar grandes lotes antes de validar câmera/escala e um carro visto por trás e em curva. Não há sprites aprovados nesta etapa.

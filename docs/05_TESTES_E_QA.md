@@ -22,3 +22,6 @@ Pendências devem constar do relatório. Não usar imagens de referência como e
 
 ## Nitro Diabo Verde
 Cobrir cargas, pressão contínua, duração, retorno à velocidade normal, pausa, reinício, chegada, colisão e regras iguais para ambos os pilotos. Quantidade provisória: duas ativações por corrida, pendente de confirmação. Todos esses testes ainda NÃO TESTADOS.
+
+## Mobile obrigatório
+Validar multitouch real: direção + aceleração + nitro; pointer/touch cancel; soltura fora do botão; perda de foco; interrupção e retomada; ausência de comandos presos; áreas seguras/notch; proporções de tela e botões sem cobrir pontos de frenagem. Teclado/emulação não comprovam teste no aparelho. Registrar aparelho, sistema, navegador/build e desempenho medido.

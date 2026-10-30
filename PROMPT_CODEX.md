@@ -7,7 +7,7 @@ Leia AGENTS.md, README.md, todos os documentos numerados em docs/, referencias/R
 Dois pilotos iniciais selecionáveis: Daniel Mencacci e Felipe Mencacci. Cada um com sua Mercedes fiel às fotos a receber. Corrida entre os dois, sem expandir elenco por conta própria. Duas pistas baseadas nos autódromos de Cascavel e Interlagos. Estilo e mecânica arcade inspirados no vídeo de Top Gear; não copiar seu código, sprites ou músicas.
 
 ## Antes de escolher stack
-Plataforma final e modo de disputa não foram respondidos. Pergunte apenas o que ainda estiver faltando: onde jogar e se o adversário é CPU ou outra pessoa. Não confunda dois personagens com multiplayer já aprovado.
+Celular e comandos por toque foram confirmados. Não perguntar novamente celular versus computador. Faltam distribuição (navegador ou aplicativo), sistemas/aparelhos-alvo e modo de disputa (CPU ou outra pessoa). Pergunte somente o que ainda impedir decisões essenciais. Não confunda dois personagens com multiplayer já aprovado.
 A preferência do usuário contra Canvas é explícita: se a solução web usa Canvas/WebGL, explique e obtenha aprovação antes de adotá-la. Não disfarce essa dependência.
 Não inventar rostos, pinturas, logos ou números. Na ausência de fotos, avançar apenas com protótipos provisórios identificados, sem chamar arte genérica de final.
 
@@ -22,3 +22,6 @@ Registre QA real conforme docs/05_TESTES_E_QA.md. Corrija antes de entregar.
 Entregue fonte, assets, build testado quando possível, instruções, evidências e pendências. Atualize documentação e faça commits.
 Se ambiente impedir compilação ou teste no alvo, diga exatamente o que foi e não foi testado. Não declarar o jogo pronto só porque há código.
 Não publicar nem consumir serviços pagos sem autorização.
+
+## Produção visual e mobile — atualização prioritária
+Leia docs/08_MOBILE_E_PIPELINE_DE_SPRITES.md. Referências e sprites serão criados e aprovados no chat e enviados ao GitHub; Codex integra e testa, preservando os originais. Não substituir por artes próprias sem solicitação. Defina contrato de assets e valide um conjunto mínimo antes da produção em lote. Conteúdo não recebido é pendência, nunca recurso final. Implemente toque simultâneo de direção/acelerador/nitro, tratamento de cancelamento/perda de foco e layout que não cubra a pista. Horizontal e disposição dos botões são propostas ajustáveis. Navegador/App e CPU/multiplayer continuam em aberto.

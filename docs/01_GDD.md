@@ -31,3 +31,6 @@ Não chamar a fatia de jogo completo se a segunda pista e demais itens prometido
 ## Critério de diversão a validar
 É possível entender como dirigir rapidamente, perceber por que perdeu velocidade e disputar a chegada com vontade de tentar novamente.
 Nenhum playtest humano realizado até agora.
+
+## Alvo e controles — atualização
+Celular e comandos na tela confirmados. Proposta de layout horizontal: esquerda/direita à esquerda; acelerador/freio à direita; botão dedicado Diabo Verde. Permitir direção + aceleração + nitro simultâneos. Layout e orientação ajustáveis; distribuição web/app e modo de disputa pendentes. Detalhes em 08_MOBILE_E_PIPELINE_DE_SPRITES.md.

@@ -11,8 +11,11 @@ Base de criação de um jogo arcade de corrida inspirado na experiência de Top 
 5. Consulte o [inventário de referências](referencias/README.md).
 
 ## Ainda faltam
-Fotos dos pilotos e dos carros, pinturas/números/logos; plataforma final; modo de disputa (CPU ou duas pessoas). Não inventar essas escolhas.
+Fotos dos pilotos e dos carros, pinturas/números/logos; distribuição no celular (navegador ou aplicativo); modo de disputa (CPU ou duas pessoas). Não inventar essas escolhas.
 Título comercial e identidade FTW ainda não definidos; FTW-Race é o nome do repositório.
 
 ## Atualização: Nitro Diabo Verde
 Power-up de velocidade associado à lata Diabo Verde aprovado. Ver [regras e hipótese de duas ativações](docs/07_NITRO_DIABO_VERDE.md). Referências da lata e logos FTW/Diabo Verde ainda pendentes.
+
+## Celular e produção visual
+Celular com comandos por toque confirmado. Referências e sprites serão criados e aprovados no chat, depois enviados ao GitHub. Codex fará integração, animação por estados e testes. Ver [pipeline e controles](docs/08_MOBILE_E_PIPELINE_DE_SPRITES.md).
