@@ -4,8 +4,8 @@ Este é um projeto novo. Não importar Diabito, Joker, mecânicas fitness, marca
 Prioridade: direção e diversão > legibilidade > identidade visual > estabilidade.
 Preservar decisões explícitas; diferenciar fatos, observações e propostas.
 Referência correta: Top Gear do SNES, não Top Gun nem Lamborghini American Challenge.
-Pilotos: Daniel Mencacci e Felipe Mencacci. Cada um terá seu próprio Mercedes conforme referências futuras.
-Duas pistas previstas: Cascavel e Interlagos. Pesquisar mapas e referências confiáveis antes de modelar traçados.
+Pilotos: Daniel Mencacci e Felipe Mencacci. Daniel #22 verde e Felipe #25 vermelho, conforme referências recebidas.
+Escopo atual: somente Cascavel. Usar os mapas e fotos recebidos; validar sentido e geometria antes de modelar.
 Não inventar rostos, números, pinturas, patrocinadores ou logos; não presumir endosso oficial.
 Não extrair sprites, músicas ou código de Top Gear para o produto. Vídeo serve apenas à análise.
 O usuário rejeita jogo genérico e Canvas como atalho procedural. Se a engine de navegador usar Canvas/WebGL, explicar e obter aprovação antes de adotá-la. Celular e comandos de toque estão confirmados; navegador versus aplicativo, sistema-alvo e engine ainda não escolhidos.
@@ -18,3 +18,5 @@ Ao implementar: manter estado, entrada, simulação, renderização, HUD, áudio
 Ao encerrar: commit das mudanças e atualização de docs/06_CHANGELOG_E_PENDENCIAS.md; nenhuma promessa de trabalho em segundo plano.
 
 Referências visuais e sprites serão criados/revisados com o usuário neste chat e enviados ao repositório. Codex integra, organiza e testa os assets aprovados; não substituí-los por novas artes sem solicitação. Ler docs/08_MOBILE_E_PIPELINE_DE_SPRITES.md. Não declarar artes ainda não recebidas como existentes. Avançar com placeholders identificados apenas para validar mecânicas.
+
+Atualização 31/10/2026: ler docs/09_ENTREGA_VISUAL_E_CONTINUIDADE.md primeiro para decisões atuais. Procedural moderado autorizado para a pista e repetição de elementos do entorno. Isso não substitui a identidade dos carros/pilotos nem decide automaticamente a engine. Prévias existem em assets/previews/, referências em referencias/. Preparar alpha, pivôs, escala e estados antes de integração.

@@ -1,3 +1,5 @@
+> Atualização prioritária — 31/10/2026: escopo atual somente Cascavel; fotos e prévias recebidas em referencias/ e assets/previews/. Leia docs/09_ENTREGA_VISUAL_E_CONTINUIDADE.md. Afirmações abaixo sobre duas pistas ou ausência de fotos são históricas e foram superadas. Não há jogo implementado nem sprites tecnicamente finalizados.
+
 # Referência e diferenciação
 ## Material enviado
 Gameplay de Top Gear (SNES), arquivo original de 192,334 s. Foram inspecionadas capturas amostradas ao longo do vídeo; isso não equivale a medir física, latência, FPS ou analisar integralmente o áudio.

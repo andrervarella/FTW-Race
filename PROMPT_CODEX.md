@@ -1,27 +1,14 @@
-# Prompt de continuidade — FTW Race
-Você está no repositório andrervarella/FTW-Race. Prepare e implemente um jogo original de corrida arcade inspirado na experiência de Top Gear (SNES), usando este repositório como fonte de verdade. Não precisa ter acesso ao chat original.
+# Continuidade — FTW Race
+Continue este projeto a partir dos materiais existentes. Leia AGENTS.md, README.md, docs/09_ENTREGA_VISUAL_E_CONTINUIDADE.md e o inventário, depois os demais documentos. As decisões de 31/10 prevalecem sobre rascunhos antigos.
 
-Leia AGENTS.md, README.md, todos os documentos numerados em docs/, referencias/README.md e referencias/PROMPT_MESTRE_ORIGINAL_V2_1.md antes de alterar código. Examine o vídeo de referência e o contato visual. Verifique se fotos foram adicionadas desde a preparação.
+Crie uma corrida arcade mobile com comandos de toque, inspirada na experiência de Top Gear SNES, sem copiar seus assets/código/música. Daniel Mencacci #22 usa Mercedes verde; Felipe Mencacci #25, vermelha. Circuito atual: somente Cascavel. Preserve as prévias e use as fotos como autoridade sobre rosto, capacetes, pintura e números.
 
-## Decisões confirmadas
-Dois pilotos iniciais selecionáveis: Daniel Mencacci e Felipe Mencacci. Cada um com sua Mercedes fiel às fotos a receber. Corrida entre os dois, sem expandir elenco por conta própria. Duas pistas baseadas nos autódromos de Cascavel e Interlagos. Estilo e mecânica arcade inspirados no vídeo de Top Gear; não copiar seu código, sprites ou músicas.
+Primeiro faça a preparação técnica dos assets e a definição do traçado: recortes sem halos, pivôs no solo, escala consistente, frames separados, mapa fechado e checkpoints. Não trate pranchas como atlas prontos. Consulte as limitações em docs/09; não use as variantes arquivadas como interpolação suave.
 
-## Antes de escolher stack
-Celular e comandos por toque foram confirmados. Não perguntar novamente celular versus computador. Faltam distribuição (navegador ou aplicativo), sistemas/aparelhos-alvo e modo de disputa (CPU ou outra pessoa). Pergunte somente o que ainda impedir decisões essenciais. Não confunda dois personagens com multiplayer já aprovado.
-A preferência do usuário contra Canvas é explícita: se a solução web usa Canvas/WebGL, explique e obtenha aprovação antes de adotá-la. Não disfarce essa dependência.
-Não inventar rostos, pinturas, logos ou números. Na ausência de fotos, avançar apenas com protótipos provisórios identificados, sem chamar arte genérica de final.
+O usuário autorizou procedural moderado na pista, mantendo seu traçado fixo e elementos reconhecíveis. Não trocar pilotos e carros por desenhos genéricos. Antes da escolha de engine, resolver distribuição web/app, sistemas-alvo e modo CPU/outra pessoa; a regra sobre explicar e obter aprovação para Canvas/WebGL permanece. Não perguntar novamente se é celular nem se pode usar procedural moderado na pista.
 
-## Execução após resolver decisões essenciais
-Faça plano curto, escolha arquitetura adequada e verifique ferramentas reais. Pesquise os traçados em fontes confiáveis e documente.
-Implemente controles responsivos, corrida com estados de largada/ativa/pausa/resultado, limites, colisões, checkpoints/voltas/posição, seleção, reinício e áudio.
-Separe simulação e renderização; dados de pilotos e pistas devem permitir expansão posterior.
-Primeiro produza uma fatia representativa com uma pista e dois carros; depois complete a segunda pista. Não sacrificar qualidade para gerar volume.
-Produza e integre assets próprios e exportáveis, com consistência de escala, perspectiva e identidade. Sons e música devem ser originais ou licenciados.
-Nitro Diabo Verde em lata está aprovado e deve seguir docs/07_NITRO_DIABO_VERDE.md. A quantidade provisória é duas ativações por corrida, interpretação ainda a confirmar. Referências da lata e logos FTW/Diabo Verde serão fornecidas; não inventar rótulos nem redesenhar logos. Tela dividida, combustível e pit stop não são decisões aprovadas. Discuta apenas se essenciais.
-Registre QA real conforme docs/05_TESTES_E_QA.md. Corrija antes de entregar.
-Entregue fonte, assets, build testado quando possível, instruções, evidências e pendências. Atualize documentação e faça commits.
-Se ambiente impedir compilação ou teste no alvo, diga exatamente o que foi e não foi testado. Não declarar o jogo pronto só porque há código.
-Não publicar nem consumir serviços pagos sem autorização.
+Após resolver dependências essenciais, implemente e teste uma corrida completa: seleção, largada, direção/aceleração/freio, limites/colisões, checkpoints e voltas, posição, nitro, pausa, chegada, resultado e reinício. Separar input, simulação, renderização, dados, UI e áudio. Não expandir para Interlagos, online, loja ou backend.
 
-## Produção visual e mobile — atualização prioritária
-Leia docs/08_MOBILE_E_PIPELINE_DE_SPRITES.md. Referências e sprites serão criados e aprovados no chat e enviados ao GitHub; Codex integra e testa, preservando os originais. Não substituir por artes próprias sem solicitação. Defina contrato de assets e valide um conjunto mínimo antes da produção em lote. Conteúdo não recebido é pendência, nunca recurso final. Implemente toque simultâneo de direção/acelerador/nitro, tratamento de cancelamento/perda de foco e layout que não cubra a pista. Horizontal e disposição dos botões são propostas ajustáveis. Navegador/App e CPU/multiplayer continuam em aberto.
+Nitro Diabo Verde aprovado; lata/logos originais ainda pendentes. Duas cargas, três voltas e layout horizontal são hipóteses configuráveis, não decisões finais. Não inventar embalagem. Áudio original ou licenciado, com procedência registrada.
+
+Medir desempenho e testar multitouch no alvo; registrar o que passou, falhou ou não foi testado. Não chamar mockups de screenshots do jogo. Ao terminar, entregar fonte, build quando realmente validado, instruções e limitações, atualizar changelog e commitar. Não publicar nem gastar sem autorização.

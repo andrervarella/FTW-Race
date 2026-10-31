@@ -1,4 +1,3 @@
-# Fotos pendentes
-Ainda não recebidas para este projeto. Colocar aqui fotos de Daniel e Felipe Mencacci e suas Mercedes.
-Usar nomes claros: daniel-carro-traseira, daniel-carro-lateral, felipe-carro-traseira etc.
-Manter originais. Registrar qual piloto, carro, data e origem; nunca adivinhar a associação.
+# Pilotos e carros
+
+Consulte a chave de fotos em ../README.md e a identidade canônica em docs/09_ENTREGA_VISUAL_E_CONTINUIDADE.md na raiz do repositório. Daniel #22 verde; Felipe #25 vermelho.

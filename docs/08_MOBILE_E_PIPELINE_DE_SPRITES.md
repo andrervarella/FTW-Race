@@ -1,3 +1,5 @@
+> Atualização prioritária — 31/10/2026: escopo atual somente Cascavel; fotos e prévias recebidas em referencias/ e assets/previews/. Leia docs/09_ENTREGA_VISUAL_E_CONTINUIDADE.md. Afirmações abaixo sobre duas pistas ou ausência de fotos são históricas e foram superadas. Não há jogo implementado nem sprites tecnicamente finalizados.
+
 # Celular e pipeline de referências/sprites
 Atualizado em 30/10/2026. Estado: preparação, sem assets finais ou jogo implementado.
 

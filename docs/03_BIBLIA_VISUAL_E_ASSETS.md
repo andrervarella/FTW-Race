@@ -1,3 +1,5 @@
+> Atualização prioritária — 31/10/2026: escopo atual somente Cascavel; fotos e prévias recebidas em referencias/ e assets/previews/. Leia docs/09_ENTREGA_VISUAL_E_CONTINUIDADE.md. Afirmações abaixo sobre duas pistas ou ausência de fotos são históricas e foram superadas. Não há jogo implementado nem sprites tecnicamente finalizados.
+
 # Direção visual e assets
 ## Referência
 Visual retrô de corrida com câmera traseira e perspectiva semelhante à experiência do vídeo. Resolução-base, paleta, pixel art estrita e acabamento final ainda não aprovados.

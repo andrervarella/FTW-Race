@@ -1,0 +1,385 @@
+[
+  {
+    "path": "assets/previews/felipe/carro-traseira.png",
+    "source": "exec-b52593af-74ec-4027-a3b7-e5df573e7a72.png",
+    "width": 2172,
+    "height": 724,
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "sha256": "7d77ccdcc9488f9e53c9849eb9d4f2c6f1e179720dc23cd9d5de7cf87beb46d1",
+    "bytes": 1400243,
+    "status": "PREVIA_VISUAL_NAO_INTEGRADA"
+  },
+  {
+    "path": "assets/previews/felipe/retrato-e-corpo.png",
+    "source": "exec-3b4373f7-5544-41d7-b3f4-68c52037b370.png",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      254
+    ],
+    "sha256": "43fe384b1f6072bd8b446d6c39de11858a720f365422dde75587d01599f04f8a",
+    "bytes": 2284488,
+    "status": "PREVIA_VISUAL_NAO_INTEGRADA"
+  },
+  {
+    "path": "assets/previews/arquivo/felipe-tentativa-recorte.png",
+    "source": "exec-a4dfa4c1-fa27-41b9-b610-58a50e1e59d7.png",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      254
+    ],
+    "sha256": "12e87c42d3f74bef50705901f34f33d3de3bd5935161dbfcba0cdda730904631",
+    "bytes": 2271221,
+    "status": "PREVIA_VISUAL_NAO_INTEGRADA"
+  },
+  {
+    "path": "assets/previews/felipe/piloto-com-e-sem-capacete.png",
+    "source": "exec-3cfde8f3-90ea-4218-b8f7-99aa61442da7.png",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      254
+    ],
+    "sha256": "26d6ceb5e55a0e41b81a1d74b9f88364ab56a3ac5fa9288967e6dc2f98926e4f",
+    "bytes": 1965433,
+    "status": "PREVIA_VISUAL_NAO_INTEGRADA"
+  },
+  {
+    "path": "assets/previews/felipe/carro-frente.png",
+    "source": "exec-d33fcf85-9c10-453d-837b-94e2a3541740.png",
+    "width": 2172,
+    "height": 724,
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "sha256": "ce79d1f6a6a1ef2336d4d8ce22248ae8f36693160cea3f40ddcd857ad3fda1bb",
+    "bytes": 1699719,
+    "status": "PREVIA_VISUAL_NAO_INTEGRADA"
+  },
+  {
+    "path": "assets/previews/arquivo/felipe-variante-curvas.png",
+    "source": "exec-ead456df-0984-4d2b-9ec2-59bfcde42bad.png",
+    "width": 2172,
+    "height": 724,
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "sha256": "f007d4c89a96dc0dc4b94f8d73c66426e0cf81e092e2840dae3c263cf44794aa",
+    "bytes": 1458578,
+    "status": "PREVIA_VISUAL_NAO_INTEGRADA"
+  },
+  {
+    "path": "assets/previews/daniel/carro-traseira.png",
+    "source": "exec-d53e9cfd-06f4-4ece-96c0-30218ef552b5.png",
+    "width": 2172,
+    "height": 724,
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "sha256": "65f9128c1570a8b93026b31e84db52d1e24d9aaf5e3f87bfb693dcc956c7acba",
+    "bytes": 1567771,
+    "status": "PREVIA_VISUAL_NAO_INTEGRADA"
+  },
+  {
+    "path": "assets/previews/daniel/piloto-com-e-sem-capacete.png",
+    "source": "exec-bdfe1d6d-d880-4502-b8bf-51f540ce741f.png",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      254
+    ],
+    "sha256": "5f5fe9a34d2de5da3c45bac12a5e35621b47873eacc8f944e289907c713d33c5",
+    "bytes": 1858678,
+    "status": "PREVIA_VISUAL_NAO_INTEGRADA"
+  },
+  {
+    "path": "assets/previews/daniel/carro-frente.png",
+    "source": "exec-8c06374a-f7ad-4aeb-84d3-c5efa58f41df.png",
+    "width": 2172,
+    "height": 724,
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "sha256": "02df8b6c5abb0c1833aa567c707c51c1669b54bf2065989f8de17d190aaa5b38",
+    "bytes": 1805348,
+    "status": "PREVIA_VISUAL_NAO_INTEGRADA"
+  },
+  {
+    "path": "assets/previews/arquivo/daniel-variante-curvas.png",
+    "source": "exec-59c799a8-e6ba-4596-b1fc-09a94eabc8e7.png",
+    "width": 2172,
+    "height": 724,
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "sha256": "8d0773b1dd6d63be3e15bba19369f31b05f3e6815ab143fa0c8c7c100d882686",
+    "bytes": 1557378,
+    "status": "PREVIA_VISUAL_NAO_INTEGRADA"
+  },
+  {
+    "path": "assets/previews/cascavel/reta-principal.png",
+    "source": "exec-9bf2d02c-6b19-4587-b2c7-4b9e5b9a932b.png",
+    "width": 1672,
+    "height": 941,
+    "mode": "RGB",
+    "alpha_extrema": null,
+    "sha256": "96feddd94e48074c567f147e2008c61e8d8444806284d815d2e46007495f063c",
+    "bytes": 2403306,
+    "status": "PREVIA_VISUAL_NAO_INTEGRADA"
+  },
+  {
+    "path": "assets/previews/cascavel/curvas-e-mata.png",
+    "source": "exec-a53b36d5-6aee-4cfa-b2bf-3d1b8fd82caa.png",
+    "width": 1672,
+    "height": 941,
+    "mode": "RGB",
+    "alpha_extrema": null,
+    "sha256": "f8019f8afbd04c35f453c7b94b0f1a293d598ddbb808655a1d470554f0818e62",
+    "bytes": 2964018,
+    "status": "PREVIA_VISUAL_NAO_INTEGRADA"
+  },
+  {
+    "path": "assets/previews/cascavel/vegetacao-e-barreiras.png",
+    "source": "exec-79a2a795-135b-4edd-8f74-32b8f8eb8c53.png",
+    "width": 1672,
+    "height": 941,
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "sha256": "914d014e54e99e5f2e419c65f79e5b3030e57a211f84453fa72b149c8f6ef543",
+    "bytes": 1846378,
+    "status": "PREVIA_VISUAL_NAO_INTEGRADA"
+  },
+  {
+    "path": "assets/previews/cascavel/boxes-e-sinalizacao.png",
+    "source": "exec-8ed34ecf-1f0b-455b-bdd4-f812688820b7.png",
+    "width": 1671,
+    "height": 941,
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "sha256": "5710aa85aed77fc9860aa404438fb8e96390258ac82e2c2a44e1d9638d907152",
+    "bytes": 1581880,
+    "status": "PREVIA_VISUAL_NAO_INTEGRADA"
+  },
+  {
+    "path": "assets/previews/fx/estudo-fumaca-poeira-nitro-impacto.png",
+    "source": "exec-de3a5b1c-7aa3-43c4-b2bf-65723411c4ea.png",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      254
+    ],
+    "sha256": "2134b1868c3c38441a30b7877462319f0d3bec2e5a5e32874c71d19487aaf094",
+    "bytes": 1648242,
+    "status": "PREVIA_VISUAL_NAO_INTEGRADA"
+  },
+  {
+    "path": "assets/previews/ui/proposta-selecao-e-hud.png",
+    "source": "exec-2ccc2660-5da5-45d9-9c99-9d871ce399a6.png",
+    "width": 1672,
+    "height": 941,
+    "mode": "RGB",
+    "alpha_extrema": null,
+    "sha256": "cef4b0a8ac7465bed431a12ab9a71402dfd57ece07f9b1a523bb7d797670bc43",
+    "bytes": 2280319,
+    "status": "PREVIA_VISUAL_NAO_INTEGRADA"
+  },
+  {
+    "path": "referencias/circuitos/cascavel-reta-aerea.jpg",
+    "source": "autodromo2 (1).jpg",
+    "bytes": 187105,
+    "sha256": "f937598e52ca8dba6626ca9e5bb3fd1f714a3eb2221e460a3e1fcdb0a6aad80d",
+    "status": "REFERENCIA_ENVIADA_PELO_USUARIO"
+  },
+  {
+    "path": "referencias/circuitos/cascavel-boxes.jpeg",
+    "source": "images (4) (1).jpeg",
+    "bytes": 39039,
+    "sha256": "627378d4f3726e3c40732558c1a56a17b126cb8613b7f42de0cd769ebbf4f8ff",
+    "status": "REFERENCIA_ENVIADA_PELO_USUARIO"
+  },
+  {
+    "path": "referencias/circuitos/cascavel-mapa-esquematico.png",
+    "source": "images (5).png",
+    "bytes": 9642,
+    "sha256": "b4e56a3b1255b3d971532bf7774b138f74a75420f796592755d3e59184ed1452",
+    "status": "REFERENCIA_ENVIADA_PELO_USUARIO"
+  },
+  {
+    "path": "referencias/circuitos/cascavel-mapa-satelite.jpeg",
+    "source": "images (1).jpeg",
+    "bytes": 47629,
+    "sha256": "fcaa9dbf0e2fd56e2083dcf5603b3e1b58af98d69a035d38c38715d5d1ad81b5",
+    "status": "REFERENCIA_ENVIADA_PELO_USUARIO"
+  },
+  {
+    "path": "referencias/circuitos/cascavel-referencia-141321.jpg",
+    "source": "Screenshot_20261031_141321_Chrome.jpg",
+    "bytes": 184088,
+    "sha256": "0b28a1a2a42846e8e0b85a039f092ba04c2740e7b26fdeb442cd7f449e37b183",
+    "status": "REFERENCIA_ENVIADA_PELO_USUARIO"
+  },
+  {
+    "path": "referencias/circuitos/cascavel-referencia-141314.jpg",
+    "source": "Screenshot_20261031_141314_Chrome.jpg",
+    "bytes": 168981,
+    "sha256": "f966ad10f30608c50ad3dd3de1b785c3133edba0e450cd0bab9dccad6b6ddc34",
+    "status": "REFERENCIA_ENVIADA_PELO_USUARIO"
+  },
+  {
+    "path": "referencias/circuitos/cascavel-referencia-141259.jpg",
+    "source": "Screenshot_20261031_141259_Chrome.jpg",
+    "bytes": 192904,
+    "sha256": "18c2143b8b6fd9da2b4a5fccf4013d6ad714ec8b6b564becb012e9a94fefbdaa",
+    "status": "REFERENCIA_ENVIADA_PELO_USUARIO"
+  },
+  {
+    "path": "referencias/circuitos/cascavel-referencia-141244.jpg",
+    "source": "Screenshot_20261031_141244_Chrome.jpg",
+    "bytes": 199027,
+    "sha256": "c571a077a972b31a495b9bbed4f7272c3016968d1a155301ce9f31ce77c81fa1",
+    "status": "REFERENCIA_ENVIADA_PELO_USUARIO"
+  },
+  {
+    "path": "referencias/pilotos-e-carros/referencia-135541.jpg",
+    "source": "Screenshot_20261031_135541_Instagram.jpg",
+    "bytes": 222204,
+    "sha256": "4b7af89531dccbdbcf1f4f74d38a1c554d6cb8b746907cba2930bd0e76dc01fe",
+    "status": "REFERENCIA_ENVIADA_PELO_USUARIO"
+  },
+  {
+    "path": "referencias/pilotos-e-carros/referencia-135415.jpg",
+    "source": "Screenshot_20261031_135415_Instagram.jpg",
+    "bytes": 285031,
+    "sha256": "394d5185571a6473a48b5fae0b3507c9c58621be00606d89c6624066b51c74d9",
+    "status": "REFERENCIA_ENVIADA_PELO_USUARIO"
+  },
+  {
+    "path": "referencias/pilotos-e-carros/referencia-135112.jpg",
+    "source": "Screenshot_20261031_135112_Instagram.jpg",
+    "bytes": 296392,
+    "sha256": "9561fdfad4c9ffbc51d1cf674f210c60aa683599ede2bc59fa89ab2c62f7e70f",
+    "status": "REFERENCIA_ENVIADA_PELO_USUARIO"
+  },
+  {
+    "path": "referencias/pilotos-e-carros/referencia-135049.jpg",
+    "source": "Screenshot_20261031_135049_Instagram.jpg",
+    "bytes": 457242,
+    "sha256": "66e09d6152fd27f7347869d05de7c2b5215ae7eb178db5b114f2271ae8e9f047",
+    "status": "REFERENCIA_ENVIADA_PELO_USUARIO"
+  },
+  {
+    "path": "referencias/pilotos-e-carros/referencia-134943.jpg",
+    "source": "Screenshot_20261031_134943_Instagram.jpg",
+    "bytes": 424043,
+    "sha256": "925902903dcd85d8162364f7e9349411b9db66b2071b98c3e08d02bd082c49b8",
+    "status": "REFERENCIA_ENVIADA_PELO_USUARIO"
+  },
+  {
+    "path": "referencias/pilotos-e-carros/referencia-131720.jpg",
+    "source": "Screenshot_20261031_131720_Instagram.jpg",
+    "bytes": 361909,
+    "sha256": "1c4f76849a3d0b820ff030a9707d583c8b1bfdcf65e5e9928c5c49211efb28a3",
+    "status": "REFERENCIA_ENVIADA_PELO_USUARIO"
+  },
+  {
+    "path": "referencias/pilotos-e-carros/referencia-131551.jpg",
+    "source": "Screenshot_20261031_131551_Instagram.jpg",
+    "bytes": 441658,
+    "sha256": "b1e677f4d406b4dad641a273d39219153ec72162976f8e4a94b4dfa091567847",
+    "status": "REFERENCIA_ENVIADA_PELO_USUARIO"
+  },
+  {
+    "path": "referencias/pilotos-e-carros/referencia-131547.jpg",
+    "source": "Screenshot_20261031_131547_Instagram.jpg",
+    "bytes": 442620,
+    "sha256": "683945e27ba86676380ed152b779c3ab1feec41f375396ea1503e455ef0917db",
+    "status": "REFERENCIA_ENVIADA_PELO_USUARIO"
+  },
+  {
+    "path": "referencias/pilotos-e-carros/referencia-131029.jpg",
+    "source": "Screenshot_20261031_131029_Instagram.jpg",
+    "bytes": 336274,
+    "sha256": "355248aa68262f9140bdc131837a32f30ee6bca45537d48c36f9f75f99cfe441",
+    "status": "REFERENCIA_ENVIADA_PELO_USUARIO"
+  },
+  {
+    "path": "referencias/pilotos-e-carros/referencia-130913.jpg",
+    "source": "Screenshot_20261031_130913_Instagram.jpg",
+    "bytes": 428302,
+    "sha256": "a9746a6f285d7efebf7a752c21eaae15beb344418c322de593e92b21c98feb86",
+    "status": "REFERENCIA_ENVIADA_PELO_USUARIO"
+  },
+  {
+    "path": "referencias/pilotos-e-carros/referencia-135358.jpg",
+    "source": "Screenshot_20261031_135358_Instagram.jpg",
+    "bytes": 324369,
+    "sha256": "9b3788776f96ea4d9b30c1e93f881223ce17d02bbbe4550d99403739c5cc9fab",
+    "status": "REFERENCIA_ENVIADA_PELO_USUARIO"
+  },
+  {
+    "path": "referencias/pilotos-e-carros/referencia-130930.jpg",
+    "source": "Screenshot_20261031_130930_Instagram.jpg",
+    "bytes": 399780,
+    "sha256": "7c730033e7fb5fa42165971dd4c2586274a678d8f704c241d83d8bed65e0966a",
+    "status": "REFERENCIA_ENVIADA_PELO_USUARIO"
+  },
+  {
+    "path": "referencias/pilotos-e-carros/referencia-135521.jpg",
+    "source": "Screenshot_20261031_135521_Instagram.jpg",
+    "bytes": 392224,
+    "sha256": "73edb169b291d58d2028c2a6081548ca34de54dded5e6c9835bc2839c456bf60",
+    "status": "REFERENCIA_ENVIADA_PELO_USUARIO"
+  },
+  {
+    "path": "referencias/pilotos-e-carros/referencia-135708.jpg",
+    "source": "Screenshot_20261031_135708_Instagram.jpg",
+    "bytes": 180877,
+    "sha256": "ff16d5c069b83bc166ad5d4ed8895e3d480e8ed4e8d8f4570b57806d5d49df8b",
+    "status": "REFERENCIA_ENVIADA_PELO_USUARIO"
+  },
+  {
+    "path": "referencias/pilotos-e-carros/referencia-135107.jpg",
+    "source": "Screenshot_20261031_135107_Instagram.jpg",
+    "bytes": 326955,
+    "sha256": "1ccd563712dadc9fef275bc6ebee6949911f18d0c4f6b853ed9eb6cf912e3aa8",
+    "status": "REFERENCIA_ENVIADA_PELO_USUARIO"
+  },
+  {
+    "path": "referencias/pilotos-e-carros/referencia-131524.jpg",
+    "source": "Screenshot_20261031_131524_Instagram.jpg",
+    "bytes": 462465,
+    "sha256": "530c5e2d286ef7281ae25f3202e4aeb0a3dd5d4670576a3de9157cb8d207df49",
+    "status": "REFERENCIA_ENVIADA_PELO_USUARIO"
+  }
+]

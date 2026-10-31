@@ -1,21 +1,13 @@
 # FTW Race
-Base de criação de um jogo arcade de corrida inspirado na experiência de Top Gear (SNES), com Daniel Mencacci e Felipe Mencacci e pistas baseadas em Cascavel e Interlagos.
+Preparação visual de corrida arcade mobile inspirada na experiência de Top Gear (SNES), com Daniel Mencacci #22 e Felipe Mencacci #25, em Cascavel.
 
-**Estado em 30/10/2026:** briefing e referências; nenhum jogo implementado, build ou teste de gameplay entregue.
+**Entrega de preparação — 31/10/2026:** 16 pranchas visuais e 24 referências originais organizadas. Não é um jogo executável. Recortes, animação, implementação e testes ficam para o Codex.
 
 ## Comece aqui
-1. Leia [AGENTS.md](AGENTS.md).
-2. Leia [briefing e decisões](docs/00_BRIEF_E_DECISOES.md).
-3. Use [PROMPT_CODEX.md](PROMPT_CODEX.md) para iniciar a produção.
-4. Consulte o [prompt mestre original](referencias/PROMPT_MESTRE_ORIGINAL_V2_1.md) e os demais documentos em docs/.
-5. Consulte o [inventário de referências](referencias/README.md).
+1. [Prompt para o Codex](PROMPT_CODEX.md).
+2. [Entrega e decisões atuais](docs/09_ENTREGA_VISUAL_E_CONTINUIDADE.md).
+3. [Galeria das prévias](assets/previews/GALERIA.md).
+4. [Inventário e limitações](assets/sprites/INVENTARIO.md).
+5. [Referências](referencias/README.md).
 
-## Ainda faltam
-Fotos dos pilotos e dos carros, pinturas/números/logos; distribuição no celular (navegador ou aplicativo); modo de disputa (CPU ou duas pessoas). Não inventar essas escolhas.
-Título comercial e identidade FTW ainda não definidos; FTW-Race é o nome do repositório.
-
-## Atualização: Nitro Diabo Verde
-Power-up de velocidade associado à lata Diabo Verde aprovado. Ver [regras e hipótese de duas ativações](docs/07_NITRO_DIABO_VERDE.md). Referências da lata e logos FTW/Diabo Verde ainda pendentes.
-
-## Celular e produção visual
-Celular com comandos por toque confirmado. Referências e sprites serão criados e aprovados no chat, depois enviados ao GitHub. Codex fará integração, animação por estados e testes. Ver [pipeline e controles](docs/08_MOBILE_E_PIPELINE_DE_SPRITES.md).
+Fotos enviadas pelo usuário e artes geradas são preservadas separadamente. O vídeo de Top Gear já existente serve apenas ao estudo. Logos originais e embalagem Diabo Verde continuam pendentes. Não substituir esses materiais por marcas inventadas.

@@ -17,3 +17,9 @@ Usuário definiu aceleração especial associada à lata de Diabo Verde pré-wor
 
 ## 30/10/2026 — mobile e fluxo de sprites
 Usuário confirmou celular e comandos na tela, além de produção das referências e sprites no chat. Codex fará integração e testes. Fotos ainda não recebidas, nenhum sprite aprovado/gerado, nenhum jogo implementado. Primeiro lote será um carro traseiro e em curva após receber referências e definir câmera/escala; expandir após validação.
+
+## 31/10/2026 — entrega de preparação visual
+Fotos recebidas, 16 pranchas de geração organizadas e 24 referências selecionadas. Escopo atual somente Cascavel; procedural moderado autorizado para pista e entorno. Identidade Daniel #22 verde e Felipe #25 vermelho, ambos com/sem capacete.
+Incluídos manifesto, galeria, inventário técnico e prompt de continuidade. Preservados os documentos anteriores como histórico, com aviso prioritário.
+Verificação desta etapa: abertura/leitura dos arquivos de imagem e manifesto com dimensões/bytes/SHA-256. Não houve build, teste de gameplay ou teste mobile.
+Próximos passos atuais substituem a lista antiga: preparar sprites, validar mapa, resolver distribuição/engine/modo, implementar, testar. Lata e logos originais pendentes.

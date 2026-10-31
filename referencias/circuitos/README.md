@@ -1,3 +1,3 @@
-# Cascavel e Interlagos
-Destinos definidos pelo usuário. Mapas, fotografias, traçados, sentido e desníveis ainda precisam de pesquisa documentada.
-Guardar fontes verificadas, anotar adaptações arcade e distinguir medidas oficiais de estimativas.
+# Cascavel
+
+Mapas e fotos recebidos. Traçado fixo; validar orientação e sentido. São referências visuais sem medidas oficiais certificadas. Consulte docs/09_ENTREGA_VISUAL_E_CONTINUIDADE.md. Interlagos não integra o escopo atual.

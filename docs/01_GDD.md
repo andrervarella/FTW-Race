@@ -1,3 +1,5 @@
+> Atualização prioritária — 31/10/2026: escopo atual somente Cascavel; fotos e prévias recebidas em referencias/ e assets/previews/. Leia docs/09_ENTREGA_VISUAL_E_CONTINUIDADE.md. Afirmações abaixo sobre duas pistas ou ausência de fotos são históricas e foram superadas. Não há jogo implementado nem sprites tecnicamente finalizados.
+
 # GDD inicial — rascunho para produção
 ## Conceito
 Escolher Daniel ou Felipe Mencacci e disputar uma corrida arcade com Mercedes identificáveis, em pistas inspiradas em Cascavel e Interlagos, com leitura visual de Top Gear.
