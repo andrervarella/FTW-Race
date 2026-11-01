@@ -9,6 +9,7 @@ Preparação visual de corrida arcade mobile inspirada na experiência de Top Ge
 3. [Galeria das prévias](assets/previews/GALERIA.md).
 4. [Inventário e limitações](assets/sprites/INVENTARIO.md).
 5. [Referências](referencias/README.md).
+6. [CLAUDE.md](CLAUDE.md) e [versão Claude v0.2 (código em game/)](docs/10_VERSAO_CLAUDE_V02.md) — jogo jogável de teste, testes e limitações.
 
 Fotos enviadas pelo usuário e artes geradas são preservadas separadamente. O vídeo de Top Gear já existente serve apenas ao estudo. Logos originais e embalagem Diabo Verde continuam pendentes. Não substituir esses materiais por marcas inventadas.
 

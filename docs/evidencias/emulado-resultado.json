@@ -1,0 +1,7 @@
+{
+ "origem": "teste EMULADO: Chromium headless, Android-like 915x412 DPR 2, STUB de Phaser, imagens substitutas. Nao e teste em aparelho.",
+ "menu_ready": true, "cards": 2, "largou": true,
+ "multitoque_2_dedos": true, "multitoque_3_dedos": true, "soltar_um_dedo": true, "cancelamento_limpa_toques": true,
+ "velocidade_acelerando_kmh": 127, "pausou": true, "tempo_parado_na_pausa": true, "retrato_mostra_aviso": true, "retomou": true,
+ "render_excecoes": [], "render_pontos_invalidos": 0, "resultado_apos_s": 67, "resultado_texto": "O rival levou essa.", "erros_de_console": []
+}
