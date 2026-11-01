@@ -204,17 +204,6 @@
     "status": "PREVIA_VISUAL_NAO_INTEGRADA"
   },
   {
-    "path": "assets/previews/ui/proposta-selecao-e-hud.png",
-    "source": "exec-2ccc2660-5da5-45d9-9c99-9d871ce399a6.png",
-    "width": 1672,
-    "height": 941,
-    "mode": "RGB",
-    "alpha_extrema": null,
-    "sha256": "cef4b0a8ac7465bed431a12ab9a71402dfd57ece07f9b1a523bb7d797670bc43",
-    "bytes": 2280319,
-    "status": "PREVIA_VISUAL_NAO_INTEGRADA"
-  },
-  {
     "path": "referencias/circuitos/cascavel-reta-aerea.jpg",
     "source": "autodromo2 (1).jpg",
     "bytes": 187105,
@@ -381,5 +370,55 @@
     "bytes": 462465,
     "sha256": "530c5e2d286ef7281ae25f3202e4aeb0a3dd5d4670576a3de9157cb8d207df49",
     "status": "REFERENCIA_ENVIADA_PELO_USUARIO"
+  },
+  {
+    "path": "referencias/marcas-e-produto/diabo-verde-269ml-maca-verde-frente.png",
+    "source": "energtico_diabo_verde_pre_workout_lata_269ml_sabor_1_20260128160409_1924fd9130fb_df237663-5cb9-45f2-b826-5f685373f069(1).png",
+    "bytes": 121519,
+    "sha256": "9a2d9efa5a559fa996d9dd0d3b37e002efa27c7656bcf5b45a36360bd101cf3c",
+    "width": 1080,
+    "height": 1080,
+    "mode": "P",
+    "status": "REFERENCIA_ENVIADA_PELO_USUARIO"
+  },
+  {
+    "path": "referencias/marcas-e-produto/diabo-verde-269ml-maca-verde-verso.png",
+    "source": "energtico_diabo_verde_pre_workout_lata_269ml_sabor_2_20260128160409_33b0f9744867(1).png",
+    "bytes": 128218,
+    "sha256": "4644d54000b0f3e582fbca0c78c819fd186fda836610d900931278224c6d77d5",
+    "width": 1080,
+    "height": 1080,
+    "mode": "P",
+    "status": "REFERENCIA_ENVIADA_PELO_USUARIO"
+  },
+  {
+    "path": "referencias/marcas-e-produto/diabo-verde-269ml-maca-verde-apresentacao.png",
+    "source": "energtico_diabo_verde_pre_workout_lata_269ml_sabor_4_20260128160409_38bc11ad0106(1).png",
+    "bytes": 75471,
+    "sha256": "7dfc59051d7de1ec978a3384b7fe91779abeaa6751862e75c8014d6b30cdf0a4",
+    "width": 1080,
+    "height": 1080,
+    "mode": "P",
+    "status": "REFERENCIA_ENVIADA_PELO_USUARIO"
+  },
+  {
+    "path": "referencias/marcas-e-produto/pagina-produto-enviada.jpg",
+    "source": "Screenshot_20261031_204356_Chrome(1).jpg",
+    "bytes": 177259,
+    "sha256": "3efdc0f35085096ddd944d5fa07b76d2e13e1cbf39f012dcb51ce0b646361bcf",
+    "width": 921,
+    "height": 2048,
+    "mode": "RGB",
+    "status": "REFERENCIA_ENVIADA_PELO_USUARIO"
+  },
+  {
+    "path": "assets/previews/ui/proposta-selecao-e-hud.png",
+    "source": "exec-fb403aae-745e-4ac5-92fe-87275b57e7a8.png",
+    "bytes": 2127696,
+    "sha256": "14731e0398b8359c5ec66924e36a5a65d748fddbe2dce053d3ed433405ac8e03",
+    "width": 1672,
+    "height": 941,
+    "mode": "RGB",
+    "status": "PREVIA_VISUAL_NAO_INTEGRADA"
   }
 ]

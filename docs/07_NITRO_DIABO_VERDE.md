@@ -36,3 +36,7 @@ Não presumir patrocínio real nem substituir pinturas reais dos carros por uma 
 ## Aceitação futura
 Testar ativação única, consumo correto, limite zero, duração, transição de velocidade, pausa, reinício, colisões, chegada, inputs simultâneos e igualdade de regras entre pilotos.
 Verificar arte contra referências oficiais. Registrar desempenho e evidências reais. Estado atual: NÃO IMPLEMENTADO / NÃO TESTADO.
+
+
+## Atualização — lata recebida e Felipe com boné (31/10/2026)
+Referências da lata Diabo Verde Pré-Workout, sabor Maçã Verde, 269 ml recebidas em referencias/marcas-e-produto/: frente, verso, apresentação e captura da página enviada pelo usuário. Esta atualização substitui as menções anteriores à lata pendente. Preservar formato alto/estreito, corpo preto, faixa verde, nome vertical e logo FTW do rótulo. A foto frontal é a referência principal para preparar o ícone e a animação; não incorporar os quadros promocionais laterais ao sprite. Logos independentes/vetoriais continuam pendentes; as marcas visíveis no rótulo já têm referência. Quantidade de nitro e demais regras continuam provisórias. A prévia assets/previews/ui/proposta-selecao-e-hud.png foi atualizada com Felipe de boné preto, conforme solicitado. Não há integração ou teste de gameplay nesta atualização.

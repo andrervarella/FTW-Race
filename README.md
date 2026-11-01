@@ -11,3 +11,7 @@ Preparação visual de corrida arcade mobile inspirada na experiência de Top Ge
 5. [Referências](referencias/README.md).
 
 Fotos enviadas pelo usuário e artes geradas são preservadas separadamente. O vídeo de Top Gear já existente serve apenas ao estudo. Logos originais e embalagem Diabo Verde continuam pendentes. Não substituir esses materiais por marcas inventadas.
+
+
+## Atualização — lata recebida e Felipe com boné (31/10/2026)
+Referências da lata Diabo Verde Pré-Workout, sabor Maçã Verde, 269 ml recebidas em referencias/marcas-e-produto/: frente, verso, apresentação e captura da página enviada pelo usuário. Esta atualização substitui as menções anteriores à lata pendente. Preservar formato alto/estreito, corpo preto, faixa verde, nome vertical e logo FTW do rótulo. A foto frontal é a referência principal para preparar o ícone e a animação; não incorporar os quadros promocionais laterais ao sprite. Logos independentes/vetoriais continuam pendentes; as marcas visíveis no rótulo já têm referência. Quantidade de nitro e demais regras continuam provisórias. A prévia assets/previews/ui/proposta-selecao-e-hud.png foi atualizada com Felipe de boné preto, conforme solicitado. Não há integração ou teste de gameplay nesta atualização.
