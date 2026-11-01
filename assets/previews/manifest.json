@@ -218,20 +218,6 @@
     "status": "REFERENCIA_ENVIADA_PELO_USUARIO"
   },
   {
-    "path": "referencias/circuitos/cascavel-mapa-esquematico.png",
-    "source": "images (5).png",
-    "bytes": 9642,
-    "sha256": "b4e56a3b1255b3d971532bf7774b138f74a75420f796592755d3e59184ed1452",
-    "status": "REFERENCIA_ENVIADA_PELO_USUARIO"
-  },
-  {
-    "path": "referencias/circuitos/cascavel-mapa-satelite.jpeg",
-    "source": "images (1).jpeg",
-    "bytes": 47629,
-    "sha256": "fcaa9dbf0e2fd56e2083dcf5603b3e1b58af98d69a035d38c38715d5d1ad81b5",
-    "status": "REFERENCIA_ENVIADA_PELO_USUARIO"
-  },
-  {
     "path": "referencias/circuitos/cascavel-referencia-141321.jpg",
     "source": "Screenshot_20261031_141321_Chrome.jpg",
     "bytes": 184088,
@@ -412,13 +398,45 @@
     "status": "REFERENCIA_ENVIADA_PELO_USUARIO"
   },
   {
+    "path": "referencias/pilotos-e-carros/dupla-canonica-bones-e-macacoes.jpg",
+    "source": "Screenshot_20261031_135425_Instagram.jpg",
+    "bytes": 422098,
+    "sha256": "d097a8eb1c7d9819eb53785c36840a574fe64bc0df29d4ba1c14d2a69362a6fe",
+    "status": "REFERENCIA_CANONICA_ENVIADA_PELO_USUARIO"
+  },
+  {
+    "path": "referencias/marcas-e-produto/ftw_logo_oficial_isolado.png",
+    "source": "ftw_logo_oficial_isolado.png",
+    "bytes": 8360,
+    "sha256": "5ca79b7cadd5d2af407513cf5d2e01ab382dc16064a84ffe219419801ccc0347",
+    "status": "REFERENCIA_CANONICA_ENVIADA_PELO_USUARIO"
+  },
+  {
+    "path": "referencias/marcas-e-produto/diabo_verde_logo_oficial.png",
+    "source": "diabo_verde_logo_oficial.png",
+    "bytes": 2700,
+    "sha256": "efd50c7ea40dc0c5fe54ae92246249d1230ac6c1d43f5d271f7a1e94267f8137",
+    "status": "REFERENCIA_CANONICA_ENVIADA_PELO_USUARIO"
+  },
+  {
+    "path": "referencias/circuitos/cascavel-mapa-esquematico.png",
+    "source": "images (5)(1).png",
+    "bytes": 9642,
+    "sha256": "b4e56a3b1255b3d971532bf7774b138f74a75420f796592755d3e59184ed1452",
+    "status": "REFERENCIA_CANONICA_ENVIADA_PELO_USUARIO"
+  },
+  {
+    "path": "referencias/circuitos/cascavel-mapa-satelite.jpeg",
+    "source": "images (1)(1).jpeg",
+    "bytes": 47629,
+    "sha256": "fcaa9dbf0e2fd56e2083dcf5603b3e1b58af98d69a035d38c38715d5d1ad81b5",
+    "status": "REFERENCIA_CANONICA_ENVIADA_PELO_USUARIO"
+  },
+  {
     "path": "assets/previews/ui/proposta-selecao-e-hud.png",
-    "source": "exec-fb403aae-745e-4ac5-92fe-87275b57e7a8.png",
-    "bytes": 2127696,
-    "sha256": "14731e0398b8359c5ec66924e36a5a65d748fddbe2dce053d3ed433405ac8e03",
-    "width": 1672,
-    "height": 941,
-    "mode": "RGB",
-    "status": "PREVIA_VISUAL_NAO_INTEGRADA"
+    "source": "exec-c1256fe2-0d1a-45c4-a1aa-a24c67040fa6.png",
+    "bytes": 2227115,
+    "sha256": "d3e4de1d24900ece0f293395d7e19ac3e06451c62ea37e76df448c71be95019f",
+    "status": "PREVIA_REVISADA_AGUARDANDO_REVISAO"
   }
 ]
