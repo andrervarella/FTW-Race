@@ -1,0 +1,9 @@
+{
+  "game": "FTW Race",
+  "version": "0.2.0-claude-test",
+  "kind": "public-test-build",
+  "source": "branch claude/ftw-race-v0.2, pasta game/",
+  "tested_emulated_with_phaser_stub": true,
+  "tested_with_real_phaser": false,
+  "physical_android_tested": false
+}
