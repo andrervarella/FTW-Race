@@ -1,0 +1,7 @@
+{
+  "name": "ftw-race-game",
+  "private": true,
+  "version": "0.2.0",
+  "type": "module",
+  "scripts": { "test": "node --test tests/core.test.js" }
+}
