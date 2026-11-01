@@ -1,0 +1,206 @@
+{
+  "schema": 1,
+  "assets": [
+    {
+      "file": "daniel-rear.png",
+      "source": "assets/sprites/candidates/daniel-rear-straight.png",
+      "source_sha256": "223b2ba33303e40978968d898432d62c539e248fee9bd18e87dca6826619e7f8",
+      "sha256": "93b9068daaf4a89c69778b345b585728ac38ea5767a48b7fd7991bd1de2b4ccd",
+      "source_rect_xyxy": null,
+      "dimensions": [
+        384,
+        384
+      ],
+      "provenance": "Material recebido no repositório; direitos de imagem e marcas não presumidos.",
+      "status": "integrated_provisional_review"
+    },
+    {
+      "file": "felipe-rear.png",
+      "source": "assets/sprites/candidates/felipe-rear-straight.png",
+      "source_sha256": "b697a1643513ebfe4fde5216a4cb2f55f6f7d4c37bd2301f66eecd2bcda7a710",
+      "sha256": "8f8000ee9aca7c15da3b9b7ea2b55ff0c3c072f3a6a64ee622a1aeb9e3206706",
+      "source_rect_xyxy": null,
+      "dimensions": [
+        384,
+        384
+      ],
+      "provenance": "Material recebido no repositório; direitos de imagem e marcas não presumidos.",
+      "status": "integrated_provisional_review"
+    },
+    {
+      "file": "daniel-photo.png",
+      "source": "referencias/pilotos-e-carros/dupla-canonica-bones-e-macacoes.jpg",
+      "source_sha256": "d097a8eb1c7d9819eb53785c36840a574fe64bc0df29d4ba1c14d2a69362a6fe",
+      "sha256": "8439793ff36d4898cb3144d5e88346f2b73d8aaaede3649b492961b9117fffbb",
+      "source_rect_xyxy": [
+        105,
+        365,
+        460,
+        1050
+      ],
+      "dimensions": [
+        355,
+        685
+      ],
+      "provenance": "Material recebido no repositório; direitos de imagem e marcas não presumidos.",
+      "status": "integrated_provisional_review"
+    },
+    {
+      "file": "felipe-photo.png",
+      "source": "referencias/pilotos-e-carros/dupla-canonica-bones-e-macacoes.jpg",
+      "source_sha256": "d097a8eb1c7d9819eb53785c36840a574fe64bc0df29d4ba1c14d2a69362a6fe",
+      "sha256": "771339f74b7ceb39a42f8fdfa041efc9671003913429440c66e4968e1bbc87a5",
+      "source_rect_xyxy": [
+        478,
+        365,
+        720,
+        1030
+      ],
+      "dimensions": [
+        242,
+        665
+      ],
+      "provenance": "Material recebido no repositório; direitos de imagem e marcas não presumidos.",
+      "status": "integrated_provisional_review"
+    },
+    {
+      "file": "ftw.png",
+      "source": "referencias/marcas-e-produto/ftw_logo_oficial_isolado.png",
+      "source_sha256": "5ca79b7cadd5d2af407513cf5d2e01ab382dc16064a84ffe219419801ccc0347",
+      "sha256": "5ca79b7cadd5d2af407513cf5d2e01ab382dc16064a84ffe219419801ccc0347",
+      "source_rect_xyxy": null,
+      "dimensions": [
+        554,
+        554
+      ],
+      "provenance": "Material recebido no repositório; direitos de imagem e marcas não presumidos.",
+      "status": "integrated_provisional_review"
+    },
+    {
+      "file": "diabo-verde.png",
+      "source": "referencias/marcas-e-produto/diabo_verde_logo_oficial.png",
+      "source_sha256": "efd50c7ea40dc0c5fe54ae92246249d1230ac6c1d43f5d271f7a1e94267f8137",
+      "sha256": "efd50c7ea40dc0c5fe54ae92246249d1230ac6c1d43f5d271f7a1e94267f8137",
+      "source_rect_xyxy": null,
+      "dimensions": [
+        225,
+        225
+      ],
+      "provenance": "Material recebido no repositório; direitos de imagem e marcas não presumidos.",
+      "status": "integrated_provisional_review"
+    },
+    {
+      "file": "can.png",
+      "source": "referencias/marcas-e-produto/diabo-verde-269ml-maca-verde-frente.png",
+      "source_sha256": "9a2d9efa5a559fa996d9dd0d3b37e002efa27c7656bcf5b45a36360bd101cf3c",
+      "sha256": "be6b2c029e36afc5947bb27fadedc383aefad2d867d72399e383a6415889444b",
+      "source_rect_xyxy": [
+        285,
+        8,
+        797,
+        1064
+      ],
+      "dimensions": [
+        128,
+        264
+      ],
+      "provenance": "Material recebido no repositório; direitos de imagem e marcas não presumidos.",
+      "status": "integrated_provisional_review"
+    },
+    {
+      "file": "horizon.png",
+      "source": "assets/previews/cascavel/reta-principal.png",
+      "source_sha256": "96feddd94e48074c567f147e2008c61e8d8444806284d815d2e46007495f063c",
+      "sha256": "4931ac38935cd73927f464eba4d32ebdab47990d5482ad9603ddc32ce0189831",
+      "source_rect_xyxy": [
+        0,
+        0,
+        1672,
+        320
+      ],
+      "dimensions": [
+        1672,
+        320
+      ],
+      "provenance": "Material recebido no repositório; direitos de imagem e marcas não presumidos.",
+      "status": "integrated_provisional_review"
+    },
+    {
+      "file": "tree.png",
+      "source": "assets/previews/cascavel/vegetacao-e-barreiras.png",
+      "source_sha256": "914d014e54e99e5f2e419c65f79e5b3030e57a211f84453fa72b149c8f6ef543",
+      "sha256": "c72de39e3b98e2b15803d0361204f86a2e78eec5f771f36e302cdb34e32a4fae",
+      "source_rect_xyxy": [
+        8,
+        7,
+        445,
+        410
+      ],
+      "dimensions": [
+        280,
+        258
+      ],
+      "provenance": "Material recebido no repositório; direitos de imagem e marcas não presumidos.",
+      "status": "integrated_provisional_review"
+    },
+    {
+      "file": "bush.png",
+      "source": "assets/previews/cascavel/vegetacao-e-barreiras.png",
+      "source_sha256": "914d014e54e99e5f2e419c65f79e5b3030e57a211f84453fa72b149c8f6ef543",
+      "sha256": "544ee641a7e717afdc2144fe9a06589743f4937b62dc02f972658c58bafd4fd1",
+      "source_rect_xyxy": [
+        1190,
+        240,
+        1655,
+        414
+      ],
+      "dimensions": [
+        350,
+        131
+      ],
+      "provenance": "Material recebido no repositório; direitos de imagem e marcas não presumidos.",
+      "status": "integrated_provisional_review"
+    },
+    {
+      "file": "pit.png",
+      "source": "assets/previews/cascavel/boxes-e-sinalizacao.png",
+      "source_sha256": "5710aa85aed77fc9860aa404438fb8e96390258ac82e2c2a44e1d9638d907152",
+      "sha256": "bd9c5b650f0d3888b1b400b4769aa0b5ac4c2c812d46f7b07d1fff566323d6c5",
+      "source_rect_xyxy": [
+        2,
+        2,
+        1669,
+        398
+      ],
+      "dimensions": [
+        1000,
+        238
+      ],
+      "provenance": "Material recebido no repositório; direitos de imagem e marcas não presumidos.",
+      "status": "integrated_provisional_review"
+    },
+    {
+      "file": "stand.png",
+      "source": "assets/previews/cascavel/boxes-e-sinalizacao.png",
+      "source_sha256": "5710aa85aed77fc9860aa404438fb8e96390258ac82e2c2a44e1d9638d907152",
+      "sha256": "2183107e3795304a7ae43cc118bf0366a214fdd49c72a12d85502ce90ecec699",
+      "source_rect_xyxy": [
+        20,
+        400,
+        613,
+        650
+      ],
+      "dimensions": [
+        593,
+        250
+      ],
+      "provenance": "Material recebido no repositório; direitos de imagem e marcas não presumidos.",
+      "status": "integrated_provisional_review"
+    }
+  ],
+  "notes": [
+    "Carros candidatos ainda precisam de revisão de alpha e fidelidade.",
+    "Nitro sem animação de consumo: frames não recebidos.",
+    "Logos copiados diretamente, sem recriação de tipografia."
+  ]
+}
