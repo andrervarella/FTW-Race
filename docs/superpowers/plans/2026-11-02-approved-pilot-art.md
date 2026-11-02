@@ -29,5 +29,7 @@
 
 ## Task3 — Verification and isolated publication
 - [x] Run all45Node tests, module syntax, full asset audit and real browser flow through both official winners' podiums and a natural complete race.
-- [ ] Commit source, copy only V4 distribution, compare46pre-existing Pages files and verify the packaged browser flow.
-- [ ] Publish with guarded refs under existing public code/assets authorization; verify HTTPS in independent Chromium and inspect artifacts/screenshots before delivery.
+- [x] Commit source, copy only V4 distribution, compare46pre-existing Pages files and verify the packaged browser flow.
+- [x] Publish with guarded refs under existing public code/assets authorization; verify HTTPS in independent Chromium and inspect artifacts/screenshots before delivery.
+
+Final evidence: public run41497991461 success, artifact13168495437 downloaded/hash-verified; published cover/selection screenshots inspected. Source and Pages hashes recorded in APPROVED_PILOT_ART_QA.md.

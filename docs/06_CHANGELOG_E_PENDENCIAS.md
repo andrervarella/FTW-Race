@@ -3,7 +3,7 @@
 - Proprietário aprovou os rostos corrigidos com base nos novos closes, as16poses de corpo inteiro e a capa com os logos oficiais.
 - Preparados retratos próprios para menus, vistas com boné/capacete e12quadros novos de pódio; preservados os24arquivos NPC e seu resultado real.
 - Capa integrada em camadas responsivas com carros canônicos, botões de toque e descarte do observador ao navegar; PNGs oficiais idênticos.
-- Node45/45 e verificação técnica de16poses passaram; corrida completa/publicação em verificação. Ver APPROVED_PILOT_ART_QA.md.
+- Node45/45,174hashes e verificação técnica de16poses passaram; pacote e HTTPS PASS no run41497991461, com23arquivos aprovados conferidos por viewport e corrida natural completa. Ver APPROVED_PILOT_ART_QA.md.
 
 ## 02/11/2026 — NPCs conforme a referência de quatro carros
 - Criados quatro atlases PNG e24sprites individuais: traseira, esquerda/direita e frenagem nas três vistas, preservando aerofólio, gaiola, lanternas, escapes e gancho da referência.
