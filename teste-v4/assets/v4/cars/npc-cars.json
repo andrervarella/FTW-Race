@@ -1,0 +1,55 @@
+{
+  "status": "new-original-vector-art-human-review-pending",
+  "source": "assets/previews/daniel/carro-traseira.png",
+  "sourceSha256": "65f9128c1570a8b93026b31e84db52d1e24d9aaf5e3f87bfb693dcc956c7acba",
+  "files": [
+    {
+      "path": "cars/npc-blue.svg",
+      "sha256": "ebf58d6ccb8c52191757d7441d2a3de4f745b636f0ea170d39c160d3a1721120",
+      "size": [
+        512,
+        512
+      ],
+      "pivot": [
+        0.5,
+        0.91796875
+      ]
+    },
+    {
+      "path": "cars/npc-yellow.svg",
+      "sha256": "e6df11a09c472d578a876341505354dcf92646517f10fc1e55dcd4d2c358ff44",
+      "size": [
+        512,
+        512
+      ],
+      "pivot": [
+        0.5,
+        0.91796875
+      ]
+    },
+    {
+      "path": "cars/npc-purple.svg",
+      "sha256": "bb087709da17f280264b9027a5b726b585f51201cd322eede72f000d808dd2c1",
+      "size": [
+        512,
+        512
+      ],
+      "pivot": [
+        0.5,
+        0.91796875
+      ]
+    },
+    {
+      "path": "cars/npc-silver.svg",
+      "sha256": "eb14a8859ad9975f65e8b7c1a587b751a665aaf2d15d42e0efe5a12f74db62ca",
+      "size": [
+        512,
+        512
+      ],
+      "pivot": [
+        0.5,
+        0.91796875
+      ]
+    }
+  ]
+}

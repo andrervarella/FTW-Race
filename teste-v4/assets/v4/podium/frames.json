@@ -1,0 +1,632 @@
+{
+  "frameDurationsMs": [
+    1200,
+    1400,
+    1300,
+    1400,
+    2200,
+    null
+  ],
+  "stages": [
+    "entry",
+    "receive",
+    "raise",
+    "open",
+    "spray",
+    "final"
+  ],
+  "assets": [
+    {
+      "file": "game/assets/v4/podium/daniel-0.png",
+      "source": "assets/previews/v4/podium-generated-source.png",
+      "sourceCrop": [
+        15,
+        48,
+        263,
+        520
+      ],
+      "frame": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        256,
+        512
+      ],
+      "approval": "pending-human-review",
+      "sha256": "ad4cbfcdd3313148a39a001b195ca52d80fba07305d1dbe600648010e6442dfa"
+    },
+    {
+      "file": "game/assets/v4/podium/daniel-1.png",
+      "source": "assets/previews/v4/podium-generated-source.png",
+      "sourceCrop": [
+        272,
+        48,
+        493,
+        520
+      ],
+      "frame": 1,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        256,
+        512
+      ],
+      "approval": "pending-human-review",
+      "sha256": "3323b19f3e6bc44957038dd5d5fba0c046518fb5e8bfa5626dcfc9f4a52b6a3e"
+    },
+    {
+      "file": "game/assets/v4/podium/daniel-2.png",
+      "source": "assets/previews/v4/podium-generated-source.png",
+      "sourceCrop": [
+        493,
+        0,
+        727,
+        520
+      ],
+      "frame": 2,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        256,
+        512
+      ],
+      "approval": "pending-human-review",
+      "sha256": "7b9f5500dcab4b2efdf8415a7cb6cd948ab60478687fbd3818ece24111135930"
+    },
+    {
+      "file": "game/assets/v4/podium/daniel-3.png",
+      "source": "assets/previews/v4/podium-generated-source.png",
+      "sourceCrop": [
+        731,
+        48,
+        984,
+        520
+      ],
+      "frame": 3,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        256,
+        512
+      ],
+      "approval": "pending-human-review",
+      "sha256": "43c588498b507546622bdb04e2cc373eb4c019906d65c8133be3d1b523190fe4"
+    },
+    {
+      "file": "game/assets/v4/podium/daniel-4.png",
+      "source": "assets/previews/v4/podium-generated-source.png",
+      "sourceCrop": [
+        1000,
+        55,
+        1279,
+        520
+      ],
+      "frame": 4,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        256,
+        512
+      ],
+      "approval": "pending-human-review",
+      "sha256": "f163c2e69daaa86153d0adf5ae55a92399c17142e529c72014f2981d9dfd0741"
+    },
+    {
+      "file": "game/assets/v4/podium/daniel-5.png",
+      "source": "assets/previews/v4/podium-generated-source.png",
+      "sourceCrop": [
+        1280,
+        10,
+        1536,
+        520
+      ],
+      "frame": 5,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        256,
+        512
+      ],
+      "approval": "pending-human-review",
+      "sha256": "2af3f90d3a4c4839bcc8e6184cc599a91bde6eb2299befe4724162f6945343c5"
+    },
+    {
+      "file": "game/assets/v4/podium/felipe-0.png",
+      "source": "assets/previews/v4/podium-generated-source.png",
+      "sourceCrop": [
+        15,
+        563,
+        263,
+        1024
+      ],
+      "frame": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        256,
+        512
+      ],
+      "approval": "pending-human-review",
+      "sha256": "3c935d64d1ae648bdd646f102e3089001e7fb5b5939d6aaa0f83e216b3660cde"
+    },
+    {
+      "file": "game/assets/v4/podium/felipe-1.png",
+      "source": "assets/previews/v4/podium-generated-source.png",
+      "sourceCrop": [
+        272,
+        563,
+        493,
+        1024
+      ],
+      "frame": 1,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        256,
+        512
+      ],
+      "approval": "pending-human-review",
+      "sha256": "779edeffc4348087bcda29d06a3ad7584422e58fcefcda31695d4e513d30e09f"
+    },
+    {
+      "file": "game/assets/v4/podium/felipe-2.png",
+      "source": "assets/previews/v4/podium-generated-source.png",
+      "sourceCrop": [
+        493,
+        520,
+        727,
+        1024
+      ],
+      "frame": 2,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        256,
+        512
+      ],
+      "approval": "pending-human-review",
+      "sha256": "0b30f51455aee7a57dc6442d2754f355e1f8c6367020ae7c4ae501607fe82c88"
+    },
+    {
+      "file": "game/assets/v4/podium/felipe-3.png",
+      "source": "assets/previews/v4/podium-generated-source.png",
+      "sourceCrop": [
+        731,
+        563,
+        984,
+        1024
+      ],
+      "frame": 3,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        256,
+        512
+      ],
+      "approval": "pending-human-review",
+      "sha256": "8ffa4573a0cb42c17a3c1d612e52eab51467a32d924bbcd6ca4f82cbc409b780"
+    },
+    {
+      "file": "game/assets/v4/podium/felipe-4.png",
+      "source": "assets/previews/v4/podium-generated-source.png",
+      "sourceCrop": [
+        1000,
+        570,
+        1279,
+        1024
+      ],
+      "frame": 4,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        256,
+        512
+      ],
+      "approval": "pending-human-review",
+      "sha256": "72f84ae2933167a9a91682e87436ebccfbd8eff435469a2378f3d86b8152fa1a"
+    },
+    {
+      "file": "game/assets/v4/podium/felipe-5.png",
+      "source": "assets/previews/v4/podium-generated-source.png",
+      "sourceCrop": [
+        1280,
+        525,
+        1536,
+        1024
+      ],
+      "frame": 5,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        256,
+        512
+      ],
+      "approval": "pending-human-review",
+      "sha256": "351f94d6fec6b48375be28efbe4fd45662954dfa9e3f9cce0e3652ad21891cca"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-blue-0.png",
+      "source": "game/scripts/prepare-v4-podium.py (original authored pixel drawing)",
+      "frame": 0,
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "size": [
+        256,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "f2bdb81b2f55212bf79bbc15c7f05a9f9390de635a2d4cf82dc113de92476066"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-blue-1.png",
+      "source": "game/scripts/prepare-v4-podium.py (original authored pixel drawing)",
+      "frame": 1,
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "size": [
+        256,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "37f7af82ae4a6132abcc2c5e430dda11b047e8aacfb97e27a4686f9e15ab8a39"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-blue-2.png",
+      "source": "game/scripts/prepare-v4-podium.py (original authored pixel drawing)",
+      "frame": 2,
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "size": [
+        256,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "97b8f4369c0d2d30e40e40a96036f77c82d779f5ffa0618e8422e24873c432b1"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-blue-3.png",
+      "source": "game/scripts/prepare-v4-podium.py (original authored pixel drawing)",
+      "frame": 3,
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "size": [
+        256,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "455d562d09994cfb734a060decba332e7f49a840bb024fbb51850f9459ba5815"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-blue-4.png",
+      "source": "game/scripts/prepare-v4-podium.py (original authored pixel drawing)",
+      "frame": 4,
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "size": [
+        256,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "f13e3a936fbc362f2148e41d03834c9fb7974bf843a1b232fabe46c6262a6a78"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-blue-5.png",
+      "source": "game/scripts/prepare-v4-podium.py (original authored pixel drawing)",
+      "frame": 5,
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "size": [
+        256,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "0a5330300148debe3e91e4b4262a35be805cf096c9a45a287e792ba940ef0c69"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-yellow-0.png",
+      "source": "game/scripts/prepare-v4-podium.py (original authored pixel drawing)",
+      "frame": 0,
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "size": [
+        256,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "84919a3576cccfa9740c7555e12e2e704bae6bc88aad9444f26fc896208e7c35"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-yellow-1.png",
+      "source": "game/scripts/prepare-v4-podium.py (original authored pixel drawing)",
+      "frame": 1,
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "size": [
+        256,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "f64eff7bbc828445b379740b0b6f1a8128266fb20b63f23d5c3d3c5a68703952"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-yellow-2.png",
+      "source": "game/scripts/prepare-v4-podium.py (original authored pixel drawing)",
+      "frame": 2,
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "size": [
+        256,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "a6359d45e03316c6fa8bd7f35aa929805c64690962d93938a9318eecbaadcee1"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-yellow-3.png",
+      "source": "game/scripts/prepare-v4-podium.py (original authored pixel drawing)",
+      "frame": 3,
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "size": [
+        256,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "1a71bcd82590987a0dbf4296666a9158fbe48fe08fc6f217c73bcc510f38dff9"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-yellow-4.png",
+      "source": "game/scripts/prepare-v4-podium.py (original authored pixel drawing)",
+      "frame": 4,
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "size": [
+        256,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "e783d83a00d7157ac0e0f3b93274e228c8efa445bf396c14d2fda91087be177c"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-yellow-5.png",
+      "source": "game/scripts/prepare-v4-podium.py (original authored pixel drawing)",
+      "frame": 5,
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "size": [
+        256,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "8efffb9283a73a8cb9acee23705526f3ccd41bd28a2857c963b2d46952566928"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-purple-0.png",
+      "source": "game/scripts/prepare-v4-podium.py (original authored pixel drawing)",
+      "frame": 0,
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "size": [
+        256,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "4949c317c5ad04ac1d2eca7105bf0f318e92b630697c06acdcfb818f26528941"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-purple-1.png",
+      "source": "game/scripts/prepare-v4-podium.py (original authored pixel drawing)",
+      "frame": 1,
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "size": [
+        256,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "f4b58fe0b563e2a3822ec26006ff19a71eb58dd96482f2fb5b113e75824c66c5"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-purple-2.png",
+      "source": "game/scripts/prepare-v4-podium.py (original authored pixel drawing)",
+      "frame": 2,
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "size": [
+        256,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "d84bed9e8def98131bf4b0c38f43cdecc9c86e8991a717b3526a125667bdeb44"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-purple-3.png",
+      "source": "game/scripts/prepare-v4-podium.py (original authored pixel drawing)",
+      "frame": 3,
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "size": [
+        256,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "018c175ef52efaebd3accd8bbfde503376ca4053ca26933184f42ac986eade74"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-purple-4.png",
+      "source": "game/scripts/prepare-v4-podium.py (original authored pixel drawing)",
+      "frame": 4,
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "size": [
+        256,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "b5765fc773cc5ac7d3a6250d8aa628290df451b06643422d5779223fba359122"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-purple-5.png",
+      "source": "game/scripts/prepare-v4-podium.py (original authored pixel drawing)",
+      "frame": 5,
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "size": [
+        256,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "9c6d6897161ef03e7accef9a3cd172c8215cdfcb9a4d97db34add3a81f8e6291"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-silver-0.png",
+      "source": "game/scripts/prepare-v4-podium.py (original authored pixel drawing)",
+      "frame": 0,
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "size": [
+        256,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "d4d318683b67cd2a4375efc379823bdbd6c9c0f007f7dba2852ec51c3adc5ce1"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-silver-1.png",
+      "source": "game/scripts/prepare-v4-podium.py (original authored pixel drawing)",
+      "frame": 1,
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "size": [
+        256,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "8e252e3feb8973c37b99a3a53cebc8eb509ef0e874446a6e26377584c6d8909d"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-silver-2.png",
+      "source": "game/scripts/prepare-v4-podium.py (original authored pixel drawing)",
+      "frame": 2,
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "size": [
+        256,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "e10074ed6ab1cec006c3151a925120cf7af57bd3be57c61b1b0742290401d4af"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-silver-3.png",
+      "source": "game/scripts/prepare-v4-podium.py (original authored pixel drawing)",
+      "frame": 3,
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "size": [
+        256,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "168f2a0602a4e0dbd4df797c25f5497c590b6837305f372dc07355795d7a5ab0"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-silver-4.png",
+      "source": "game/scripts/prepare-v4-podium.py (original authored pixel drawing)",
+      "frame": 4,
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "size": [
+        256,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "8eb65ad9522695f84b8a8944bc784675090cf9502443ea956a19c94e3f74f355"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-silver-5.png",
+      "source": "game/scripts/prepare-v4-podium.py (original authored pixel drawing)",
+      "frame": 5,
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "size": [
+        256,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "50966ff10418e7c3214ed008863610dbbd04e3b43cce1d2054b00945eb26f9c9"
+    }
+  ]
+}
