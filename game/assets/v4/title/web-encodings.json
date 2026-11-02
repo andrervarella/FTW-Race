@@ -83,5 +83,22 @@
     "method": "WebP92 scenery; original PNG preserved",
     "bytes": 492732,
     "approval": "owner-approved-design; technical delivery encoding"
+  },
+  {
+    "file": "game/assets/v4/title/felipe-front-portrait.webp",
+    "source": "game/assets/v4/title/felipe-front-portrait.png",
+    "sourceSha256": "f4b46310e890e7016a0b8b668d8193ae7ebfeb109fe655bf60386259a51aca93",
+    "sha256": "aaa2e54ca01ef8644e7e86f0fb034b19aeba4c57db259ffe070646780fe1106b",
+    "originalSize": [
+      1182,
+      1331
+    ],
+    "size": [
+      799,
+      900
+    ],
+    "method": "aspect-preserving downsample and lossless WebP; encoded pixels verified exactly",
+    "bytes": 672048,
+    "approval": "owner-approved-design; technical delivery encoding"
   }
 ]

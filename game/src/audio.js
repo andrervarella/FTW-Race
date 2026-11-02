@@ -1,6 +1,6 @@
 // Áudio 100% sintetizado (Web Audio): motor com marchas, derrapagem, cascalho, batida, nitro, contagem e trilha em loop.
 // Tudo ORIGINAL (nenhum sample, melodia ou código de Top Gear). Estilo: arcade 16-bit, andamento rápido, baixo pulsante.
-// Modos: 'tudo' (música + efeitos), 'efeitos', 'mudo'. Não testado em aparelho (ouvido humano) — só renderização offline.
+// Modos: 'tudo' (música + efeitos), 'efeitos', 'mudo'. Saída testável offline e ao vivo; aparelho físico não validado.
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 const mtof = (m) => 440 * Math.pow(2, (m - 69) / 12);
 export const MODES = ['tudo', 'efeitos', 'mudo'];
@@ -15,11 +15,16 @@ const BASS_PAT = [0, 0, 12, 0, 0, 0, 12, 7];
 export class GameAudio {
   constructor(ctx = null) {
     this.ctx = ctx; this.mode = 'tudo'; this.ready = false; this.nextNote = 0; this.step = 0; this.timer = null;
-    this.suspended = false; this.unlocking = null; this.lifecycle = 0; this.sources = new Set();
+    this.suspended = false; this.unlocking = null; this.lifecycle = 0; this.sources = new Set(); this.activated = false;
     this.prev = { hit: 0, laps: 0, count: -1, nitro: false, phase: '', gear: 1 };
   }
   async unlock() {
     if (this.unlocking) {
+      // A touch-start attempt may still be blocked. Retry synchronously on the
+      // later trusted click/pointer-up instead of losing that activation stack.
+      if (this.ctx && this.ctx.state !== 'running' && this.ctx.state !== 'closed') {
+        try { void Promise.resolve(this.ctx.resume()).catch(() => {}); } catch { /* optional audio */ }
+      }
       const generation = this.unlockGeneration, pending = this.unlocking;
       const result = await pending;
       // A new user gesture after a blur must not inherit a cancelled unlock.
@@ -39,7 +44,9 @@ export class GameAudio {
         await this.ctx.resume();
         // A blur may have arrived while the browser was granting audio access.
         if (generation !== this.lifecycle) { await this.ctx.suspend?.(); return false; }
+        if (this.ctx.state !== 'running') return false;
         this.suspended = false;
+        this.activated = true;
         this.master.gain.setTargetAtTime(0.9, this.ctx.currentTime, 0.04);
         this.setMode(this.mode); this.startMusic();
         return true;
@@ -90,6 +97,16 @@ export class GameAudio {
     this.sfxBus.gain.setTargetAtTime(m === 'mudo' ? 0 : 1, t, 0.05); this.musicBus.gain.setTargetAtTime(m === 'tudo' ? 0.2 : 0, t, 0.08);
   }
   cycleMode() { this.setMode(MODES[(MODES.indexOf(this.mode) + 1) % MODES.length]); return this.mode; }
+  get active() { return this.ready && !this.suspended && this.ctx?.state === 'running'; }
+  get label() { return this.mode === 'mudo' && this.activated ? MODE_LABEL.mudo : this.active ? MODE_LABEL[this.mode] : 'ATIVAR SOM'; }
+  control() {
+    // The first sound-button action enables music and effects; it must not
+    // silently cycle the initial all-audio mode into an effects-only menu.
+    // An interrupted context resumes its selected mode. A deliberate click on
+    // mute can still unmute; background/steering gestures never change modes.
+    if (this.activated && (this.active || this.mode === 'mudo')) this.cycleMode();
+    return this.unlock();
+  }
 
   // ---- efeitos pontuais (todos aceitam "at" para renderização offline) ----
   canPlay() { return this.ready && !this.suspended && this.mode !== 'mudo' && this.ctx.state !== 'closed'; }

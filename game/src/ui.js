@@ -1,7 +1,7 @@
 // Interface DOM: navegação visual separada das fases do simulador.
 import { DRIVERS } from './config.js';
 import { InputState, KEYMAP } from './input.js';
-import { GameAudio, MODE_LABEL } from './audio.js';
+import { GameAudio } from './audio.js';
 import { createRace, pauseRace, resumeRace, playerPosition, formatTime } from './sim.js';
 import { getResults } from './standings.js';
 import { podiumMarkup, updatePodium } from './podium.js';
@@ -12,12 +12,20 @@ export class Ui {
     Object.assign(this, { root, track, assets, onRace, debug, race: null, input: new InputState(), audio: new GameAudio(), selected: 'daniel', screen: '', renderedPhase: '', lastHud: 0, fps: 0, fpsAcc: 0, laps: 3, charges: 2 });
     this.listeners = new AbortController();
     const opts = { signal: this.listeners.signal };
-    document.addEventListener('pointerdown', () => this.audio.unlock().catch(() => {}), opts);
+    const soundControl = target => target?.closest?.('#screen-sound, #sound, #podium-sound');
+    const unlockFromGesture = event => {
+      // Sound controls handle their own first activation, without cycling it.
+      if (soundControl(event.target)) return;
+      // The bubbling click that just paused the race must not resume its sound.
+      if (this.screen === 'race' && this.race?.phase === 'paused') return;
+      if (!this.audio.ready || this.audio.suspended || this.audio.ctx?.state !== 'running') this.audio.unlock().catch(() => {});
+    };
+    for (const event of ['pointerdown', 'pointerup', 'click']) document.addEventListener(event, unlockFromGesture, opts);
     window.addEventListener('blur', () => { this.interrupt(); this.audio.suspend?.(); }, opts);
     document.addEventListener('visibilitychange', () => { if (document.hidden) { this.interrupt(); this.audio.suspend?.(); } }, opts);
     document.addEventListener('contextmenu', (e) => e.preventDefault(), opts);
     window.addEventListener('keydown', (e) => {
-      if (['Enter', 'Space'].includes(e.code)) this.audio.unlock().catch(() => {});
+      if (['Enter', 'Space'].includes(e.code) && !soundControl(e.target)) this.audio.unlock().catch(() => {});
       if (e.repeat && ['Enter', 'Escape', 'Space'].includes(e.code)) return;
       if (e.code === 'Escape') { e.preventDefault(); this.back(); return; }
       if (e.code === 'Enter' || (e.code === 'Space' && this.screen === 'title')) {
@@ -42,8 +50,8 @@ export class Ui {
   }
   dropRace() { this.race = null; this.onRace(null); }
   brand(copy = 'CASCAVEL') { return `<header class="brand">${this.img('ftw.png', 'FTW', 'ftw-logo')}<span class="brand-title">RACE <em>${copy}</em></span><span class="tag">PRÉVIA V4 · DANIEL E FELIPE APROVADOS</span></header>`; }
-  soundButton() { return `<button type="button" class="icon-button" id="screen-sound" aria-label="Alternar som">${MODE_LABEL[this.audio.mode]}</button>`; }
-  bindSound() { const b = this.root.querySelector('#screen-sound'); if (b) b.onclick = () => { this.audio.unlock().catch(() => {}); this.audio.cycleMode(); b.textContent = MODE_LABEL[this.audio.mode]; }; }
+  soundButton() { return `<button type="button" class="icon-button" id="screen-sound" aria-label="Alternar som">${this.audio.label}</button>`; }
+  bindSound() { const b = this.root.querySelector('#screen-sound'); if (b) b.onclick = () => { this.audio.control().catch(() => {}); b.textContent = this.audio.label; }; }
   feedback() { this.audio.unlock().then(ready => { if (ready) this.audio.selection?.(); }).catch(() => {}); }
   showTitle() {
     this.dropRace(); this.transition('title');
@@ -113,7 +121,7 @@ export class Ui {
       <header class="hud"><div class="cell"><small>POSIÇÃO</small><strong id="position">5<span>/ 6</span></strong></div>
         <div class="cell"><small>VOLTA</small><strong id="lap">1 / ${r.config.laps}</strong></div>
         <div class="cell"><small>TEMPO</small><strong id="time">00:00.0</strong></div>
-        <div class="grow"></div><button id="sound" class="icon-button">${MODE_LABEL[this.audio.mode]}</button><button id="pause" class="icon-button" aria-label="Pausar">II</button></header>
+        <div class="grow"></div><button id="sound" class="icon-button">${this.audio.label}</button><button id="pause" class="icon-button" aria-label="Pausar">II</button></header>
       <div class="minimap">${this.minimap()}</div><div class="race-message" id="msg" aria-live="polite"></div>
       <div class="speed"><strong id="speed">0</strong><span>km/h</span><small id="surface"></small></div>
       <div class="nitro-toast" id="nitro-toast" hidden>${this.img('can.png', 'Lata Diabo Verde')}<span>DIABO VERDE<small>NITRO ATIVO</small></span></div>
@@ -122,7 +130,7 @@ export class Ui {
         <button class="brake" data-action="brake">FREIO</button><button class="throttle" data-action="throttle">ACELERAR</button></div></div>
       <div id="modal"></div></section>`;
     this.root.querySelector('#pause').onclick = () => this.togglePause();
-    this.root.querySelector('#sound').onclick = (e) => { this.audio.unlock().catch(() => {}); this.audio.cycleMode(); e.currentTarget.textContent = MODE_LABEL[this.audio.mode]; };
+    this.root.querySelector('#sound').onclick = (e) => { this.audio.control().catch(() => {}); e.currentTarget.textContent = this.audio.label; };
     for (const b of this.root.querySelectorAll('[data-action]')) {
       b.addEventListener('pointerdown', (e) => { e.preventDefault(); if (this.race?.phase !== 'racing') return; try { b.setPointerCapture(e.pointerId); } catch {} this.input.press(e.pointerId, b.dataset.action); b.classList.add('held'); });
       const up = (e) => { this.input.release(e.pointerId); b.classList.toggle('held', this.input.snapshot()[b.dataset.action]); };
@@ -184,6 +192,11 @@ export class Ui {
     const dt = Math.min(Math.max((now - (this.lastUpdate ?? now)) / 1000, 0), .1); this.lastUpdate = now;
     const r = this.race; this.fpsAcc += 1; if (now - (this.fpsT || now) >= 1000) { this.fps = this.fpsAcc; this.fpsAcc = 0; this.fpsT = now; } this.fpsT ||= now;
     this.audio.update(this.screen === 'race' ? r : null, this.input.snapshot());
+    const soundState = `${this.screen}:${this.audio.mode}:${this.audio.activated}:${this.audio.active}`;
+    if (this.soundState !== soundState) {
+      this.soundState = soundState;
+      for (const control of this.root.querySelectorAll('#screen-sound, #sound, #podium-sound')) control.textContent = this.audio.label;
+    }
     if (this.screen === 'podium' && !this.podiumPaused && !document.hidden && document.hasFocus()) updatePodium(this.root, r, dt, this.audio);
     if (this.debug) this.debugPanel(now);
     if (!r || this.screen !== 'race') return;

@@ -33,6 +33,17 @@
       "source": "/workspace/FTW-Race/referencias/marcas-e-produto/diabo_verde_logo_oficial.png",
       "sha256": "efd50c7ea40dc0c5fe54ae92246249d1230ac6c1d43f5d271f7a1e94267f8137",
       "approval": "owner approved cover; original supplied logo/car files preserved"
+    },
+    {
+      "file": "game/assets/v4/title/felipe-front-portrait.png",
+      "source": "/workspace/work/felipe-audio-fix/felipe-cover-front-proposal.png",
+      "sha256": "f4b46310e890e7016a0b8b668d8193ae7ebfeb109fe655bf60386259a51aca93",
+      "approval": "owner approved front pose for opening cover"
     }
-  ]
+  ],
+  "poseApproval": {
+    "date": "2026-11-02",
+    "text": "Aprovar a pose",
+    "scope": "Felipe opening cover front posture only; retain approved facial identity; selection and podium portraits unchanged"
+  }
 }

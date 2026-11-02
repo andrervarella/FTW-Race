@@ -41,5 +41,5 @@ export function updatePodium(root, race, dt, audio) {
     audio?.podium?.(stage);
   }
   const sound = scene.querySelector('#podium-sound');
-  if (sound && !sound.onclick) sound.onclick = () => { audio?.unlock?.(); audio?.cycleMode?.(); sound.textContent = audio?.mode === 'mudo' ? 'MUDO' : 'SOM'; };
+  if (sound && !sound.onclick) sound.onclick = () => { audio?.control?.()?.catch?.(() => {}); sound.textContent = audio?.label || 'SOM'; };
 }

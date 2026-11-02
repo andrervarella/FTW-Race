@@ -64,7 +64,7 @@ def verify_approved_art(page, url):
         assert got['sha256'] == want['sha256'], 'Served approved art differs: ' + want['path']
         if 'size' in want:
             assert got['size'] == want['size'], 'Unexpected approved art dimensions: ' + want['path']
-    assert len(actual) == 23, '16 pilot poses, 5 title layers and 2 original logos'
+    assert len(actual) == 24, '16 pilot poses, 6 title layers and 2 original logos'
     control = page.locator('#press-start').bounding_box()
     assert control['height'] >= 43.9 and control['width'] >= 43.9, 'Physical touch target must remain at least44px'
     assert page.locator('.cover-hero img').count() == 2
@@ -112,7 +112,7 @@ def verify_viewport(browser, url, output, width, height, reduced):
         assert page.locator('#fatal').is_hidden(), 'Fatal initialization panel must remain hidden'
         loaded_images(page)
         report['approved_art'] = verify_approved_art(page, url)
-        report['checks'].append('23 served approved art hashes/dimensions, original logos and physical title touch target')
+        report['checks'].append('24 served approved art hashes/dimensions, original logos and physical title touch target')
         npc_atlases = page.evaluate('''() => {
           const scene = window.__ftwGame.scene.getScene('race');
           return ['npc-blue','npc-yellow','npc-purple','npc-silver'].map(key => {

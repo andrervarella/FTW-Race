@@ -27,6 +27,9 @@ jobs:
       - name: Verify the published V4 in mobile Chromium
         run: |
           python game/tests/v4-live.py https://andrervarella.github.io/FTW-Race/teste-v4/ --wait-ready 180 --output work/v4-live
+      - name: Verify live music, engine and effects after trusted activation
+        run: |
+          python game/tests/audio-live.py https://andrervarella.github.io/FTW-Race/teste-v4/ --output work/v4-live/audio-live
       - name: Preserve browser screenshots and logs
         if: always()
         uses: actions/upload-artifact@v4

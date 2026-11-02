@@ -41,3 +41,38 @@ test('browser AudioContext creation failure remains a silent optional feature', 
     if (previous === undefined) delete globalThis.window; else globalThis.window = previous;
   }
 });
+
+test('a later activation retries resume even while the first attempt is pending', async () => {
+  let allowed = false, calls = 0;
+  const pending = [];
+  const ctx = { state: 'suspended', currentTime: 0, resume() {
+    calls++;
+    if (allowed) { this.state = 'running'; for (const resolve of pending.splice(0)) resolve(); return Promise.resolve(); }
+    return new Promise(resolve => pending.push(resolve));
+  } };
+  const audio = new GameAudio(ctx);
+  audio.build = () => { audio.ready = true; audio.master = { gain: { setTargetAtTime() {} } }; };
+  audio.setMode = () => {}; audio.startMusic = () => {};
+  const first = audio.unlock();
+  allowed = true;
+  const activated = audio.unlock();
+  const result = await Promise.race([activated, new Promise(resolve => setTimeout(() => resolve('blocked'), 30))]);
+  try { assert.equal(result, true, 'new activation must invoke resume rather than await a still-blocked call'); assert.ok(calls >= 2); }
+  finally { await ctx.resume(); await Promise.all([first, activated]); }
+});
+
+test('sound control resumes an interrupted mode without cycling it and preserves intentional mute', async () => {
+  const audio = new GameAudio({ state: 'suspended' });
+  audio.ready = true; audio.activated = true; audio.suspended = true;
+  audio.setMode = function(mode) { this.mode = mode; };
+  audio.unlock = async function() { this.suspended = false; this.ctx.state = 'running'; return true; };
+  assert.equal(audio.label, 'ATIVAR SOM');
+  await audio.control();
+  assert.equal(audio.mode, 'tudo', 'resuming music must not switch to effects-only');
+  audio.setMode('efeitos'); audio.suspended = true; audio.ctx.state = 'suspended';
+  await audio.control(); assert.equal(audio.mode, 'efeitos');
+  audio.setMode('mudo'); audio.suspended = true; audio.ctx.state = 'suspended';
+  await audio.unlock(); assert.equal(audio.mode, 'mudo', 'generic gestures preserve a deliberate mute');
+  audio.suspended = true; audio.ctx.state = 'suspended';
+  await audio.control(); assert.equal(audio.mode, 'tudo', 'a deliberate mute-control click can unmute');
+});

@@ -1935,8 +1935,8 @@
     },
     {
       "path": "game/assets/v4/title/approval.json",
-      "sha256": "b3c24a3b699d2d62f0a8d0bda91494d124bbc02645be6f656437ede96e078c12",
-      "bytes": 1854,
+      "sha256": "11e84dd2f1f1a0753487379457df7de41a859b9b6848b738519f90a08cb920ca",
+      "bytes": 2374,
       "status": "owner-approved-derived"
     },
     {
@@ -1998,6 +1998,34 @@
       ]
     },
     {
+      "path": "game/assets/v4/title/felipe-front-portrait.png",
+      "sha256": "f4b46310e890e7016a0b8b668d8193ae7ebfeb109fe655bf60386259a51aca93",
+      "bytes": 2007308,
+      "status": "owner-approved-derived",
+      "size": [
+        1182,
+        1331
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "game/assets/v4/title/felipe-front-portrait.webp",
+      "sha256": "aaa2e54ca01ef8644e7e86f0fb034b19aeba4c57db259ffe070646780fe1106b",
+      "bytes": 672048,
+      "status": "owner-approved-derived",
+      "size": [
+        799,
+        900
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
       "path": "game/assets/v4/title/felipe-front-sheet.png",
       "sha256": "ce79d1f6a6a1ef2336d4d8ce22248ae8f36693160cea3f40ddcd857ad3fda1bb",
       "bytes": 1699719,
@@ -2037,8 +2065,8 @@
     },
     {
       "path": "game/assets/v4/title/web-encodings.json",
-      "sha256": "4bfe077e32c6fd4ea378d226b512dc16aa4348c31d2a4f03f92c06fc10b483bb",
-      "bytes": 2847,
+      "sha256": "d2f98ac198e384a01c865c07aa519c989cdd99f30e0d47b0ea2eb7a2ba3f40cb",
+      "bytes": 3434,
       "status": "owner-approved-derived"
     },
     {
