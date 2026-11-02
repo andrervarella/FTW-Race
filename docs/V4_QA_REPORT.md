@@ -1,5 +1,18 @@
 # QA V4 — prévia funcional, arte em revisão
 
+## Verificação pública final — PASS, 02/11/2026
+- URL jogável verificada: https://andrervarella.github.io/FTW-Race/teste-v4/.
+- Fonte testada: `d0d883177838f3997804cd923757a525dcbf5e4c`, branch `codex/ftw-race-v4-arcade`; Pages: `a8f8511beac3905aec05e767e91b17b396129071`.
+- [Run final 41455523600](https://github.com/andrervarella/FTW-Race/actions/runs/41455523600): **success**, incluindo teste e upload do artifact.
+- Artifact `13146592605`, `ftw-v4-public-chromium-41455523600`; ZIP SHA256 `255dba04eb08f996bf2be07ded7d2a6e5577aa726960d135d2fe655ef769d8fb`. Baixado e inspecionado: summary/2 relatórios PASS, 13 capturas, nomes de arquivo válidos.
+- Chromium independente 141.0.7390.37 executou o produto pela URL HTTPS em 915×412 e 740×360 com redução de movimento. Phaser 3.90.0/WebGL, ambos pilotos, grid, countdown natural, toque simultâneo, pausa, rotação e retorno passaram. Uma corrida terminou naturalmente; Rival Roxo venceu e recebeu taça/champanhe/pódio correspondente. Replay funcionou. O teste de separação entre rótulos e números dos degraus também passou.
+- Zero erros de JavaScript/console, HTTP/404, requests falhos ou assets fora da subpasta. Avisos de GPU software do runner não são erros do jogo nem medição de desempenho Android.
+- Testes locais finais: 40/40 asserções Node, sintaxe dos módulos, 121 hashes de assets, 36 frames de corpo inteiro, 20 PNGs de render/16 frames FX e regressões de áudio/pausa/carregamento lento aprovados.
+- Os 46 arquivos preexistentes de Pages permanecem idênticos (SHA/tipo/modo); `main` e `claude/ftw-race-v0.2` não foram alteradas. Publicação restrita a `teste-v4/`.
+
+**Estado do aceite:** prévia funcional publicada e verificada; **entrega artística final ainda não aprovada**. Feições, uniformes, patrocinadores e novos NPCs/derivados aguardam revisão humana. Android físico, áudio ouvido no aparelho e FPS real do telefone não foram testados. Este fechamento adiciona somente documentação; não altera o produto verificado.
+
+
 ## Primeira verificação pública — PASS
 URL real: https://andrervarella.github.io/FTW-Race/teste-v4/. Pages `0c7235e09306c8ae12ca9ac5fc87fdcea551462d`; fonte `3dce9df21f68591055742bf72128fa9401514e4e`. Run [41452949514](https://github.com/andrervarella/FTW-Race/actions/runs/41452949514) concluiu success. Artifact13145781202 (ZIP SHA256 ec6619ed4ccb8a87846c982d1240b60f52af6cbaf8c2e64662b2f751f11502c7) foi baixado, extraído e inspecionado. Chromium141.0.7390.37 independente visitou a URLHTTPS, inicializou Phaser3.90/WebGL, testou os dois pilotos, inputs reais, pausa/orientação, redução de movimento e uma corrida natural completa. Vencedor real: Rival Roxo; resultado e pódio correspondentes. Layouts915×412 e740×360 passaram sem erros de console/HTTP, requests falhos ou caminhos fora de teste-v4. Capturas eJSON comprovam o resultado. Avisos de GPU software no runner não são medição Android.
 

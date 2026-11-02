@@ -1,4 +1,10 @@
 # Registro e continuidade
+## 02/11/2026 — publicação e verificação pública da prévia V4
+- Prévia em https://andrervarella.github.io/FTW-Race/teste-v4/, branch exclusiva `codex/ftw-race-v4-arcade`.
+- Run público41455523600 concluiu success; artifact e13capturas inspecionados. Corrida natural, resultados reais e pódio do vencedor passaram em dois layouts móveis emulados, sem404/erros.
+- Corrigidos carregamento lento, pausa do spray, áudio após pausa, rótulos dos degraus e coleta de evidências. Testes Node finais40/40.
+- Os46arquivos anteriores de Pages ficaram idênticos. Artes em revisão; Android físico e desempenho no telefone não testados. Ver V4_QA_REPORT.md.
+
 ## 01–02/11/2026 — V4 em branch exclusiva
 - Fonte exata `f6f6f83` recuperada e branch `codex/ftw-race-v4-arcade` criada; V3 e raiz preservadas.
 - Implementados capa2D, seleção explícita, grid, corrida/pausa, bandeirada, classificação de seis e comemoração para cada vencedor.
