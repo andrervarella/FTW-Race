@@ -1,0 +1,37 @@
+name: FTW Race V4 public browser verification
+
+on:
+  push:
+    branches: ['codex/ftw-race-v4-arcade']
+    paths:
+      - 'game/**'
+      - '.github/workflows/v4-verify.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  public-chromium:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned browser tooling
+        run: |
+          python -m pip install playwright==1.56.0
+          python -m playwright install --with-deps chromium
+      - name: Verify the published V4 in mobile Chromium
+        run: |
+          python game/tests/v4-live.py https://andrervarella.github.io/FTW-Race/teste-v4/ --wait-ready 180 --output work/v4-live
+      - name: Preserve browser screenshots and logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ftw-v4-public-chromium-${{ github.run_id }}
+          path: work/v4-live/
+          if-no-files-found: error
+          retention-days: 7

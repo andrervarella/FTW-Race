@@ -1,4 +1,12 @@
 # Registro e continuidade
+## 01/11/2026 — V4 em branch exclusiva
+- Fonte exata `f6f6f83` recuperada e branch `codex/ftw-race-v4-arcade` criada; V3 e raiz preservadas.
+- Implementados capa2D, seleção explícita, grid, corrida/pausa, bandeirada, classificação de seis e comemoração para cada vencedor.
+- Resultado congelado na primeira chegada interpolada; não concluintes sem tempo inventado. Corrigida perda de volta na colisão com retardatário.
+- Preparados cenários/FX, vistas reais dos dois carros, quatro NPCs redesenhados e36poses de comemoração. Artes novas em revisão humana, **prévia funcional incompleta artisticamente**.
+- Áudio sintetizado próprio, recuperação após pausa e pódio pausável com botão continuar; caminhos autocontidos para subpasta.
+- Verificação e publicação: consultar `V4_QA_REPORT.md`, manifesto e provenance. Android físico não disponível; nenhuma afirmação de FPS Android.
+
 ## 30/10/2026 — preparação
 Conversa consolidada, prompt mestre original preservado e referência de Top Gear organizada.
 Não houve implementação do jogo.
