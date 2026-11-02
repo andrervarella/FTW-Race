@@ -37,16 +37,18 @@ test('contagem regressiva e largada', () => {
   for (let i = 0; i < 60 * 3.1; i++) stepRace(race, IDLE, 1 / 60);
   assert.equal(race.phase, 'racing');
 });
-test('piloto parado nunca completa volta; CPU termina 3 voltas sem sair da pista', () => {
+test('piloto parado nao completa volta; um dos cinco rivais termina tres voltas', () => {
   const race = createRace(track, 'daniel');
   for (let i = 0; i < 60 * 400 && race.phase !== 'finished'; i++) stepRace(race, IDLE, 1 / 60);
-  assert.equal(race.phase, 'finished'); assert.equal(race.winner, 'felipe'); assert.equal(race.player.laps, 0); assert.equal(race.cpu.laps, 3);
-  assert.equal(race.cpu.lapTimes.length, 3);
-  console.log('  CPU 3 voltas:', race.cpu.finishTime.toFixed(1), 's; voltas', race.cpu.lapTimes.map((t) => t.toFixed(1)).join(' / '));
+  const winner = race.racers.find(d => d.driver === race.winner);
+  assert.equal(race.phase, 'finished'); assert.equal(race.player.laps, 0);
+  assert.ok(winner && winner !== race.player);
+  assert.equal(winner.laps, 3); assert.equal(winner.lapTimes.length, 3);
+  console.log('  Campeao CPU:', winner.driver, winner.finishTime.toFixed(1), 's');
 });
 test('bot completa a corrida, usa no máximo 2 nitros e passa pouco tempo fora do asfalto', () => {
   const { race, stats } = runBot();
-  assert.equal(race.phase, 'finished'); assert.ok(race.player.laps >= 3 || race.cpu.laps >= 3);
+  assert.equal(race.phase, 'finished'); assert.ok(race.racers.some(d => d.laps >= 3));
   assert.ok(race.player.charges >= 0 && race.cpu.charges >= 0);
   assert.ok(stats.maxAbsLateral <= 1.65 + 1e-9);
   console.log('  bot: tempo', race.elapsed.toFixed(1), 's, fora da pista', (100 * stats.offRoadFrames / stats.frames).toFixed(1), '%, max|lat|', stats.maxAbsLateral.toFixed(2), ', voltas', race.player.lapTimes.map((t) => t.toFixed(1)).join('/'));
