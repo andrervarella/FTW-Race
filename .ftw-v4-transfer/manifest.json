@@ -3,585 +3,105 @@
   "scope": "approved V4 pilot and cover assets; existing authorization for public code and assets",
   "blobs": [
     {
-      "path": "assets/previews/v4/approved-pilots/daniel-face-v2.png",
-      "size": 1892158,
-      "sha": "3c1ec92c1856ace5f897be912b56caa917d6e22b",
-      "dimensions": [
-        1312,
-        1199
-      ],
-      "parts": [
-        {
-          "path": "chunks/3c1ec92c1856ace5f897be912b56caa917d6e22b/000.json"
-        },
-        {
-          "path": "chunks/3c1ec92c1856ace5f897be912b56caa917d6e22b/001.json"
-        },
-        {
-          "path": "chunks/3c1ec92c1856ace5f897be912b56caa917d6e22b/002.json"
-        },
-        {
-          "path": "chunks/3c1ec92c1856ace5f897be912b56caa917d6e22b/003.json"
-        },
-        {
-          "path": "chunks/3c1ec92c1856ace5f897be912b56caa917d6e22b/004.json"
-        },
-        {
-          "path": "chunks/3c1ec92c1856ace5f897be912b56caa917d6e22b/005.json"
-        },
-        {
-          "path": "chunks/3c1ec92c1856ace5f897be912b56caa917d6e22b/006.json"
-        },
-        {
-          "path": "chunks/3c1ec92c1856ace5f897be912b56caa917d6e22b/007.json"
-        },
-        {
-          "path": "chunks/3c1ec92c1856ace5f897be912b56caa917d6e22b/008.json"
-        },
-        {
-          "path": "chunks/3c1ec92c1856ace5f897be912b56caa917d6e22b/009.json"
-        },
-        {
-          "path": "chunks/3c1ec92c1856ace5f897be912b56caa917d6e22b/010.json"
-        },
-        {
-          "path": "chunks/3c1ec92c1856ace5f897be912b56caa917d6e22b/011.json"
-        },
-        {
-          "path": "chunks/3c1ec92c1856ace5f897be912b56caa917d6e22b/012.json"
-        },
-        {
-          "path": "chunks/3c1ec92c1856ace5f897be912b56caa917d6e22b/013.json"
-        },
-        {
-          "path": "chunks/3c1ec92c1856ace5f897be912b56caa917d6e22b/014.json"
-        },
-        {
-          "path": "chunks/3c1ec92c1856ace5f897be912b56caa917d6e22b/015.json"
-        },
-        {
-          "path": "chunks/3c1ec92c1856ace5f897be912b56caa917d6e22b/016.json"
-        },
-        {
-          "path": "chunks/3c1ec92c1856ace5f897be912b56caa917d6e22b/017.json"
-        },
-        {
-          "path": "chunks/3c1ec92c1856ace5f897be912b56caa917d6e22b/018.json"
-        }
-      ]
-    },
-    {
-      "path": "assets/previews/v4/approved-pilots/daniel-full-sprites-corrected.png",
-      "size": 1781173,
-      "sha": "60f56bdfe439e3073435802afd3de7b6c3eaf11c",
-      "dimensions": [
-        1254,
-        1254
-      ],
-      "parts": [
-        {
-          "path": "chunks/60f56bdfe439e3073435802afd3de7b6c3eaf11c/000.json"
-        },
-        {
-          "path": "chunks/60f56bdfe439e3073435802afd3de7b6c3eaf11c/001.json"
-        },
-        {
-          "path": "chunks/60f56bdfe439e3073435802afd3de7b6c3eaf11c/002.json"
-        },
-        {
-          "path": "chunks/60f56bdfe439e3073435802afd3de7b6c3eaf11c/003.json"
-        },
-        {
-          "path": "chunks/60f56bdfe439e3073435802afd3de7b6c3eaf11c/004.json"
-        },
-        {
-          "path": "chunks/60f56bdfe439e3073435802afd3de7b6c3eaf11c/005.json"
-        },
-        {
-          "path": "chunks/60f56bdfe439e3073435802afd3de7b6c3eaf11c/006.json"
-        },
-        {
-          "path": "chunks/60f56bdfe439e3073435802afd3de7b6c3eaf11c/007.json"
-        },
-        {
-          "path": "chunks/60f56bdfe439e3073435802afd3de7b6c3eaf11c/008.json"
-        },
-        {
-          "path": "chunks/60f56bdfe439e3073435802afd3de7b6c3eaf11c/009.json"
-        },
-        {
-          "path": "chunks/60f56bdfe439e3073435802afd3de7b6c3eaf11c/010.json"
-        },
-        {
-          "path": "chunks/60f56bdfe439e3073435802afd3de7b6c3eaf11c/011.json"
-        },
-        {
-          "path": "chunks/60f56bdfe439e3073435802afd3de7b6c3eaf11c/012.json"
-        },
-        {
-          "path": "chunks/60f56bdfe439e3073435802afd3de7b6c3eaf11c/013.json"
-        },
-        {
-          "path": "chunks/60f56bdfe439e3073435802afd3de7b6c3eaf11c/014.json"
-        },
-        {
-          "path": "chunks/60f56bdfe439e3073435802afd3de7b6c3eaf11c/015.json"
-        },
-        {
-          "path": "chunks/60f56bdfe439e3073435802afd3de7b6c3eaf11c/016.json"
-        }
-      ]
-    },
-    {
-      "path": "assets/previews/v4/approved-pilots/felipe-face-cap.png",
-      "size": 1870192,
-      "sha": "839a979a2bf687b9481a2a4a69ded737d32d30a0",
+      "path": "game/assets/v4/title/felipe-front-portrait.png",
+      "size": 2007308,
+      "sha": "2c7fdc70729253275b3d3694e545bb222a51ee48",
       "dimensions": [
         1182,
         1331
       ],
       "parts": [
         {
-          "path": "chunks/839a979a2bf687b9481a2a4a69ded737d32d30a0/000.json"
+          "path": "chunks/2c7fdc70729253275b3d3694e545bb222a51ee48/000.json"
         },
         {
-          "path": "chunks/839a979a2bf687b9481a2a4a69ded737d32d30a0/001.json"
+          "path": "chunks/2c7fdc70729253275b3d3694e545bb222a51ee48/001.json"
         },
         {
-          "path": "chunks/839a979a2bf687b9481a2a4a69ded737d32d30a0/002.json"
+          "path": "chunks/2c7fdc70729253275b3d3694e545bb222a51ee48/002.json"
         },
         {
-          "path": "chunks/839a979a2bf687b9481a2a4a69ded737d32d30a0/003.json"
+          "path": "chunks/2c7fdc70729253275b3d3694e545bb222a51ee48/003.json"
         },
         {
-          "path": "chunks/839a979a2bf687b9481a2a4a69ded737d32d30a0/004.json"
+          "path": "chunks/2c7fdc70729253275b3d3694e545bb222a51ee48/004.json"
         },
         {
-          "path": "chunks/839a979a2bf687b9481a2a4a69ded737d32d30a0/005.json"
+          "path": "chunks/2c7fdc70729253275b3d3694e545bb222a51ee48/005.json"
         },
         {
-          "path": "chunks/839a979a2bf687b9481a2a4a69ded737d32d30a0/006.json"
+          "path": "chunks/2c7fdc70729253275b3d3694e545bb222a51ee48/006.json"
         },
         {
-          "path": "chunks/839a979a2bf687b9481a2a4a69ded737d32d30a0/007.json"
+          "path": "chunks/2c7fdc70729253275b3d3694e545bb222a51ee48/007.json"
         },
         {
-          "path": "chunks/839a979a2bf687b9481a2a4a69ded737d32d30a0/008.json"
+          "path": "chunks/2c7fdc70729253275b3d3694e545bb222a51ee48/008.json"
         },
         {
-          "path": "chunks/839a979a2bf687b9481a2a4a69ded737d32d30a0/009.json"
+          "path": "chunks/2c7fdc70729253275b3d3694e545bb222a51ee48/009.json"
         },
         {
-          "path": "chunks/839a979a2bf687b9481a2a4a69ded737d32d30a0/010.json"
+          "path": "chunks/2c7fdc70729253275b3d3694e545bb222a51ee48/010.json"
         },
         {
-          "path": "chunks/839a979a2bf687b9481a2a4a69ded737d32d30a0/011.json"
+          "path": "chunks/2c7fdc70729253275b3d3694e545bb222a51ee48/011.json"
         },
         {
-          "path": "chunks/839a979a2bf687b9481a2a4a69ded737d32d30a0/012.json"
+          "path": "chunks/2c7fdc70729253275b3d3694e545bb222a51ee48/012.json"
         },
         {
-          "path": "chunks/839a979a2bf687b9481a2a4a69ded737d32d30a0/013.json"
+          "path": "chunks/2c7fdc70729253275b3d3694e545bb222a51ee48/013.json"
         },
         {
-          "path": "chunks/839a979a2bf687b9481a2a4a69ded737d32d30a0/014.json"
+          "path": "chunks/2c7fdc70729253275b3d3694e545bb222a51ee48/014.json"
         },
         {
-          "path": "chunks/839a979a2bf687b9481a2a4a69ded737d32d30a0/015.json"
+          "path": "chunks/2c7fdc70729253275b3d3694e545bb222a51ee48/015.json"
         },
         {
-          "path": "chunks/839a979a2bf687b9481a2a4a69ded737d32d30a0/016.json"
+          "path": "chunks/2c7fdc70729253275b3d3694e545bb222a51ee48/016.json"
         },
         {
-          "path": "chunks/839a979a2bf687b9481a2a4a69ded737d32d30a0/017.json"
+          "path": "chunks/2c7fdc70729253275b3d3694e545bb222a51ee48/017.json"
+        },
+        {
+          "path": "chunks/2c7fdc70729253275b3d3694e545bb222a51ee48/018.json"
+        },
+        {
+          "path": "chunks/2c7fdc70729253275b3d3694e545bb222a51ee48/019.json"
         }
       ]
     },
     {
-      "path": "assets/previews/v4/approved-pilots/felipe-face-v2.png",
-      "size": 2026378,
-      "sha": "b152bb9540e37b7bcea8a618ebc5f1b523373f6a",
-      "dimensions": [
-        1182,
-        1331
-      ],
-      "parts": [
-        {
-          "path": "chunks/b152bb9540e37b7bcea8a618ebc5f1b523373f6a/000.json"
-        },
-        {
-          "path": "chunks/b152bb9540e37b7bcea8a618ebc5f1b523373f6a/001.json"
-        },
-        {
-          "path": "chunks/b152bb9540e37b7bcea8a618ebc5f1b523373f6a/002.json"
-        },
-        {
-          "path": "chunks/b152bb9540e37b7bcea8a618ebc5f1b523373f6a/003.json"
-        },
-        {
-          "path": "chunks/b152bb9540e37b7bcea8a618ebc5f1b523373f6a/004.json"
-        },
-        {
-          "path": "chunks/b152bb9540e37b7bcea8a618ebc5f1b523373f6a/005.json"
-        },
-        {
-          "path": "chunks/b152bb9540e37b7bcea8a618ebc5f1b523373f6a/006.json"
-        },
-        {
-          "path": "chunks/b152bb9540e37b7bcea8a618ebc5f1b523373f6a/007.json"
-        },
-        {
-          "path": "chunks/b152bb9540e37b7bcea8a618ebc5f1b523373f6a/008.json"
-        },
-        {
-          "path": "chunks/b152bb9540e37b7bcea8a618ebc5f1b523373f6a/009.json"
-        },
-        {
-          "path": "chunks/b152bb9540e37b7bcea8a618ebc5f1b523373f6a/010.json"
-        },
-        {
-          "path": "chunks/b152bb9540e37b7bcea8a618ebc5f1b523373f6a/011.json"
-        },
-        {
-          "path": "chunks/b152bb9540e37b7bcea8a618ebc5f1b523373f6a/012.json"
-        },
-        {
-          "path": "chunks/b152bb9540e37b7bcea8a618ebc5f1b523373f6a/013.json"
-        },
-        {
-          "path": "chunks/b152bb9540e37b7bcea8a618ebc5f1b523373f6a/014.json"
-        },
-        {
-          "path": "chunks/b152bb9540e37b7bcea8a618ebc5f1b523373f6a/015.json"
-        },
-        {
-          "path": "chunks/b152bb9540e37b7bcea8a618ebc5f1b523373f6a/016.json"
-        },
-        {
-          "path": "chunks/b152bb9540e37b7bcea8a618ebc5f1b523373f6a/017.json"
-        },
-        {
-          "path": "chunks/b152bb9540e37b7bcea8a618ebc5f1b523373f6a/018.json"
-        },
-        {
-          "path": "chunks/b152bb9540e37b7bcea8a618ebc5f1b523373f6a/019.json"
-        }
-      ]
-    },
-    {
-      "path": "assets/previews/v4/approved-pilots/felipe-full-sprites-corrected.png",
-      "size": 2081536,
-      "sha": "0591fc8b0a5253bb8ab5be3a7a078f4f7668886e",
-      "dimensions": [
-        1254,
-        1254
-      ],
-      "parts": [
-        {
-          "path": "chunks/0591fc8b0a5253bb8ab5be3a7a078f4f7668886e/000.json"
-        },
-        {
-          "path": "chunks/0591fc8b0a5253bb8ab5be3a7a078f4f7668886e/001.json"
-        },
-        {
-          "path": "chunks/0591fc8b0a5253bb8ab5be3a7a078f4f7668886e/002.json"
-        },
-        {
-          "path": "chunks/0591fc8b0a5253bb8ab5be3a7a078f4f7668886e/003.json"
-        },
-        {
-          "path": "chunks/0591fc8b0a5253bb8ab5be3a7a078f4f7668886e/004.json"
-        },
-        {
-          "path": "chunks/0591fc8b0a5253bb8ab5be3a7a078f4f7668886e/005.json"
-        },
-        {
-          "path": "chunks/0591fc8b0a5253bb8ab5be3a7a078f4f7668886e/006.json"
-        },
-        {
-          "path": "chunks/0591fc8b0a5253bb8ab5be3a7a078f4f7668886e/007.json"
-        },
-        {
-          "path": "chunks/0591fc8b0a5253bb8ab5be3a7a078f4f7668886e/008.json"
-        },
-        {
-          "path": "chunks/0591fc8b0a5253bb8ab5be3a7a078f4f7668886e/009.json"
-        },
-        {
-          "path": "chunks/0591fc8b0a5253bb8ab5be3a7a078f4f7668886e/010.json"
-        },
-        {
-          "path": "chunks/0591fc8b0a5253bb8ab5be3a7a078f4f7668886e/011.json"
-        },
-        {
-          "path": "chunks/0591fc8b0a5253bb8ab5be3a7a078f4f7668886e/012.json"
-        },
-        {
-          "path": "chunks/0591fc8b0a5253bb8ab5be3a7a078f4f7668886e/013.json"
-        },
-        {
-          "path": "chunks/0591fc8b0a5253bb8ab5be3a7a078f4f7668886e/014.json"
-        },
-        {
-          "path": "chunks/0591fc8b0a5253bb8ab5be3a7a078f4f7668886e/015.json"
-        },
-        {
-          "path": "chunks/0591fc8b0a5253bb8ab5be3a7a078f4f7668886e/016.json"
-        },
-        {
-          "path": "chunks/0591fc8b0a5253bb8ab5be3a7a078f4f7668886e/017.json"
-        },
-        {
-          "path": "chunks/0591fc8b0a5253bb8ab5be3a7a078f4f7668886e/018.json"
-        },
-        {
-          "path": "chunks/0591fc8b0a5253bb8ab5be3a7a078f4f7668886e/019.json"
-        }
-      ]
-    },
-    {
-      "path": "game/assets/v4/drivers/daniel-portrait.webp",
-      "size": 585996,
-      "sha": "8c1192d9818dc8f6f7ff7f70ec4cc654921ed677",
-      "dimensions": [
-        900,
-        822
-      ],
-      "parts": [
-        {
-          "path": "chunks/8c1192d9818dc8f6f7ff7f70ec4cc654921ed677/000.json"
-        },
-        {
-          "path": "chunks/8c1192d9818dc8f6f7ff7f70ec4cc654921ed677/001.json"
-        },
-        {
-          "path": "chunks/8c1192d9818dc8f6f7ff7f70ec4cc654921ed677/002.json"
-        },
-        {
-          "path": "chunks/8c1192d9818dc8f6f7ff7f70ec4cc654921ed677/003.json"
-        },
-        {
-          "path": "chunks/8c1192d9818dc8f6f7ff7f70ec4cc654921ed677/004.json"
-        },
-        {
-          "path": "chunks/8c1192d9818dc8f6f7ff7f70ec4cc654921ed677/005.json"
-        }
-      ]
-    },
-    {
-      "path": "game/assets/v4/drivers/felipe-portrait.webp",
-      "size": 620716,
-      "sha": "8d117a536396297952871b4d33900bbce6029c6b",
+      "path": "game/assets/v4/title/felipe-front-portrait.webp",
+      "size": 672048,
+      "sha": "59260035ff5137c52a52b415de9c813632d4e758",
       "dimensions": [
         799,
         900
       ],
       "parts": [
         {
-          "path": "chunks/8d117a536396297952871b4d33900bbce6029c6b/000.json"
+          "path": "chunks/59260035ff5137c52a52b415de9c813632d4e758/000.json"
         },
         {
-          "path": "chunks/8d117a536396297952871b4d33900bbce6029c6b/001.json"
+          "path": "chunks/59260035ff5137c52a52b415de9c813632d4e758/001.json"
         },
         {
-          "path": "chunks/8d117a536396297952871b4d33900bbce6029c6b/002.json"
+          "path": "chunks/59260035ff5137c52a52b415de9c813632d4e758/002.json"
         },
         {
-          "path": "chunks/8d117a536396297952871b4d33900bbce6029c6b/003.json"
+          "path": "chunks/59260035ff5137c52a52b415de9c813632d4e758/003.json"
         },
         {
-          "path": "chunks/8d117a536396297952871b4d33900bbce6029c6b/004.json"
+          "path": "chunks/59260035ff5137c52a52b415de9c813632d4e758/004.json"
         },
         {
-          "path": "chunks/8d117a536396297952871b4d33900bbce6029c6b/005.json"
-        }
-      ]
-    },
-    {
-      "path": "game/assets/v4/title/background.png",
-      "size": 2821411,
-      "sha": "e72f8b43fc54e3bdc9fd4b22e5aa547cdfe020c6",
-      "dimensions": [
-        1672,
-        941
-      ],
-      "parts": [
-        {
-          "path": "chunks/e72f8b43fc54e3bdc9fd4b22e5aa547cdfe020c6/000.json"
+          "path": "chunks/59260035ff5137c52a52b415de9c813632d4e758/005.json"
         },
         {
-          "path": "chunks/e72f8b43fc54e3bdc9fd4b22e5aa547cdfe020c6/001.json"
-        },
-        {
-          "path": "chunks/e72f8b43fc54e3bdc9fd4b22e5aa547cdfe020c6/002.json"
-        },
-        {
-          "path": "chunks/e72f8b43fc54e3bdc9fd4b22e5aa547cdfe020c6/003.json"
-        },
-        {
-          "path": "chunks/e72f8b43fc54e3bdc9fd4b22e5aa547cdfe020c6/004.json"
-        },
-        {
-          "path": "chunks/e72f8b43fc54e3bdc9fd4b22e5aa547cdfe020c6/005.json"
-        },
-        {
-          "path": "chunks/e72f8b43fc54e3bdc9fd4b22e5aa547cdfe020c6/006.json"
-        },
-        {
-          "path": "chunks/e72f8b43fc54e3bdc9fd4b22e5aa547cdfe020c6/007.json"
-        },
-        {
-          "path": "chunks/e72f8b43fc54e3bdc9fd4b22e5aa547cdfe020c6/008.json"
-        },
-        {
-          "path": "chunks/e72f8b43fc54e3bdc9fd4b22e5aa547cdfe020c6/009.json"
-        },
-        {
-          "path": "chunks/e72f8b43fc54e3bdc9fd4b22e5aa547cdfe020c6/010.json"
-        },
-        {
-          "path": "chunks/e72f8b43fc54e3bdc9fd4b22e5aa547cdfe020c6/011.json"
-        },
-        {
-          "path": "chunks/e72f8b43fc54e3bdc9fd4b22e5aa547cdfe020c6/012.json"
-        },
-        {
-          "path": "chunks/e72f8b43fc54e3bdc9fd4b22e5aa547cdfe020c6/013.json"
-        },
-        {
-          "path": "chunks/e72f8b43fc54e3bdc9fd4b22e5aa547cdfe020c6/014.json"
-        },
-        {
-          "path": "chunks/e72f8b43fc54e3bdc9fd4b22e5aa547cdfe020c6/015.json"
-        },
-        {
-          "path": "chunks/e72f8b43fc54e3bdc9fd4b22e5aa547cdfe020c6/016.json"
-        },
-        {
-          "path": "chunks/e72f8b43fc54e3bdc9fd4b22e5aa547cdfe020c6/017.json"
-        },
-        {
-          "path": "chunks/e72f8b43fc54e3bdc9fd4b22e5aa547cdfe020c6/018.json"
-        },
-        {
-          "path": "chunks/e72f8b43fc54e3bdc9fd4b22e5aa547cdfe020c6/019.json"
-        },
-        {
-          "path": "chunks/e72f8b43fc54e3bdc9fd4b22e5aa547cdfe020c6/020.json"
-        },
-        {
-          "path": "chunks/e72f8b43fc54e3bdc9fd4b22e5aa547cdfe020c6/021.json"
-        },
-        {
-          "path": "chunks/e72f8b43fc54e3bdc9fd4b22e5aa547cdfe020c6/022.json"
-        },
-        {
-          "path": "chunks/e72f8b43fc54e3bdc9fd4b22e5aa547cdfe020c6/023.json"
-        },
-        {
-          "path": "chunks/e72f8b43fc54e3bdc9fd4b22e5aa547cdfe020c6/024.json"
-        },
-        {
-          "path": "chunks/e72f8b43fc54e3bdc9fd4b22e5aa547cdfe020c6/025.json"
-        },
-        {
-          "path": "chunks/e72f8b43fc54e3bdc9fd4b22e5aa547cdfe020c6/026.json"
-        }
-      ]
-    },
-    {
-      "path": "game/assets/v4/title/background.webp",
-      "size": 492732,
-      "sha": "44ecaba6364d676b31a18a310745fce3c98a7ea5",
-      "dimensions": [
-        1600,
-        900
-      ],
-      "parts": [
-        {
-          "path": "chunks/44ecaba6364d676b31a18a310745fce3c98a7ea5/000.json"
-        },
-        {
-          "path": "chunks/44ecaba6364d676b31a18a310745fce3c98a7ea5/001.json"
-        },
-        {
-          "path": "chunks/44ecaba6364d676b31a18a310745fce3c98a7ea5/002.json"
-        },
-        {
-          "path": "chunks/44ecaba6364d676b31a18a310745fce3c98a7ea5/003.json"
-        },
-        {
-          "path": "chunks/44ecaba6364d676b31a18a310745fce3c98a7ea5/004.json"
-        }
-      ]
-    },
-    {
-      "path": "game/assets/v4/title/daniel-front-sheet.webp",
-      "size": 802736,
-      "sha": "e2a513659cbb92831f967d72a27180fd41b1ca0c",
-      "dimensions": [
-        1600,
-        533
-      ],
-      "parts": [
-        {
-          "path": "chunks/e2a513659cbb92831f967d72a27180fd41b1ca0c/000.json"
-        },
-        {
-          "path": "chunks/e2a513659cbb92831f967d72a27180fd41b1ca0c/001.json"
-        },
-        {
-          "path": "chunks/e2a513659cbb92831f967d72a27180fd41b1ca0c/002.json"
-        },
-        {
-          "path": "chunks/e2a513659cbb92831f967d72a27180fd41b1ca0c/003.json"
-        },
-        {
-          "path": "chunks/e2a513659cbb92831f967d72a27180fd41b1ca0c/004.json"
-        },
-        {
-          "path": "chunks/e2a513659cbb92831f967d72a27180fd41b1ca0c/005.json"
-        },
-        {
-          "path": "chunks/e2a513659cbb92831f967d72a27180fd41b1ca0c/006.json"
-        },
-        {
-          "path": "chunks/e2a513659cbb92831f967d72a27180fd41b1ca0c/007.json"
-        }
-      ]
-    },
-    {
-      "path": "game/assets/v4/title/felipe-front-sheet.webp",
-      "size": 752916,
-      "sha": "a5efb5a29ae1e15e50de38a59c3dc41dec584adc",
-      "dimensions": [
-        1600,
-        533
-      ],
-      "parts": [
-        {
-          "path": "chunks/a5efb5a29ae1e15e50de38a59c3dc41dec584adc/000.json"
-        },
-        {
-          "path": "chunks/a5efb5a29ae1e15e50de38a59c3dc41dec584adc/001.json"
-        },
-        {
-          "path": "chunks/a5efb5a29ae1e15e50de38a59c3dc41dec584adc/002.json"
-        },
-        {
-          "path": "chunks/a5efb5a29ae1e15e50de38a59c3dc41dec584adc/003.json"
-        },
-        {
-          "path": "chunks/a5efb5a29ae1e15e50de38a59c3dc41dec584adc/004.json"
-        },
-        {
-          "path": "chunks/a5efb5a29ae1e15e50de38a59c3dc41dec584adc/005.json"
-        },
-        {
-          "path": "chunks/a5efb5a29ae1e15e50de38a59c3dc41dec584adc/006.json"
-        },
-        {
-          "path": "chunks/a5efb5a29ae1e15e50de38a59c3dc41dec584adc/007.json"
+          "path": "chunks/59260035ff5137c52a52b415de9c813632d4e758/006.json"
         }
       ]
     }
