@@ -7,7 +7,9 @@ export const DEFAULTS = Object.freeze({
   maxSpeed: 64, // unidades de pista por segundo (x3.6 = km/h exibido, valor de jogo, não medida real)
   countdown: 3,
 });
-export const ROAD_WIDTH = 12; // largura em unidades de pista; lateral = ±1 é a borda do asfalto
+export const ROAD_WIDTH = 18; // largura em unidades de pista (v0.1.0: 12); lateral = ±1 é a borda do asfalto
+export const CAR_LENGTH = 9; // caixa de colisão (unidades de pista)
+export const CAR_WIDTH = 0.55; // caixa de colisão (unidades laterais; 1 = meia pista)
 export const LATERAL_LIMIT = 1.65; // limite duro (zebra + escape)
 export const CHECKPOINTS = 8; // portões igualmente espaçados; o 8 é a linha de chegada
 
