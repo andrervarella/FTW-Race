@@ -1,0 +1,38 @@
+{
+  "status": "owner-approved-for-integration",
+  "date": "2026-11-02",
+  "approvalText": "Aprovar a capa",
+  "composition": "layered DOM/CSS; exact original logo PNGs and approved portraits; no mirroring",
+  "assets": [
+    {
+      "file": "game/assets/v4/title/background.png",
+      "source": "/workspace/work/pilot-art-review/cover-background.png",
+      "sha256": "dc6eb16e91c5e38393aa0aeec936a54f39f82b41d3be9c373ea6c2f16ecb2d16",
+      "approval": "owner approved cover; original supplied logo/car files preserved"
+    },
+    {
+      "file": "game/assets/v4/title/daniel-front-sheet.png",
+      "source": "/workspace/FTW-Race/assets/previews/daniel/carro-frente.png",
+      "sha256": "02df8b6c5abb0c1833aa567c707c51c1669b54bf2065989f8de17d190aaa5b38",
+      "approval": "owner approved cover; original supplied logo/car files preserved"
+    },
+    {
+      "file": "game/assets/v4/title/felipe-front-sheet.png",
+      "source": "/workspace/FTW-Race/assets/previews/felipe/carro-frente.png",
+      "sha256": "ce79d1f6a6a1ef2336d4d8ce22248ae8f36693160cea3f40ddcd857ad3fda1bb",
+      "approval": "owner approved cover; original supplied logo/car files preserved"
+    },
+    {
+      "file": "game/assets/v4/title/ftw-official.png",
+      "source": "/workspace/FTW-Race/referencias/marcas-e-produto/ftw_logo_oficial_isolado.png",
+      "sha256": "5ca79b7cadd5d2af407513cf5d2e01ab382dc16064a84ffe219419801ccc0347",
+      "approval": "owner approved cover; original supplied logo/car files preserved"
+    },
+    {
+      "file": "game/assets/v4/title/diabo-verde-official.png",
+      "source": "/workspace/FTW-Race/referencias/marcas-e-produto/diabo_verde_logo_oficial.png",
+      "sha256": "efd50c7ea40dc0c5fe54ae92246249d1230ac6c1d43f5d271f7a1e94267f8137",
+      "approval": "owner approved cover; original supplied logo/car files preserved"
+    }
+  ]
+}

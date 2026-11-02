@@ -7,7 +7,7 @@ root=Path(__file__).resolve().parents[2]
 manifest=root/'assets/sprites/V4_MANIFEST.json'
 def record(path, status):
     data={'path':str(path.relative_to(root)), 'sha256':hashlib.sha256(path.read_bytes()).hexdigest(), 'bytes':path.stat().st_size, 'status':status}
-    if path.suffix.lower() in ['.png','.jpg','.jpeg']:
+    if path.suffix.lower() in ['.png','.jpg','.jpeg','.webp']:
         with Image.open(path) as im:
             data['size']=list(im.size)
             if im.mode=='RGBA': data['alphaExtrema']=list(im.getchannel('A').getextrema())
@@ -17,13 +17,16 @@ if '--write' in sys.argv:
     rows=[]
     for folder in ['referencias','assets/previews']:
         for p in sorted((root/folder).rglob('*')):
-            if p.suffix.lower() not in ['.png','.jpg','.jpeg']:continue
+            if p.suffix.lower() not in ['.png','.jpg','.jpeg','.webp']:continue
             status='rejected-not-distributed' if '/arquivo/' in str(p) else 'official-user-reference' if folder=='referencias' else 'preliminary-human-review-pending'
+            if '/approved-pilots/' in str(p): status='owner-approved-source'
             rows.append(record(p,status))
     for folder in ['game/assets','game/cars']:
         for p in sorted((root/folder).rglob('*')):
-            if p.is_file():rows.append(record(p,'original-logo-or-legacy-engine' if '/legacy/' in str(p) else 'derived-or-new-art-human-review-pending'))
-    manifest.write_text(json.dumps({'version':'4-preview','approval':'not-final-human-art-review-required','details':['game/assets/v4/render-assets.json','game/assets/v4/cars/npc-cars.json','game/assets/v4/podium/frames.json'],'assets':rows},indent=2)+'\n')
+            if p.is_file():
+                approved = '/drivers/' in str(p) or '/title/' in str(p) or ('/podium/' in str(p) and p.name.startswith(('daniel-','felipe-')))
+                rows.append(record(p,'owner-approved-derived' if approved else 'original-logo-or-legacy-engine' if '/legacy/' in str(p) else 'derived-or-new-art-human-review-pending'))
+    manifest.write_text(json.dumps({'version':'4-preview','approval':'pilots-and-cover-owner-approved; other-new-art-review-pending','details':['game/assets/v4/render-assets.json','game/assets/v4/cars/npc-cars.json','game/assets/v4/podium/frames.json','game/assets/v4/drivers/approved-pilots.json','game/assets/v4/title/approval.json'],'assets':rows},indent=2)+'\n')
 else:
     data=json.loads(manifest.read_text())
     for row in data['assets']:

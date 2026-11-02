@@ -1,0 +1,1075 @@
+{
+  "version": "approved-pilots-1",
+  "frameSize": [
+    256,
+    512
+  ],
+  "ground": 500,
+  "pivot": [
+    0.5,
+    0.9765625
+  ],
+  "commonScale": 0.7,
+  "alphaThreshold": 80,
+  "columnBoundaries": [
+    0,
+    314,
+    627,
+    940,
+    1254
+  ],
+  "rowBoundaries": [
+    0,
+    627,
+    1254
+  ],
+  "componentConnectivity": 8,
+  "footAnchorMethod": "midpoint of both feet in bottom90 source pixels",
+  "sourceSelection": "largest full-row component overlapping nominal sourceCell; sourceCrop is its tight global bounds",
+  "approval": "approved-by-owner",
+  "sheetApproval": "Owner approved both shown corrected sheets (“Aprovado”), 2026-11-02",
+  "coverApproval": "Owner explicitly selected “Aprovar a capa”, 2026-11-02",
+  "sources": [
+    {
+      "file": "assets/previews/v4/approved-pilots/daniel-full-sprites-corrected.png",
+      "sha256": "e1d26a16e7d2d55ac08f212f3646da5c88a5f17688c2a4f29208ebdb22bdbb3b",
+      "size": [
+        1254,
+        1254
+      ],
+      "originalPath": "/workspace/work/pilot-art-review/daniel-full-sprites-corrected.png",
+      "approval": "approved-by-owner",
+      "approvalScope": "eight full-body poses including corrected open bottles",
+      "approvalReference": "Owner approved shown artwork (“Aprovado”) on 2026-11-02"
+    },
+    {
+      "file": "assets/previews/v4/approved-pilots/felipe-full-sprites-corrected.png",
+      "sha256": "e015e657fea02102dfa8babc83b2fe894442f33593ee6a47ffe495575f2d476f",
+      "size": [
+        1254,
+        1254
+      ],
+      "originalPath": "/workspace/work/pilot-art-review/felipe-full-sprites-corrected.png",
+      "approval": "approved-by-owner",
+      "approvalScope": "eight full-body poses including corrected open bottles",
+      "approvalReference": "Owner approved shown artwork (“Aprovado”) on 2026-11-02"
+    },
+    {
+      "file": "assets/previews/v4/approved-pilots/daniel-face-v2.png",
+      "sha256": "701f3077485d037a72a867fd32473bba182525fb448111a97db0fb19c47d3bcb",
+      "size": [
+        1312,
+        1199
+      ],
+      "originalPath": "/workspace/work/pilot-art-review/daniel-face-v2.png",
+      "approval": "approved-by-owner",
+      "approvalScope": "face anchor",
+      "approvalReference": "Owner approved shown artwork (“Aprovado”) on 2026-11-02"
+    },
+    {
+      "file": "assets/previews/v4/approved-pilots/felipe-face-v2.png",
+      "sha256": "da316b991e51337bd989f7bc01882049c433b047c33f05c4b40ddfdbe6b6cfb8",
+      "size": [
+        1182,
+        1331
+      ],
+      "originalPath": "/workspace/work/pilot-art-review/felipe-face-v2.png",
+      "approval": "approved-by-owner",
+      "approvalScope": "face anchor",
+      "approvalReference": "Owner approved shown artwork (“Aprovado”) on 2026-11-02"
+    },
+    {
+      "file": "assets/previews/v4/approved-pilots/felipe-face-cap.png",
+      "sha256": "d8d6b6cb0db27aee2ea0bc754fd260b3f108a6ba50a43a8c0aafb5c46f0849fd",
+      "size": [
+        1182,
+        1331
+      ],
+      "originalPath": "/workspace/work/pilot-art-review/felipe-face-cap.png",
+      "approval": "approved-by-owner",
+      "approvalScope": "face anchor and cap cover variant",
+      "approvalReference": "Owner explicitly selected “Aprovar a capa” on 2026-11-02"
+    }
+  ],
+  "views": [
+    {
+      "key": "daniel",
+      "name": "neutral",
+      "file": "game/assets/v4/drivers/daniel-neutral.png",
+      "source": "assets/previews/v4/approved-pilots/daniel-full-sprites-corrected.png",
+      "sourceIndex": 0,
+      "sourceCell": [
+        0,
+        0,
+        314,
+        627
+      ],
+      "sourceCrop": [
+        53,
+        16,
+        275,
+        602
+      ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        222,
+        586
+      ],
+      "sourceFootBounds": [
+        66,
+        512,
+        260,
+        602
+      ],
+      "sourceFootAnchor": [
+        163.0,
+        602
+      ],
+      "retainedSourcePixels": 78429,
+      "excludedCellPixels": 0,
+      "recoveredOutsideCellPixels": 0,
+      "size": [
+        256,
+        512
+      ],
+      "usefulBounds": [
+        51,
+        90,
+        206,
+        500
+      ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "a570a102c09fc98c346c12dfc94e3dabf3e4a73af4da5113ec0f6ebb71579e59"
+    },
+    {
+      "key": "daniel",
+      "name": "helmet",
+      "file": "game/assets/v4/drivers/daniel-helmet.png",
+      "source": "assets/previews/v4/approved-pilots/daniel-full-sprites-corrected.png",
+      "sourceIndex": 1,
+      "sourceCell": [
+        314,
+        0,
+        627,
+        627
+      ],
+      "sourceCrop": [
+        367,
+        15,
+        588,
+        602
+      ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        221,
+        587
+      ],
+      "sourceFootBounds": [
+        380,
+        512,
+        574,
+        602
+      ],
+      "sourceFootAnchor": [
+        477.0,
+        602
+      ],
+      "retainedSourcePixels": 80825,
+      "excludedCellPixels": 0,
+      "recoveredOutsideCellPixels": 0,
+      "size": [
+        256,
+        512
+      ],
+      "usefulBounds": [
+        51,
+        89,
+        206,
+        500
+      ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "7f31d2d6b177ff5d1921bd7c69419dad8546d0934fbd60978518b18bc963e3de"
+    },
+    {
+      "key": "daniel",
+      "name": "entry",
+      "file": "game/assets/v4/podium/daniel-0.png",
+      "source": "assets/previews/v4/approved-pilots/daniel-full-sprites-corrected.png",
+      "sourceIndex": 2,
+      "sourceCell": [
+        627,
+        0,
+        940,
+        627
+      ],
+      "sourceCrop": [
+        663,
+        13,
+        894,
+        606
+      ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        231,
+        593
+      ],
+      "sourceFootBounds": [
+        729,
+        516,
+        823,
+        606
+      ],
+      "sourceFootAnchor": [
+        776.0,
+        606
+      ],
+      "retainedSourcePixels": 74237,
+      "excludedCellPixels": 0,
+      "recoveredOutsideCellPixels": 0,
+      "size": [
+        256,
+        512
+      ],
+      "usefulBounds": [
+        49,
+        85,
+        211,
+        500
+      ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "43913befab1bc8bd5c3f53c6e0301dd5faa9249850fc2fe68f60ff25be921e10"
+    },
+    {
+      "key": "daniel",
+      "name": "receive",
+      "file": "game/assets/v4/podium/daniel-1.png",
+      "source": "assets/previews/v4/approved-pilots/daniel-full-sprites-corrected.png",
+      "sourceIndex": 3,
+      "sourceCell": [
+        940,
+        0,
+        1254,
+        627
+      ],
+      "sourceCrop": [
+        981,
+        17,
+        1196,
+        601
+      ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        215,
+        584
+      ],
+      "sourceFootBounds": [
+        998,
+        511,
+        1191,
+        601
+      ],
+      "sourceFootAnchor": [
+        1094.5,
+        601
+      ],
+      "retainedSourcePixels": 72750,
+      "excludedCellPixels": 0,
+      "recoveredOutsideCellPixels": 0,
+      "size": [
+        256,
+        512
+      ],
+      "usefulBounds": [
+        49,
+        91,
+        199,
+        500
+      ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "b686878ab1db198d4e400f0bbe87287985ede4439d2057084223637eb9735402"
+    },
+    {
+      "key": "daniel",
+      "name": "raise",
+      "file": "game/assets/v4/podium/daniel-2.png",
+      "source": "assets/previews/v4/approved-pilots/daniel-full-sprites-corrected.png",
+      "sourceIndex": 4,
+      "sourceCell": [
+        0,
+        627,
+        314,
+        1254
+      ],
+      "sourceCrop": [
+        28,
+        634,
+        280,
+        1239
+      ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        252,
+        605
+      ],
+      "sourceFootBounds": [
+        67,
+        1149,
+        270,
+        1239
+      ],
+      "sourceFootAnchor": [
+        168.5,
+        1239
+      ],
+      "retainedSourcePixels": 76901,
+      "excludedCellPixels": 0,
+      "recoveredOutsideCellPixels": 0,
+      "size": [
+        256,
+        512
+      ],
+      "usefulBounds": [
+        30,
+        76,
+        206,
+        500
+      ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "38781117df79aeb60de925dbf0bff82c4daddedecb2fa549ba0061e4709ada05"
+    },
+    {
+      "key": "daniel",
+      "name": "open",
+      "file": "game/assets/v4/podium/daniel-3.png",
+      "source": "assets/previews/v4/approved-pilots/daniel-full-sprites-corrected.png",
+      "sourceIndex": 5,
+      "sourceCell": [
+        314,
+        627,
+        627,
+        1254
+      ],
+      "sourceCrop": [
+        377,
+        678,
+        592,
+        1238
+      ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        215,
+        560
+      ],
+      "sourceFootBounds": [
+        381,
+        1148,
+        583,
+        1238
+      ],
+      "sourceFootAnchor": [
+        482.0,
+        1238
+      ],
+      "retainedSourcePixels": 68030,
+      "excludedCellPixels": 0,
+      "recoveredOutsideCellPixels": 0,
+      "size": [
+        256,
+        512
+      ],
+      "usefulBounds": [
+        54,
+        108,
+        205,
+        500
+      ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "1aa1bb6383d20a9ade4423625905d0aadc2e51fdfb45de94803ac0d61d5ba1f9"
+    },
+    {
+      "key": "daniel",
+      "name": "spray",
+      "file": "game/assets/v4/podium/daniel-4.png",
+      "source": "assets/previews/v4/approved-pilots/daniel-full-sprites-corrected.png",
+      "sourceIndex": 6,
+      "sourceCell": [
+        627,
+        627,
+        940,
+        1254
+      ],
+      "sourceCrop": [
+        661,
+        677,
+        903,
+        1239
+      ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        242,
+        562
+      ],
+      "sourceFootBounds": [
+        661,
+        1149,
+        903,
+        1239
+      ],
+      "sourceFootAnchor": [
+        782.0,
+        1239
+      ],
+      "retainedSourcePixels": 68995,
+      "excludedCellPixels": 0,
+      "recoveredOutsideCellPixels": 0,
+      "size": [
+        256,
+        512
+      ],
+      "usefulBounds": [
+        43,
+        107,
+        213,
+        500
+      ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "4d93a17dfdde35ba4a13654a9c6e533ab5f022a50bf6a16c27ef1373054dfbff"
+    },
+    {
+      "key": "daniel",
+      "name": "final",
+      "file": "game/assets/v4/podium/daniel-5.png",
+      "source": "assets/previews/v4/approved-pilots/daniel-full-sprites-corrected.png",
+      "sourceIndex": 7,
+      "sourceCell": [
+        940,
+        627,
+        1254,
+        1254
+      ],
+      "sourceCrop": [
+        949,
+        631,
+        1244,
+        1240
+      ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        295,
+        609
+      ],
+      "sourceFootBounds": [
+        980,
+        1150,
+        1206,
+        1240
+      ],
+      "sourceFootAnchor": [
+        1093.0,
+        1240
+      ],
+      "retainedSourcePixels": 78588,
+      "excludedCellPixels": 0,
+      "recoveredOutsideCellPixels": 0,
+      "size": [
+        256,
+        512
+      ],
+      "usefulBounds": [
+        27,
+        74,
+        234,
+        500
+      ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "5314b13595c142b79fd301f22da77c596c1aad8ec0bd0ed74b171afd6d29a081"
+    },
+    {
+      "key": "felipe",
+      "name": "neutral",
+      "file": "game/assets/v4/drivers/felipe-neutral.png",
+      "source": "assets/previews/v4/approved-pilots/felipe-full-sprites-corrected.png",
+      "sourceIndex": 0,
+      "sourceCell": [
+        0,
+        0,
+        314,
+        627
+      ],
+      "sourceCrop": [
+        63,
+        12,
+        290,
+        606
+      ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        227,
+        594
+      ],
+      "sourceFootBounds": [
+        78,
+        516,
+        282,
+        606
+      ],
+      "sourceFootAnchor": [
+        180.0,
+        606
+      ],
+      "retainedSourcePixels": 81512,
+      "excludedCellPixels": 0,
+      "recoveredOutsideCellPixels": 0,
+      "size": [
+        256,
+        512
+      ],
+      "usefulBounds": [
+        46,
+        84,
+        205,
+        500
+      ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "08fd1475f0a46f881580df4dfa4e16c4fb9a57b3098ebbe1d7adc887113310d7"
+    },
+    {
+      "key": "felipe",
+      "name": "helmet",
+      "file": "game/assets/v4/drivers/felipe-helmet.png",
+      "source": "assets/previews/v4/approved-pilots/felipe-full-sprites-corrected.png",
+      "sourceIndex": 1,
+      "sourceCell": [
+        314,
+        0,
+        627,
+        627
+      ],
+      "sourceCrop": [
+        360,
+        14,
+        589,
+        606
+      ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        229,
+        592
+      ],
+      "sourceFootBounds": [
+        377,
+        516,
+        579,
+        606
+      ],
+      "sourceFootAnchor": [
+        478.0,
+        606
+      ],
+      "retainedSourcePixels": 82499,
+      "excludedCellPixels": 0,
+      "recoveredOutsideCellPixels": 0,
+      "size": [
+        256,
+        512
+      ],
+      "usefulBounds": [
+        45,
+        86,
+        206,
+        500
+      ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "44569cb72116deafd5667f470d9f0074d1da2248003b52d9ee05c21083b45c32"
+    },
+    {
+      "key": "felipe",
+      "name": "entry",
+      "file": "game/assets/v4/podium/felipe-0.png",
+      "source": "assets/previews/v4/approved-pilots/felipe-full-sprites-corrected.png",
+      "sourceIndex": 2,
+      "sourceCell": [
+        627,
+        0,
+        940,
+        627
+      ],
+      "sourceCrop": [
+        667,
+        12,
+        899,
+        609
+      ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        232,
+        597
+      ],
+      "sourceFootBounds": [
+        728,
+        519,
+        827,
+        609
+      ],
+      "sourceFootAnchor": [
+        777.5,
+        609
+      ],
+      "retainedSourcePixels": 76200,
+      "excludedCellPixels": 0,
+      "recoveredOutsideCellPixels": 0,
+      "size": [
+        256,
+        512
+      ],
+      "usefulBounds": [
+        51,
+        82,
+        213,
+        500
+      ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "e3b11672fd40420e2d98cbdca876a367ce9f654676dd48ff237a94cfa542d67f"
+    },
+    {
+      "key": "felipe",
+      "name": "receive",
+      "file": "game/assets/v4/podium/felipe-1.png",
+      "source": "assets/previews/v4/approved-pilots/felipe-full-sprites-corrected.png",
+      "sourceIndex": 3,
+      "sourceCell": [
+        940,
+        0,
+        1254,
+        627
+      ],
+      "sourceCrop": [
+        962,
+        12,
+        1187,
+        605
+      ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        225,
+        593
+      ],
+      "sourceFootBounds": [
+        976,
+        515,
+        1187,
+        605
+      ],
+      "sourceFootAnchor": [
+        1081.5,
+        605
+      ],
+      "retainedSourcePixels": 75727,
+      "excludedCellPixels": 0,
+      "recoveredOutsideCellPixels": 0,
+      "size": [
+        256,
+        512
+      ],
+      "usefulBounds": [
+        44,
+        85,
+        202,
+        500
+      ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "245241cbb8768643b17d537aa8a1bff4854c8b46a9b61d9814c674fdca307195"
+    },
+    {
+      "key": "felipe",
+      "name": "raise",
+      "file": "game/assets/v4/podium/felipe-2.png",
+      "source": "assets/previews/v4/approved-pilots/felipe-full-sprites-corrected.png",
+      "sourceIndex": 4,
+      "sourceCell": [
+        0,
+        627,
+        314,
+        1254
+      ],
+      "sourceCrop": [
+        48,
+        635,
+        308,
+        1246
+      ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        260,
+        611
+      ],
+      "sourceFootBounds": [
+        78,
+        1156,
+        298,
+        1246
+      ],
+      "sourceFootAnchor": [
+        188.0,
+        1246
+      ],
+      "retainedSourcePixels": 81566,
+      "excludedCellPixels": 0,
+      "recoveredOutsideCellPixels": 0,
+      "size": [
+        256,
+        512
+      ],
+      "usefulBounds": [
+        30,
+        72,
+        212,
+        500
+      ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "3661cd9550fc0a47f2c2da5a9aa89ffb8e273a64fee9eb16f32448e3d87f9277"
+    },
+    {
+      "key": "felipe",
+      "name": "open",
+      "file": "game/assets/v4/podium/felipe-3.png",
+      "source": "assets/previews/v4/approved-pilots/felipe-full-sprites-corrected.png",
+      "sourceIndex": 5,
+      "sourceCell": [
+        314,
+        627,
+        627,
+        1254
+      ],
+      "sourceCrop": [
+        345,
+        671,
+        580,
+        1245
+      ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        235,
+        574
+      ],
+      "sourceFootBounds": [
+        369,
+        1155,
+        578,
+        1245
+      ],
+      "sourceFootAnchor": [
+        473.5,
+        1245
+      ],
+      "retainedSourcePixels": 73635,
+      "excludedCellPixels": 0,
+      "recoveredOutsideCellPixels": 0,
+      "size": [
+        256,
+        512
+      ],
+      "usefulBounds": [
+        38,
+        98,
+        203,
+        500
+      ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "96110ee4c1a72ab3a905c2a163978270ade7ce30c1c91493f06b285949fa6efc"
+    },
+    {
+      "key": "felipe",
+      "name": "spray",
+      "file": "game/assets/v4/podium/felipe-4.png",
+      "source": "assets/previews/v4/approved-pilots/felipe-full-sprites-corrected.png",
+      "sourceIndex": 6,
+      "sourceCell": [
+        627,
+        627,
+        940,
+        1254
+      ],
+      "sourceCrop": [
+        636,
+        671,
+        885,
+        1246
+      ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        249,
+        575
+      ],
+      "sourceFootBounds": [
+        655,
+        1156,
+        885,
+        1246
+      ],
+      "sourceFootAnchor": [
+        770.0,
+        1246
+      ],
+      "retainedSourcePixels": 70295,
+      "excludedCellPixels": 223,
+      "recoveredOutsideCellPixels": 0,
+      "size": [
+        256,
+        512
+      ],
+      "usefulBounds": [
+        34,
+        98,
+        209,
+        500
+      ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "0809ffb53c8dcc82d7467ab45bd016132c846bf9d48d33b478a4052d7f678c50"
+    },
+    {
+      "key": "felipe",
+      "name": "final",
+      "file": "game/assets/v4/podium/felipe-5.png",
+      "source": "assets/previews/v4/approved-pilots/felipe-full-sprites-corrected.png",
+      "sourceIndex": 7,
+      "sourceCell": [
+        940,
+        627,
+        1254,
+        1254
+      ],
+      "sourceCrop": [
+        935,
+        631,
+        1230,
+        1245
+      ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        295,
+        614
+      ],
+      "sourceFootBounds": [
+        974,
+        1155,
+        1194,
+        1245
+      ],
+      "sourceFootAnchor": [
+        1084.0,
+        1245
+      ],
+      "retainedSourcePixels": 81587,
+      "excludedCellPixels": 0,
+      "recoveredOutsideCellPixels": 223,
+      "size": [
+        256,
+        512
+      ],
+      "usefulBounds": [
+        24,
+        70,
+        230,
+        500
+      ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "60ef61f199a5c9946d51bb66da257618300da3121556c95c6d3f8f656118c6d3"
+    }
+  ],
+  "portraits": [
+    {
+      "key": "daniel",
+      "file": "game/assets/v4/drivers/daniel-portrait.png",
+      "source": "assets/previews/v4/approved-pilots/daniel-face-v2.png",
+      "size": [
+        1312,
+        1199
+      ],
+      "sha256": "701f3077485d037a72a867fd32473bba182525fb448111a97db0fb19c47d3bcb",
+      "operation": "byte-for-byte copy",
+      "approval": "approved-by-owner",
+      "approvalScope": "approved face anchor",
+      "approvedFaceAnchor": "assets/previews/v4/approved-pilots/daniel-face-v2.png",
+      "approvedFaceAnchorSha256": "701f3077485d037a72a867fd32473bba182525fb448111a97db0fb19c47d3bcb",
+      "approvedFaceAnchorStatus": "approved-by-owner"
+    },
+    {
+      "key": "felipe",
+      "file": "game/assets/v4/drivers/felipe-portrait.png",
+      "source": "assets/previews/v4/approved-pilots/felipe-face-cap.png",
+      "size": [
+        1182,
+        1331
+      ],
+      "sha256": "d8d6b6cb0db27aee2ea0bc754fd260b3f108a6ba50a43a8c0aafb5c46f0849fd",
+      "operation": "byte-for-byte copy",
+      "approval": "approved-by-owner",
+      "approvalScope": "approved face anchor and explicitly approved cap cover variant",
+      "approvedFaceAnchor": "assets/previews/v4/approved-pilots/felipe-face-v2.png",
+      "approvedFaceAnchorSha256": "da316b991e51337bd989f7bc01882049c433b047c33f05c4b40ddfdbe6b6cfb8",
+      "approvedFaceAnchorStatus": "approved-by-owner"
+    }
+  ],
+  "npcBaseline": "assets/previews/v4/approved-pilots/npc-baseline.json"
+}

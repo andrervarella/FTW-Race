@@ -1,0 +1,87 @@
+[
+  {
+    "file": "game/assets/v4/drivers/daniel-portrait.webp",
+    "source": "game/assets/v4/drivers/daniel-portrait.png",
+    "sourceSha256": "701f3077485d037a72a867fd32473bba182525fb448111a97db0fb19c47d3bcb",
+    "sha256": "1e64a5077e55042583239070289d30fab10ce4b3b539615ffee83475b793b4b0",
+    "originalSize": [
+      1312,
+      1199
+    ],
+    "size": [
+      900,
+      822
+    ],
+    "method": "aspect-preserving downsample and lossless WebP; encoded pixels verified exactly",
+    "bytes": 585996,
+    "approval": "owner-approved-design; technical delivery encoding"
+  },
+  {
+    "file": "game/assets/v4/drivers/felipe-portrait.webp",
+    "source": "game/assets/v4/drivers/felipe-portrait.png",
+    "sourceSha256": "d8d6b6cb0db27aee2ea0bc754fd260b3f108a6ba50a43a8c0aafb5c46f0849fd",
+    "sha256": "210aa3f0498ce5016f0e6f96ae4cbdd692dc3fed49206a41f27628dd190091cd",
+    "originalSize": [
+      1182,
+      1331
+    ],
+    "size": [
+      799,
+      900
+    ],
+    "method": "aspect-preserving downsample and lossless WebP; encoded pixels verified exactly",
+    "bytes": 620716,
+    "approval": "owner-approved-design; technical delivery encoding"
+  },
+  {
+    "file": "game/assets/v4/title/daniel-front-sheet.webp",
+    "source": "game/assets/v4/title/daniel-front-sheet.png",
+    "sourceSha256": "02df8b6c5abb0c1833aa567c707c51c1669b54bf2065989f8de17d190aaa5b38",
+    "sha256": "a81767b75c6fe8591032c0c0d10caa59f725321732348ddf16f072dc8e11c33d",
+    "originalSize": [
+      2172,
+      724
+    ],
+    "size": [
+      1600,
+      533
+    ],
+    "method": "aspect-preserving downsample and lossless WebP; encoded pixels verified exactly",
+    "bytes": 802736,
+    "approval": "owner-approved-design; technical delivery encoding"
+  },
+  {
+    "file": "game/assets/v4/title/felipe-front-sheet.webp",
+    "source": "game/assets/v4/title/felipe-front-sheet.png",
+    "sourceSha256": "ce79d1f6a6a1ef2336d4d8ce22248ae8f36693160cea3f40ddcd857ad3fda1bb",
+    "sha256": "425a136f721bf7c231f7170823699025c18554ba3b0dfe973c16a2b77378293e",
+    "originalSize": [
+      2172,
+      724
+    ],
+    "size": [
+      1600,
+      533
+    ],
+    "method": "aspect-preserving downsample and lossless WebP; encoded pixels verified exactly",
+    "bytes": 752916,
+    "approval": "owner-approved-design; technical delivery encoding"
+  },
+  {
+    "file": "game/assets/v4/title/background.webp",
+    "source": "game/assets/v4/title/background.png",
+    "sourceSha256": "dc6eb16e91c5e38393aa0aeec936a54f39f82b41d3be9c373ea6c2f16ecb2d16",
+    "sha256": "2b5da48e6d7bc34d9a793ffd5cf3a67edfac8e069110915bad2a96bc9085ba75",
+    "originalSize": [
+      1672,
+      941
+    ],
+    "size": [
+      1600,
+      900
+    ],
+    "method": "WebP92 scenery; original PNG preserved",
+    "bytes": 492732,
+    "approval": "owner-approved-design; technical delivery encoding"
+  }
+]

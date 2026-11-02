@@ -1,0 +1,62 @@
+[
+  {
+    "file": "assets/previews/v4/approved-pilots/daniel-full-sprites-corrected.png",
+    "sha256": "e1d26a16e7d2d55ac08f212f3646da5c88a5f17688c2a4f29208ebdb22bdbb3b",
+    "size": [
+      1254,
+      1254
+    ],
+    "originalPath": "/workspace/work/pilot-art-review/daniel-full-sprites-corrected.png",
+    "approval": "approved-by-owner",
+    "approvalScope": "eight full-body poses including corrected open bottles",
+    "approvalReference": "Owner approved shown artwork (“Aprovado”) on 2026-11-02"
+  },
+  {
+    "file": "assets/previews/v4/approved-pilots/felipe-full-sprites-corrected.png",
+    "sha256": "e015e657fea02102dfa8babc83b2fe894442f33593ee6a47ffe495575f2d476f",
+    "size": [
+      1254,
+      1254
+    ],
+    "originalPath": "/workspace/work/pilot-art-review/felipe-full-sprites-corrected.png",
+    "approval": "approved-by-owner",
+    "approvalScope": "eight full-body poses including corrected open bottles",
+    "approvalReference": "Owner approved shown artwork (“Aprovado”) on 2026-11-02"
+  },
+  {
+    "file": "assets/previews/v4/approved-pilots/daniel-face-v2.png",
+    "sha256": "701f3077485d037a72a867fd32473bba182525fb448111a97db0fb19c47d3bcb",
+    "size": [
+      1312,
+      1199
+    ],
+    "originalPath": "/workspace/work/pilot-art-review/daniel-face-v2.png",
+    "approval": "approved-by-owner",
+    "approvalScope": "face anchor",
+    "approvalReference": "Owner approved shown artwork (“Aprovado”) on 2026-11-02"
+  },
+  {
+    "file": "assets/previews/v4/approved-pilots/felipe-face-v2.png",
+    "sha256": "da316b991e51337bd989f7bc01882049c433b047c33f05c4b40ddfdbe6b6cfb8",
+    "size": [
+      1182,
+      1331
+    ],
+    "originalPath": "/workspace/work/pilot-art-review/felipe-face-v2.png",
+    "approval": "approved-by-owner",
+    "approvalScope": "face anchor",
+    "approvalReference": "Owner approved shown artwork (“Aprovado”) on 2026-11-02"
+  },
+  {
+    "file": "assets/previews/v4/approved-pilots/felipe-face-cap.png",
+    "sha256": "d8d6b6cb0db27aee2ea0bc754fd260b3f108a6ba50a43a8c0aafb5c46f0849fd",
+    "size": [
+      1182,
+      1331
+    ],
+    "originalPath": "/workspace/work/pilot-art-review/felipe-face-cap.png",
+    "approval": "approved-by-owner",
+    "approvalScope": "face anchor and cap cover variant",
+    "approvalReference": "Owner explicitly selected “Aprovar a capa” on 2026-11-02"
+  }
+]

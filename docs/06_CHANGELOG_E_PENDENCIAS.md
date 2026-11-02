@@ -1,4 +1,10 @@
 # Registro e continuidade
+## 02/11/2026 — pilotos e capa aprovados
+- Proprietário aprovou os rostos corrigidos com base nos novos closes, as16poses de corpo inteiro e a capa com os logos oficiais.
+- Preparados retratos próprios para menus, vistas com boné/capacete e12quadros novos de pódio; preservados os24arquivos NPC e seu resultado real.
+- Capa integrada em camadas responsivas com carros canônicos, botões de toque e descarte do observador ao navegar; PNGs oficiais idênticos.
+- Node45/45 e verificação técnica de16poses passaram; corrida completa/publicação em verificação. Ver APPROVED_PILOT_ART_QA.md.
+
 ## 02/11/2026 — NPCs conforme a referência de quatro carros
 - Criados quatro atlases PNG e24sprites individuais: traseira, esquerda/direita e frenagem nas três vistas, preservando aerofólio, gaiola, lanternas, escapes e gancho da referência.
 - Runtime Phaser usa as novas vistas com proporção e pivô verificados; seleção estável pelo volante e freio efetivo. Física e resultados preservados.

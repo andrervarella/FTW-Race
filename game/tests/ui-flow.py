@@ -63,6 +63,23 @@ with sync_playwright() as p:
         page.get_by_role('button',name='VER PÓDIO',exact=True).click()
         assert page.locator('.podium-screen').get_attribute('data-winner') == winner
         assert f'{winner}-0.png' in page.locator('.champion-frame').get_attribute('src')
+        if winner in ['daniel', 'felipe']:
+            page.evaluate('for(let i=0;i<56;i++) ui.update(ui.lastUpdate + 100)')
+            assert page.locator('.podium-screen').get_attribute('data-stage') == '4'
+            page.wait_for_function('document.querySelector(".champion-frame").complete')
+            image_box = page.locator('.champion-frame').bounding_box()
+            spray_box = page.locator('.champagne-fx').bounding_box()
+            mouth = (185,165) if winner == 'daniel' else (43,139)
+            expected_x = image_box['x'] + image_box['width'] * mouth[0] / 256
+            expected_y = image_box['y'] + image_box['height'] * mouth[1] / 512
+            assert abs(spray_box['x'] - expected_x) < 1.5, f'{winner}: spray must start at the drawn open bottle mouth'
+            assert abs(spray_box['y'] - expected_y) < 1.5, f'{winner}: spray height must match the drawn open bottle mouth'
+            direction = page.locator('.champagne-fx img').first.evaluate("""el => {
+                el.style.animation='none';el.style.transform='translate(var(--x),var(--y))';
+                const x=new DOMMatrixReadOnly(getComputedStyle(el).transform).m41;
+                el.style.removeProperty('animation');el.style.removeProperty('transform');return x;
+            }""")
+            assert direction > 0 if winner == 'daniel' else direction < 0
         page.evaluate('for(let i=0;i<90;i++) ui.update(ui.lastUpdate + 100)')
         assert page.locator('.podium-screen').get_attribute('data-stage') == '5'
         page.get_by_role('button',name='VOLTAR À CAPA',exact=True).click()

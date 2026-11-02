@@ -35,6 +35,43 @@ def loaded_images(page):
     page.wait_for_function('''() => [...document.images].every(img => img.complete && img.naturalWidth > 0)''')
 
 
+def verify_approved_art(page, url):
+    """Compare actual served art against the checked-out, owner-approved sources."""
+    import hashlib
+    game = Path(__file__).resolve().parents[1]
+    pilots = json.loads((game / 'assets/v4/drivers/approved-pilots.json').read_text())
+    encodings = json.loads((game / 'assets/v4/title/web-encodings.json').read_text())
+    assert pilots['approval'] == 'approved-by-owner'
+    expected = [{'path': row['file'].removeprefix('game/'), 'sha256': row['sha256'], 'size': [256,512]}
+                for row in pilots['views']]
+    expected += [{'path': row['file'].removeprefix('game/'), 'sha256': row['sha256'], 'size': row['size']}
+                 for row in encodings]
+    for name in ['ftw-official.png', 'diabo-verde-official.png']:
+        data = (game / 'assets/v4/title' / name).read_bytes()
+        expected.append({'path': 'assets/v4/title/' + name, 'sha256': hashlib.sha256(data).hexdigest()})
+    for item in expected:
+        item['url'] = urljoin(url, item['path'])
+    actual = page.evaluate('''async entries => Promise.all(entries.map(async item => {
+      const response = await fetch(item.url);
+      if (!response.ok) throw new Error('Approved image HTTP '+response.status+': '+item.path);
+      const bytes = await response.arrayBuffer();
+      const hash = [...new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))].map(x=>x.toString(16).padStart(2,'0')).join('');
+      const bitmap = await createImageBitmap(new Blob([bytes]));
+      const result = {path:item.path, sha256:hash, size:[bitmap.width,bitmap.height], bytes:bytes.byteLength};
+      bitmap.close(); return result;
+    }))''', expected)
+    for want, got in zip(expected, actual):
+        assert got['sha256'] == want['sha256'], 'Served approved art differs: ' + want['path']
+        if 'size' in want:
+            assert got['size'] == want['size'], 'Unexpected approved art dimensions: ' + want['path']
+    assert len(actual) == 23, '16 pilot poses, 5 title layers and 2 original logos'
+    control = page.locator('#press-start').bounding_box()
+    assert control['height'] >= 43.9 and control['width'] >= 43.9, 'Physical touch target must remain at least44px'
+    assert page.locator('.cover-hero img').count() == 2
+    assert all('portrait.webp' in path for path in page.locator('.cover-hero img').evaluate_all('imgs => imgs.map(i=>i.src)'))
+    return {'assets': actual, 'touch_target': control}
+
+
 def verify_viewport(browser, url, output, width, height, reduced):
     label = f'{width}x{height}' + ('-reduced' if reduced else '')
     report = {'viewport': label, 'device': 'Chromium mobile emulation; no physical Android',
@@ -73,6 +110,9 @@ def verify_viewport(browser, url, output, width, height, reduced):
         page.wait_for_function('document.body.dataset.ready === "true"')
         assert page.evaluate('!!window.__ftwGame?.renderer'), 'Real Phaser renderer must initialize'
         assert page.locator('#fatal').is_hidden(), 'Fatal initialization panel must remain hidden'
+        loaded_images(page)
+        report['approved_art'] = verify_approved_art(page, url)
+        report['checks'].append('23 served approved art hashes/dimensions, original logos and physical title touch target')
         npc_atlases = page.evaluate('''() => {
           const scene = window.__ftwGame.scene.getScene('race');
           return ['npc-blue','npc-yellow','npc-purple','npc-silver'].map(key => {

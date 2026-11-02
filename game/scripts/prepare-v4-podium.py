@@ -4,6 +4,8 @@ from PIL import Image, ImageDraw
 import hashlib,json
 
 repo=Path(__file__).resolve().parents[2]
+if (repo/'game/assets/v4/drivers/approved-pilots.json').exists():
+    raise SystemExit('Historical podium generator disabled: use prepare-approved-pilots.py to preserve owner-approved art.')
 source=repo/'assets/previews/v4/podium-generated-source.png'
 target=repo/'game/assets/v4/podium'
 target.mkdir(parents=True,exist_ok=True)

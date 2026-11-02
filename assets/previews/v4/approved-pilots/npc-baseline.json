@@ -1,0 +1,558 @@
+{
+  "records": [
+    {
+      "file": "game/assets/v4/podium/npc-blue-0.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        0,
+        145,
+        332,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "6c2784f5c43bde17bcdbebab966b20a422adccd220895b1f1dea3a6070caddb5"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-blue-1.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        340,
+        145,
+        652,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 1,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "3fba6eed863a2a54976784b719f03d80d55cd9e5b1f79ea91724455c8aa5bd7e"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-blue-2.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        670,
+        0,
+        977,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 2,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "489cfd9d8f4444ba6a2fd836ee684a6633ac1de776117dad1984ccef5e6f5c2e"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-blue-3.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        1018,
+        145,
+        1320,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 3,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "fa09c1cef0d18f4aec36de1a40cf400fc1d46016d38bf7cec4d9bbb8b0c07799"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-blue-4.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        1380,
+        145,
+        1747,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 4,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "95500e937e3cdbe626f5390e7075f36f64cfbc2d87858340c7b3e90d4a877c24"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-blue-5.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        1775,
+        0,
+        2172,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 5,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "0ddf4ff83f3a307c5404d3905a3c5fdf5a75a0a7851b3aae1674967cb8eea246"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-yellow-0.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        0,
+        145,
+        332,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "3c3ee0e9d593841db992e9824926a3b13dcdf940e8026d128e54c35c634c4d07"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-yellow-1.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        340,
+        145,
+        652,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 1,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "58b22544dd9861c14135100602a8f0c8fba4ebbc3f19f6b9179b0dc65e851115"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-yellow-2.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        670,
+        0,
+        977,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 2,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "a917b948a97539ec329fab8244bedb8861aa19100cdb049930a0e643877c48a2"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-yellow-3.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        1018,
+        145,
+        1320,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 3,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "f47e541de241cacf7babf9e552a1575cdd7cb57d9fad4d93dbab01a325f54908"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-yellow-4.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        1380,
+        145,
+        1747,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 4,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "401d98fc144fa68f7a92776a3209e42d3cb6e3ffddf3f4d11221799cd4cad51a"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-yellow-5.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        1775,
+        0,
+        2172,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 5,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "ea3db8db5429c74196d417259d1522b5f2766fb0a5d6991f4918de4a9451469d"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-purple-0.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        0,
+        145,
+        332,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "d24738394ac9fdebcf78b8da788435f1529f0b6693774beb44bae5301a1e18b1"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-purple-1.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        340,
+        145,
+        652,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 1,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "da8e0e62a7cbdbdb615981cf68672594fa8882c6931a4ebc099fecfc62375730"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-purple-2.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        670,
+        0,
+        977,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 2,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "6d33dd7be5edac93a3c152529cf541fb93eb185d54df6cde968db698dd41705a"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-purple-3.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        1018,
+        145,
+        1320,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 3,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "5a498ab9ff22da30137ee020c973d0a7f31375b18732d43c48f557b9580c9d00"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-purple-4.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        1380,
+        145,
+        1747,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 4,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "bb3732cce79ae7e918a3908c41514e9b2bd6b669cde8e6fda4083159ba5ebc39"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-purple-5.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        1775,
+        0,
+        2172,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 5,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "0058268215d5bb365996594137c748cafa34206a0d5a20f05d7774840d4f9ac9"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-silver-0.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        0,
+        145,
+        332,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "be2a6c9d8c65a5c67bbdcb12e0508fd34c139f1659c832fad5864faf09718aac"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-silver-1.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        340,
+        145,
+        652,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 1,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "008691a4cce5d2fe109b89cdcb57783955fd1dcd56c154c572ccf1d43076eba7"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-silver-2.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        670,
+        0,
+        977,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 2,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "f1417365a53dbaa0e2a48272b30637c84f7644cb3c52586b460cabf7be9b7cc9"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-silver-3.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        1018,
+        145,
+        1320,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 3,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "17397e57414bed0aabb663ec1c579a164785a97b480c73aca5336593acede95c"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-silver-4.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        1380,
+        145,
+        1747,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 4,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "f75adaaf254722867f239c6b0e37f675ae0f98a088d2a0d96731507b8a420914"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-silver-5.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        1775,
+        0,
+        2172,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 5,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "10d4e6f66209212aea3dbdb9461b7ded4d1a0ac8c80fd22905ba9a81bf54fd0e"
+    }
+  ],
+  "files": {
+    "game/assets/v4/podium/npc-blue-0.png": "6c2784f5c43bde17bcdbebab966b20a422adccd220895b1f1dea3a6070caddb5",
+    "game/assets/v4/podium/npc-blue-1.png": "3fba6eed863a2a54976784b719f03d80d55cd9e5b1f79ea91724455c8aa5bd7e",
+    "game/assets/v4/podium/npc-blue-2.png": "489cfd9d8f4444ba6a2fd836ee684a6633ac1de776117dad1984ccef5e6f5c2e",
+    "game/assets/v4/podium/npc-blue-3.png": "fa09c1cef0d18f4aec36de1a40cf400fc1d46016d38bf7cec4d9bbb8b0c07799",
+    "game/assets/v4/podium/npc-blue-4.png": "95500e937e3cdbe626f5390e7075f36f64cfbc2d87858340c7b3e90d4a877c24",
+    "game/assets/v4/podium/npc-blue-5.png": "0ddf4ff83f3a307c5404d3905a3c5fdf5a75a0a7851b3aae1674967cb8eea246",
+    "game/assets/v4/podium/npc-purple-0.png": "d24738394ac9fdebcf78b8da788435f1529f0b6693774beb44bae5301a1e18b1",
+    "game/assets/v4/podium/npc-purple-1.png": "da8e0e62a7cbdbdb615981cf68672594fa8882c6931a4ebc099fecfc62375730",
+    "game/assets/v4/podium/npc-purple-2.png": "6d33dd7be5edac93a3c152529cf541fb93eb185d54df6cde968db698dd41705a",
+    "game/assets/v4/podium/npc-purple-3.png": "5a498ab9ff22da30137ee020c973d0a7f31375b18732d43c48f557b9580c9d00",
+    "game/assets/v4/podium/npc-purple-4.png": "bb3732cce79ae7e918a3908c41514e9b2bd6b669cde8e6fda4083159ba5ebc39",
+    "game/assets/v4/podium/npc-purple-5.png": "0058268215d5bb365996594137c748cafa34206a0d5a20f05d7774840d4f9ac9",
+    "game/assets/v4/podium/npc-silver-0.png": "be2a6c9d8c65a5c67bbdcb12e0508fd34c139f1659c832fad5864faf09718aac",
+    "game/assets/v4/podium/npc-silver-1.png": "008691a4cce5d2fe109b89cdcb57783955fd1dcd56c154c572ccf1d43076eba7",
+    "game/assets/v4/podium/npc-silver-2.png": "f1417365a53dbaa0e2a48272b30637c84f7644cb3c52586b460cabf7be9b7cc9",
+    "game/assets/v4/podium/npc-silver-3.png": "17397e57414bed0aabb663ec1c579a164785a97b480c73aca5336593acede95c",
+    "game/assets/v4/podium/npc-silver-4.png": "f75adaaf254722867f239c6b0e37f675ae0f98a088d2a0d96731507b8a420914",
+    "game/assets/v4/podium/npc-silver-5.png": "10d4e6f66209212aea3dbdb9461b7ded4d1a0ac8c80fd22905ba9a81bf54fd0e",
+    "game/assets/v4/podium/npc-yellow-0.png": "3c3ee0e9d593841db992e9824926a3b13dcdf940e8026d128e54c35c634c4d07",
+    "game/assets/v4/podium/npc-yellow-1.png": "58b22544dd9861c14135100602a8f0c8fba4ebbc3f19f6b9179b0dc65e851115",
+    "game/assets/v4/podium/npc-yellow-2.png": "a917b948a97539ec329fab8244bedb8861aa19100cdb049930a0e643877c48a2",
+    "game/assets/v4/podium/npc-yellow-3.png": "f47e541de241cacf7babf9e552a1575cdd7cb57d9fad4d93dbab01a325f54908",
+    "game/assets/v4/podium/npc-yellow-4.png": "401d98fc144fa68f7a92776a3209e42d3cb6e3ffddf3f4d11221799cd4cad51a",
+    "game/assets/v4/podium/npc-yellow-5.png": "ea3db8db5429c74196d417259d1522b5f2766fb0a5d6991f4918de4a9451469d"
+  }
+}
