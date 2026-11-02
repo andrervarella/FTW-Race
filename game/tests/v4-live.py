@@ -39,7 +39,7 @@ def verify_viewport(browser, url, output, width, height, reduced):
     label = f'{width}x{height}' + ('-reduced' if reduced else '')
     report = {'viewport': label, 'device': 'Chromium mobile emulation; no physical Android',
               'errors': [], 'http_errors': [], 'failed_requests': [],
-              'outside_subfolder': [], 'console': [], 'screenshots': [], 'checks': []}
+              'outside_subfolder': [], 'console': [], 'screenshots': [], 'checks': [], 'npc_asset_requests': []}
     context = browser.new_context(viewport={'width': width, 'height': height},
                                   device_scale_factor=1, is_mobile=True, has_touch=True,
                                   reduced_motion='reduce' if reduced else 'no-preference')
@@ -52,6 +52,8 @@ def verify_viewport(browser, url, output, width, height, reduced):
     allowed = urljoin(url, './')
 
     def request_seen(request):
+        if '/cars/npc-raster/' in request.url:
+            report['npc_asset_requests'].append(request.url)
         if urlparse(request.url).scheme in ('http', 'https') and not request.url.startswith(allowed):
             report['outside_subfolder'].append(request.url)
 
@@ -71,6 +73,19 @@ def verify_viewport(browser, url, output, width, height, reduced):
         page.wait_for_function('document.body.dataset.ready === "true"')
         assert page.evaluate('!!window.__ftwGame?.renderer'), 'Real Phaser renderer must initialize'
         assert page.locator('#fatal').is_hidden(), 'Fatal initialization panel must remain hidden'
+        npc_atlases = page.evaluate('''() => {
+          const scene = window.__ftwGame.scene.getScene('race');
+          return ['npc-blue','npc-yellow','npc-purple','npc-silver'].map(key => {
+            const texture = scene.textures.get(key), image = texture.getSourceImage();
+            return { key, src: image.src, size: [image.width,image.height],
+              frames: Array.from({length:6},(_,i)=>{const f=texture.get(i);return [f.width,f.height];}) };
+          });
+        }''')
+        assert all(item['size'] == [1680,1024] and item['frames'] == [[560,512]]*6 for item in npc_atlases), 'All four reference car atlases must load six complete views'
+        expected_npc_files = {item['key']+'.png' for item in npc_atlases}
+        assert {Path(urlparse(src).path).name for src in report['npc_asset_requests']} == expected_npc_files, 'The served game must request all four new PNG atlases'
+        report['npc_atlases'] = npc_atlases
+        report['checks'].append('four reference NPC raster atlases with six curve and brake views each')
         screen('title')
         loaded_images(page)
         shot('title')

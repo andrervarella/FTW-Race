@@ -1,55 +1,444 @@
 {
-  "status": "new-original-vector-art-human-review-pending",
-  "source": "assets/previews/daniel/carro-traseira.png",
-  "sourceSha256": "65f9128c1570a8b93026b31e84db52d1e24d9aaf5e3f87bfb693dcc956c7acba",
+  "version": "npc-reference-1",
+  "source": "assets/previews/v4/npc-cars-views-generated.png",
+  "sourceSha256": "39e98cf961a610dc64ab51f8550e5caf66fc5a5c37b30a83176813f7e1ac5202",
+  "reference": "Owner supplied four-car NPC sheet in conversation; approved visual design, original attachment bytes unavailable to executor",
+  "status": "reference-design-requested; derived views inspected, owner review of final artwork pending",
+  "frameSize": [
+    560,
+    512
+  ],
+  "pivot": [
+    0.5,
+    0.91796875
+  ],
+  "commonScale": 1.434782608695652,
+  "frames": [
+    "rear",
+    "left",
+    "right",
+    "brake",
+    "left-brake",
+    "right-brake"
+  ],
   "files": [
     {
-      "path": "cars/npc-blue.svg",
-      "sha256": "ebf58d6ccb8c52191757d7441d2a3de4f745b636f0ea170d39c160d3a1721120",
-      "size": [
-        512,
-        512
+      "key": "npc-blue",
+      "path": "assets/v4/cars/npc-raster/npc-blue.png",
+      "sha256": "eb9f6e112f961d270d033a13cfe7791861caccd36f811d63f3cdc498271c9799",
+      "atlasSize": [
+        1680,
+        1024
       ],
-      "pivot": [
-        0.5,
-        0.91796875
+      "frames": [
+        {
+          "name": "rear",
+          "sourceCrop": [
+            0,
+            0,
+            314,
+            314
+          ],
+          "sourceUsefulBounds": [
+            18,
+            49,
+            295,
+            278
+          ],
+          "sourceRearAxleX": 156.5,
+          "index": 0,
+          "path": "assets/v4/cars/npc-raster/frames/npc-blue/rear.png",
+          "sha256": "98c2849a3aa7423f38ce49695a6b64f6433f3c3be49ec27373c0c08b3c7999d2"
+        },
+        {
+          "name": "left",
+          "sourceCrop": [
+            314,
+            0,
+            627,
+            314
+          ],
+          "sourceUsefulBounds": [
+            8,
+            49,
+            308,
+            278
+          ],
+          "sourceRearAxleX": 188.25,
+          "index": 1,
+          "path": "assets/v4/cars/npc-raster/frames/npc-blue/left.png",
+          "sha256": "d4864fcdde5c8a617dcaa8b5b2d2468d3b1a231c95a70195e973297ecfa536b0"
+        },
+        {
+          "name": "right",
+          "sourceCrop": [
+            627,
+            0,
+            940,
+            314
+          ],
+          "sourceUsefulBounds": [
+            6,
+            49,
+            305,
+            278
+          ],
+          "sourceRearAxleX": 123.0,
+          "index": 2,
+          "path": "assets/v4/cars/npc-raster/frames/npc-blue/right.png",
+          "sha256": "dfc530419f64cff33a34e0fea242e17efa5a3bee7c4770c10096fcbfbbeb1ac4"
+        },
+        {
+          "name": "brake",
+          "sourceCrop": [
+            940,
+            0,
+            1254,
+            314
+          ],
+          "sourceUsefulBounds": [
+            19,
+            49,
+            296,
+            278
+          ],
+          "sourceRearAxleX": 157.0,
+          "index": 3,
+          "path": "assets/v4/cars/npc-raster/frames/npc-blue/brake.png",
+          "sha256": "990f21f73f316a706803f50aaff0bcfeed6b5204b59bd2405a9a36655b711135"
+        },
+        {
+          "name": "left-brake",
+          "derivedFrom": "left",
+          "operation": "tail-light brightness only; identical alpha/body geometry",
+          "index": 4,
+          "path": "assets/v4/cars/npc-raster/frames/npc-blue/left-brake.png",
+          "sha256": "28f2afe57cb50df02417dd0f2ae73516051cebb7d2becb03214760d5ab9276e7"
+        },
+        {
+          "name": "right-brake",
+          "derivedFrom": "right",
+          "operation": "tail-light brightness only; identical alpha/body geometry",
+          "index": 5,
+          "path": "assets/v4/cars/npc-raster/frames/npc-blue/right-brake.png",
+          "sha256": "1992291735ba27aa479069836a72911824b305b0ca2fa2ed3b0d5b011933c086"
+        }
       ]
     },
     {
-      "path": "cars/npc-yellow.svg",
-      "sha256": "e6df11a09c472d578a876341505354dcf92646517f10fc1e55dcd4d2c358ff44",
-      "size": [
-        512,
-        512
+      "key": "npc-yellow",
+      "path": "assets/v4/cars/npc-raster/npc-yellow.png",
+      "sha256": "cc7dbd2f47dd23f9e505a73617867e7adc12c19bc38dc577401ef4ae6df73053",
+      "atlasSize": [
+        1680,
+        1024
       ],
-      "pivot": [
-        0.5,
-        0.91796875
+      "frames": [
+        {
+          "name": "rear",
+          "sourceCrop": [
+            0,
+            314,
+            314,
+            627
+          ],
+          "sourceUsefulBounds": [
+            18,
+            49,
+            295,
+            278
+          ],
+          "sourceRearAxleX": 157.0,
+          "index": 0,
+          "path": "assets/v4/cars/npc-raster/frames/npc-yellow/rear.png",
+          "sha256": "2263d0b281fc6af420b2952befef2b4bad9f69b26e23229ced3d449af2a9e9cc"
+        },
+        {
+          "name": "left",
+          "sourceCrop": [
+            314,
+            314,
+            627,
+            627
+          ],
+          "sourceUsefulBounds": [
+            8,
+            49,
+            308,
+            278
+          ],
+          "sourceRearAxleX": 175.75,
+          "index": 1,
+          "path": "assets/v4/cars/npc-raster/frames/npc-yellow/left.png",
+          "sha256": "ce0330f8fc5f2fb03e77266ec690e6c4c56c53f84a9c917ccd693e7deeccc477"
+        },
+        {
+          "name": "right",
+          "sourceCrop": [
+            627,
+            314,
+            940,
+            627
+          ],
+          "sourceUsefulBounds": [
+            6,
+            49,
+            305,
+            278
+          ],
+          "sourceRearAxleX": 136.0,
+          "index": 2,
+          "path": "assets/v4/cars/npc-raster/frames/npc-yellow/right.png",
+          "sha256": "9d3538e22494e52daca8f94622bfd732c7ec868ffed120b34106acc4d2c37875"
+        },
+        {
+          "name": "brake",
+          "sourceCrop": [
+            940,
+            314,
+            1254,
+            627
+          ],
+          "sourceUsefulBounds": [
+            19,
+            49,
+            296,
+            278
+          ],
+          "sourceRearAxleX": 158.25,
+          "index": 3,
+          "path": "assets/v4/cars/npc-raster/frames/npc-yellow/brake.png",
+          "sha256": "a11b942e29ff30ded176b0bd7d1e737e3848d171b27f909b496b347c50ff01d9"
+        },
+        {
+          "name": "left-brake",
+          "derivedFrom": "left",
+          "operation": "tail-light brightness only; identical alpha/body geometry",
+          "index": 4,
+          "path": "assets/v4/cars/npc-raster/frames/npc-yellow/left-brake.png",
+          "sha256": "afd10d3088814fa5375a9b4c372f308e00a28d15b47162b8da8fd1ec843a2275"
+        },
+        {
+          "name": "right-brake",
+          "derivedFrom": "right",
+          "operation": "tail-light brightness only; identical alpha/body geometry",
+          "index": 5,
+          "path": "assets/v4/cars/npc-raster/frames/npc-yellow/right-brake.png",
+          "sha256": "833c6b762eef84b667cd777e07adfe9799743c10ae1f0e0f27143a745f12b407"
+        }
       ]
     },
     {
-      "path": "cars/npc-purple.svg",
-      "sha256": "bb087709da17f280264b9027a5b726b585f51201cd322eede72f000d808dd2c1",
-      "size": [
-        512,
-        512
+      "key": "npc-silver",
+      "path": "assets/v4/cars/npc-raster/npc-silver.png",
+      "sha256": "a529d75c25eb603786c5132b1b4d88eab34f39b0a03f50ea0c77fca155a73dfd",
+      "atlasSize": [
+        1680,
+        1024
       ],
-      "pivot": [
-        0.5,
-        0.91796875
+      "frames": [
+        {
+          "name": "rear",
+          "sourceCrop": [
+            0,
+            627,
+            314,
+            940
+          ],
+          "sourceUsefulBounds": [
+            18,
+            49,
+            295,
+            278
+          ],
+          "sourceRearAxleX": 156.5,
+          "index": 0,
+          "path": "assets/v4/cars/npc-raster/frames/npc-silver/rear.png",
+          "sha256": "ee9696dce1dc43ae8748f25e881dd26a6a348aca8da29a2685302a3dc4ddcb34"
+        },
+        {
+          "name": "left",
+          "sourceCrop": [
+            314,
+            627,
+            627,
+            940
+          ],
+          "sourceUsefulBounds": [
+            8,
+            49,
+            308,
+            278
+          ],
+          "sourceRearAxleX": 188.75,
+          "index": 1,
+          "path": "assets/v4/cars/npc-raster/frames/npc-silver/left.png",
+          "sha256": "8edbb0a39bd9457a6b5afea3b3905f8205bb986fb428aed637f779ad31024f9b"
+        },
+        {
+          "name": "right",
+          "sourceCrop": [
+            627,
+            627,
+            940,
+            940
+          ],
+          "sourceUsefulBounds": [
+            6,
+            49,
+            305,
+            278
+          ],
+          "sourceRearAxleX": 124.25,
+          "index": 2,
+          "path": "assets/v4/cars/npc-raster/frames/npc-silver/right.png",
+          "sha256": "c9c2bf1e2ad2f1a402b17592885663242de01d839f0ddeb32d6f2776cb7a62dd"
+        },
+        {
+          "name": "brake",
+          "sourceCrop": [
+            940,
+            627,
+            1254,
+            940
+          ],
+          "sourceUsefulBounds": [
+            19,
+            49,
+            296,
+            278
+          ],
+          "sourceRearAxleX": 156.25,
+          "index": 3,
+          "path": "assets/v4/cars/npc-raster/frames/npc-silver/brake.png",
+          "sha256": "0c98339defb147fddff2c957fa7fc698c8b068775fcb67ace401c99794bc0efd"
+        },
+        {
+          "name": "left-brake",
+          "derivedFrom": "left",
+          "operation": "tail-light brightness only; identical alpha/body geometry",
+          "index": 4,
+          "path": "assets/v4/cars/npc-raster/frames/npc-silver/left-brake.png",
+          "sha256": "d19c14e1314514d28140e2f8aa73bf74ecb8dfb1581cfeba059cffe541a62d4b"
+        },
+        {
+          "name": "right-brake",
+          "derivedFrom": "right",
+          "operation": "tail-light brightness only; identical alpha/body geometry",
+          "index": 5,
+          "path": "assets/v4/cars/npc-raster/frames/npc-silver/right-brake.png",
+          "sha256": "f95a2b5ff3978b23311c59f9400f2edf14fa437be221db8c4f79cf43260b9065"
+        }
       ]
     },
     {
-      "path": "cars/npc-silver.svg",
-      "sha256": "eb14a8859ad9975f65e8b7c1a587b751a665aaf2d15d42e0efe5a12f74db62ca",
-      "size": [
-        512,
-        512
+      "key": "npc-purple",
+      "path": "assets/v4/cars/npc-raster/npc-purple.png",
+      "sha256": "a4f1bfc52a9f368a7c0b103ad7d69c90726872aab10f1483ab525223ec2ed46c",
+      "atlasSize": [
+        1680,
+        1024
       ],
-      "pivot": [
-        0.5,
-        0.91796875
+      "frames": [
+        {
+          "name": "rear",
+          "sourceCrop": [
+            0,
+            940,
+            314,
+            1254
+          ],
+          "sourceUsefulBounds": [
+            18,
+            50,
+            295,
+            279
+          ],
+          "sourceRearAxleX": 155.75,
+          "index": 0,
+          "path": "assets/v4/cars/npc-raster/frames/npc-purple/rear.png",
+          "sha256": "84fede1d395f1b3a3b6822e9f1b08e17ade792888db370a1a3b0c0f445e3c05f"
+        },
+        {
+          "name": "left",
+          "sourceCrop": [
+            314,
+            940,
+            627,
+            1254
+          ],
+          "sourceUsefulBounds": [
+            8,
+            49,
+            308,
+            279
+          ],
+          "sourceRearAxleX": 188.75,
+          "index": 1,
+          "path": "assets/v4/cars/npc-raster/frames/npc-purple/left.png",
+          "sha256": "fd8df7d72d94750e36603e3e1db3302f4873b865500b0629021bfeef8c01a949"
+        },
+        {
+          "name": "right",
+          "sourceCrop": [
+            627,
+            940,
+            940,
+            1254
+          ],
+          "sourceUsefulBounds": [
+            6,
+            49,
+            305,
+            279
+          ],
+          "sourceRearAxleX": 122.25,
+          "index": 2,
+          "path": "assets/v4/cars/npc-raster/frames/npc-purple/right.png",
+          "sha256": "b14de4849e2cef44ae92663412702b2f2ec56bf870efd89fac02a7b942421cb3"
+        },
+        {
+          "name": "brake",
+          "sourceCrop": [
+            940,
+            940,
+            1254,
+            1254
+          ],
+          "sourceUsefulBounds": [
+            19,
+            50,
+            296,
+            279
+          ],
+          "sourceRearAxleX": 156.75,
+          "index": 3,
+          "path": "assets/v4/cars/npc-raster/frames/npc-purple/brake.png",
+          "sha256": "8a7fc79cf28164ec05cbe97ac52ebabf2e784c83cce53cb7e51deda02ce4f0e6"
+        },
+        {
+          "name": "left-brake",
+          "derivedFrom": "left",
+          "operation": "tail-light brightness only; identical alpha/body geometry",
+          "index": 4,
+          "path": "assets/v4/cars/npc-raster/frames/npc-purple/left-brake.png",
+          "sha256": "eaeeb27bf81e2aeb11ce1f939f8211d8f2bfcfe727d7c47c233d6faae6580602"
+        },
+        {
+          "name": "right-brake",
+          "derivedFrom": "right",
+          "operation": "tail-light brightness only; identical alpha/body geometry",
+          "index": 5,
+          "path": "assets/v4/cars/npc-raster/frames/npc-purple/right-brake.png",
+          "sha256": "948376fdeec2effd04f46c6b409d308eca758c8e85fcac41de93e6cf4eee13ac"
+        }
       ]
     }
+  ],
+  "retired": [
+    "cars/npc-blue.svg",
+    "cars/npc-yellow.svg",
+    "cars/npc-purple.svg",
+    "cars/npc-silver.svg"
   ]
 }

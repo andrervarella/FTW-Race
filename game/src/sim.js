@@ -7,7 +7,7 @@ const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 
 function makeDriver(driver, lateral, charges) {
   return { driver, distance: 0, lateral, speed: 0, steer: 0, wheel: 0, latVel: 0, hitTimer: 0, laps: 0, nextCheckpoint: 1, charges,
-    nitroRemaining: 0, nitroHeld: false, collisionRemaining: 0, lapStart: 0, lapTimes: [], finishTime: null, offRoad: false };
+    nitroRemaining: 0, nitroHeld: false, collisionRemaining: 0, lapStart: 0, lapTimes: [], finishTime: null, offRoad: false, braking: false };
 }
 
 export function createRace(track, playerKey, options = {}) {
@@ -54,6 +54,7 @@ function crossCheckpoints(race, d, from, to, tNow, dt) {
 
 function stepDriver(race, d, input, dt) {
   const cfg = race.config, track = race.track;
+  d.braking = Boolean(input.brake);
   d.collisionRemaining = Math.max(0, d.collisionRemaining - dt); d.hitTimer = Math.max(0, d.hitTimer - dt);
   if (input.nitro && !d.nitroHeld && d.charges > 0 && d.nitroRemaining <= 0) { d.charges--; d.nitroRemaining = cfg.nitroDuration; }
   d.nitroHeld = input.nitro;

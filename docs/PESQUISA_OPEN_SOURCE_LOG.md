@@ -51,3 +51,17 @@ with sync_playwright() as p:
     print({'chromium': b.version, 'title': page.title()})
     b.close()
 ```
+
+## 02/11/2026 — NPCs conforme a prancha do proprietário
+
+Pedido: trocar os quatro SVGs provisórios por carros visualmente iguais à referência azul/amarelo/branco-prata/roxo e produzir os estados necessários. A consulta a jogos públicos orientou a implementação; nenhuma imagem, música ou trecho de código desses projetos foi importado.
+
+| Fonte consultada | Licença/limite | Aplicação efetiva |
+|---|---|---|
+| `jakesgordon/javascript-racer`, commit `3e8a060b5900755db27f899612a74a77427c853e`, `common.js` (`Render.player`/`Render.sprite`) | Código MIT; sprites OutRun e música excluídos de reutilização conforme o README já auditado. | Escolha de vistas reais pela direção e pivô de solo com escala de projeção. `vehicle-visual.js` usa a inércia do volante do FTW e acrescenta limiares de entrada/saída diferentes para estabilizar a vista; `render.js` preserva a proporção dos frames e a âncora do eixo traseiro. Implementação própria, sem cópia literal. |
+| `jamessimo/Phaser3-Road`, commit `21acaacf8bf9da7b71f7ea303e5bd06fd9102934` (2019-04-28), `README.md`, `LICENSE`, `package.json`, `src/classes/Car.js` e `renderHelpers.js` | MIT no código (Richard Davey2017); assets sem origem/licença individual comprovada, não importados. Phaser^3.16.2, projeto antigo. | Confirma a abordagem de projeção e objetos Phaser3. As rotinas turnLeft/turnRight estão vazias e o README lista animação de curva como TODO; não é uma solução pronta superior à V4. Preservada a base atual3.90 e criados os próprios frames/seleção. |
+| `ssusnic/Pseudo-3d-Racer`, commit `12dfc34d7d055b83441016d9a2e774c585fdfdc3`, `README.md` e `source/part2/circuit.js` | MIT no código; nenhum asset reutilizado. README declara Phaser2; o arquivo examinado contém APIs de cena/renderTexture semelhantes às de Phaser3. Essa divergência impede assumir portabilidade direta. | Referência conceitual complementar de segmentos/clipping. A geometria de Cascavel e a projeção existente foram mantidas; não houve motivo comprovado para trocar a engine ou importar esse protótipo. |
+
+REA foi considerado e não é necessário: temos o próprio JavaScript, testes determinísticos e inspeção em Phaser/Chromium. Não houve instalação, execução ou engenharia reversa de binários de terceiros. A pesquisa é de código aberto publicado pelos autores.
+
+Verificação desta alteração: cinco testes novos de vistas, histerese, preload raster e estado real de freio; suíte Node45/45. Phaser real exibiu os quatro NPCs nos seis estados, sem saltos do pivô ou deformação da proporção. Os resultados públicos posteriores constam de NPC_REFERENCE_QA.md.
