@@ -1,6 +1,6 @@
 // Approved cover composition. Keep artwork separate from physical-size controls.
 const titleAsset = name => new URL(`../assets/v4/title/${name}`, import.meta.url).href;
-const portrait = key => new URL(`../assets/v4/drivers/${key}-portrait.webp`, import.meta.url).href;
+const portrait = key => key === 'felipe' ? titleAsset('felipe-front-portrait.webp') : new URL(`../assets/v4/drivers/${key}-portrait.webp`, import.meta.url).href;
 
 export function titleMarkup(soundButton) {
   return `<section class="title-screen cover-screen" aria-label="FTW Race — Cascavel">
@@ -18,7 +18,7 @@ export function titleMarkup(soundButton) {
           <h1>RACE</h1><p class="cover-location">CASCAVEL</p>
         </header>
         <div class="cover-hero cover-daniel"><img src="${portrait('daniel')}" alt="Daniel Mencacci com boné preto e uniforme preto e verde, voltado ao centro" draggable="false"></div>
-        <div class="cover-hero cover-felipe"><img src="${portrait('felipe')}" alt="Felipe Mencacci com boné vermelho número 25 e uniforme vermelho, voltado ao centro" draggable="false"></div>
+        <div class="cover-hero cover-felipe"><img src="${portrait('felipe')}" alt="Felipe Mencacci em pose frontal, com boné vermelho número 25 e uniforme vermelho" draggable="false"></div>
         <div class="cover-hero-ground" aria-hidden="true"></div>
         <div class="cover-car-shadow cover-daniel" aria-hidden="true"></div><div class="cover-car-shadow cover-felipe" aria-hidden="true"></div>
         <div class="cover-road-line" aria-hidden="true"></div>
