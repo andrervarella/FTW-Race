@@ -24,7 +24,11 @@ window.addEventListener('error', function (e) {
   window.__boot.show('Erro: ' + (t ? 'falha ao carregar ' + t : (e.message || 'desconhecido') + (e.filename ? ' em ' + e.filename.split('/').pop() + ':' + e.lineno : '')));
 }, true);
 window.addEventListener('unhandledrejection', function (e) { window.__boot.show('Erro: ' + ((e.reason && e.reason.message) || e.reason)); });
-setTimeout(function () { if (document.body.dataset.ready !== 'true') window.__boot.show('Demorou mais de 12 s para iniciar o jogo.'); }, 12000);
+setTimeout(function () {
+  if (document.body.dataset.ready === 'true') return;
+  var loading = document.getElementById('loading'), fatal = document.getElementById('fatal');
+  if (loading && (!fatal || fatal.hidden)) loading.textContent = 'Ainda carregando FTW Race… Em conexão lenta, aguarde o download das imagens.';
+}, 12000);
 </script>
 </head>
 <body>
