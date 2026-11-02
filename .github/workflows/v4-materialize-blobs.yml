@@ -1,0 +1,28 @@
+name: FTW V4 materialize authorized asset blobs
+
+on:
+  push:
+    branches: [codex/ftw-race-v4-assets-transfer]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reconstruct and verify three asset blobs in this repository
+        run: python3 .ftw-v4-transfer/materialize.py
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Upload expected and actual SHA report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ftw-v4-materialized-blobs-${{ github.run_id }}
+          path: .ftw-v4-transfer/result.json
+          if-no-files-found: error
+          retention-days: 7
