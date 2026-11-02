@@ -9,3 +9,7 @@
 .champagne-fx{position:absolute;left:35%;top:29%;width:1px;height:1px;pointer-events:none;display:none}.podium-screen[data-stage="4"] .champagne-fx{display:block}.champagne-fx img{position:absolute;width:7px;height:12px;animation:spray .8s linear infinite;animation-delay:calc(var(--i) * -.037s);--x:calc(-60px - var(--i) * 4px);--y:calc(-90px + var(--i) * 8px)}@keyframes spray{from{transform:translate(0,0) scale(.2);opacity:1}to{transform:translate(var(--x),var(--y)) scale(1);opacity:0}}
 @media(prefers-reduced-motion:reduce){.champion{transition:none}.champagne-fx img{animation:none;transform:translate(var(--x),var(--y));opacity:.5}.podium-screen[data-stage="0"] .champion{bottom:17%}}
 @media(max-height:400px){.podium-heading{min-height:44px}.podium-heading h1{font-size:19px}.podium-actions{min-height:45px}.podium-actions button{padding:8px}.podium-stage-label{font-size:8px}.podium-review{font-size:8px}}
+/* Open-mouth anchors measured on the approved256×512 spray frames. */
+.podium-screen[data-winner="daniel"] .champagne-fx{left:72.265625%;top:32.2265625%}
+.podium-screen[data-winner="daniel"] .champagne-fx img{--x:calc(60px + var(--i) * 4px)}
+.podium-screen[data-winner="felipe"] .champagne-fx{left:16.796875%;top:27.1484375%}

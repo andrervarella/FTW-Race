@@ -5,6 +5,7 @@ import { GameAudio, MODE_LABEL } from './audio.js';
 import { createRace, pauseRace, resumeRace, playerPosition, formatTime } from './sim.js';
 import { getResults } from './standings.js';
 import { podiumMarkup, updatePodium } from './podium.js';
+import { titleMarkup, mountTitle } from './title.js';
 
 export class Ui {
   constructor(root, { track, assets, onRace, debug }) {
@@ -31,26 +32,25 @@ export class Ui {
   }
   get portrait() { return innerHeight > innerWidth; }
   img(name, alt, cls = '') { return `<img class="${cls}" src="${this.assets}${name}" alt="${alt}" draggable="false">`; }
-  driverArt(key, cls) { return `<img class="${cls}" src="${new URL(`../assets/v4/podium/${key}-0.png`, import.meta.url).href}" alt="Ilustração de ${DRIVERS[key].name} — arte em revisão" draggable="false">`; }
+  driverArt(key, cls) { return `<img class="${cls}" src="${new URL(`../assets/v4/drivers/${key}-portrait.webp`, import.meta.url).href}" alt="Ilustração de ${DRIVERS[key].name} — retrato aprovado" draggable="false">`; }
   transition(screen) {
+    const titleCleanup = this.titleCleanup; this.titleCleanup = null; titleCleanup?.();
     this.clearInputs(); this.screen = screen; this.root.dataset.screen = screen;
     this.podiumPaused = false;
     this.root.dataset.phase = this.race?.phase || ''; this.renderedPhase = '';
     this.lastUpdate = performance.now(); this.bannerUntil = 0;
   }
   dropRace() { this.race = null; this.onRace(null); }
-  brand(copy = 'CASCAVEL') { return `<header class="brand">${this.img('ftw.png', 'FTW', 'ftw-logo')}<span class="brand-title">RACE <em>${copy}</em></span><span class="tag">PRÉVIA V4 · ARTE EM REVISÃO</span></header>`; }
+  brand(copy = 'CASCAVEL') { return `<header class="brand">${this.img('ftw.png', 'FTW', 'ftw-logo')}<span class="brand-title">RACE <em>${copy}</em></span><span class="tag">PRÉVIA V4 · DANIEL E FELIPE APROVADOS</span></header>`; }
   soundButton() { return `<button type="button" class="icon-button" id="screen-sound" aria-label="Alternar som">${MODE_LABEL[this.audio.mode]}</button>`; }
   bindSound() { const b = this.root.querySelector('#screen-sound'); if (b) b.onclick = () => { this.audio.unlock().catch(() => {}); this.audio.cycleMode(); b.textContent = MODE_LABEL[this.audio.mode]; }; }
   feedback() { this.audio.unlock().then(ready => { if (ready) this.audio.selection?.(); }).catch(() => {}); }
   showTitle() {
     this.dropRace(); this.transition('title');
-    this.root.innerHTML = `<section class="title-screen" aria-label="FTW Race — Cascavel">
-      <div class="title-scenery" aria-hidden="true" style="background-image:linear-gradient(0deg,#080a12,#080a1244 55%,#080a12aa),url('${new URL('../assets/v4/cascavel/title-straight.png', import.meta.url).href}')"></div><div class="title-stripes" aria-hidden="true"></div>
-      ${this.brand()}<div class="title-art" aria-hidden="true"><div class="title-driver daniel">${this.driverArt('daniel', 'title-portrait')}${this.img('daniel-rear.png', '', 'title-car')}</div><div class="title-driver felipe">${this.driverArt('felipe', 'title-portrait')}${this.img('felipe-rear.png', '', 'title-car')}</div></div>
-      <div class="title-center"><p class="eyebrow">AUTÓDROMO DE CASCAVEL</p><h1>FTW <span>RACE</span></h1><p class="title-tagline">6 CARROS · 1 CAMPEÃO</p><button type="button" class="primary press-start" id="press-start" data-confirm>PRESS START</button><span class="start-hint">TOQUE PARA COMEÇAR · ENTER</span></div>
-      <footer class="title-footer"><p>PRÉVIA FUNCIONAL · ILUSTRAÇÕES EM REVISÃO</p>${this.soundButton()}<button class="text-button" id="fs">TELA CHEIA</button></footer></section>`;
-    this.root.querySelector('#press-start').onclick = () => { this.audio.unlock().catch(() => {}); this.feedback(); this.showDriverSelect(); };
+    this.root.innerHTML = titleMarkup(this.soundButton());
+    this.titleCleanup = mountTitle(this.root);
+    const start = this.root.querySelector('#press-start');
+    start.onclick = () => { if (this.screen !== 'title' || !start.isConnected || this.portrait) return; this.audio.unlock().catch(() => {}); this.feedback(); this.showDriverSelect(); };
     this.root.querySelector('#fs').onclick = () => this.fullscreen(); this.bindSound();
   }
   menu() { this.showDriverSelect(); }
@@ -67,7 +67,7 @@ export class Ui {
         <label>Voltas <select id="laps">${[1,3,5].map(n => `<option ${n === this.laps ? 'selected' : ''}>${n}</option>`).join('')}</select></label>
         <label>Nitros <select id="charges">${[0,1,2].map(n => `<option ${n === this.charges ? 'selected' : ''}>${n}</option>`).join('')}</select></label></div>
         <button class="primary" id="confirm-driver" data-confirm>CONFIRMAR PILOTO</button></footer>
-      <p class="build-note">Arte em revisão · parâmetros de voltas e nitro provisórios · celular na horizontal</p></section>`;
+      <p class="build-note">Retratos aprovados · demais artes em revisão · voltas e nitro provisórios · celular na horizontal</p></section>`;
     for (const b of this.root.querySelectorAll('[data-driver]')) b.onclick = () => {
       this.laps = Number(this.root.querySelector('#laps').value); this.charges = Number(this.root.querySelector('#charges').value);
       this.selected = b.dataset.driver; this.feedback(); this.showDriverSelect();
@@ -200,7 +200,7 @@ export class Ui {
     q('#nitro-toast').hidden = r.player.nitroRemaining <= 0 || r.phase !== 'racing';
     for (const [id, d] of [['player', r.player], ...r.opponents.map((d,i) => [`rival-${i}`, d])]) { const p = this.track.at(d.distance), c = q(`#map-${id}`); if (c) { c.setAttribute('cx', p.x); c.setAttribute('cy', p.y); } }
   }
-  destroy() { this.listeners.abort(); this.clearInputs(); this.audio.suspend?.(); this.dropRace(); this.root.innerHTML = ''; }
+  destroy() { const titleCleanup = this.titleCleanup; this.titleCleanup = null; titleCleanup?.(); this.listeners.abort(); this.clearInputs(); this.audio.suspend?.(); this.dropRace(); this.root.innerHTML = ''; }
   debugPanel(now) {
     let el = document.getElementById('debug'); if (!el) { el = document.createElement('pre'); el.id = 'debug'; document.body.appendChild(el); }
     if (now - (this.dbgT || 0) < 250) return; this.dbgT = now;

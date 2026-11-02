@@ -17,256 +17,736 @@
   ],
   "assets": [
     {
+      "key": "daniel",
+      "name": "entry",
       "file": "game/assets/v4/podium/daniel-0.png",
-      "source": "assets/previews/v4/podium-generated-source.png",
-      "sourceCrop": [
-        15,
-        48,
-        263,
-        520
-      ],
-      "frame": 0,
-      "pivot": [
-        0.5,
-        0.9765625
-      ],
-      "size": [
-        256,
-        512
-      ],
-      "approval": "pending-human-review",
-      "sha256": "ad4cbfcdd3313148a39a001b195ca52d80fba07305d1dbe600648010e6442dfa"
-    },
-    {
-      "file": "game/assets/v4/podium/daniel-1.png",
-      "source": "assets/previews/v4/podium-generated-source.png",
-      "sourceCrop": [
-        272,
-        48,
-        493,
-        520
-      ],
-      "frame": 1,
-      "pivot": [
-        0.5,
-        0.9765625
-      ],
-      "size": [
-        256,
-        512
-      ],
-      "approval": "pending-human-review",
-      "sha256": "3323b19f3e6bc44957038dd5d5fba0c046518fb5e8bfa5626dcfc9f4a52b6a3e"
-    },
-    {
-      "file": "game/assets/v4/podium/daniel-2.png",
-      "source": "assets/previews/v4/podium-generated-source.png",
-      "sourceCrop": [
-        493,
+      "source": "assets/previews/v4/approved-pilots/daniel-full-sprites-corrected.png",
+      "sourceIndex": 2,
+      "sourceCell": [
+        627,
         0,
-        727,
-        520
+        940,
+        627
       ],
-      "frame": 2,
-      "pivot": [
-        0.5,
-        0.9765625
+      "sourceCrop": [
+        663,
+        13,
+        894,
+        606
       ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        231,
+        593
+      ],
+      "sourceFootBounds": [
+        729,
+        516,
+        823,
+        606
+      ],
+      "sourceFootAnchor": [
+        776.0,
+        606
+      ],
+      "retainedSourcePixels": 74237,
+      "excludedCellPixels": 0,
+      "recoveredOutsideCellPixels": 0,
       "size": [
         256,
         512
       ],
-      "approval": "pending-human-review",
-      "sha256": "7b9f5500dcab4b2efdf8415a7cb6cd948ab60478687fbd3818ece24111135930"
-    },
-    {
-      "file": "game/assets/v4/podium/daniel-3.png",
-      "source": "assets/previews/v4/podium-generated-source.png",
-      "sourceCrop": [
-        731,
-        48,
-        984,
-        520
+      "usefulBounds": [
+        49,
+        85,
+        211,
+        500
       ],
-      "frame": 3,
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
       "pivot": [
         0.5,
         0.9765625
       ],
-      "size": [
-        256,
-        512
-      ],
-      "approval": "pending-human-review",
-      "sha256": "43c588498b507546622bdb04e2cc373eb4c019906d65c8133be3d1b523190fe4"
-    },
-    {
-      "file": "game/assets/v4/podium/daniel-4.png",
-      "source": "assets/previews/v4/podium-generated-source.png",
-      "sourceCrop": [
-        1000,
-        55,
-        1279,
-        520
-      ],
-      "frame": 4,
-      "pivot": [
-        0.5,
-        0.9765625
-      ],
-      "size": [
-        256,
-        512
-      ],
-      "approval": "pending-human-review",
-      "sha256": "f163c2e69daaa86153d0adf5ae55a92399c17142e529c72014f2981d9dfd0741"
-    },
-    {
-      "file": "game/assets/v4/podium/daniel-5.png",
-      "source": "assets/previews/v4/podium-generated-source.png",
-      "sourceCrop": [
-        1280,
-        10,
-        1536,
-        520
-      ],
-      "frame": 5,
-      "pivot": [
-        0.5,
-        0.9765625
-      ],
-      "size": [
-        256,
-        512
-      ],
-      "approval": "pending-human-review",
-      "sha256": "2af3f90d3a4c4839bcc8e6184cc599a91bde6eb2299befe4724162f6945343c5"
-    },
-    {
-      "file": "game/assets/v4/podium/felipe-0.png",
-      "source": "assets/previews/v4/podium-generated-source.png",
-      "sourceCrop": [
-        15,
-        563,
-        263,
-        1024
-      ],
+      "approval": "approved-by-owner",
+      "sha256": "43913befab1bc8bd5c3f53c6e0301dd5faa9249850fc2fe68f60ff25be921e10",
       "frame": 0,
-      "pivot": [
-        0.5,
-        0.9765625
+      "transformation": "alpha>=80; largest cell-seeded connected person; exact common .70 scale; feet midpoint at128,500"
+    },
+    {
+      "key": "daniel",
+      "name": "receive",
+      "file": "game/assets/v4/podium/daniel-1.png",
+      "source": "assets/previews/v4/approved-pilots/daniel-full-sprites-corrected.png",
+      "sourceIndex": 3,
+      "sourceCell": [
+        940,
+        0,
+        1254,
+        627
       ],
+      "sourceCrop": [
+        981,
+        17,
+        1196,
+        601
+      ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        215,
+        584
+      ],
+      "sourceFootBounds": [
+        998,
+        511,
+        1191,
+        601
+      ],
+      "sourceFootAnchor": [
+        1094.5,
+        601
+      ],
+      "retainedSourcePixels": 72750,
+      "excludedCellPixels": 0,
+      "recoveredOutsideCellPixels": 0,
       "size": [
         256,
         512
       ],
-      "approval": "pending-human-review",
-      "sha256": "3c935d64d1ae648bdd646f102e3089001e7fb5b5939d6aaa0f83e216b3660cde"
-    },
-    {
-      "file": "game/assets/v4/podium/felipe-1.png",
-      "source": "assets/previews/v4/podium-generated-source.png",
-      "sourceCrop": [
-        272,
-        563,
-        493,
-        1024
+      "usefulBounds": [
+        49,
+        91,
+        199,
+        500
       ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "b686878ab1db198d4e400f0bbe87287985ede4439d2057084223637eb9735402",
       "frame": 1,
-      "pivot": [
-        0.5,
-        0.9765625
+      "transformation": "alpha>=80; largest cell-seeded connected person; exact common .70 scale; feet midpoint at128,500"
+    },
+    {
+      "key": "daniel",
+      "name": "raise",
+      "file": "game/assets/v4/podium/daniel-2.png",
+      "source": "assets/previews/v4/approved-pilots/daniel-full-sprites-corrected.png",
+      "sourceIndex": 4,
+      "sourceCell": [
+        0,
+        627,
+        314,
+        1254
       ],
+      "sourceCrop": [
+        28,
+        634,
+        280,
+        1239
+      ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        252,
+        605
+      ],
+      "sourceFootBounds": [
+        67,
+        1149,
+        270,
+        1239
+      ],
+      "sourceFootAnchor": [
+        168.5,
+        1239
+      ],
+      "retainedSourcePixels": 76901,
+      "excludedCellPixels": 0,
+      "recoveredOutsideCellPixels": 0,
       "size": [
         256,
         512
       ],
-      "approval": "pending-human-review",
-      "sha256": "779edeffc4348087bcda29d06a3ad7584422e58fcefcda31695d4e513d30e09f"
-    },
-    {
-      "file": "game/assets/v4/podium/felipe-2.png",
-      "source": "assets/previews/v4/podium-generated-source.png",
-      "sourceCrop": [
-        493,
-        520,
-        727,
-        1024
+      "usefulBounds": [
+        30,
+        76,
+        206,
+        500
       ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "38781117df79aeb60de925dbf0bff82c4daddedecb2fa549ba0061e4709ada05",
       "frame": 2,
-      "pivot": [
-        0.5,
-        0.9765625
+      "transformation": "alpha>=80; largest cell-seeded connected person; exact common .70 scale; feet midpoint at128,500"
+    },
+    {
+      "key": "daniel",
+      "name": "open",
+      "file": "game/assets/v4/podium/daniel-3.png",
+      "source": "assets/previews/v4/approved-pilots/daniel-full-sprites-corrected.png",
+      "sourceIndex": 5,
+      "sourceCell": [
+        314,
+        627,
+        627,
+        1254
       ],
+      "sourceCrop": [
+        377,
+        678,
+        592,
+        1238
+      ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        215,
+        560
+      ],
+      "sourceFootBounds": [
+        381,
+        1148,
+        583,
+        1238
+      ],
+      "sourceFootAnchor": [
+        482.0,
+        1238
+      ],
+      "retainedSourcePixels": 68030,
+      "excludedCellPixels": 0,
+      "recoveredOutsideCellPixels": 0,
       "size": [
         256,
         512
       ],
-      "approval": "pending-human-review",
-      "sha256": "0b30f51455aee7a57dc6442d2754f355e1f8c6367020ae7c4ae501607fe82c88"
-    },
-    {
-      "file": "game/assets/v4/podium/felipe-3.png",
-      "source": "assets/previews/v4/podium-generated-source.png",
-      "sourceCrop": [
-        731,
-        563,
-        984,
-        1024
+      "usefulBounds": [
+        54,
+        108,
+        205,
+        500
       ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "1aa1bb6383d20a9ade4423625905d0aadc2e51fdfb45de94803ac0d61d5ba1f9",
       "frame": 3,
-      "pivot": [
-        0.5,
-        0.9765625
+      "transformation": "alpha>=80; largest cell-seeded connected person; exact common .70 scale; feet midpoint at128,500"
+    },
+    {
+      "key": "daniel",
+      "name": "spray",
+      "file": "game/assets/v4/podium/daniel-4.png",
+      "source": "assets/previews/v4/approved-pilots/daniel-full-sprites-corrected.png",
+      "sourceIndex": 6,
+      "sourceCell": [
+        627,
+        627,
+        940,
+        1254
       ],
+      "sourceCrop": [
+        661,
+        677,
+        903,
+        1239
+      ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        242,
+        562
+      ],
+      "sourceFootBounds": [
+        661,
+        1149,
+        903,
+        1239
+      ],
+      "sourceFootAnchor": [
+        782.0,
+        1239
+      ],
+      "retainedSourcePixels": 68995,
+      "excludedCellPixels": 0,
+      "recoveredOutsideCellPixels": 0,
       "size": [
         256,
         512
       ],
-      "approval": "pending-human-review",
-      "sha256": "8ffa4573a0cb42c17a3c1d612e52eab51467a32d924bbcd6ca4f82cbc409b780"
-    },
-    {
-      "file": "game/assets/v4/podium/felipe-4.png",
-      "source": "assets/previews/v4/podium-generated-source.png",
-      "sourceCrop": [
-        1000,
-        570,
-        1279,
-        1024
+      "usefulBounds": [
+        43,
+        107,
+        213,
+        500
       ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "4d93a17dfdde35ba4a13654a9c6e533ab5f022a50bf6a16c27ef1373054dfbff",
       "frame": 4,
-      "pivot": [
-        0.5,
-        0.9765625
-      ],
-      "size": [
-        256,
-        512
-      ],
-      "approval": "pending-human-review",
-      "sha256": "72f84ae2933167a9a91682e87436ebccfbd8eff435469a2378f3d86b8152fa1a"
+      "transformation": "alpha>=80; largest cell-seeded connected person; exact common .70 scale; feet midpoint at128,500"
     },
     {
-      "file": "game/assets/v4/podium/felipe-5.png",
-      "source": "assets/previews/v4/podium-generated-source.png",
+      "key": "daniel",
+      "name": "final",
+      "file": "game/assets/v4/podium/daniel-5.png",
+      "source": "assets/previews/v4/approved-pilots/daniel-full-sprites-corrected.png",
+      "sourceIndex": 7,
+      "sourceCell": [
+        940,
+        627,
+        1254,
+        1254
+      ],
       "sourceCrop": [
-        1280,
-        525,
-        1536,
-        1024
+        949,
+        631,
+        1244,
+        1240
       ],
-      "frame": 5,
-      "pivot": [
-        0.5,
-        0.9765625
+      "sourceUsefulBounds": [
+        0,
+        0,
+        295,
+        609
       ],
+      "sourceFootBounds": [
+        980,
+        1150,
+        1206,
+        1240
+      ],
+      "sourceFootAnchor": [
+        1093.0,
+        1240
+      ],
+      "retainedSourcePixels": 78588,
+      "excludedCellPixels": 0,
+      "recoveredOutsideCellPixels": 0,
       "size": [
         256,
         512
       ],
-      "approval": "pending-human-review",
-      "sha256": "351f94d6fec6b48375be28efbe4fd45662954dfa9e3f9cce0e3652ad21891cca"
+      "usefulBounds": [
+        27,
+        74,
+        234,
+        500
+      ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "5314b13595c142b79fd301f22da77c596c1aad8ec0bd0ed74b171afd6d29a081",
+      "frame": 5,
+      "transformation": "alpha>=80; largest cell-seeded connected person; exact common .70 scale; feet midpoint at128,500"
+    },
+    {
+      "key": "felipe",
+      "name": "entry",
+      "file": "game/assets/v4/podium/felipe-0.png",
+      "source": "assets/previews/v4/approved-pilots/felipe-full-sprites-corrected.png",
+      "sourceIndex": 2,
+      "sourceCell": [
+        627,
+        0,
+        940,
+        627
+      ],
+      "sourceCrop": [
+        667,
+        12,
+        899,
+        609
+      ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        232,
+        597
+      ],
+      "sourceFootBounds": [
+        728,
+        519,
+        827,
+        609
+      ],
+      "sourceFootAnchor": [
+        777.5,
+        609
+      ],
+      "retainedSourcePixels": 76200,
+      "excludedCellPixels": 0,
+      "recoveredOutsideCellPixels": 0,
+      "size": [
+        256,
+        512
+      ],
+      "usefulBounds": [
+        51,
+        82,
+        213,
+        500
+      ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "e3b11672fd40420e2d98cbdca876a367ce9f654676dd48ff237a94cfa542d67f",
+      "frame": 0,
+      "transformation": "alpha>=80; largest cell-seeded connected person; exact common .70 scale; feet midpoint at128,500"
+    },
+    {
+      "key": "felipe",
+      "name": "receive",
+      "file": "game/assets/v4/podium/felipe-1.png",
+      "source": "assets/previews/v4/approved-pilots/felipe-full-sprites-corrected.png",
+      "sourceIndex": 3,
+      "sourceCell": [
+        940,
+        0,
+        1254,
+        627
+      ],
+      "sourceCrop": [
+        962,
+        12,
+        1187,
+        605
+      ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        225,
+        593
+      ],
+      "sourceFootBounds": [
+        976,
+        515,
+        1187,
+        605
+      ],
+      "sourceFootAnchor": [
+        1081.5,
+        605
+      ],
+      "retainedSourcePixels": 75727,
+      "excludedCellPixels": 0,
+      "recoveredOutsideCellPixels": 0,
+      "size": [
+        256,
+        512
+      ],
+      "usefulBounds": [
+        44,
+        85,
+        202,
+        500
+      ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "245241cbb8768643b17d537aa8a1bff4854c8b46a9b61d9814c674fdca307195",
+      "frame": 1,
+      "transformation": "alpha>=80; largest cell-seeded connected person; exact common .70 scale; feet midpoint at128,500"
+    },
+    {
+      "key": "felipe",
+      "name": "raise",
+      "file": "game/assets/v4/podium/felipe-2.png",
+      "source": "assets/previews/v4/approved-pilots/felipe-full-sprites-corrected.png",
+      "sourceIndex": 4,
+      "sourceCell": [
+        0,
+        627,
+        314,
+        1254
+      ],
+      "sourceCrop": [
+        48,
+        635,
+        308,
+        1246
+      ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        260,
+        611
+      ],
+      "sourceFootBounds": [
+        78,
+        1156,
+        298,
+        1246
+      ],
+      "sourceFootAnchor": [
+        188.0,
+        1246
+      ],
+      "retainedSourcePixels": 81566,
+      "excludedCellPixels": 0,
+      "recoveredOutsideCellPixels": 0,
+      "size": [
+        256,
+        512
+      ],
+      "usefulBounds": [
+        30,
+        72,
+        212,
+        500
+      ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "3661cd9550fc0a47f2c2da5a9aa89ffb8e273a64fee9eb16f32448e3d87f9277",
+      "frame": 2,
+      "transformation": "alpha>=80; largest cell-seeded connected person; exact common .70 scale; feet midpoint at128,500"
+    },
+    {
+      "key": "felipe",
+      "name": "open",
+      "file": "game/assets/v4/podium/felipe-3.png",
+      "source": "assets/previews/v4/approved-pilots/felipe-full-sprites-corrected.png",
+      "sourceIndex": 5,
+      "sourceCell": [
+        314,
+        627,
+        627,
+        1254
+      ],
+      "sourceCrop": [
+        345,
+        671,
+        580,
+        1245
+      ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        235,
+        574
+      ],
+      "sourceFootBounds": [
+        369,
+        1155,
+        578,
+        1245
+      ],
+      "sourceFootAnchor": [
+        473.5,
+        1245
+      ],
+      "retainedSourcePixels": 73635,
+      "excludedCellPixels": 0,
+      "recoveredOutsideCellPixels": 0,
+      "size": [
+        256,
+        512
+      ],
+      "usefulBounds": [
+        38,
+        98,
+        203,
+        500
+      ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "96110ee4c1a72ab3a905c2a163978270ade7ce30c1c91493f06b285949fa6efc",
+      "frame": 3,
+      "transformation": "alpha>=80; largest cell-seeded connected person; exact common .70 scale; feet midpoint at128,500"
+    },
+    {
+      "key": "felipe",
+      "name": "spray",
+      "file": "game/assets/v4/podium/felipe-4.png",
+      "source": "assets/previews/v4/approved-pilots/felipe-full-sprites-corrected.png",
+      "sourceIndex": 6,
+      "sourceCell": [
+        627,
+        627,
+        940,
+        1254
+      ],
+      "sourceCrop": [
+        636,
+        671,
+        885,
+        1246
+      ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        249,
+        575
+      ],
+      "sourceFootBounds": [
+        655,
+        1156,
+        885,
+        1246
+      ],
+      "sourceFootAnchor": [
+        770.0,
+        1246
+      ],
+      "retainedSourcePixels": 70295,
+      "excludedCellPixels": 223,
+      "recoveredOutsideCellPixels": 0,
+      "size": [
+        256,
+        512
+      ],
+      "usefulBounds": [
+        34,
+        98,
+        209,
+        500
+      ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "0809ffb53c8dcc82d7467ab45bd016132c846bf9d48d33b478a4052d7f678c50",
+      "frame": 4,
+      "transformation": "alpha>=80; largest cell-seeded connected person; exact common .70 scale; feet midpoint at128,500"
+    },
+    {
+      "key": "felipe",
+      "name": "final",
+      "file": "game/assets/v4/podium/felipe-5.png",
+      "source": "assets/previews/v4/approved-pilots/felipe-full-sprites-corrected.png",
+      "sourceIndex": 7,
+      "sourceCell": [
+        940,
+        627,
+        1254,
+        1254
+      ],
+      "sourceCrop": [
+        935,
+        631,
+        1230,
+        1245
+      ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        295,
+        614
+      ],
+      "sourceFootBounds": [
+        974,
+        1155,
+        1194,
+        1245
+      ],
+      "sourceFootAnchor": [
+        1084.0,
+        1245
+      ],
+      "retainedSourcePixels": 81587,
+      "excludedCellPixels": 0,
+      "recoveredOutsideCellPixels": 223,
+      "size": [
+        256,
+        512
+      ],
+      "usefulBounds": [
+        24,
+        70,
+        230,
+        500
+      ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "60ef61f199a5c9946d51bb66da257618300da3121556c95c6d3f8f656118c6d3",
+      "frame": 5,
+      "transformation": "alpha>=80; largest cell-seeded connected person; exact common .70 scale; feet midpoint at128,500"
     },
     {
       "file": "game/assets/v4/podium/npc-blue-0.png",

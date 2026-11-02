@@ -22,7 +22,7 @@ export function podiumMarkup(race, assets) {
       <div class="podium-stage-label" aria-live="polite">${labels[0]}</div>
     </div>
     <footer class="podium-actions"><button class="primary" id="podium-replay">CORRER NOVAMENTE</button><button class="secondary" id="podium-select">TROCAR PILOTO</button><button class="text-button" id="podium-title">VOLTAR À CAPA</button><button class="text-button" id="podium-sound">SOM</button></footer>
-    <small class="podium-review">PRÉVIA V4 · ilustrações novas aguardam revisão de fidelidade</small>
+    <small class="podium-review">V4 · Daniel e Felipe aprovados · arte dos rivais em revisão</small>
   </section>`;
 }
 
