@@ -3,7 +3,7 @@
 - Criados quatro atlases PNG e24sprites individuais: traseira, esquerda/direita e frenagem nas três vistas, preservando aerofólio, gaiola, lanternas, escapes e gancho da referência.
 - Runtime Phaser usa as novas vistas com proporção e pivô verificados; seleção estável pelo volante e freio efetivo. Física e resultados preservados.
 - Pesquisa de código público MIT registrada; nenhum código/asset/música de Top Gear importado.
-- Node45/45, alpha/hashes, seis estados no Phaser real e corrida completa em dois tamanhos móveis emulados passaram localmente. Publicação HTTPS em verificação. Ver NPC_REFERENCE_QA.md.
+- Node45/45, alpha/hashes, seis estados no Phaser real e corrida completa em dois tamanhos móveis emulados passaram localmente. HTTPS publicado e verificado no run41483753670, com13capturas e dois relatórios PASS. Versões anteriores preservadas. Ver NPC_REFERENCE_QA.md.
 
 ## 02/11/2026 — publicação e verificação pública da prévia V4
 - Prévia em https://andrervarella.github.io/FTW-Race/teste-v4/, branch exclusiva `codex/ftw-race-v4-arcade`.

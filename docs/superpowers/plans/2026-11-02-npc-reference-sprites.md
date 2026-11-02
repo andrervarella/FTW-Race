@@ -9,6 +9,8 @@ The owner explicitly requested these car designs and production sprites. Public 
 - [x] Add failing tests for six view states, steering hysteresis, active raster preload and actual brake state; implement the small visual selector and simulator flag.
 - [x] Integrate atlas texture/frame selection with physical scale and rear-axle pivot; inspect screenshots and curves/braking in real Phaser.
 - [x] Audit alpha/dimensions/frame hashes, document generated derivation and source access limits, record public-repository research and run all suites.
-- [ ] Commit source, copy only the V4 folder, verify old Pages files, publish with guarded refs, run the public browser workflow and inspect its evidence.
+- [x] Commit source, copy only the V4 folder, verify old Pages files, publish with guarded refs, run the public browser workflow and inspect its evidence.
 
 The chat attachment is visually available but has no local file ID/path. image_gen edits the supplied reference directly; its result is a visual derivation, not a byte-for-byte extraction of that attachment. The raw generated sheet and every transformation will be versioned and verified.
+
+Public completion evidence: run41483753670 success, artifact13161440675 downloaded/hash-verified and screenshots inspected. Details in NPC_REFERENCE_QA.md. Physical Android and final artistic approval remain outside the verified claims.
