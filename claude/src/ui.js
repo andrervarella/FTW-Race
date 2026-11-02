@@ -1,13 +1,14 @@
 // Interface em DOM por cima do canvas: menu, HUD, controles de toque, pausa, resultado, aviso de orientação, depuração.
 import { DRIVERS } from './config.js';
 import { InputState, KEYMAP } from './input.js';
-import { EngineAudio } from './audio.js';
+import { GameAudio, MODE_LABEL } from './audio.js';
 import { createRace, pauseRace, resumeRace, playerPosition, formatTime } from './sim.js';
 
 export class Ui {
   constructor(root, { track, assets, onRace, debug }) {
-    Object.assign(this, { root, track, assets, onRace, debug, race: null, input: new InputState(), audio: new EngineAudio(), selected: 'daniel', screen: 'menu', renderedPhase: '', lastHud: 0, fps: 0, fpsAcc: 0, fpsN: 0 });
+    Object.assign(this, { root, track, assets, onRace, debug, race: null, input: new InputState(), audio: new GameAudio(), selected: 'daniel', screen: 'menu', renderedPhase: '', lastHud: 0, fps: 0, fpsAcc: 0, fpsN: 0 });
     this.menu();
+    document.addEventListener('pointerdown', () => this.audio.unlock().catch(() => {}), { once: true }); // navegadores exigem um toque para liberar o áudio
     const stop = () => this.interrupt();
     window.addEventListener('blur', stop);
     document.addEventListener('visibilitychange', () => { if (document.hidden) stop(); });
@@ -47,7 +48,7 @@ export class Ui {
   start(laps, charges) {
     this.race = createRace(this.track, this.selected, { laps, nitroCharges: charges }); this.onRace(this.race);
     this.input.clear(); this.screen = 'race'; this.renderedPhase = ''; this.raceUi();
-    this.audio.unlock().catch(() => { this.audio.muted = true; });
+    this.audio.unlock().catch(() => {});
     if (this.portrait) pauseRace(this.race);
   }
   minimap() {
@@ -62,7 +63,7 @@ export class Ui {
       <header class="hud"><div class="cell"><small>POSIÇÃO</small><strong id="position">1<span>/ 2</span></strong></div>
         <div class="cell"><small>VOLTA</small><strong id="lap">1 / ${r.config.laps}</strong></div>
         <div class="cell"><small>TEMPO</small><strong id="time">00:00.0</strong></div>
-        <div class="grow"></div><button id="sound" class="icon-button">${this.audio.muted ? 'SOM OFF' : 'SOM ON'}</button><button id="pause" class="icon-button" aria-label="Pausar">II</button></header>
+        <div class="grow"></div><button id="sound" class="icon-button">${MODE_LABEL[this.audio.mode]}</button><button id="pause" class="icon-button" aria-label="Pausar">II</button></header>
       <div class="minimap">${this.minimap()}</div><div class="race-message" id="msg" aria-live="polite"></div>
       <div class="speed"><strong id="speed">0</strong><span>km/h</span><small id="surface"></small></div>
       <div class="nitro-toast" id="nitro-toast" hidden>${this.img('can.png', 'Lata Diabo Verde')}<span>DIABO VERDE<small>NITRO ATIVO</small></span></div>
@@ -71,7 +72,7 @@ export class Ui {
         <button class="brake" data-action="brake">FREIO</button><button class="throttle" data-action="throttle">ACELERAR</button></div></div>
       <div id="modal"></div></section>`;
     this.root.querySelector('#pause').onclick = () => this.togglePause();
-    this.root.querySelector('#sound').onclick = (e) => { this.audio.toggle(); this.audio.unlock().catch(() => { this.audio.muted = true; }); e.currentTarget.textContent = this.audio.muted ? 'SOM OFF' : 'SOM ON'; };
+    this.root.querySelector('#sound').onclick = (e) => { this.audio.unlock().catch(() => {}); this.audio.cycleMode(); e.currentTarget.textContent = MODE_LABEL[this.audio.mode]; };
     for (const b of this.root.querySelectorAll('[data-action]')) {
       b.addEventListener('pointerdown', (e) => { e.preventDefault(); if (this.race?.phase !== 'racing') return; try { b.setPointerCapture(e.pointerId); } catch {} this.input.press(e.pointerId, b.dataset.action); b.classList.add('held'); });
       const up = (e) => { this.input.release(e.pointerId); b.classList.toggle('held', this.input.snapshot()[b.dataset.action]); };
@@ -96,7 +97,7 @@ export class Ui {
   }
   update(now) {
     const r = this.race; this.fpsAcc += 1; if (now - (this.fpsT || now) >= 1000) { this.fps = this.fpsAcc; this.fpsAcc = 0; this.fpsT = now; } this.fpsT ||= now;
-    this.audio.update(r?.player.speed ?? 0, r?.phase === 'racing', !!r && r.player.nitroRemaining > 0);
+    this.audio.update(this.screen === 'race' ? r : null, this.input.snapshot());
     if (this.debug) this.debugPanel(now);
     if (!r || this.screen !== 'race') return;
     this.root.dataset.phase = r.phase;
