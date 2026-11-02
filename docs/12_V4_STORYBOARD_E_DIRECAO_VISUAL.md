@@ -1,4 +1,4 @@
-# FTW RACE — V4 | Storyboard visual e especificação de experiência (PROPOSTA)
+# FTW RACE — V4 | Storyboard visual e especificação de experiência (APROVADO)
 
 **Status:** DIREÇÃO VISUAL E FUNCIONAL APROVADA PELO PROPRIETÁRIO. A V4 ainda NÃO está implementada, os sprites específicos ainda NÃO foram validados e a aprovação não autoriza chamar a versão final de pronta.  
 **Base:** `claude/ftw-race-v0.2` (V3 seis carros). **Próxima etapa autorizada:** preparar a implementação em branch de desenvolvimento, seguindo `docs/13_PROMPT_MESTRE_CODEX_V4.md`. A publicação deve preservar a V3 e exigir validação real.
