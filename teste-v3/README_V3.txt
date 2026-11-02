@@ -1,0 +1,1 @@
+FTW Race V3: versao de teste com 6 carros. Chrome Android em paisagem. Os quatro adversarios adicionais usam arte 2D original provisoria. Nada nesta pasta altera a versao original. Fonte: branch claude/ftw-race-v0.2 no GitHub. Testes de simulacao executados; teste Android fisico pendente.
