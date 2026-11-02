@@ -1,0 +1,28 @@
+name: FTW Race V3 QA
+on:
+  push:
+    branches:
+      - 'claude/ftw-race-v0.2'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  game-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check JS syntax
+        run: |
+          for f in game/src/*.js game/tests/*.js; do node --check "$f"; done
+      - name: Run game tests
+        working-directory: game
+        run: npm test
+      - name: Check original unbranded opponent sprites
+        run: |
+          for f in game/cars/*.svg; do
+            test -s "$f"
+            grep -q 'xmlns="http://www.w3.org/2000/svg"' "$f"
+          done
