@@ -540,6 +540,20 @@
       ]
     },
     {
+      "path": "assets/previews/v4/npc-podium-generated-source.png",
+      "sha256": "d9c7eda3c53e3bbb1e8cc17d946045842d6c26d8ad30bc01dce55db37945887b",
+      "bytes": 1306966,
+      "status": "preliminary-human-review-pending",
+      "size": [
+        2172,
+        724
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
       "path": "assets/previews/v4/podium-generated-source.png",
       "sha256": "99217899498490dc35ca57ada3b29c7a2ff1fdfd26934e7d40163bc833b7a5ea",
       "bytes": 2458550,
@@ -1089,17 +1103,17 @@
     },
     {
       "path": "game/assets/v4/podium/frames.json",
-      "sha256": "73ef43392b9b0ad7258fef8e20cb42be5961bc0644b9155cf108f8175e477b80",
-      "bytes": 15714,
+      "sha256": "135edb8a00bc6972d728f472f1c17f785d6228199407a8ea34f231204d6a11a0",
+      "bytes": 19146,
       "status": "derived-or-new-art-human-review-pending"
     },
     {
       "path": "game/assets/v4/podium/npc-blue-0.png",
-      "sha256": "f2bdb81b2f55212bf79bbc15c7f05a9f9390de635a2d4cf82dc113de92476066",
-      "bytes": 2168,
+      "sha256": "6c2784f5c43bde17bcdbebab966b20a422adccd220895b1f1dea3a6070caddb5",
+      "bytes": 77297,
       "status": "derived-or-new-art-human-review-pending",
       "size": [
-        256,
+        320,
         512
       ],
       "alphaExtrema": [
@@ -1109,11 +1123,11 @@
     },
     {
       "path": "game/assets/v4/podium/npc-blue-1.png",
-      "sha256": "37f7af82ae4a6132abcc2c5e430dda11b047e8aacfb97e27a4686f9e15ab8a39",
-      "bytes": 2605,
+      "sha256": "3fba6eed863a2a54976784b719f03d80d55cd9e5b1f79ea91724455c8aa5bd7e",
+      "bytes": 84679,
       "status": "derived-or-new-art-human-review-pending",
       "size": [
-        256,
+        320,
         512
       ],
       "alphaExtrema": [
@@ -1123,11 +1137,11 @@
     },
     {
       "path": "game/assets/v4/podium/npc-blue-2.png",
-      "sha256": "97b8f4369c0d2d30e40e40a96036f77c82d779f5ffa0618e8422e24873c432b1",
-      "bytes": 2608,
+      "sha256": "489cfd9d8f4444ba6a2fd836ee684a6633ac1de776117dad1984ccef5e6f5c2e",
+      "bytes": 109723,
       "status": "derived-or-new-art-human-review-pending",
       "size": [
-        256,
+        320,
         512
       ],
       "alphaExtrema": [
@@ -1137,11 +1151,11 @@
     },
     {
       "path": "game/assets/v4/podium/npc-blue-3.png",
-      "sha256": "455d562d09994cfb734a060decba332e7f49a840bb024fbb51850f9459ba5815",
-      "bytes": 2339,
+      "sha256": "fa09c1cef0d18f4aec36de1a40cf400fc1d46016d38bf7cec4d9bbb8b0c07799",
+      "bytes": 87281,
       "status": "derived-or-new-art-human-review-pending",
       "size": [
-        256,
+        320,
         512
       ],
       "alphaExtrema": [
@@ -1151,11 +1165,11 @@
     },
     {
       "path": "game/assets/v4/podium/npc-blue-4.png",
-      "sha256": "f13e3a936fbc362f2148e41d03834c9fb7974bf843a1b232fabe46c6262a6a78",
-      "bytes": 2432,
+      "sha256": "95500e937e3cdbe626f5390e7075f36f64cfbc2d87858340c7b3e90d4a877c24",
+      "bytes": 87211,
       "status": "derived-or-new-art-human-review-pending",
       "size": [
-        256,
+        320,
         512
       ],
       "alphaExtrema": [
@@ -1165,11 +1179,11 @@
     },
     {
       "path": "game/assets/v4/podium/npc-blue-5.png",
-      "sha256": "0a5330300148debe3e91e4b4262a35be805cf096c9a45a287e792ba940ef0c69",
-      "bytes": 2589,
+      "sha256": "0ddf4ff83f3a307c5404d3905a3c5fdf5a75a0a7851b3aae1674967cb8eea246",
+      "bytes": 110368,
       "status": "derived-or-new-art-human-review-pending",
       "size": [
-        256,
+        320,
         512
       ],
       "alphaExtrema": [
@@ -1179,11 +1193,11 @@
     },
     {
       "path": "game/assets/v4/podium/npc-purple-0.png",
-      "sha256": "4949c317c5ad04ac1d2eca7105bf0f318e92b630697c06acdcfb818f26528941",
-      "bytes": 2169,
+      "sha256": "d24738394ac9fdebcf78b8da788435f1529f0b6693774beb44bae5301a1e18b1",
+      "bytes": 79844,
       "status": "derived-or-new-art-human-review-pending",
       "size": [
-        256,
+        320,
         512
       ],
       "alphaExtrema": [
@@ -1193,11 +1207,11 @@
     },
     {
       "path": "game/assets/v4/podium/npc-purple-1.png",
-      "sha256": "f4b58fe0b563e2a3822ec26006ff19a71eb58dd96482f2fb5b113e75824c66c5",
-      "bytes": 2623,
+      "sha256": "da8e0e62a7cbdbdb615981cf68672594fa8882c6931a4ebc099fecfc62375730",
+      "bytes": 86807,
       "status": "derived-or-new-art-human-review-pending",
       "size": [
-        256,
+        320,
         512
       ],
       "alphaExtrema": [
@@ -1207,11 +1221,11 @@
     },
     {
       "path": "game/assets/v4/podium/npc-purple-2.png",
-      "sha256": "d84bed9e8def98131bf4b0c38f43cdecc9c86e8991a717b3526a125667bdeb44",
-      "bytes": 2608,
+      "sha256": "6d33dd7be5edac93a3c152529cf541fb93eb185d54df6cde968db698dd41705a",
+      "bytes": 112601,
       "status": "derived-or-new-art-human-review-pending",
       "size": [
-        256,
+        320,
         512
       ],
       "alphaExtrema": [
@@ -1221,11 +1235,11 @@
     },
     {
       "path": "game/assets/v4/podium/npc-purple-3.png",
-      "sha256": "018c175ef52efaebd3accd8bbfde503376ca4053ca26933184f42ac986eade74",
-      "bytes": 2362,
+      "sha256": "5a498ab9ff22da30137ee020c973d0a7f31375b18732d43c48f557b9580c9d00",
+      "bytes": 90052,
       "status": "derived-or-new-art-human-review-pending",
       "size": [
-        256,
+        320,
         512
       ],
       "alphaExtrema": [
@@ -1235,11 +1249,11 @@
     },
     {
       "path": "game/assets/v4/podium/npc-purple-4.png",
-      "sha256": "b5765fc773cc5ac7d3a6250d8aa628290df451b06643422d5779223fba359122",
-      "bytes": 2454,
+      "sha256": "bb3732cce79ae7e918a3908c41514e9b2bd6b669cde8e6fda4083159ba5ebc39",
+      "bytes": 89886,
       "status": "derived-or-new-art-human-review-pending",
       "size": [
-        256,
+        320,
         512
       ],
       "alphaExtrema": [
@@ -1249,11 +1263,11 @@
     },
     {
       "path": "game/assets/v4/podium/npc-purple-5.png",
-      "sha256": "9c6d6897161ef03e7accef9a3cd172c8215cdfcb9a4d97db34add3a81f8e6291",
-      "bytes": 2580,
+      "sha256": "0058268215d5bb365996594137c748cafa34206a0d5a20f05d7774840d4f9ac9",
+      "bytes": 113267,
       "status": "derived-or-new-art-human-review-pending",
       "size": [
-        256,
+        320,
         512
       ],
       "alphaExtrema": [
@@ -1263,11 +1277,11 @@
     },
     {
       "path": "game/assets/v4/podium/npc-silver-0.png",
-      "sha256": "d4d318683b67cd2a4375efc379823bdbd6c9c0f007f7dba2852ec51c3adc5ce1",
-      "bytes": 2167,
+      "sha256": "be2a6c9d8c65a5c67bbdcb12e0508fd34c139f1659c832fad5864faf09718aac",
+      "bytes": 83376,
       "status": "derived-or-new-art-human-review-pending",
       "size": [
-        256,
+        320,
         512
       ],
       "alphaExtrema": [
@@ -1277,11 +1291,11 @@
     },
     {
       "path": "game/assets/v4/podium/npc-silver-1.png",
-      "sha256": "8e252e3feb8973c37b99a3a53cebc8eb509ef0e874446a6e26377584c6d8909d",
-      "bytes": 2596,
+      "sha256": "008691a4cce5d2fe109b89cdcb57783955fd1dcd56c154c572ccf1d43076eba7",
+      "bytes": 89643,
       "status": "derived-or-new-art-human-review-pending",
       "size": [
-        256,
+        320,
         512
       ],
       "alphaExtrema": [
@@ -1291,11 +1305,11 @@
     },
     {
       "path": "game/assets/v4/podium/npc-silver-2.png",
-      "sha256": "e10074ed6ab1cec006c3151a925120cf7af57bd3be57c61b1b0742290401d4af",
-      "bytes": 2606,
+      "sha256": "f1417365a53dbaa0e2a48272b30637c84f7644cb3c52586b460cabf7be9b7cc9",
+      "bytes": 116773,
       "status": "derived-or-new-art-human-review-pending",
       "size": [
-        256,
+        320,
         512
       ],
       "alphaExtrema": [
@@ -1305,11 +1319,11 @@
     },
     {
       "path": "game/assets/v4/podium/npc-silver-3.png",
-      "sha256": "168f2a0602a4e0dbd4df797c25f5497c590b6837305f372dc07355795d7a5ab0",
-      "bytes": 2331,
+      "sha256": "17397e57414bed0aabb663ec1c579a164785a97b480c73aca5336593acede95c",
+      "bytes": 93682,
       "status": "derived-or-new-art-human-review-pending",
       "size": [
-        256,
+        320,
         512
       ],
       "alphaExtrema": [
@@ -1319,11 +1333,11 @@
     },
     {
       "path": "game/assets/v4/podium/npc-silver-4.png",
-      "sha256": "8eb65ad9522695f84b8a8944bc784675090cf9502443ea956a19c94e3f74f355",
-      "bytes": 2434,
+      "sha256": "f75adaaf254722867f239c6b0e37f675ae0f98a088d2a0d96731507b8a420914",
+      "bytes": 93306,
       "status": "derived-or-new-art-human-review-pending",
       "size": [
-        256,
+        320,
         512
       ],
       "alphaExtrema": [
@@ -1333,11 +1347,11 @@
     },
     {
       "path": "game/assets/v4/podium/npc-silver-5.png",
-      "sha256": "50966ff10418e7c3214ed008863610dbbd04e3b43cce1d2054b00945eb26f9c9",
-      "bytes": 2586,
+      "sha256": "10d4e6f66209212aea3dbdb9461b7ded4d1a0ac8c80fd22905ba9a81bf54fd0e",
+      "bytes": 117516,
       "status": "derived-or-new-art-human-review-pending",
       "size": [
-        256,
+        320,
         512
       ],
       "alphaExtrema": [
@@ -1347,11 +1361,11 @@
     },
     {
       "path": "game/assets/v4/podium/npc-yellow-0.png",
-      "sha256": "84919a3576cccfa9740c7555e12e2e704bae6bc88aad9444f26fc896208e7c35",
-      "bytes": 2156,
+      "sha256": "3c3ee0e9d593841db992e9824926a3b13dcdf940e8026d128e54c35c634c4d07",
+      "bytes": 78553,
       "status": "derived-or-new-art-human-review-pending",
       "size": [
-        256,
+        320,
         512
       ],
       "alphaExtrema": [
@@ -1361,11 +1375,11 @@
     },
     {
       "path": "game/assets/v4/podium/npc-yellow-1.png",
-      "sha256": "f64eff7bbc828445b379740b0b6f1a8128266fb20b63f23d5c3d3c5a68703952",
-      "bytes": 2628,
+      "sha256": "58b22544dd9861c14135100602a8f0c8fba4ebbc3f19f6b9179b0dc65e851115",
+      "bytes": 85594,
       "status": "derived-or-new-art-human-review-pending",
       "size": [
-        256,
+        320,
         512
       ],
       "alphaExtrema": [
@@ -1375,11 +1389,11 @@
     },
     {
       "path": "game/assets/v4/podium/npc-yellow-2.png",
-      "sha256": "a6359d45e03316c6fa8bd7f35aa929805c64690962d93938a9318eecbaadcee1",
-      "bytes": 2601,
+      "sha256": "a917b948a97539ec329fab8244bedb8861aa19100cdb049930a0e643877c48a2",
+      "bytes": 111163,
       "status": "derived-or-new-art-human-review-pending",
       "size": [
-        256,
+        320,
         512
       ],
       "alphaExtrema": [
@@ -1389,11 +1403,11 @@
     },
     {
       "path": "game/assets/v4/podium/npc-yellow-3.png",
-      "sha256": "1a71bcd82590987a0dbf4296666a9158fbe48fe08fc6f217c73bcc510f38dff9",
-      "bytes": 2331,
+      "sha256": "f47e541de241cacf7babf9e552a1575cdd7cb57d9fad4d93dbab01a325f54908",
+      "bytes": 88556,
       "status": "derived-or-new-art-human-review-pending",
       "size": [
-        256,
+        320,
         512
       ],
       "alphaExtrema": [
@@ -1403,11 +1417,11 @@
     },
     {
       "path": "game/assets/v4/podium/npc-yellow-4.png",
-      "sha256": "e783d83a00d7157ac0e0f3b93274e228c8efa445bf396c14d2fda91087be177c",
-      "bytes": 2423,
+      "sha256": "401d98fc144fa68f7a92776a3209e42d3cb6e3ffddf3f4d11221799cd4cad51a",
+      "bytes": 88565,
       "status": "derived-or-new-art-human-review-pending",
       "size": [
-        256,
+        320,
         512
       ],
       "alphaExtrema": [
@@ -1417,11 +1431,11 @@
     },
     {
       "path": "game/assets/v4/podium/npc-yellow-5.png",
-      "sha256": "8efffb9283a73a8cb9acee23705526f3ccd41bd28a2857c963b2d46952566928",
-      "bytes": 2583,
+      "sha256": "ea3db8db5429c74196d417259d1522b5f2766fb0a5d6991f4918de4a9451469d",
+      "bytes": 111781,
       "status": "derived-or-new-art-human-review-pending",
       "size": [
-        256,
+        320,
         512
       ],
       "alphaExtrema": [

@@ -1,6 +1,6 @@
 # QA V4 — prévia funcional, arte em revisão
 
-Fonte-base: `f6f6f83c40a3db3cc83cde4fc12702a1a94cc6e1`. Branch exclusiva: `codex/ftw-race-v4-arcade`. Baseline: `V4_BASELINE.txt`. Data de trabalho exibida ao usuário:01/11/2026, America/Sao_Paulo.
+Fonte-base: `f6f6f83c40a3db3cc83cde4fc12702a1a94cc6e1`. Branch exclusiva: `codex/ftw-race-v4-arcade`. Baseline: `V4_BASELINE.txt`. Trabalho iniciado em01/11/2026 e continuado em02/11/2026, America/Sao_Paulo.
 
 ## Verificado localmente
 | Verificação | Resultado e limite |
@@ -8,7 +8,7 @@ Fonte-base: `f6f6f83c40a3db3cc83cde4fc12702a1a94cc6e1`. Branch exclusiva: `codex
 | Node24.19 / npm test | PASS40/40asserções: todas as suítes, não apenas core. `--test-isolation=none` evita a execução por subprocesso que ocultava asserts neste ambiente. |
 | Sintaxe | `node --check` em todos os módulos JS; PASS. |
 | Simulação | Corrida completa determinística, seis vencedores, empate estável, checkpoints, exatas voltas, nitro, pausa, colisão em pack e retardatário; PASS. |
-| Assets |20PNG de render/16quadros FX;120arquivos com SHA256;36frames de corpo inteiro distintos com alpha real256×512; PASS. |
+| Assets |20PNG de render/16quadros FX;121 arquivos com SHA256;36frames de corpo inteiro distintos com alpha real (oficiais256×512, NPCs320×512); PASS. |
 | DOM em Chromium154 | title→select→grid→countdown→pause→results→podium; ambos pilotos, confirmação duplicada, três pointers/cancel/lostcapture, teclado, reduced-motion e seis vencedores; PASS. |
 | Phaser real | WEBGL local3.90.0 carregou; corrida de uma volta terminou naturalmente com rival vencedor, bandeirada→seis linhas→pódio seis etapas→replay/trocar/capa; PASS. Não apenas fixture. |
 | Android emulado | Chromium, viewports915×412 e740×360, is_mobile/has_touch; CDP input de três dedos, aceleração+direção+nitro, cancel/blur, portrait/landscape e safe layout; PASS. Não é aparelho físico. |

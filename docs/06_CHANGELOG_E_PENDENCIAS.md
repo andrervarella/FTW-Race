@@ -1,5 +1,5 @@
 # Registro e continuidade
-## 01/11/2026 — V4 em branch exclusiva
+## 01–02/11/2026 — V4 em branch exclusiva
 - Fonte exata `f6f6f83` recuperada e branch `codex/ftw-race-v4-arcade` criada; V3 e raiz preservadas.
 - Implementados capa2D, seleção explícita, grid, corrida/pausa, bandeirada, classificação de seis e comemoração para cada vencedor.
 - Resultado congelado na primeira chegada interpolada; não concluintes sem tempo inventado. Corrigida perda de volta na colisão com retardatário.

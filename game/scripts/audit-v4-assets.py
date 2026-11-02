@@ -33,7 +33,7 @@ else:
         hashes=[]
         for i in range(6):
             p=root/f'game/assets/v4/podium/{key}-{i}.png'
-            im=Image.open(p);assert im.size==(256,512)
+            im=Image.open(p);assert im.size==((320,512) if key.startswith('npc-') else (256,512))
             assert im.mode=='RGBA' and im.getchannel('A').getextrema()==(0,255)
             hashes.append(hashlib.sha256(p.read_bytes()).hexdigest())
         assert len(set(hashes))==6,key
