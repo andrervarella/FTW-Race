@@ -1,4 +1,4 @@
-name: FTW V4 materialize authorized NPC sprite source
+name: FTW V4 materialize approved pilot and cover images
 on:
   push:
     branches: [codex/ftw-race-v4-assets-transfer]
@@ -11,14 +11,14 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
-      - name: Verify and materialize the owner-requested NPC PNG in this repository
+      - name: Verify and materialize owner-approved images in this same repository
         run: python3 .ftw-v4-transfer/materialize.py
         env:
           GITHUB_TOKEN: ${{ github.token }}
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: ftw-v4-npc-materialized-${{ github.run_id }}
+          name: ftw-v4-pilots-materialized-${{ github.run_id }}
           path: .ftw-v4-transfer/result.json
           if-no-files-found: error
           retention-days: 7

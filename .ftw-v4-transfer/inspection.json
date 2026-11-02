@@ -1,22 +1,208 @@
-{
-  "visualInspection": "16 NPC car sprite views only, matching the owner-requested design; no people, documents, private communications or credentials",
-  "source": "assets/previews/v4/npc-cars-views-generated.png",
-  "sha": "2ec845c8f02415c8a9616f92be1f14012504bf57",
-  "sha256": "39e98cf961a610dc64ab51f8550e5caf66fc5a5c37b30a83176813f7e1ac5202",
-  "dimensions": [
-    1254,
-    1254
-  ],
-  "pngChunks": [
-    "IDAT",
-    "IEND",
-    "IHDR",
-    "caBX"
-  ],
-  "noBytesAfterIEND": true,
-  "singleRGBAImageStream": true,
-  "credentialMarkers": [],
-  "partsAreContiguousSlicesOfThisPNG": true,
-  "parts": 18,
-  "c2pa": "Public AI provenance/certificates, no private key or prompt text"
-}
+[
+  {
+    "source": "assets/previews/v4/approved-pilots/daniel-face-v2.png",
+    "gitBlob": "3c1ec92c1856ace5f897be912b56caa917d6e22b",
+    "sha256": "701f3077485d037a72a867fd32473bba182525fb448111a97db0fb19c47d3bcb",
+    "bytes": 1892158,
+    "dimensions": [
+      1312,
+      1199
+    ],
+    "format": "PNG",
+    "chunks": [
+      "IDAT",
+      "IEND",
+      "IHDR",
+      "caBX"
+    ],
+    "containerValidated": true,
+    "credentialMarkers": [],
+    "visualScope": "approved Daniel/Felipe racing portraits, complete sprite sheets or Cascavel cover scenery; no private documents/communications",
+    "parts": 19
+  },
+  {
+    "source": "assets/previews/v4/approved-pilots/daniel-full-sprites-corrected.png",
+    "gitBlob": "60f56bdfe439e3073435802afd3de7b6c3eaf11c",
+    "sha256": "e1d26a16e7d2d55ac08f212f3646da5c88a5f17688c2a4f29208ebdb22bdbb3b",
+    "bytes": 1781173,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "format": "PNG",
+    "chunks": [
+      "IDAT",
+      "IEND",
+      "IHDR",
+      "caBX"
+    ],
+    "containerValidated": true,
+    "credentialMarkers": [],
+    "visualScope": "approved Daniel/Felipe racing portraits, complete sprite sheets or Cascavel cover scenery; no private documents/communications",
+    "parts": 17
+  },
+  {
+    "source": "assets/previews/v4/approved-pilots/felipe-face-cap.png",
+    "gitBlob": "839a979a2bf687b9481a2a4a69ded737d32d30a0",
+    "sha256": "d8d6b6cb0db27aee2ea0bc754fd260b3f108a6ba50a43a8c0aafb5c46f0849fd",
+    "bytes": 1870192,
+    "dimensions": [
+      1182,
+      1331
+    ],
+    "format": "PNG",
+    "chunks": [
+      "IDAT",
+      "IEND",
+      "IHDR",
+      "caBX"
+    ],
+    "containerValidated": true,
+    "credentialMarkers": [],
+    "visualScope": "approved Daniel/Felipe racing portraits, complete sprite sheets or Cascavel cover scenery; no private documents/communications",
+    "parts": 18
+  },
+  {
+    "source": "assets/previews/v4/approved-pilots/felipe-face-v2.png",
+    "gitBlob": "b152bb9540e37b7bcea8a618ebc5f1b523373f6a",
+    "sha256": "da316b991e51337bd989f7bc01882049c433b047c33f05c4b40ddfdbe6b6cfb8",
+    "bytes": 2026378,
+    "dimensions": [
+      1182,
+      1331
+    ],
+    "format": "PNG",
+    "chunks": [
+      "IDAT",
+      "IEND",
+      "IHDR",
+      "caBX"
+    ],
+    "containerValidated": true,
+    "credentialMarkers": [],
+    "visualScope": "approved Daniel/Felipe racing portraits, complete sprite sheets or Cascavel cover scenery; no private documents/communications",
+    "parts": 20
+  },
+  {
+    "source": "assets/previews/v4/approved-pilots/felipe-full-sprites-corrected.png",
+    "gitBlob": "0591fc8b0a5253bb8ab5be3a7a078f4f7668886e",
+    "sha256": "e015e657fea02102dfa8babc83b2fe894442f33593ee6a47ffe495575f2d476f",
+    "bytes": 2081536,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "format": "PNG",
+    "chunks": [
+      "IDAT",
+      "IEND",
+      "IHDR",
+      "caBX"
+    ],
+    "containerValidated": true,
+    "credentialMarkers": [],
+    "visualScope": "approved Daniel/Felipe racing portraits, complete sprite sheets or Cascavel cover scenery; no private documents/communications",
+    "parts": 20
+  },
+  {
+    "source": "game/assets/v4/drivers/daniel-portrait.webp",
+    "gitBlob": "8c1192d9818dc8f6f7ff7f70ec4cc654921ed677",
+    "sha256": "1e64a5077e55042583239070289d30fab10ce4b3b539615ffee83475b793b4b0",
+    "bytes": 585996,
+    "dimensions": [
+      900,
+      822
+    ],
+    "format": "WEBP",
+    "chunks": [],
+    "containerValidated": true,
+    "credentialMarkers": [],
+    "visualScope": "approved Daniel/Felipe racing portraits, complete sprite sheets or Cascavel cover scenery; no private documents/communications",
+    "parts": 6
+  },
+  {
+    "source": "game/assets/v4/drivers/felipe-portrait.webp",
+    "gitBlob": "8d117a536396297952871b4d33900bbce6029c6b",
+    "sha256": "210aa3f0498ce5016f0e6f96ae4cbdd692dc3fed49206a41f27628dd190091cd",
+    "bytes": 620716,
+    "dimensions": [
+      799,
+      900
+    ],
+    "format": "WEBP",
+    "chunks": [],
+    "containerValidated": true,
+    "credentialMarkers": [],
+    "visualScope": "approved Daniel/Felipe racing portraits, complete sprite sheets or Cascavel cover scenery; no private documents/communications",
+    "parts": 6
+  },
+  {
+    "source": "game/assets/v4/title/background.png",
+    "gitBlob": "e72f8b43fc54e3bdc9fd4b22e5aa547cdfe020c6",
+    "sha256": "dc6eb16e91c5e38393aa0aeec936a54f39f82b41d3be9c373ea6c2f16ecb2d16",
+    "bytes": 2821411,
+    "dimensions": [
+      1672,
+      941
+    ],
+    "format": "PNG",
+    "chunks": [
+      "IDAT",
+      "IEND",
+      "IHDR",
+      "caBX"
+    ],
+    "containerValidated": true,
+    "credentialMarkers": [],
+    "visualScope": "approved Daniel/Felipe racing portraits, complete sprite sheets or Cascavel cover scenery; no private documents/communications",
+    "parts": 27
+  },
+  {
+    "source": "game/assets/v4/title/background.webp",
+    "gitBlob": "44ecaba6364d676b31a18a310745fce3c98a7ea5",
+    "sha256": "2b5da48e6d7bc34d9a793ffd5cf3a67edfac8e069110915bad2a96bc9085ba75",
+    "bytes": 492732,
+    "dimensions": [
+      1600,
+      900
+    ],
+    "format": "WEBP",
+    "chunks": [],
+    "containerValidated": true,
+    "credentialMarkers": [],
+    "visualScope": "approved Daniel/Felipe racing portraits, complete sprite sheets or Cascavel cover scenery; no private documents/communications",
+    "parts": 5
+  },
+  {
+    "source": "game/assets/v4/title/daniel-front-sheet.webp",
+    "gitBlob": "e2a513659cbb92831f967d72a27180fd41b1ca0c",
+    "sha256": "a81767b75c6fe8591032c0c0d10caa59f725321732348ddf16f072dc8e11c33d",
+    "bytes": 802736,
+    "dimensions": [
+      1600,
+      533
+    ],
+    "format": "WEBP",
+    "chunks": [],
+    "containerValidated": true,
+    "credentialMarkers": [],
+    "visualScope": "approved Daniel/Felipe racing portraits, complete sprite sheets or Cascavel cover scenery; no private documents/communications",
+    "parts": 8
+  },
+  {
+    "source": "game/assets/v4/title/felipe-front-sheet.webp",
+    "gitBlob": "a5efb5a29ae1e15e50de38a59c3dc41dec584adc",
+    "sha256": "425a136f721bf7c231f7170823699025c18554ba3b0dfe973c16a2b77378293e",
+    "bytes": 752916,
+    "dimensions": [
+      1600,
+      533
+    ],
+    "format": "WEBP",
+    "chunks": [],
+    "containerValidated": true,
+    "credentialMarkers": [],
+    "visualScope": "approved Daniel/Felipe racing portraits, complete sprite sheets or Cascavel cover scenery; no private documents/communications",
+    "parts": 8
+  }
+]
