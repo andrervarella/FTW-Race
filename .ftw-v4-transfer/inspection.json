@@ -1,0 +1,22 @@
+{
+  "visualInspection": "16 NPC car sprite views only, matching the owner-requested design; no people, documents, private communications or credentials",
+  "source": "assets/previews/v4/npc-cars-views-generated.png",
+  "sha": "2ec845c8f02415c8a9616f92be1f14012504bf57",
+  "sha256": "39e98cf961a610dc64ab51f8550e5caf66fc5a5c37b30a83176813f7e1ac5202",
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "pngChunks": [
+    "IDAT",
+    "IEND",
+    "IHDR",
+    "caBX"
+  ],
+  "noBytesAfterIEND": true,
+  "singleRGBAImageStream": true,
+  "credentialMarkers": [],
+  "partsAreContiguousSlicesOfThisPNG": true,
+  "parts": 18,
+  "c2pa": "Public AI provenance/certificates, no private key or prompt text"
+}

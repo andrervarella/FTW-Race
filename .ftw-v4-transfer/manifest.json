@@ -2,268 +2,63 @@
   "repository": "andrervarella/FTW-Race",
   "blobs": [
     {
-      "sha": "50c93904ba6e554f020f0044530479d9a3a530d3",
-      "size": 1666364,
-      "path": "game/assets/v4/cascavel/title-straight.png",
+      "path": "assets/previews/v4/npc-cars-views-generated.png",
+      "size": 1811796,
+      "sha": "2ec845c8f02415c8a9616f92be1f14012504bf57",
       "parts": [
         {
-          "path": "chunks/50c93904ba6e554f020f0044530479d9a3a530d3/000.b64",
-          "sha": "0bb9cb5757d5103e59a22518aa4265491ab20299",
-          "size": 150000
+          "path": "chunks/2ec845c8f02415c8a9616f92be1f14012504bf57/000.json"
         },
         {
-          "path": "chunks/50c93904ba6e554f020f0044530479d9a3a530d3/001.b64",
-          "sha": "739ff22d1c7fcfa778288e23bd8da8ca2f6d48f2",
-          "size": 150000
+          "path": "chunks/2ec845c8f02415c8a9616f92be1f14012504bf57/001.json"
         },
         {
-          "path": "chunks/50c93904ba6e554f020f0044530479d9a3a530d3/002.b64",
-          "sha": "27bb07145e98e78e61ffac20e071a3b047f55fc2",
-          "size": 150000
+          "path": "chunks/2ec845c8f02415c8a9616f92be1f14012504bf57/002.json"
         },
         {
-          "path": "chunks/50c93904ba6e554f020f0044530479d9a3a530d3/003.b64",
-          "sha": "31f4b7c65e74f525708e00a8e695609aa72ee162",
-          "size": 150000
+          "path": "chunks/2ec845c8f02415c8a9616f92be1f14012504bf57/003.json"
         },
         {
-          "path": "chunks/50c93904ba6e554f020f0044530479d9a3a530d3/004.b64",
-          "sha": "794d8d4d445d487b921ac7ebd1be7d34897d85d5",
-          "size": 150000
+          "path": "chunks/2ec845c8f02415c8a9616f92be1f14012504bf57/004.json"
         },
         {
-          "path": "chunks/50c93904ba6e554f020f0044530479d9a3a530d3/005.b64",
-          "sha": "559f44d8659a5ddf45147816712147f1a4dfb591",
-          "size": 150000
+          "path": "chunks/2ec845c8f02415c8a9616f92be1f14012504bf57/005.json"
         },
         {
-          "path": "chunks/50c93904ba6e554f020f0044530479d9a3a530d3/006.b64",
-          "sha": "94935b99ab43bbdec8224bab2585cd15a34f7635",
-          "size": 150000
+          "path": "chunks/2ec845c8f02415c8a9616f92be1f14012504bf57/006.json"
         },
         {
-          "path": "chunks/50c93904ba6e554f020f0044530479d9a3a530d3/007.b64",
-          "sha": "310b64b2972e807d19c411fd64934af6380abf51",
-          "size": 150000
+          "path": "chunks/2ec845c8f02415c8a9616f92be1f14012504bf57/007.json"
         },
         {
-          "path": "chunks/50c93904ba6e554f020f0044530479d9a3a530d3/008.b64",
-          "sha": "132a9dda25672af7cb1c21c2027ca019357d07aa",
-          "size": 150000
+          "path": "chunks/2ec845c8f02415c8a9616f92be1f14012504bf57/008.json"
         },
         {
-          "path": "chunks/50c93904ba6e554f020f0044530479d9a3a530d3/009.b64",
-          "sha": "1f266f4a621ced12b3315a940dd58c1f0a2363c1",
-          "size": 150000
+          "path": "chunks/2ec845c8f02415c8a9616f92be1f14012504bf57/009.json"
         },
         {
-          "path": "chunks/50c93904ba6e554f020f0044530479d9a3a530d3/010.b64",
-          "sha": "5a150eb92cacc59835f82c8a821823f37cc4cddf",
-          "size": 150000
+          "path": "chunks/2ec845c8f02415c8a9616f92be1f14012504bf57/010.json"
         },
         {
-          "path": "chunks/50c93904ba6e554f020f0044530479d9a3a530d3/011.b64",
-          "sha": "3bf0eba895f4e1bea221b8ae5cc9c4e2738cf38a",
-          "size": 150000
+          "path": "chunks/2ec845c8f02415c8a9616f92be1f14012504bf57/011.json"
         },
         {
-          "path": "chunks/50c93904ba6e554f020f0044530479d9a3a530d3/012.b64",
-          "sha": "7f4de40ae3985b3371fa3d14cd7ad4d20ad60aae",
-          "size": 150000
+          "path": "chunks/2ec845c8f02415c8a9616f92be1f14012504bf57/012.json"
         },
         {
-          "path": "chunks/50c93904ba6e554f020f0044530479d9a3a530d3/013.b64",
-          "sha": "8f5b10bb4b46c4ef277899c91bed01d483c3a019",
-          "size": 150000
+          "path": "chunks/2ec845c8f02415c8a9616f92be1f14012504bf57/013.json"
         },
         {
-          "path": "chunks/50c93904ba6e554f020f0044530479d9a3a530d3/014.b64",
-          "sha": "98f3a4f0789435ddd74acaca2958463000bfba18",
-          "size": 121820
-        }
-      ]
-    },
-    {
-      "sha": "496f711d8e4c4aaa3b6f452af28a5f69dac0eed2",
-      "size": 2458550,
-      "path": "assets/previews/v4/podium-generated-source.png",
-      "parts": [
-        {
-          "path": "chunks/496f711d8e4c4aaa3b6f452af28a5f69dac0eed2/000.b64",
-          "sha": "54c3ad721c44eaa62c52b9c450e6bc0392c5d7ec",
-          "size": 150000
+          "path": "chunks/2ec845c8f02415c8a9616f92be1f14012504bf57/014.json"
         },
         {
-          "path": "chunks/496f711d8e4c4aaa3b6f452af28a5f69dac0eed2/001.b64",
-          "sha": "39212a0ad3d76cfdc7dc0c6ba163a3258033044f",
-          "size": 150000
+          "path": "chunks/2ec845c8f02415c8a9616f92be1f14012504bf57/015.json"
         },
         {
-          "path": "chunks/496f711d8e4c4aaa3b6f452af28a5f69dac0eed2/002.b64",
-          "sha": "b369c6be80040e76dc51af6e505c90026cf728c6",
-          "size": 150000
+          "path": "chunks/2ec845c8f02415c8a9616f92be1f14012504bf57/016.json"
         },
         {
-          "path": "chunks/496f711d8e4c4aaa3b6f452af28a5f69dac0eed2/003.b64",
-          "sha": "d7da9f420dab0251d7333896c2e731f6e99e944b",
-          "size": 150000
-        },
-        {
-          "path": "chunks/496f711d8e4c4aaa3b6f452af28a5f69dac0eed2/004.b64",
-          "sha": "a8ec10d2bfd7181e192993340bfa16aa1ed03892",
-          "size": 150000
-        },
-        {
-          "path": "chunks/496f711d8e4c4aaa3b6f452af28a5f69dac0eed2/005.b64",
-          "sha": "4f5a1abae46ecb4a26238431f83191c17f799db7",
-          "size": 150000
-        },
-        {
-          "path": "chunks/496f711d8e4c4aaa3b6f452af28a5f69dac0eed2/006.b64",
-          "sha": "b1b6983ad99515f361cb011222a3e75cf972e84b",
-          "size": 150000
-        },
-        {
-          "path": "chunks/496f711d8e4c4aaa3b6f452af28a5f69dac0eed2/007.b64",
-          "sha": "cfb23c54113217c718067106b497db5a021e5f61",
-          "size": 150000
-        },
-        {
-          "path": "chunks/496f711d8e4c4aaa3b6f452af28a5f69dac0eed2/008.b64",
-          "sha": "221dd43e443b51cd4ff511f8e8959ac80e92861c",
-          "size": 150000
-        },
-        {
-          "path": "chunks/496f711d8e4c4aaa3b6f452af28a5f69dac0eed2/009.b64",
-          "sha": "8f8709893e39496f7ca95cab2d0587dbdf69d4ba",
-          "size": 150000
-        },
-        {
-          "path": "chunks/496f711d8e4c4aaa3b6f452af28a5f69dac0eed2/010.b64",
-          "sha": "76d402fb2618a6502b174287e4133d6f43938c8a",
-          "size": 150000
-        },
-        {
-          "path": "chunks/496f711d8e4c4aaa3b6f452af28a5f69dac0eed2/011.b64",
-          "sha": "4731dad4ef736bc276c80eb480da74794423b70b",
-          "size": 150000
-        },
-        {
-          "path": "chunks/496f711d8e4c4aaa3b6f452af28a5f69dac0eed2/012.b64",
-          "sha": "beda190d42c5f92b41b74e142bb88c6e53dad1ce",
-          "size": 150000
-        },
-        {
-          "path": "chunks/496f711d8e4c4aaa3b6f452af28a5f69dac0eed2/013.b64",
-          "sha": "cf57ffdcd9349a39f295d9261bb9bed4e70f1206",
-          "size": 150000
-        },
-        {
-          "path": "chunks/496f711d8e4c4aaa3b6f452af28a5f69dac0eed2/014.b64",
-          "sha": "790a7333bd6743e21cdb372bdddc65132c158921",
-          "size": 150000
-        },
-        {
-          "path": "chunks/496f711d8e4c4aaa3b6f452af28a5f69dac0eed2/015.b64",
-          "sha": "18fca57932f65e72a8d8e042595a4adb9bee1072",
-          "size": 150000
-        },
-        {
-          "path": "chunks/496f711d8e4c4aaa3b6f452af28a5f69dac0eed2/016.b64",
-          "sha": "aeee82b67885084284b73a789585acc17df13739",
-          "size": 150000
-        },
-        {
-          "path": "chunks/496f711d8e4c4aaa3b6f452af28a5f69dac0eed2/017.b64",
-          "sha": "0d09593dfb91576bbfe35a99f5a658373e00206b",
-          "size": 150000
-        },
-        {
-          "path": "chunks/496f711d8e4c4aaa3b6f452af28a5f69dac0eed2/018.b64",
-          "sha": "0249f26e29919bd36d37523155664ce623e9b66e",
-          "size": 150000
-        },
-        {
-          "path": "chunks/496f711d8e4c4aaa3b6f452af28a5f69dac0eed2/019.b64",
-          "sha": "9134679653674ad8b862ba30b818609821442ac0",
-          "size": 150000
-        },
-        {
-          "path": "chunks/496f711d8e4c4aaa3b6f452af28a5f69dac0eed2/020.b64",
-          "sha": "2d65345b8815c0f108b78f7a06bcb72fe6489f6d",
-          "size": 150000
-        },
-        {
-          "path": "chunks/496f711d8e4c4aaa3b6f452af28a5f69dac0eed2/021.b64",
-          "sha": "d7e27989a1e90660acbce15e4c53ef7784d557e6",
-          "size": 128068
-        }
-      ]
-    },
-    {
-      "sha": "922dd028c0f21acd0898fb6b5559ef06b579834c",
-      "size": 1306966,
-      "path": "assets/previews/v4/npc-podium-generated-source.png",
-      "parts": [
-        {
-          "path": "chunks/922dd028c0f21acd0898fb6b5559ef06b579834c/000.b64",
-          "sha": "45b2a6e392d00f5cc4b20775383845f4bc37cdbd",
-          "size": 150000
-        },
-        {
-          "path": "chunks/922dd028c0f21acd0898fb6b5559ef06b579834c/001.b64",
-          "sha": "4e526e584805decc71d8280fd8b6e0dba7ea70a9",
-          "size": 150000
-        },
-        {
-          "path": "chunks/922dd028c0f21acd0898fb6b5559ef06b579834c/002.b64",
-          "sha": "bc084ed8fda20a9b453e8c320f36ebf2139f1bd1",
-          "size": 150000
-        },
-        {
-          "path": "chunks/922dd028c0f21acd0898fb6b5559ef06b579834c/003.b64",
-          "sha": "866d537c49d52980a13aa082650aaf34eccbe377",
-          "size": 150000
-        },
-        {
-          "path": "chunks/922dd028c0f21acd0898fb6b5559ef06b579834c/004.b64",
-          "sha": "d9067fcfa04dd53c9b87b17b90eb6346d6947c75",
-          "size": 150000
-        },
-        {
-          "path": "chunks/922dd028c0f21acd0898fb6b5559ef06b579834c/005.b64",
-          "sha": "9416a8ec5c986a2a7f641e624a8920a0cda912fa",
-          "size": 150000
-        },
-        {
-          "path": "chunks/922dd028c0f21acd0898fb6b5559ef06b579834c/006.b64",
-          "sha": "1fcb96bf231086b828ccd1bcc6c76f3d38aace1b",
-          "size": 150000
-        },
-        {
-          "path": "chunks/922dd028c0f21acd0898fb6b5559ef06b579834c/007.b64",
-          "sha": "f196e92110f0755e4d2f28ecac4f9980f2ce89d8",
-          "size": 150000
-        },
-        {
-          "path": "chunks/922dd028c0f21acd0898fb6b5559ef06b579834c/008.b64",
-          "sha": "3c97570ede84a01a26de87379cb296a71cee772a",
-          "size": 150000
-        },
-        {
-          "path": "chunks/922dd028c0f21acd0898fb6b5559ef06b579834c/009.b64",
-          "sha": "29b973fad890a5645163dea3f1b29ce5b922051e",
-          "size": 150000
-        },
-        {
-          "path": "chunks/922dd028c0f21acd0898fb6b5559ef06b579834c/010.b64",
-          "sha": "1744d173ada7857f5d77274d778b42346b06407e",
-          "size": 150000
-        },
-        {
-          "path": "chunks/922dd028c0f21acd0898fb6b5559ef06b579834c/011.b64",
-          "sha": "cf9e5a8ec406538fb4e1a65afcace38c37980142",
-          "size": 92624
+          "path": "chunks/2ec845c8f02415c8a9616f92be1f14012504bf57/017.json"
         }
       ]
     }
