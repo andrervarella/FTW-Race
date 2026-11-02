@@ -1,0 +1,59 @@
+Baseline V4 fonte f6f6f83c40a3db3cc83cde4fc12702a1a94cc6e1
+
+$ node --version
+EXIT 0
+v24.19.0
+
+$ npm test
+EXIT 0
+
+> ftw-race-game@0.2.0 test
+> node --test tests/core.test.js
+
+✔ tests/core.test.js (228.58238ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 233.834022
+
+$ node --test tests/core.test.js tests/source-integrity.test.js tests/v3-traffic.test.js
+EXIT 0
+✔ tests/core.test.js (258.115885ms)
+✔ tests/source-integrity.test.js (40.122875ms)
+✔ tests/v3-traffic.test.js (48.347067ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 352.039424
+
+$ node --check src/audio.js
+EXIT 0
+
+$ node --check src/config.js
+EXIT 0
+
+$ node --check src/input.js
+EXIT 0
+
+$ node --check src/main.js
+EXIT 0
+
+$ node --check src/render.js
+EXIT 0
+
+$ node --check src/sim.js
+EXIT 0
+
+$ node --check src/track.js
+EXIT 0
+
+$ node --check src/ui.js
+EXIT 0

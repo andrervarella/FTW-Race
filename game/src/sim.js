@@ -1,5 +1,7 @@
 // Simulação determinística (sem DOM, sem Phaser). Passo fixo de 1/60 s é responsabilidade do chamador.
 import { DEFAULTS, LATERAL_LIMIT, CHECKPOINTS, CAR_LENGTH, CAR_WIDTH, otherDriver, NPC_KEYS } from './config.js';
+import { getResults } from './standings.js';
+export { getResults } from './standings.js';
 
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 
@@ -22,7 +24,7 @@ export function createRace(track, playerKey, options = {}) {
   });
   const opponents = [cpu, ...extras];
   return { track, config, phase: 'countdown', resumePhase: 'countdown', countdown: config.countdown,
-    elapsed: 0, winner: null, hit: null, hitCount: 0, player, cpu, extras, opponents,
+    elapsed: 0, winner: null, finishedAt: null, results: null, hit: null, hitCount: 0, player, cpu, extras, opponents,
     racers: [player, ...opponents] };
 }
 
@@ -73,9 +75,7 @@ function stepDriver(race, d, input, dt) {
   d.lateral += d.latVel * dt;
   d.speed = Math.max(0, d.speed - Math.abs(d.wheel) * d.speed * 0.05 * dt); // perde um pouco ao esterçar forte
   if (Math.abs(d.lateral) > LATERAL_LIMIT) { d.lateral = clamp(d.lateral, -LATERAL_LIMIT, LATERAL_LIMIT); d.latVel = 0; d.speed = Math.max(0, d.speed - 35 * dt); }
-  const from = d.distance;
   d.distance += d.speed * dt;
-  crossCheckpoints(race, d, from, d.distance, race.elapsed, dt);
 }
 
 // Piloto CPU. "catchUp" (±) ajusta levemente o ritmo para manter a disputa próxima; não é trapaça de posição.
@@ -120,12 +120,13 @@ function resolvePair(race, player, cpu) {
     player.lateral = clamp(player.lateral - (dir * need) / 2, -LATERAL_LIMIT, LATERAL_LIMIT);
     dl = cpu.lateral - player.lateral;
     if (Math.abs(dl) < CAR_WIDTH - 1e-6) { // sem espaço (parede): trata como traseira
-      back.distance = front.distance - CAR_LENGTH;
+      back.distance -= CAR_LENGTH - Math.abs(gap);
     }
     if (back.hitTimer === 0 && front.hitTimer === 0) { player.speed *= 0.94; cpu.speed *= 0.94; strength = 0.4; }
     player.latVel = -dir * 1.2; cpu.latVel = dir * 1.2;
   } else { // traseira: não atravessa
-    back.distance = front.distance - CAR_LENGTH;
+    // gap é circular; usar a distância absoluta do outro apagaria uma volta ao tocar um retardatário.
+    back.distance -= CAR_LENGTH - Math.abs(gap);
     if (back.hitTimer === 0) { strength = clamp(0.3 + closing / 30, 0.3, 1); back.speed = Math.max(0, Math.min(back.speed, front.speed) * 0.92 - 3); front.speed += Math.min(4, closing * 0.25); }
     else back.speed = Math.min(back.speed, front.speed);
     const side = back.lateral <= front.lateral ? -1 : 1;
@@ -148,6 +149,9 @@ export function stepRace(race, playerInput, dt) {
   if (!Number.isFinite(dt) || dt <= 0 || race.phase === 'paused' || race.phase === 'finished') return;
   dt = Math.min(dt, 0.05);
   if (race.phase === 'countdown') { race.countdown = Math.max(0, race.countdown - dt); if (race.countdown === 0) race.phase = 'racing'; return; }
+  // Guardar o início do passo permite cortar TODOS os movimentos no mesmo instante da bandeirada.
+  const before = race.racers.map(d => ({ ...d, lapTimes: [...d.lapTimes] }));
+  const startedAt = race.elapsed;
   race.elapsed += dt;
   for (const d of race.opponents) {
     let closest = race.player, bestGap = Infinity;
@@ -160,13 +164,34 @@ export function stepRace(race, playerInput, dt) {
   }
   stepDriver(race, race.player, playerInput, dt);
   resolveContact(race);
-  const finishers = race.racers.filter(d => d.finishTime !== null).sort((a,b) => a.finishTime - b.finishTime);
+  for (let i = 0; i < race.racers.length; i++)
+    crossCheckpoints(race, race.racers[i], before[i].distance, race.racers[i].distance, race.elapsed, dt);
+  const finishers = race.racers.filter(d => d.finishTime !== null);
   if (finishers.length) {
-    race.winner = finishers[0].driver;
+    const finishedAt = Math.min(...finishers.map(d => d.finishTime));
+    const fraction = clamp((finishedAt - startedAt) / dt, 0, 1);
+    const tied = new Set(finishers.filter(d => Math.abs(d.finishTime - finishedAt) < 1e-9).map(d => d.driver));
+    race.elapsed = race.finishedAt = finishedAt;
+    for (let i = 0; i < race.racers.length; i++) {
+      const d = race.racers[i], from = before[i];
+      // A integração usa trajetórias lineares dentro de cada passo fixo, assim como os checkpoints.
+      for (const key of ['distance', 'lateral', 'speed', 'wheel', 'latVel', 'hitTimer', 'collisionRemaining'])
+        d[key] = from[key] + (d[key] - from[key]) * fraction;
+      if (tied.has(d.driver)) d.distance = race.track.length * race.config.laps;
+      d.laps = from.laps; d.nextCheckpoint = from.nextCheckpoint;
+      d.lapStart = from.lapStart; d.lapTimes = [...from.lapTimes]; d.finishTime = from.finishTime;
+      crossCheckpoints(race, d, from.distance, d.distance, finishedAt, dt * fraction);
+      if (tied.has(d.driver)) d.finishTime = finishedAt;
+      d.offRoad = Math.abs(d.lateral) > 1;
+      d.nitroRemaining = 0; d.nitroHeld = false;
+    }
+    if (race.hit && race.hit.at > finishedAt) race.hit = { ...race.hit, at: finishedAt };
+    race.results = getResults(race).map(row => Object.freeze(row));
+    Object.freeze(race.results);
+    race.winner = race.results[0].driver;
     race.phase = 'finished';
-    race.resultPosition = playerPosition(race);
-    for (const d of race.racers) d.nitroRemaining = 0;
+    race.resultPosition = race.results.find(row => row.isPlayer).position;
   }
 }
-export const playerPosition = race => 1 + (race.opponents ?? [race.cpu]).filter(d => d.distance > race.player.distance).length;
+export const playerPosition = race => race.results ? race.results.find(row => row.isPlayer).position : 1 + (race.opponents ?? [race.cpu]).filter(d => d.distance > race.player.distance).length;
 export const formatTime = (s) => `${String(Math.floor(s / 60)).padStart(2, '0')}:${(s % 60).toFixed(1).padStart(4, '0')}`;
