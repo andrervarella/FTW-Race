@@ -126,6 +126,31 @@ def verify_viewport(browser, url, output, width, height, reduced):
         shot('paused')
         page.get_by_role('button', name='CONTINUAR', exact=True).tap()
         page.wait_for_function('document.querySelector("#ui").dataset.phase === "racing"')
+        if not reduced:
+            # Let the six-car simulator finish naturally on the actual served URL.
+            page.locator('.results-screen').wait_for(state='visible', timeout=180000)
+            assert page.locator('tbody tr').count() == 6
+            winner = page.locator('tbody tr').first.get_attribute('data-result-driver')
+            assert winner in ['daniel', 'felipe', 'npc-blue', 'npc-yellow', 'npc-purple', 'npc-silver']
+            assert page.locator('td', has_text='Não concluiu').count() >= 1
+            shot('natural-finish-results')
+            page.get_by_role('button', name='VER PÓDIO', exact=True).tap()
+            screen('podium')
+            assert page.locator('.podium-screen').get_attribute('data-winner') == winner
+            page.wait_for_function('document.querySelector(".podium-screen").dataset.stage === "4"', timeout=30000)
+            loaded_images(page)
+            assert f'{winner}-4.png' in page.locator('.champion-frame').get_attribute('src')
+            assert page.locator('.champagne-fx').is_visible()
+            shot('real-winner-champagne')
+            page.wait_for_function('document.querySelector(".podium-screen").dataset.stage === "5"', timeout=15000)
+            loaded_images(page)
+            shot('real-winner-final-podium')
+            report['checks'].append('natural complete race, six real standings and winner-specific animated champagne podium')
+            report['natural_winner'] = winner
+            page.locator('#podium-replay').tap()
+            screen('grid')
+            page.get_by_role('button', name='LARGAR', exact=True).tap()
+            page.wait_for_function('document.querySelector("#ui").dataset.phase === "racing"')
         # Rotation must pause and clear input; restoration leaves an explicit resume.
         page.set_viewport_size({'width': height, 'height': width})
         page.wait_for_function('document.querySelector("#ui").dataset.phase === "paused"')
