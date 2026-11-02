@@ -15,6 +15,7 @@ Fonte-base: `f6f6f83c40a3db3cc83cde4fc12702a1a94cc6e1`. Branch exclusiva: `codex
 | Áudio |18renders OfflineAudioContext (6etapas×3modos), seleção, unlock idempotente, suspensão/retomada e mudo real; PASS. Qualidade ouvida por humano não validada. |
 
 ## Problemas encontrados e reteste
+- Conexão lenta: um asset atrasado13s deixava um falso erro fatal mesmo após iniciar. Reproduzido em Chromium e corrigido:12s agora mostra orientação de espera, sem mascarar erros reais de arquivo. `slow-boot.py` passou após falhar antes da correção.
 - Perda de volta ao tocar retardatário: recuo agora usa penetração circular, não distância absoluta de outro carro. Regressão passou.
 - Revisão independente encontrou spray CSS continuando após blur: comemoração agora pausa JS+CSS e exige CONTINUAR COMEMORAÇÃO. Teste Chromium falhou antes e passou depois.
 - Revisão encontrou seleção silenciosa após sair da pausa: gestos voltam a desbloquear áudio e feedback espera contexto disponível. Teste Chromium falhou antes e passou depois.
@@ -33,3 +34,5 @@ A rota de publicação é exclusivamente `teste-v4/` na branch `gh-pages`. Hashe
 
 ## Publicação — bloqueio de autorização em02/11/2026
 O GitHub confirmou repositório público andrervarella/FTW-Race pertencente à conta autenticada e permissões de push/admin. Mesmo após confirmação de destino e do pedido de branch/publicação, a revisão automática rejeitou create_blob por exigir autorização explícita de divulgação pública do código/assets. Confirmação específica solicitada ao proprietário. Não houve movimento de refs, implantação ou verificação da URL pública; não afirmar que /teste-v4/ está online. Há alguns objetos Git sem ref de uma transferência inicial interrompida, mas nenhuma branch ou versão publicada foi alterada.
+
+O proprietário respondeu posteriormente: “Autorizo publicar código e assets publicamente”, confirmando o destino e a visibilidade. A revisão automática então aceitou o envio. Status de publicação e verificação pública será acrescentado após a implantação; a autorização não substitui QA externo.
