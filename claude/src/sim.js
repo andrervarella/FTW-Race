@@ -1,10 +1,10 @@
 // Simulação determinística (sem DOM, sem Phaser). Passo fixo de 1/60 s é responsabilidade do chamador.
-import { DEFAULTS, LATERAL_LIMIT, CHECKPOINTS, otherDriver } from './config.js';
+import { DEFAULTS, LATERAL_LIMIT, CHECKPOINTS, CAR_LENGTH, CAR_WIDTH, otherDriver } from './config.js';
 
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 
 function makeDriver(driver, lateral, charges) {
-  return { driver, distance: 0, lateral, speed: 0, steer: 0, laps: 0, nextCheckpoint: 1, charges,
+  return { driver, distance: 0, lateral, speed: 0, steer: 0, wheel: 0, latVel: 0, hitTimer: 0, laps: 0, nextCheckpoint: 1, charges,
     nitroRemaining: 0, nitroHeld: false, collisionRemaining: 0, lapStart: 0, lapTimes: [], finishTime: null, offRoad: false };
 }
 
@@ -13,7 +13,7 @@ export function createRace(track, playerKey, options = {}) {
   if (!Number.isInteger(config.laps) || config.laps < 1 || !Number.isInteger(config.nitroCharges) || config.nitroCharges < 0)
     throw new Error('Configuração de corrida inválida');
   return {
-    track, config, phase: 'countdown', resumePhase: 'countdown', countdown: config.countdown, elapsed: 0, winner: null,
+    track, config, phase: 'countdown', resumePhase: 'countdown', countdown: config.countdown, elapsed: 0, winner: null, hit: null, hitCount: 0,
     player: makeDriver(playerKey, -0.32, config.nitroCharges),
     cpu: makeDriver(otherDriver(playerKey), 0.32, config.nitroCharges),
   };
@@ -45,7 +45,7 @@ function crossCheckpoints(race, d, from, to, tNow, dt) {
 
 function stepDriver(race, d, input, dt) {
   const cfg = race.config, track = race.track;
-  d.collisionRemaining = Math.max(0, d.collisionRemaining - dt);
+  d.collisionRemaining = Math.max(0, d.collisionRemaining - dt); d.hitTimer = Math.max(0, d.hitTimer - dt);
   if (input.nitro && !d.nitroHeld && d.charges > 0 && d.nitroRemaining <= 0) { d.charges--; d.nitroRemaining = cfg.nitroDuration; }
   d.nitroHeld = input.nitro;
   d.nitroRemaining = Math.max(0, d.nitroRemaining - dt);
@@ -56,10 +56,16 @@ function stepDriver(race, d, input, dt) {
   const accel = input.brake ? -55 : input.throttle ? (nitro ? 32 : 20) : -12;
   if (d.speed > vmax) d.speed = Math.max(vmax, d.speed - ((input.brake ? 55 : 18) + (d.offRoad ? 30 : 0)) * dt);
   else d.speed = clamp(d.speed + (accel - (d.offRoad ? 12 : 0)) * dt, 0, vmax);
+  // Direção com inércia (v0.2): o volante "anda" até o alvo e o carro desliza lateralmente com massa.
   d.steer = Number(input.right) - Number(input.left);
+  const rate = d.steer === 0 ? 9 : 6;
+  d.wheel += clamp(d.steer - d.wheel, -rate * dt, rate * dt);
   const curv = track.sample(d.distance).curvature;
-  d.lateral += d.steer * dt * (0.45 + d.speed * 0.03) - curv * d.speed * d.speed * dt * 0.012;
-  if (Math.abs(d.lateral) > LATERAL_LIMIT) { d.lateral = clamp(d.lateral, -LATERAL_LIMIT, LATERAL_LIMIT); d.speed = Math.max(0, d.speed - 35 * dt); }
+  const targetVel = d.wheel * (0.6 + d.speed * 0.028) - curv * d.speed * d.speed * 0.008;
+  d.latVel += (targetVel - d.latVel) * Math.min(1, 7 * dt);
+  d.lateral += d.latVel * dt;
+  d.speed = Math.max(0, d.speed - Math.abs(d.wheel) * d.speed * 0.05 * dt); // perde um pouco ao esterçar forte
+  if (Math.abs(d.lateral) > LATERAL_LIMIT) { d.lateral = clamp(d.lateral, -LATERAL_LIMIT, LATERAL_LIMIT); d.latVel = 0; d.speed = Math.max(0, d.speed - 35 * dt); }
   const from = d.distance;
   d.distance += d.speed * dt;
   crossCheckpoints(race, d, from, d.distance, race.elapsed, dt);
@@ -70,7 +76,12 @@ export function cpuControls(race, d = race.cpu, rival = race.player) {
   const track = race.track, L = track.length;
   const now = track.sample(d.distance).curvature;
   const ahead = Math.abs(track.sample(d.distance + d.speed * 0.55).curvature);
-  const target = (0.25 - d.lateral) * 4 + now * d.speed * d.speed * 0.012;
+  // linha: perto da direita; se o rival está logo à frente e na mesma faixa, procura espaço para ultrapassar
+  let line = 0.25;
+  const gapAhead = ((rival.distance - d.distance) % L + L) % L;
+  if (gapAhead < 60 && Math.abs(rival.lateral - d.lateral) < 0.9 && d.speed > rival.speed * 0.85) line = rival.lateral > 0 ? rival.lateral - 0.95 : rival.lateral + 0.95;
+  line = clamp(line, -1.2, 1.2);
+  const target = (line - d.lateral) * 4 + now * d.speed * d.speed * 0.008 * 1.5;
   let gap = d.distance - rival.distance; // >0: CPU na frente
   gap = ((gap + L / 2) % L + L) % L - L / 2;
   const catchUp = clamp(-gap / 400, -0.04, 0.06);
@@ -83,6 +94,39 @@ export function cpuControls(race, d = race.cpu, rival = race.player) {
   };
 }
 
+
+// Colisão (v0.2): caixas de CAR_LENGTH x CAR_WIDTH. Nunca deixa um carro atravessar o outro.
+// Encostada lateral: separa os carros e tira um pouco de velocidade dos dois. Traseira: o de trás não passa e perde ritmo.
+const wrapSigned = (v, L) => ((v + L / 2) % L + L) % L - L / 2;
+export function resolveContact(race) {
+  const { player, cpu, track } = race, L = track.length;
+  let gap = wrapSigned(cpu.distance - player.distance, L); // >0: CPU à frente
+  let dl = cpu.lateral - player.lateral;
+  if (Math.abs(gap) >= CAR_LENGTH || Math.abs(dl) >= CAR_WIDTH) return;
+  const front = gap >= 0 ? cpu : player, back = gap >= 0 ? player : cpu;
+  const penLong = (CAR_LENGTH - Math.abs(gap)) / CAR_LENGTH, penLat = (CAR_WIDTH - Math.abs(dl)) / CAR_WIDTH;
+  const closing = Math.max(0, back.speed - front.speed);
+  let strength = 0;
+  if (penLat < penLong) { // lado a lado: empurra para os lados
+    const dir = dl === 0 ? (cpu.lateral > 0 ? 1 : -1) : Math.sign(dl), need = CAR_WIDTH - Math.abs(dl);
+    cpu.lateral = clamp(cpu.lateral + (dir * need) / 2, -LATERAL_LIMIT, LATERAL_LIMIT);
+    player.lateral = clamp(player.lateral - (dir * need) / 2, -LATERAL_LIMIT, LATERAL_LIMIT);
+    dl = cpu.lateral - player.lateral;
+    if (Math.abs(dl) < CAR_WIDTH - 1e-6) { // sem espaço (parede): trata como traseira
+      back.distance = front.distance - CAR_LENGTH;
+    }
+    if (back.hitTimer === 0 && front.hitTimer === 0) { player.speed *= 0.94; cpu.speed *= 0.94; strength = 0.4; }
+    player.latVel = -dir * 1.2; cpu.latVel = dir * 1.2;
+  } else { // traseira: não atravessa
+    back.distance = front.distance - CAR_LENGTH;
+    if (back.hitTimer === 0) { strength = clamp(0.3 + closing / 30, 0.3, 1); back.speed = Math.max(0, Math.min(back.speed, front.speed) * 0.92 - 3); front.speed += Math.min(4, closing * 0.25); }
+    else back.speed = Math.min(back.speed, front.speed);
+    const side = back.lateral <= front.lateral ? -1 : 1;
+    back.latVel += side * 0.8; front.latVel -= side * 0.4;
+  }
+  if (strength > 0) { player.hitTimer = cpu.hitTimer = 0.35; player.collisionRemaining = cpu.collisionRemaining = 0.8; race.hit = { at: race.elapsed, strength, id: ++race.hitCount }; }
+}
+
 export function stepRace(race, playerInput, dt) {
   if (!Number.isFinite(dt) || dt <= 0 || race.phase === 'paused' || race.phase === 'finished') return;
   dt = Math.min(dt, 0.05);
@@ -91,13 +135,7 @@ export function stepRace(race, playerInput, dt) {
   const { player, cpu, track, config } = race;
   stepDriver(race, cpu, cpuControls(race), dt);
   stepDriver(race, player, playerInput, dt);
-  const L = track.length, diff = Math.abs(player.distance - cpu.distance), dd = Math.min(diff % L, L - (diff % L));
-  if (dd < 7 && Math.abs(player.lateral - cpu.lateral) < 0.3 && player.collisionRemaining === 0 && cpu.collisionRemaining === 0) {
-    player.speed *= 0.7; cpu.speed *= 0.7; player.collisionRemaining = cpu.collisionRemaining = 0.8;
-    const dir = player.lateral <= cpu.lateral ? -1 : 1;
-    player.lateral = clamp(player.lateral + dir * 0.12, -LATERAL_LIMIT, LATERAL_LIMIT);
-    cpu.lateral = clamp(cpu.lateral - dir * 0.12, -LATERAL_LIMIT, LATERAL_LIMIT);
-  }
+  resolveContact(race);
   if (player.laps >= config.laps || cpu.laps >= config.laps) {
     const pt = player.finishTime ?? Infinity, ct = cpu.finishTime ?? Infinity;
     race.winner = pt <= ct ? player.driver : cpu.driver;
