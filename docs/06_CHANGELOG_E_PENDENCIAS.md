@@ -2,7 +2,7 @@
 ## 02/11/2026 — Felipe frontal na capa e correção da ativação do som
 - Nova postura de Felipe aprovada para a abertura, com identidade preservada; retratos da seleção e demais sprites mantidos.
 - Reproduzido primeiro toque no botão de som que desativava a música, apesar de mostrar SOM ON. Corrigidas ativação inicial, retomada e indicação do estado real.
-- Incluída verificação pública de áudio ao vivo para música, motor e efeitos; 47testes, áudio ao vivo e fluxo local passaram; publicação em verificação. Ver FELIPE_AUDIO_FIX_QA.md.
+- Incluída verificação pública de áudio ao vivo para música, motor e efeitos; Node47/47 e pacote local PASS. HTTPS verificado no run41507715470: corrida completa, áudio por toque/teclado,13efeitos pontuais/3contínuos e artifact inspecionado. Felipe frontal aprovado somente na abertura; versões anteriores preservadas. Ver FELIPE_AUDIO_FIX_QA.md.
 
 ## 02/11/2026 — pilotos e capa aprovados
 - Proprietário aprovou os rostos corrigidos com base nos novos closes, as16poses de corpo inteiro e a capa com os logos oficiais.
