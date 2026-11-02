@@ -1,5 +1,5 @@
 // Simulação determinística (sem DOM, sem Phaser). Passo fixo de 1/60 s é responsabilidade do chamador.
-import { DEFAULTS, LATERAL_LIMIT, CHECKPOINTS, CAR_LENGTH, CAR_WIDTH, otherDriver } from './config.js';
+import { DEFAULTS, LATERAL_LIMIT, CHECKPOINTS, CAR_LENGTH, CAR_WIDTH, otherDriver, NPC_KEYS } from './config.js';
 
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 
@@ -12,11 +12,18 @@ export function createRace(track, playerKey, options = {}) {
   const config = { ...DEFAULTS, ...options };
   if (!Number.isInteger(config.laps) || config.laps < 1 || !Number.isInteger(config.nitroCharges) || config.nitroCharges < 0)
     throw new Error('Configuração de corrida inválida');
-  return {
-    track, config, phase: 'countdown', resumePhase: 'countdown', countdown: config.countdown, elapsed: 0, winner: null, hit: null, hitCount: 0,
-    player: makeDriver(playerKey, -0.32, config.nitroCharges),
-    cpu: makeDriver(otherDriver(playerKey), 0.32, config.nitroCharges),
-  };
+  const player = makeDriver(playerKey, -0.32, config.nitroCharges);
+  const cpu = makeDriver(otherDriver(playerKey), 0.32, config.nitroCharges); cpu.profile = 1;
+  const extras = NPC_KEYS.map((key, i) => {
+    const d = makeDriver(key, [-0.76, 0.75, -0.14, 0.84][i], 0);
+    d.distance = [18, 35, 52, 69][i];
+    d.profile = [0.93, 0.99, 1.03, 0.91][i];
+    return d;
+  });
+  const opponents = [cpu, ...extras];
+  return { track, config, phase: 'countdown', resumePhase: 'countdown', countdown: config.countdown,
+    elapsed: 0, winner: null, hit: null, hitCount: 0, player, cpu, extras, opponents,
+    racers: [player, ...opponents] };
 }
 
 export function pauseRace(race) {
@@ -86,7 +93,7 @@ export function cpuControls(race, d = race.cpu, rival = race.player) {
   gap = ((gap + L / 2) % L + L) % L - L / 2;
   const catchUp = clamp(-gap / 400, -0.04, 0.06);
   const base = ahead > 0.013 ? 37 : ahead > 0.006 ? 49 : 61;
-  const vTarget = base * (1 + catchUp);
+  const vTarget = base * (1 + catchUp) * (d.profile ?? 1);
   const pos = track.wrap(d.distance);
   return {
     left: target < -0.12, right: target > 0.12, throttle: d.speed < vTarget, brake: d.speed > vTarget + 5,
@@ -98,8 +105,8 @@ export function cpuControls(race, d = race.cpu, rival = race.player) {
 // Colisão (v0.2): caixas de CAR_LENGTH x CAR_WIDTH. Nunca deixa um carro atravessar o outro.
 // Encostada lateral: separa os carros e tira um pouco de velocidade dos dois. Traseira: o de trás não passa e perde ritmo.
 const wrapSigned = (v, L) => ((v + L / 2) % L + L) % L - L / 2;
-export function resolveContact(race) {
-  const { player, cpu, track } = race, L = track.length;
+function resolvePair(race, player, cpu) {
+  const { track } = race, L = track.length;
   let gap = wrapSigned(cpu.distance - player.distance, L); // >0: CPU à frente
   let dl = cpu.lateral - player.lateral;
   if (Math.abs(gap) >= CAR_LENGTH || Math.abs(dl) >= CAR_WIDTH) return;
@@ -124,7 +131,17 @@ export function resolveContact(race) {
     const side = back.lateral <= front.lateral ? -1 : 1;
     back.latVel += side * 0.8; front.latVel -= side * 0.4;
   }
-  if (strength > 0) { player.hitTimer = cpu.hitTimer = 0.35; player.collisionRemaining = cpu.collisionRemaining = 0.8; race.hit = { at: race.elapsed, strength, id: ++race.hitCount }; }
+  if (strength > 0) {
+    player.hitTimer = cpu.hitTimer = 0.35;
+    player.collisionRemaining = cpu.collisionRemaining = 0.8;
+    if (player === race.player || cpu === race.player)
+      race.hit = { at: race.elapsed, strength, id: ++race.hitCount };
+  }
+}
+export function resolveContact(race) {
+  const cars = race.racers ?? [race.player, race.cpu];
+  for (let i = 0; i < cars.length; i++)
+    for (let j = i + 1; j < cars.length; j++) resolvePair(race, cars[i], cars[j]);
 }
 
 export function stepRace(race, playerInput, dt) {
@@ -132,16 +149,24 @@ export function stepRace(race, playerInput, dt) {
   dt = Math.min(dt, 0.05);
   if (race.phase === 'countdown') { race.countdown = Math.max(0, race.countdown - dt); if (race.countdown === 0) race.phase = 'racing'; return; }
   race.elapsed += dt;
-  const { player, cpu, track, config } = race;
-  stepDriver(race, cpu, cpuControls(race), dt);
-  stepDriver(race, player, playerInput, dt);
+  for (const d of race.opponents) {
+    let closest = race.player, bestGap = Infinity;
+    for (const rival of race.racers) {
+      if (rival === d) continue;
+      const gap = race.track.wrap(rival.distance - d.distance);
+      if (gap > 0.01 && gap < bestGap) { bestGap = gap; closest = rival; }
+    }
+    stepDriver(race, d, cpuControls(race, d, closest), dt);
+  }
+  stepDriver(race, race.player, playerInput, dt);
   resolveContact(race);
-  if (player.laps >= config.laps || cpu.laps >= config.laps) {
-    const pt = player.finishTime ?? Infinity, ct = cpu.finishTime ?? Infinity;
-    race.winner = pt <= ct ? player.driver : cpu.driver;
-    race.phase = 'finished'; player.nitroRemaining = cpu.nitroRemaining = 0;
+  const finishers = race.racers.filter(d => d.finishTime !== null).sort((a,b) => a.finishTime - b.finishTime);
+  if (finishers.length) {
+    race.winner = finishers[0].driver;
+    race.phase = 'finished';
+    race.resultPosition = playerPosition(race);
+    for (const d of race.racers) d.nitroRemaining = 0;
   }
 }
-
-export const playerPosition = (race) => (race.player.distance >= race.cpu.distance ? 1 : 2);
+export const playerPosition = race => 1 + (race.opponents ?? [race.cpu]).filter(d => d.distance > race.player.distance).length;
 export const formatTime = (s) => `${String(Math.floor(s / 60)).padStart(2, '0')}:${(s % 60).toFixed(1).padStart(4, '0')}`;

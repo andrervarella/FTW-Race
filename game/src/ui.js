@@ -30,14 +30,14 @@ export class Ui {
         <span class="driver-copy"><small>PILOTO ${d.number}</small><strong>${d.first}<span>Mencacci</span></strong><span class="driver-line">${d.car.toUpperCase()}</span></span>
         ${this.img(`${k}-rear.png`, d.car, 'menu-car')}<span class="choice">${sel ? 'SELECIONADO' : 'ESCOLHER PILOTO'}</span></button>`; };
     this.root.innerHTML = `<section class="menu">
-      <header class="brand">${this.img('ftw.png', 'FTW', 'ftw-logo')}<span class="brand-title">RACE <em>CASCAVEL</em></span><span class="tag">VERSÃO DE TESTE · CLAUDE</span></header>
+      <header class="brand">${this.img('ftw.png', 'FTW', 'ftw-logo')}<span class="brand-title">RACE <em>CASCAVEL</em></span><span class="tag">TESTE V3 · 6 CARROS</span></header>
       <div class="drivers">${card('daniel')}${card('felipe')}</div>
       <footer class="menu-footer"><div class="race-options">
         <label>Voltas <select id="laps"><option>1</option><option selected>3</option><option>5</option></select></label>
         <label>Nitros <select id="charges"><option>0</option><option>1</option><option selected>2</option></select></label>
         <button type="button" class="text-button" id="fs">TELA CHEIA</button></div>
         <button class="primary" id="start">LARGAR EM CASCAVEL ›</button></footer>
-      <p class="build-note">Arte dos carros em revisão · rival CPU · use o celular na horizontal</p></section>`;
+      <p class="build-note">Quatro rivais com artes provisórias sem marcas · celular na horizontal</p></section>`;
     for (const b of this.root.querySelectorAll('[data-driver]')) b.onclick = () => { this.selected = b.dataset.driver; this.menu(); };
     this.root.querySelector('#fs').onclick = () => this.fullscreen();
     this.root.querySelector('#start').onclick = () => { this.fullscreen(); this.start(Number(this.root.querySelector('#laps').value), Number(this.root.querySelector('#charges').value)); };
@@ -54,13 +54,15 @@ export class Ui {
   minimap() {
     const p = this.track.points, b = this.track.bounds, pad = 60;
     const vb = `${b.minX - pad} ${b.minY - pad} ${b.maxX - b.minX + 2 * pad} ${b.maxY - b.minY + 2 * pad}`;
-    const me = DRIVERS[this.selected].color, other = DRIVERS[this.selected === 'daniel' ? 'felipe' : 'daniel'].color;
-    return `<svg viewBox="${vb}" role="img" aria-label="Minimapa de Cascavel"><polyline points="${p.map((q) => `${q.x.toFixed(0)},${q.y.toFixed(0)}`).join(' ')}" fill="none" stroke="#ffffff66" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/><circle id="map-cpu" r="38" fill="${other}" stroke="#102019" stroke-width="12"/><circle id="map-player" r="42" fill="${me}" stroke="#fff" stroke-width="14"/></svg>`;
+    const me = DRIVERS[this.selected].color;
+    const rivals = this.race.opponents.map((d,i) => `<circle id="map-rival-${i}" r="30" fill="${DRIVERS[d.driver].color}" stroke="#102019" stroke-width="10"/>`).join('');
+    return `<svg viewBox="${vb}" role="img" aria-label="Minimapa de Cascavel"><polyline points="${p.map(q => `${q.x.toFixed(0)},${q.y.toFixed(0)}`).join(' ')}" fill="none" stroke="#ffffff66" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>${rivals}<circle id="map-player" r="42" fill="${me}" stroke="#fff" stroke-width="14"/></svg>`;
+
   }
   raceUi() {
     const r = this.race;
     this.root.innerHTML = `<section class="race-ui">
-      <header class="hud"><div class="cell"><small>POSIÇÃO</small><strong id="position">1<span>/ 2</span></strong></div>
+      <header class="hud"><div class="cell"><small>POSIÇÃO</small><strong id="position">5<span>/ 6</span></strong></div>
         <div class="cell"><small>VOLTA</small><strong id="lap">1 / ${r.config.laps}</strong></div>
         <div class="cell"><small>TEMPO</small><strong id="time">00:00.0</strong></div>
         <div class="grow"></div><button id="sound" class="icon-button">${MODE_LABEL[this.audio.mode]}</button><button id="pause" class="icon-button" aria-label="Pausar">II</button></header>
@@ -90,7 +92,7 @@ export class Ui {
     const m = this.root.querySelector('#modal'), r = this.race; this.root.querySelector('.controls').classList.toggle('inactive', phase !== 'racing');
     if (phase === 'paused') { this.clearInputs(); m.innerHTML = `<div class="backdrop"><section class="dialog"><p class="eyebrow">CORRIDA PAUSADA</p><h2>${this.portrait ? 'Gire o celular' : 'Pausa'}</h2><button class="primary" id="resume">CONTINUAR</button><button class="secondary" id="restart">RECOMEÇAR</button><button class="text-button" id="menu">VOLTAR À SELEÇÃO</button></section></div>`; m.querySelector('#resume').onclick = () => this.togglePause(); }
     else if (phase === 'finished') { this.clearInputs(); const best = Math.min(...r.player.lapTimes, Infinity);
-      m.innerHTML = `<div class="backdrop"><section class="dialog result"><p class="eyebrow">BANDEIRADA</p><h2>${r.winner === r.player.driver ? 'Vitória!' : 'O rival levou essa.'}</h2><p>${DRIVERS[r.winner].name} venceu em Cascavel.</p><div class="result-time">${formatTime(r.elapsed)}</div>${Number.isFinite(best) ? `<p class="small">Sua melhor volta: ${formatTime(best)}</p>` : ''}<button class="primary" id="restart">DISPUTAR NOVAMENTE</button><button class="text-button" id="menu">TROCAR PILOTO</button></section></div>`; }
+      m.innerHTML = `<div class="backdrop"><section class="dialog result"><p class="eyebrow">BANDEIRADA</p><h2>${r.winner === r.player.driver ? 'Vitória!' : 'Bandeirada!'}</h2><p>${DRIVERS[r.winner].name} venceu. Sua posição: ${r.resultPosition || playerPosition(r)}º de ${r.racers.length}.</p><div class="result-time">${formatTime(r.elapsed)}</div>${Number.isFinite(best) ? `<p class="small">Sua melhor volta: ${formatTime(best)}</p>` : ''}<button class="primary" id="restart">DISPUTAR NOVAMENTE</button><button class="text-button" id="menu">TROCAR PILOTO</button></section></div>`; }
     else m.innerHTML = '';
     const rs = m.querySelector('#restart'); if (rs) rs.onclick = () => this.start(r.config.laps, r.config.nitroCharges);
     const mn = m.querySelector('#menu'); if (mn) mn.onclick = () => this.menu();
@@ -104,13 +106,13 @@ export class Ui {
     if (this.renderedPhase !== r.phase) { this.renderedPhase = r.phase; this.modal(r.phase); }
     if (now - this.lastHud < 65) return; this.lastHud = now;
     const q = (s) => this.root.querySelector(s);
-    q('#position').innerHTML = `${playerPosition(r)}<span>/ 2</span>`;
+    q('#position').innerHTML = `${playerPosition(r)}<span>/ ${r.racers.length}</span>`;
     q('#lap').textContent = `${Math.min(r.player.laps + 1, r.config.laps)} / ${r.config.laps}`;
     q('#time').textContent = formatTime(r.elapsed); q('#speed').textContent = String(Math.round(r.player.speed * 3.6));
     q('#charges-left').textContent = String(r.player.charges); q('#surface').textContent = r.player.offRoad ? 'FORA DA PISTA' : '';
     q('#msg').textContent = r.phase === 'countdown' ? String(Math.ceil(r.countdown)) : r.phase === 'racing' && r.elapsed < 1 ? 'VAI!' : '';
     q('#nitro-toast').hidden = r.player.nitroRemaining <= 0 || r.phase !== 'racing';
-    for (const [id, d] of [['player', r.player], ['cpu', r.cpu]]) { const p = this.track.at(d.distance), c = q(`#map-${id}`); c.setAttribute('cx', p.x); c.setAttribute('cy', p.y); }
+    for (const [id, d] of [['player', r.player], ...r.opponents.map((d,i) => [`rival-${i}`, d])]) { const p = this.track.at(d.distance), c = q(`#map-${id}`); if (c) { c.setAttribute('cx', p.x); c.setAttribute('cy', p.y); } }
   }
   debugPanel(now) {
     let el = document.getElementById('debug'); if (!el) { el = document.createElement('pre'); el.id = 'debug'; document.body.appendChild(el); }

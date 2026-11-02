@@ -39,3 +39,6 @@ O traçado jogável E o minimapa devem seguir cascavel-mapa-esquematico.png e ca
 - Copiados os módulos de `gh-pages/claude/` para `game/` (HTML/CSS, áudio, configuração, simulação, renderização, main e UI), preservando a versão da pasta publicada. O material publicado já traz pista mais larga, volante com inércia, colisão e áudio sintetizado.
 - Incluídos `game/README.md` e `game/tests/source-integrity.test.js` para exigir arquivos essenciais, imports válidos e verificar contratos básicos de física/UI.
 - **Verificação nesta etapa:** análise estática de arquivos, dependências e exports antes do commit. **Não houve** execução de npm test, navegador real ou aparelho Android nesta etapa. A versão pública existente e a branch main não foram modificadas.
+
+## 01/11/2026 — teste V3 seis carros
+Implementados quatro adversários de IA, HUD 1–6, colisão entre todos, sprites 2D sem logos para NPCs. Simulação JavaScript de 12 s executada; Android físico e Phaser real ainda não verificados. Consultar docs/11_TESTE_V3_SEIS_CARROS.md.

@@ -1,3 +1,4 @@
+import { NPC_KEYS } from './config.js';
 // Renderização Phaser (câmera traseira em pseudo-3D sobre a geometria do circuito).
 // Usa apenas chamadas Phaser já exercitadas na v0.1.0 (Graphics.fillPoints/fillRect, add.image, setDisplaySize...).
 const LOW = typeof location !== 'undefined' && new URLSearchParams(location.search).get('q') === 'baixa'; // ?q=baixa: menos polígonos por quadro
@@ -12,13 +13,14 @@ export function createRaceScene(Phaser, { assets, track, getRace, onReady, onErr
       this.load.image('horizon', `${assets}horizon.png`);
       for (const k of ['tree', 'bush', 'pit', 'stand']) this.load.image(k, `${assets}${k}.png`);
       for (const d of ['daniel', 'felipe']) this.load.image(d, `${assets}${d}-rear.png`);
+      for (const key of NPC_KEYS) this.load.svg(key, new URL(`../cars/${key}.svg`, import.meta.url).href, { width: 256, height: 256 });
       this.load.on('loaderror', (f) => onError(new Error(`Imagem não carregou: ${(f && (f.src || f.key)) || '?'}`)));
     }
     create() {
       this.horizon = this.add.image(0, 0, 'horizon').setOrigin(0, 0);
       this.road = this.add.graphics();
       this.scenery = Array.from({ length: 24 }, () => this.add.image(0, 0, 'tree').setOrigin(0.5, 1).setVisible(false));
-      this.rival = this.add.image(0, 0, 'felipe').setOrigin(0.5, 0.95).setDepth(1500);
+      this.rivals = Array.from({ length: 5 }, () => this.add.image(0, 0, 'felipe').setOrigin(0.5, 0.95).setDepth(1500));
       this.player = this.add.image(0, 0, 'daniel').setOrigin(0.5, 0.95).setDepth(2000);
       onReady();
     }
@@ -95,19 +97,26 @@ export function createRaceScene(Phaser, { assets, track, getRace, onReady, onErr
       }
       place('pit', 60, 20, 28); place('stand', 75, -20, 16);
 
-      if (!race) { this.player.setVisible(false); this.rival.setVisible(false); return; }
-      if (this.lastDriver !== race.player.driver) { this.player.setTexture(race.player.driver); this.rival.setTexture(race.cpu.driver); this.lastDriver = race.player.driver; }
-      const size = Math.min(W * 0.22, H * 0.47), bump = race.player.offRoad && race.phase === 'racing' ? Math.sin(time / 28) * 2.5 : 0;
-      const sway = race.player.wheel * W * 0.018, lean = clamp(race.player.wheel * Math.min(6, race.player.speed / 9), -6, 6);
+      if (!race) { this.player.setVisible(false); for (const s of this.rivals) s.setVisible(false); return; }
+      if (this.lastDriver !== race.player.driver) { this.player.setTexture(race.player.driver); this.lastDriver = race.player.driver; }
+      const size = Math.min(W * 0.22, H * 0.47);
+      const bump = race.player.offRoad && race.phase === 'racing' ? Math.sin(time / 28) * 2.5 : 0;
+      const sway = race.player.wheel * W * 0.018;
+      const lean = clamp(race.player.wheel * Math.min(6, race.player.speed / 9), -6, 6);
       this.player.setVisible(true).setPosition(W * 0.5 + sway, H * 0.91 + bump).setDisplaySize(size, size)
         .setAlpha(1).setAngle(lean).setDepth(2000);
-      // o carro do jogador é desenhado como se estivesse 8 unidades à frente da câmera; o rival usa a mesma escala/projeção
-      const ahead = ((race.cpu.distance - race.player.distance + track.length / 2) % track.length + track.length) % track.length - track.length / 2;
-      if (ahead < 220 && ahead > -7) {
-        const p = project(dist + 8 + ahead, race.cpu.lateral * half), sz = Math.min((size * 18) / p.z, size * 1.6);
-        this.rival.setVisible(p.z > 4 && p.y > horizonY).setPosition(p.x, p.y).setDisplaySize(sz, sz)
-          .setDepth(ahead < 0 ? 2500 : 1500).setAlpha(1).setAngle(clamp(race.cpu.wheel * 4, -5, 5));
-      } else this.rival.setVisible(false);
+      for (let i = 0; i < this.rivals.length; i++) {
+        const car = race.opponents[i], sprite = this.rivals[i];
+        if (!car) { sprite.setVisible(false); continue; }
+        const ahead = ((car.distance - race.player.distance + track.length / 2) % track.length + track.length) % track.length - track.length / 2;
+        if (ahead > -8 && ahead < 220) {
+          const p = project(dist + 8 + ahead, car.lateral * half);
+          const sz = Math.min(size * 18 / Math.max(1,p.z), size * 1.6);
+          sprite.setTexture(car.driver).setVisible(p.z > 4 && p.y > horizonY)
+            .setPosition(p.x,p.y).setDisplaySize(sz,sz)
+            .setDepth(ahead < 0 ? 2500 - ahead : 1500 - ahead).setAngle(clamp(car.wheel * 4,-5,5));
+        } else sprite.setVisible(false);
+      }
       if (race.hit && race.hit.id !== this.lastHitId) { // tremor de câmera na batida
         this.lastHitId = race.hit.id;
         try { this.cameras.main.shake(180, 0.004 + 0.008 * race.hit.strength); } catch (e) { /* câmera indisponível */ }
