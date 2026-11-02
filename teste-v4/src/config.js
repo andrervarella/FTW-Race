@@ -17,9 +17,9 @@ export const NPC_KEYS = Object.freeze(['npc-blue','npc-yellow','npc-purple','npc
 export const DRIVERS = Object.freeze({
   daniel: { key: 'daniel', name: 'Daniel Mencacci', first: 'Daniel', number: 22, car: 'Mercedes AMG A45 verde', color: '#b0f138' },
   felipe: { key: 'felipe', name: 'Felipe Mencacci', first: 'Felipe', number: 25, car: 'Mercedes AMG A45 vermelha', color: '#ef5349' },
-  'npc-blue': { key: 'npc-blue', name: 'Rival Azul', number: 31, color: '#29b6ff', car: 'Hatch de corrida (arte provisória)' },
-  'npc-yellow': { key: 'npc-yellow', name: 'Rival Amarelo', number: 34, color: '#ffcf32', car: 'Hatch de corrida (arte provisória)' },
-  'npc-purple': { key: 'npc-purple', name: 'Rival Roxo', number: 38, color: '#ad75f8', car: 'Hatch de corrida (arte provisória)' },
-  'npc-silver': { key: 'npc-silver', name: 'Rival Prata', number: 41, color: '#d2e0eb', car: 'Hatch de corrida (arte provisória)' },
+  'npc-blue': { key: 'npc-blue', name: 'Rival Azul', number: 31, color: '#29b6ff', car: 'Hatch A45 sem marcas (arte provisória em revisão)' },
+  'npc-yellow': { key: 'npc-yellow', name: 'Rival Amarelo', number: 34, color: '#ffcf32', car: 'Hatch A45 sem marcas (arte provisória em revisão)' },
+  'npc-purple': { key: 'npc-purple', name: 'Rival Roxo', number: 38, color: '#ad75f8', car: 'Hatch A45 sem marcas (arte provisória em revisão)' },
+  'npc-silver': { key: 'npc-silver', name: 'Rival Prata', number: 41, color: '#d2e0eb', car: 'Hatch A45 sem marcas (arte provisória em revisão)' },
 });
 export const otherDriver = (key) => (key === 'daniel' ? 'felipe' : 'daniel');

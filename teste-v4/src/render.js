@@ -1,5 +1,6 @@
 import { NPC_KEYS } from './config.js';
 import { SpriteEffects } from './effects.js';
+import { vehicleAppearance, NPC_FRAME } from './vehicle-visual.js';
 // Renderização Phaser (câmera traseira em pseudo-3D sobre a geometria do circuito).
 // Usa apenas chamadas Phaser já exercitadas na v0.1.0 (Graphics.fillPoints/fillRect, add.image, setDisplaySize...).
 const LOW = typeof location !== 'undefined' && new URLSearchParams(location.search).get('q') === 'baixa'; // ?q=baixa: menos polígonos por quadro
@@ -21,7 +22,7 @@ export function createRaceScene(Phaser, { assets, track, getRace, onReady, onErr
         for (const view of ['left', 'right']) this.load.image(`${d}-${view}`, `${V4}cars/${d}-${view}.png`);
       }
       this.load.spritesheet('fx', `${V4}fx/effects.png`, { frameWidth: 128, frameHeight: 128 });
-      for (const key of NPC_KEYS) this.load.svg(key, new URL(`../cars/${key}.svg`, import.meta.url).href, { width: 512, height: 512 });
+      for (const key of NPC_KEYS) this.load.spritesheet(key, `${V4}cars/npc-raster/${key}.png`, { frameWidth: NPC_FRAME.width, frameHeight: NPC_FRAME.height });
       this.load.on('loaderror', (f) => onError(new Error(`Imagem não carregou: ${(f && (f.src || f.key)) || '?'}`)));
     }
     create() {
@@ -31,13 +32,14 @@ export function createRaceScene(Phaser, { assets, track, getRace, onReady, onErr
       this.fxImages = Array.from({ length: this.fxState.limit }, () => this.add.image(0, 0, 'fx', 0).setOrigin(0.5, 110 / 128).setDepth(3000).setVisible(false));
       this.rivals = Array.from({ length: 5 }, () => this.add.image(0, 0, 'felipe').setOrigin(0.5, 470 / 512).setDepth(1500));
       this.player = this.add.image(0, 0, 'daniel').setOrigin(0.5, 470 / 512).setDepth(2000);
+      this.carTurns = new Map();
       onReady();
     }
     update(time, delta) {
       if (!this.road) return;
       const W = this.scale.width, H = this.scale.height, horizonY = H * 0.37;
       const race = getRace(), g = this.road;
-      if (race !== this.lastRace) { this.fxState.clear(); this.lastFxHit = 0; this.lastHitId = 0; this.lastRace = race; this.emitClock = 0; }
+      if (race !== this.lastRace) { this.fxState.clear(); this.carTurns.clear(); this.lastFxHit = 0; this.lastHitId = 0; this.lastRace = race; this.emitClock = 0; }
       const dist = race ? race.player.distance : 0, lat = race ? race.player.lateral : 0;
       const cam = track.sample(dist), look = track.sample(dist + 8).heading;
       const f = { x: Math.cos(look), y: Math.sin(look) }, S = { x: -f.y, y: f.x };
@@ -116,13 +118,19 @@ export function createRaceScene(Phaser, { assets, track, getRace, onReady, onErr
 
       if (!race) { this.player.setVisible(false); for (const s of [...this.rivals, ...this.fxImages]) s.setVisible(false); return; }
       // Actual separate views, never mirror a numbered/marked car.
-      const carTexture = car => !NPC_KEYS.includes(car.driver) && car.speed > 10 && Math.abs(car.wheel) > 0.6 ? `${car.driver}-${car.wheel < 0 ? 'left' : 'right'}` : car.driver;
-      this.player.setTexture(carTexture(race.player));
+      const applyCarView = (sprite, car) => {
+        const look = vehicleAppearance(car, this.carTurns.get(car.driver) || 0);
+        this.carTurns.set(car.driver, look.turn);
+        sprite.setTexture(look.texture);
+        if (look.frame !== null) sprite.setFrame(look.frame);
+        return look.widthScale;
+      };
+      const playerWidth = applyCarView(this.player, race.player);
       const size = Math.min(W * 0.22, H * 0.47);
       const bump = !REDUCED && race.player.offRoad && race.phase === 'racing' ? Math.sin(time / 28) * 2.5 : 0;
       const sway = race.player.wheel * W * 0.018;
       const lean = REDUCED ? 0 : clamp(race.player.wheel, -1.5, 1.5);
-      this.player.setVisible(true).setPosition(W * 0.5 + sway, H * 0.91 + bump).setDisplaySize(size, size)
+      this.player.setVisible(true).setPosition(W * 0.5 + sway, H * 0.91 + bump).setDisplaySize(size * playerWidth, size)
         .setAlpha(1).setAngle(lean).setDepth(2000);
       for (let i = 0; i < this.rivals.length; i++) {
         const car = race.opponents[i], sprite = this.rivals[i];
@@ -132,8 +140,9 @@ export function createRaceScene(Phaser, { assets, track, getRace, onReady, onErr
           const p = project(dist + 8 + ahead, car.lateral * half);
           const sz = Math.min(size * 18 / Math.max(1,p.z), size * 1.6);
           const visibleDistance = segs.length ? segs[segs.length - 1].d - dist + 4 : 0;
-          sprite.setTexture(carTexture(car)).setVisible(p.z > 4 && p.y > horizonY && ahead < visibleDistance)
-            .setPosition(p.x,p.y).setDisplaySize(sz,sz)
+          const widthScale = applyCarView(sprite, car);
+          sprite.setVisible(p.z > 4 && p.y > horizonY && ahead < visibleDistance)
+            .setPosition(p.x,p.y).setDisplaySize(sz * widthScale,sz)
             .setDepth(ahead < 0 ? 2500 - ahead : 1500 - p.z).setAngle(REDUCED ? 0 : clamp(car.wheel, -1.5, 1.5));
         } else sprite.setVisible(false);
       }
