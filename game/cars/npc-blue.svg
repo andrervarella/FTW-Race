@@ -1,19 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
-<defs><linearGradient id="paint" x2=".8" y2="1"><stop stop-color="#a0ebff"/><stop offset=".5" stop-color="#29b6ff"/><stop offset="1" stop-color="#176ba0"/></linearGradient><linearGradient id="glass" x2="0" y2="1"><stop stop-color="#385e78"/><stop offset="1" stop-color="#071321"/></linearGradient></defs>
-<ellipse cx="128" cy="236" rx="105" ry="11" fill="#090c11" opacity=".48"/>
-<path d="M27 170 24 217 36 232 50 227 51 168 Z M229 170 232 217 220 232 206 227 205 168Z" fill="#080c12" stroke="#444c58" stroke-width="4"/>
-<path d="M45 115 56 73 Q67 52 88 51 H168 Q189 52 200 73 L211 115 224 150 218 218 Q211 229 193 230 H63 Q45 229 38 218 L32 150Z" fill="url(#paint)" stroke="#111722" stroke-width="5"/>
-<path d="M60 79 Q64 64 88 63 H168 Q189 65 194 79 L201 126 H55Z" fill="url(#glass)" stroke="#15202d" stroke-width="4"/>
-<path d="M69 87 H186 L192 116 H63Z" fill="#55788b" opacity=".26"/>
-<path d="M47 128 58 142 H198 L210 128" fill="none" stroke="#a0ebff" stroke-width="5" opacity=".7"/>
-<path d="M43 142 93 147 95 165 44 164Z M213 142 163 147 161 165 212 164Z" fill="#600e18" stroke="#13141a" stroke-width="3"/>
-<path d="M46 147 88 152 88 158 46 157Z M210 147 168 152 168 158 210 157Z" fill="#ff4354"/>
-<path d="M39 181 H217 L216 215 Q209 224 193 225 H63 Q47 224 40 215Z" fill="#141b25" stroke="#2d3946" stroke-width="3"/>
-<path d="M48 192 H208 M48 198 H208" stroke="#56677a" stroke-width="3" opacity=".7"/>
-<rect x="101" y="174" width="54" height="18" rx="3" fill="#111620" stroke="#8d9fb3" stroke-width="2"/>
-<path d="M54 210 H85 L92 224 H53Z M202 210 H171 L164 224 H203Z" fill="#05080b" stroke="#6d7785" stroke-width="2"/>
-<path d="M90 210 H166 L174 226 H82Z" fill="#151e27"/>
-<path d="M109 215 H147 M106 221 H150" stroke="#73818a" stroke-width="2"/>
-<path d="M49 71 72 54 H184 L207 71 V78 H49Z" fill="#101820" stroke="#a0ebff" stroke-width="2"/>
-<path d="M45 117 27 110 24 125 48 131Z M211 117 229 110 232 125 208 131Z" fill="#176ba0" stroke="#141b25" stroke-width="3"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+<title>Rival blue — same A45 rear chassis, original art pending review</title>
+<defs><linearGradient id="paint" x2="0" y2="1"><stop stop-color="#a8edff"/><stop offset=".3" stop-color="#39b9ed"/><stop offset=".78" stop-color="#39b9ed"/><stop offset="1" stop-color="#15779b"/></linearGradient><linearGradient id="glass" x2="0" y2="1"><stop stop-color="#354650"/><stop offset=".7" stop-color="#10212b"/><stop offset="1" stop-color="#263e48"/></linearGradient></defs>
+<ellipse cx="256" cy="471" rx="204" ry="14" fill="#05090a" opacity=".45"/>
+<path d="M74 343Q50 363 57 445L66 466Q90 478 111 465L119 352ZM438 343Q462 363 455 445L446 466Q422 478 401 465L393 352Z" fill="#080c0d" stroke="#273034" stroke-width="6"/>
+<path d="M84 358 78 452M96 360 91 459M428 358 434 452M416 360 421 459" stroke="#353a3c" stroke-width="4"/>
+<path d="M91 299 108 238 131 165Q149 139 192 137H320Q363 139 381 165L404 238 421 299Q442 329 447 375L443 432Q435 455 408 459H104Q77 455 69 432L65 375Q70 329 91 299Z" fill="url(#paint)" stroke="#10171a" stroke-width="6"/>
+<path d="M145 169Q156 152 190 151H322Q356 152 367 169L381 211H131Z" fill="#15779b" stroke="#102027" stroke-width="4"/>
+<text x="256" y="194" text-anchor="middle" font-family="sans-serif" font-size="47" font-weight="900" fill="#fff8cb" stroke="#111a21" stroke-width="3" paint-order="stroke">31</text>
+<path d="M119 242 133 217H379L393 242 385 304Q379 322 358 323H154Q133 322 127 304Z" fill="url(#glass)" stroke="#0b1419" stroke-width="8"/>
+<path d="M145 238 362 304M368 238 157 304" stroke="#67818a" stroke-width="7" opacity=".3"/>
+<path d="M173 239V309M339 239V309" stroke="#0a1217" stroke-width="11"/>
+<path d="M113 220H399L409 208H103Z" fill="#080d11"/>
+<path d="M110 212H402V235H110Z" fill="#39b9ed" stroke="#152328" stroke-width="5"/>
+<path d="M164 237V321M348 237V321" stroke="#080d11" stroke-width="12"/>
+<path d="M111 238 83 227 67 231 65 248 96 254ZM401 238 429 227 445 231 447 248 416 254Z" fill="#15779b" stroke="#141f26" stroke-width="5"/>
+<path d="M105 326Q125 322 155 335L190 351 178 369Q145 383 117 366L96 347Z M407 326Q387 322 357 335L322 351 334 369Q367 383 395 366L416 347Z" fill="#661a25" stroke="#1c1e23" stroke-width="5"/>
+<path d="M106 335 159 346 177 354 121 352Z M406 335 353 346 335 354 391 352Z" fill="#ff564b"/>
+<path d="M114 350 148 359 171 357M398 350 364 359 341 357" fill="none" stroke="#f8e1cf" stroke-width="4"/>
+<path d="M183 369H329L316 390H196Z" fill="#142027"/>
+<rect x="214" y="371" width="84" height="18" rx="3" fill="#09131b"/>
+<path d="M94 392 101 437Q110 446 135 445H377Q402 446 411 437L418 392 438 405 434 438Q427 452 408 456H104Q85 452 78 438L74 405Z" fill="#15779b"/>
+<path d="M95 400 92 428 108 428 113 399Z M417 400 420 428 404 428 399 399Z" fill="#111b20" stroke="#2c383d" stroke-width="3"/>
+<path d="M165 434H347L368 461H144Z" fill="#0d161b" stroke="#26353a" stroke-width="5"/>
+<path d="M203 437V461M239 437V465M273 437V465M309 437V461" stroke="#424b50" stroke-width="7"/>
+<ellipse cx="127" cy="441" rx="29" ry="15" fill="#b3c5ca" stroke="#152229" stroke-width="5"/><ellipse cx="127" cy="441" rx="22" ry="9" fill="#030608"/>
+<ellipse cx="385" cy="441" rx="29" ry="15" fill="#b3c5ca" stroke="#152229" stroke-width="5"/><ellipse cx="385" cy="441" rx="22" ry="9" fill="#030608"/>
+<rect x="368" y="399" width="13" height="24" rx="3" fill="#a31825" stroke="#171e24" stroke-width="4"/>
+<path d="M200 325H312M111 393H401" stroke="#a8edff" stroke-width="3" opacity=".6"/>
 </svg>
