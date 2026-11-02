@@ -5,6 +5,8 @@ URL real: https://andrervarella.github.io/FTW-Race/teste-v4/. Pages `0c7235e0930
 
 Inspeção das capturas encontrou sobreposição pequena de rótulos e números dos degraus2/3. Corrigida via espaçamento/escala do texto e teste de bounding boxes (RED→GREEN em Chromium). Essa correção visual passa por nova rodada pública antes da entrega.
 
+A rodada41454470771 passou a etapa “Verify the published V4 in mobile Chromium” nos dois layouts, inclusive o assert dos rótulos corrigidos. A etapa de upload do artifact falhou porque uma variável do teste usada em nomes de arquivos foi sobrescrita por coordenadas de bounding box, gerando caractere “:” inválido. Corrigido o nome da variável do teste; produto e Pages não sofreram alteração. A rodada final precisa confirmar tanto o teste quanto o artifact.
+
 Fonte-base: `f6f6f83c40a3db3cc83cde4fc12702a1a94cc6e1`. Branch exclusiva: `codex/ftw-race-v4-arcade`. Baseline: `V4_BASELINE.txt`. Trabalho iniciado em01/11/2026 e continuado em02/11/2026, America/Sao_Paulo.
 
 ## Verificado localmente

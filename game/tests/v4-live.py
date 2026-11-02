@@ -146,10 +146,10 @@ def verify_viewport(browser, url, output, width, height, reduced):
             loaded_images(page)
             shot('real-winner-final-podium')
             for index, step in [(0, 'two'), (1, 'three')]:
-                label = page.locator(f'.runner-{index} span').bounding_box()
+                caption_box = page.locator(f'.runner-{index} span').bounding_box()
                 number = page.locator(f'.step-{step} b').bounding_box()
-                overlap = (label['x'] < number['x'] + number['width'] and label['x'] + label['width'] > number['x']
-                           and label['y'] < number['y'] + number['height'] and label['y'] + label['height'] > number['y'])
+                overlap = (caption_box['x'] < number['x'] + number['width'] and caption_box['x'] + caption_box['width'] > number['x']
+                           and caption_box['y'] < number['y'] + number['height'] and caption_box['y'] + caption_box['height'] > number['y'])
                 assert not overlap, 'Podium runner caption cannot cover its place number'
             report['checks'].append('natural complete race, six real standings and winner-specific animated champagne podium')
             report['natural_winner'] = winner
