@@ -33,3 +33,8 @@ O traçado jogável E o minimapa devem seguir cascavel-mapa-esquematico.png e ca
 
 ## Pesquisa permanente em GitHub open source — 01/11/2026
 Para toda nova função importante, ler `docs/REPOSITORIOS_PUBLICOS_E_POLITICA.md` e pesquisar repositorios públicos do GitHub (os sugeridos e alternativas melhores) como base técnica, aplicando apenas soluções compatíveis e licenciadas. Registrar fontes e testes em `docs/PESQUISA_OPEN_SOURCE_LOG.md`. Esta política não autoriza cópia de assets protegidos, troca de engine nem publicação sem autorização.
+
+
+## REA — engenharia reversa responsável (02/11/2026)
+- Avaliar o **REA — Reverse Engineer Anything** (https://github.com/morluto/rea) quando útil para investigar nossas builds, comportamentos, física, câmera, colisões e bugs. **Ler `docs/REA_ENGENHARIA_REVERSA.md` antes de usar.**
+- Usar apenas em alvos próprios/autorizados; não extrair recursos/código de Top Gear ou jogos comerciais, nem contornar proteções. REA depende de acesso e instalação autorizados e não deve ser presumido disponível.
