@@ -1,7 +1,7 @@
 # FTW RACE — V4 | Storyboard visual e especificação de experiência (PROPOSTA)
 
-**Status:** proposta visual e funcional para revisão do proprietário, NÃO versão implementada.  
-**Base:** `claude/ftw-race-v0.2` (V3 seis carros). Sem publicação, alteração de código, troca de engine ou aprovação implícita.
+**Status:** DIREÇÃO VISUAL E FUNCIONAL APROVADA PELO PROPRIETÁRIO. A V4 ainda NÃO está implementada, os sprites específicos ainda NÃO foram validados e a aprovação não autoriza chamar a versão final de pronta.  
+**Base:** `claude/ftw-race-v0.2` (V3 seis carros). **Próxima etapa autorizada:** preparar a implementação em branch de desenvolvimento, seguindo `docs/13_PROMPT_MESTRE_CODEX_V4.md`. A publicação deve preservar a V3 e exigir validação real.
 
 ## Objetivo
 Construir uma experiência arcade de corrida **2D**, com estética inspirada na geração 16-bit/SNES (sem copiar artes, códigos, trilhas ou marcas dos jogos de referência). O jogo inteiro deve manter identidade própria FTW Race, fidelidade aos pilotos e carros reais, e usabilidade horizontal em celulares Android/iOS.
@@ -88,4 +88,4 @@ Retratos e carros inteiramente **2D**, escala e iluminação coerentes; alternâ
 - Testes de sintaxe, regras, fluxo UI, verificação de assets e interação em mobile com resultados documentados. **Não afirmar FPS ou teste em dispositivo físico sem evidência.**
 
 ## Próxima etapa
-Depois da aprovação deste storyboard pelo proprietário: criar **prompt mestre V4 específico por arquivo e sequência de execução**, implementar em branch própria, testar e disponibilizar build de teste. Esta fase de storyboard não altera a versão V3 publicada.
+Storyboard **aprovado**. O prompt mestre técnico foi criado em `docs/13_PROMPT_MESTRE_CODEX_V4.md`. Próxima atividade: Codex/engenharia implementa em branch própria, testa e disponibiliza build de teste quando verificável. Esta aprovação do planejamento não altera a V3 publicada.

@@ -20,3 +20,6 @@ Link público HTTPS, abrível com um toque no Chrome do Android, hospedagem grat
 ## Código
 game/ (módulos ES, sem build). Testes: `cd game && npm test`. Emulado: `python3 game/tests/emulated/run_emulated.py game saida`. Implantação: copiar game/index.html, styles.css e src/ para gh-pages/claude/ (usa ../assets/ da gh-pages, inclusive phaser-Czz4FBZH.js; plano B via CDN jsdelivr). A cópia publicada está em gh-pages/claude/ (mesmos arquivos).
 Estado, limitações e hipóteses: docs/10_VERSAO_CLAUDE_V02.md.
+
+## V4 — aprovação posterior ao estado V2/V3
+O storyboard `docs/12_V4_STORYBOARD_E_DIRECAO_VISUAL.md` foi aprovado pelo proprietário. Para qualquer trabalho V4 ler obrigatoriamente `docs/13_PROMPT_MESTRE_CODEX_V4.md`; usar branch dedicada, preservar o jogo V3 em `/teste-v3/` e a raiz. Esta aprovação diz respeito à direção de produto, não a qualquer arte derivada ainda não validada.

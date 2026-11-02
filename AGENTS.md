@@ -38,3 +38,6 @@ Para toda nova função importante, ler `docs/REPOSITORIOS_PUBLICOS_E_POLITICA.m
 ## REA — engenharia reversa responsável (02/11/2026)
 - Avaliar o **REA — Reverse Engineer Anything** (https://github.com/morluto/rea) quando útil para investigar nossas builds, comportamentos, física, câmera, colisões e bugs. **Ler `docs/REA_ENGENHARIA_REVERSA.md` antes de usar.**
 - Usar apenas em alvos próprios/autorizados; não extrair recursos/código de Top Gear ou jogos comerciais, nem contornar proteções. REA depende de acesso e instalação autorizados e não deve ser presumido disponível.
+
+## FTW RACE V4 — storyboard aprovado e prompt de execução
+O proprietário **aprovou** a direção visual e funcional descrita em `docs/12_V4_STORYBOARD_E_DIRECAO_VISUAL.md`. Para trabalho de implementação V4, **leia `docs/13_PROMPT_MESTRE_CODEX_V4.md` antes de começar** e mantenha as decisões de identidade de `AGENTS.md` e `CLAUDE.md`. Executar em branch nova, preservar V3 e somente publicar em `/teste-v4/` após testes, com resultados verificáveis. Arte gerada de pilotos e pódio ainda depende de validação visual; a aprovação do storyboard não aprova automaticamente cada sprite.
