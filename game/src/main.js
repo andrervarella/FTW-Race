@@ -6,7 +6,7 @@ import { Ui } from './ui.js';
 const boot = window.__boot || { step() {}, show() {} };
 boot.step('módulos carregados');
 const params = new URLSearchParams(location.search);
-const ASSETS = params.get('assets') || new URL('../../assets/', import.meta.url).href; // gh-pages/claude/src -> gh-pages/assets/
+const ASSETS = new URL('../assets/legacy/', import.meta.url).href;
 const debug = params.has('debug');
 window.__ftwErrors = [];
 
