@@ -1275,6 +1275,294 @@
       ],
       "approval": "fictional-new-art-review-pending",
       "sha256": "10d4e6f66209212aea3dbdb9461b7ded4d1a0ac8c80fd22905ba9a81bf54fd0e"
+    },
+    {
+      "file": "game/assets/v4/podium/marquinhos-0.png",
+      "source": "assets/sprites/v4/truck-driver/podium-0.png",
+      "sha256": "eab134daedaa2bc0555117466b7f2a2b5b48c804c2ca5f7b7c62fd934dd61138",
+      "sourceSha256": "eab134daedaa2bc0555117466b7f2a2b5b48c804c2ca5f7b7c62fd934dd61138",
+      "size": [
+        256,
+        512
+      ],
+      "transformation": "byte-identical copy of prepared source",
+      "approval": "owner-requested-integration",
+      "key": "marquinhos",
+      "name": "entry",
+      "frame": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "ground": 500,
+      "sourceCrop": [
+        46,
+        107,
+        347,
+        730
+      ],
+      "sourceAnchor": {
+        "root": [
+          126.0,
+          612.0
+        ],
+        "rootMethod": "reviewed-explicit-foot-anchor",
+        "capTop": 12,
+        "capTopMethod": "reviewed-explicit-cap-crown",
+        "anatomicalHeight": 600.0,
+        "anatomicalMeasurement": "measured-cap-to-sole",
+        "visibleBBox": [
+          12,
+          12,
+          289,
+          612
+        ]
+      },
+      "scale": [
+        0.6721763085399449,
+        0.6721763085399449
+      ],
+      "rotationDegrees": 0
+    },
+    {
+      "file": "game/assets/v4/podium/marquinhos-1.png",
+      "source": "assets/sprites/v4/truck-driver/podium-1.png",
+      "sha256": "e475d84a219813b196030b7611cf259fad16b33b3db5e9fc20e7fd0b7c3f3e32",
+      "sourceSha256": "e475d84a219813b196030b7611cf259fad16b33b3db5e9fc20e7fd0b7c3f3e32",
+      "size": [
+        256,
+        512
+      ],
+      "transformation": "byte-identical copy of prepared source",
+      "approval": "owner-requested-integration",
+      "key": "marquinhos",
+      "name": "receive",
+      "frame": 1,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "ground": 500,
+      "sourceCrop": [
+        413,
+        108,
+        660,
+        725
+      ],
+      "sourceAnchor": {
+        "root": [
+          127.5,
+          605.0
+        ],
+        "rootMethod": "midpoint-of-both-feet-extents-in-bottom-12-percent-band",
+        "capTop": null,
+        "capTopMethod": null,
+        "anatomicalHeight": null,
+        "anatomicalMeasurement": "unmeasured-requires-visual-review; shared-scale-only",
+        "visibleBBox": [
+          12,
+          12,
+          235,
+          605
+        ]
+      },
+      "scale": [
+        0.6721763085399449,
+        0.6721763085399449
+      ],
+      "rotationDegrees": 0
+    },
+    {
+      "file": "game/assets/v4/podium/marquinhos-2.png",
+      "source": "assets/sprites/v4/truck-driver/podium-2.png",
+      "sha256": "e7e62e85234bb6d706511b96b0e6ac576a08a262975b3cb64942eba71b15da55",
+      "sourceSha256": "e7e62e85234bb6d706511b96b0e6ac576a08a262975b3cb64942eba71b15da55",
+      "size": [
+        256,
+        512
+      ],
+      "transformation": "byte-identical copy of prepared source",
+      "approval": "owner-requested-integration",
+      "key": "marquinhos",
+      "name": "raise",
+      "frame": 2,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "ground": 500,
+      "sourceCrop": [
+        764,
+        2,
+        1007,
+        725
+      ],
+      "sourceAnchor": {
+        "root": [
+          121.5,
+          711.0
+        ],
+        "rootMethod": "midpoint-of-both-feet-extents-in-bottom-12-percent-band",
+        "capTop": null,
+        "capTopMethod": null,
+        "anatomicalHeight": null,
+        "anatomicalMeasurement": "unmeasured-requires-visual-review; shared-scale-only",
+        "visibleBBox": [
+          12,
+          12,
+          231,
+          711
+        ]
+      },
+      "scale": [
+        0.6721763085399449,
+        0.6721763085399449
+      ],
+      "rotationDegrees": 0
+    },
+    {
+      "file": "game/assets/v4/podium/marquinhos-3.png",
+      "source": "assets/sprites/v4/truck-driver/podium-3.png",
+      "sha256": "c46fb72c08148728712ed3a4600e9bf853cdd9072243d3d086827c5b36b29970",
+      "sourceSha256": "c46fb72c08148728712ed3a4600e9bf853cdd9072243d3d086827c5b36b29970",
+      "size": [
+        256,
+        512
+      ],
+      "transformation": "byte-identical copy of prepared source",
+      "approval": "owner-requested-integration",
+      "key": "marquinhos",
+      "name": "open",
+      "frame": 3,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "ground": 500,
+      "sourceCrop": [
+        40,
+        803,
+        312,
+        1440
+      ],
+      "sourceAnchor": {
+        "root": [
+          148.0,
+          625.0
+        ],
+        "rootMethod": "midpoint-of-both-feet-extents-in-bottom-12-percent-band",
+        "capTop": null,
+        "capTopMethod": null,
+        "anatomicalHeight": null,
+        "anatomicalMeasurement": "unmeasured-requires-visual-review; shared-scale-only",
+        "visibleBBox": [
+          12,
+          12,
+          260,
+          625
+        ]
+      },
+      "scale": [
+        0.6721763085399449,
+        0.6721763085399449
+      ],
+      "rotationDegrees": 0
+    },
+    {
+      "file": "game/assets/v4/podium/marquinhos-4.png",
+      "source": "assets/sprites/v4/truck-driver/podium-4.png",
+      "sha256": "bc506a4b223aba86a4247ed11b8f49db910262727de3dcc0e3677fc00a401285",
+      "sourceSha256": "bc506a4b223aba86a4247ed11b8f49db910262727de3dcc0e3677fc00a401285",
+      "size": [
+        256,
+        512
+      ],
+      "transformation": "byte-identical copy of prepared source",
+      "approval": "owner-requested-integration",
+      "key": "marquinhos",
+      "name": "spray",
+      "frame": 4,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "ground": 500,
+      "sourceCrop": [
+        384,
+        809,
+        674,
+        1438
+      ],
+      "sourceAnchor": {
+        "root": [
+          145.5,
+          617.0
+        ],
+        "rootMethod": "midpoint-of-both-feet-extents-in-bottom-12-percent-band",
+        "capTop": null,
+        "capTopMethod": null,
+        "anatomicalHeight": null,
+        "anatomicalMeasurement": "unmeasured-requires-visual-review; shared-scale-only",
+        "visibleBBox": [
+          12,
+          12,
+          278,
+          617
+        ]
+      },
+      "scale": [
+        0.6721763085399449,
+        0.6721763085399449
+      ],
+      "rotationDegrees": 0
+    },
+    {
+      "file": "game/assets/v4/podium/marquinhos-5.png",
+      "source": "assets/sprites/v4/truck-driver/podium-5.png",
+      "sha256": "d7d3ac0371db06085abd0dbb86d8a2986f534e595a5d160e7b4c43dfa1d86a56",
+      "sourceSha256": "d7d3ac0371db06085abd0dbb86d8a2986f534e595a5d160e7b4c43dfa1d86a56",
+      "size": [
+        256,
+        512
+      ],
+      "transformation": "byte-identical copy of prepared source",
+      "approval": "owner-requested-integration",
+      "key": "marquinhos",
+      "name": "final",
+      "frame": 5,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "ground": 500,
+      "sourceCrop": [
+        708,
+        730,
+        1082,
+        1440
+      ],
+      "sourceAnchor": {
+        "root": [
+          180.5,
+          698.0
+        ],
+        "rootMethod": "midpoint-of-both-feet-extents-in-bottom-12-percent-band",
+        "capTop": null,
+        "capTopMethod": null,
+        "anatomicalHeight": null,
+        "anatomicalMeasurement": "unmeasured-requires-visual-review; shared-scale-only",
+        "visibleBBox": [
+          12,
+          11,
+          362,
+          698
+        ]
+      },
+      "scale": [
+        0.6721763085399449,
+        0.6721763085399449
+      ],
+      "rotationDegrees": 0
     }
   ]
 }

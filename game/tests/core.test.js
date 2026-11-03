@@ -37,7 +37,7 @@ test('contagem regressiva e largada', () => {
   for (let i = 0; i < 60 * 3.1; i++) stepRace(race, IDLE, 1 / 60);
   assert.equal(race.phase, 'racing');
 });
-test('piloto parado nao completa volta; um dos cinco rivais termina tres voltas', () => {
+test('piloto parado nao completa volta; um dos seis rivais termina tres voltas', () => {
   const race = createRace(track, 'daniel');
   for (let i = 0; i < 60 * 400 && race.phase !== 'finished'; i++) stepRace(race, IDLE, 1 / 60);
   const winner = race.racers.find(d => d.driver === race.winner);

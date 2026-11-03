@@ -1,5 +1,5 @@
 // Interface DOM: navegação visual separada das fases do simulador.
-import { DRIVERS } from './config.js';
+import { DRIVERS, PLAYABLE_KEYS } from './config.js';
 import { InputState, KEYMAP } from './input.js';
 import { GameAudio } from './audio.js';
 import { createRace, pauseRace, resumeRace, playerPosition, formatTime } from './sim.js';
@@ -40,7 +40,7 @@ export class Ui {
   }
   get portrait() { return innerHeight > innerWidth; }
   img(name, alt, cls = '') { return `<img class="${cls}" src="${this.assets}${name}" alt="${alt}" draggable="false">`; }
-  driverArt(key, cls) { return `<img class="${cls}" src="${new URL(`../assets/v4/drivers/${key}-portrait.webp`, import.meta.url).href}" alt="Ilustração de ${DRIVERS[key].name} — retrato aprovado" draggable="false">`; }
+  driverArt(key, cls) { return `<img class="${cls}" src="${new URL(`../assets/v4/drivers/${key}-portrait.webp`, import.meta.url).href}" alt="Ilustração de ${DRIVERS[key].name}" draggable="false">`; }
   transition(screen) {
     const titleCleanup = this.titleCleanup; this.titleCleanup = null; titleCleanup?.();
     this.clearInputs(); this.screen = screen; this.root.dataset.screen = screen;
@@ -49,7 +49,7 @@ export class Ui {
     this.lastUpdate = performance.now(); this.bannerUntil = 0;
   }
   dropRace() { this.race = null; this.onRace(null); }
-  brand(copy = 'CASCAVEL') { return `<header class="brand">${this.img('ftw.png', 'FTW', 'ftw-logo')}<span class="brand-title">RACE <em>${copy}</em></span><span class="tag">PRÉVIA V4 · DANIEL E FELIPE APROVADOS</span></header>`; }
+  brand(copy = 'CASCAVEL') { return `<header class="brand">${this.img('ftw.png', 'FTW', 'ftw-logo')}<span class="brand-title">RACE <em>${copy}</em></span><span class="tag">PRÉVIA V4 · ${PLAYABLE_KEYS.map(key => DRIVERS[key].first.toUpperCase()).join(' · ')}</span></header>`; }
   soundButton() { return `<button type="button" class="icon-button" id="screen-sound" aria-label="Alternar som">${this.audio.label}</button>`; }
   bindSound() { const b = this.root.querySelector('#screen-sound'); if (b) b.onclick = () => { this.audio.control().catch(() => {}); b.textContent = this.audio.label; }; }
   feedback() { this.audio.unlock().then(ready => { if (ready) this.audio.selection?.(); }).catch(() => {}); }
@@ -64,18 +64,19 @@ export class Ui {
   menu() { this.showDriverSelect(); }
   showDriverSelect() {
     this.dropRace(); this.transition('driverSelect');
-    const card = (k) => { const d = DRIVERS[k], sel = k === this.selected;
-      return `<button type="button" class="driver ${sel ? 'selected' : ''}" data-driver="${k}" aria-pressed="${sel}" style="--driver-color:${d.color}">
+    const card = (k) => { const d = DRIVERS[k], sel = k === this.selected, last = d.last ?? d.name.slice(d.first.length).trim();
+      const vehicle = d.vehicleType === 'truck' ? `<img class="menu-car" src="${new URL(`../assets/v4/cars/${k}-rear.png`, import.meta.url).href}" alt="${d.car}" draggable="false">` : this.img(`${k}-rear.png`, d.car, 'menu-car');
+      return `<button type="button" class="driver ${sel ? 'selected' : ''}" data-driver="${k}" data-vehicle="${d.vehicleType}" aria-pressed="${sel}" style="--driver-color:${d.color}">
         ${this.driverArt(k, 'driver-photo')}
-        <span class="driver-copy"><small>PILOTO #${d.number}</small><strong>${d.first}<span>Mencacci</span></strong><span class="driver-line">${d.car.toUpperCase()}</span></span>
-        ${this.img(`${k}-rear.png`, d.car, 'menu-car')}<span class="choice">${sel ? 'SELECIONADO' : 'ESCOLHER PILOTO'}</span></button>`; };
+        <span class="driver-copy"><small>PILOTO${d.number == null ? '' : ` #${d.number}`}</small><strong>${d.first}${last ? `<span>${last}</span>` : ''}</strong><span class="driver-line">${d.car.toUpperCase()}</span></span>
+        ${vehicle}<span class="choice">${sel ? 'SELECIONADO' : 'ESCOLHER PILOTO'}</span></button>`; };
     this.root.innerHTML = `<section class="menu">${this.brand()}<div class="select-heading"><h1>SELECT YOUR DRIVER</h1>${this.soundButton()}</div>
-      <div class="drivers">${card('daniel')}${card('felipe')}</div>
+      <div class="drivers" style="--driver-count:${PLAYABLE_KEYS.length}">${PLAYABLE_KEYS.map(card).join('')}</div>
       <footer class="menu-footer"><div class="race-options"><button type="button" class="text-button" id="back">VOLTAR</button>
         <label>Voltas <select id="laps">${[1,3,5].map(n => `<option ${n === this.laps ? 'selected' : ''}>${n}</option>`).join('')}</select></label>
         <label>Nitros <select id="charges">${[0,1,2].map(n => `<option ${n === this.charges ? 'selected' : ''}>${n}</option>`).join('')}</select></label></div>
         <button class="primary" id="confirm-driver" data-confirm>CONFIRMAR PILOTO</button></footer>
-      <p class="build-note">Retratos aprovados · demais artes em revisão · voltas e nitro provisórios · celular na horizontal</p></section>`;
+      <p class="build-note">Daniel · Felipe · Marquinhos · voltas e nitro provisórios · celular na horizontal</p></section>`;
     for (const b of this.root.querySelectorAll('[data-driver]')) b.onclick = () => {
       this.laps = Number(this.root.querySelector('#laps').value); this.charges = Number(this.root.querySelector('#charges').value);
       this.selected = b.dataset.driver; this.feedback(); this.showDriverSelect();
@@ -89,7 +90,7 @@ export class Ui {
     this.race = createRace(this.track, this.selected, { laps, nitroCharges: charges });
     pauseRace(this.race); this.onRace(this.race); this.transition('grid');
     const d = DRIVERS[this.selected];
-    this.root.innerHTML = `<section class="grid-screen">${this.brand()}<div class="grid-intro"><p class="eyebrow">GRID DE LARGADA</p><h1>${d.first.toUpperCase()} <span style="color:${d.color}">#${d.number}</span></h1><p>${laps} VOLTA${laps > 1 ? 'S' : ''} · ${charges} NITROS · CASCAVEL</p><div class="grid-names">${this.race.racers.map((r, i) => `<span style="--driver-color:${DRIVERS[r.driver].color}"><b>${i + 1}</b> ${DRIVERS[r.driver].name}</span>`).join('')}</div><p class="grid-tip">Segure ACELERAR e use as setas. Nitro: duas ações simultâneas ou mais.</p></div><footer class="menu-footer"><button type="button" class="secondary" id="grid-back">TROCAR PILOTO</button><button type="button" class="primary" id="start" data-confirm>LARGAR</button></footer></section>`;
+    this.root.innerHTML = `<section class="grid-screen">${this.brand()}<div class="grid-intro"><p class="eyebrow">GRID DE LARGADA · ${this.race.racers.length} VEÍCULOS</p><h1>${d.first.toUpperCase()}${d.number == null ? '' : ` <span style="color:${d.color}">#${d.number}</span>`}</h1><p>${laps} VOLTA${laps > 1 ? 'S' : ''} · ${charges} NITROS · CASCAVEL</p><div class="grid-names">${this.race.racers.map((r, i) => `<span style="--driver-color:${DRIVERS[r.driver].color}"><b>${i + 1}</b> ${DRIVERS[r.driver].name}</span>`).join('')}</div><p class="grid-tip">Segure ACELERAR e use as setas. Nitro: duas ações simultâneas ou mais.</p></div><footer class="menu-footer"><button type="button" class="secondary" id="grid-back">TROCAR PILOTO</button><button type="button" class="primary" id="start" data-confirm>LARGAR</button></footer></section>`;
     this.root.querySelector('#grid-back').onclick = () => this.showDriverSelect();
     this.root.querySelector('#start').onclick = () => { this.fullscreen(); this.start(); };
   }
@@ -118,7 +119,7 @@ export class Ui {
   raceUi() {
     const r = this.race;
     this.root.innerHTML = `<section class="race-ui">
-      <header class="hud"><div class="cell"><small>POSIÇÃO</small><strong id="position">5<span>/ 6</span></strong></div>
+      <header class="hud"><div class="cell"><small>POSIÇÃO</small><strong id="position">${playerPosition(r)}<span>/ ${r.racers.length}</span></strong></div>
         <div class="cell"><small>VOLTA</small><strong id="lap">1 / ${r.config.laps}</strong></div>
         <div class="cell"><small>TEMPO</small><strong id="time">00:00.0</strong></div>
         <div class="grow"></div><button id="sound" class="icon-button">${this.audio.label}</button><button id="pause" class="icon-button" aria-label="Pausar">II</button></header>
@@ -170,7 +171,7 @@ export class Ui {
   showResults() {
     if (!this.race || this.race.phase !== 'finished') return;
     this.transition('results'); const rows = getResults(this.race), winner = DRIVERS[this.race.winner], playerResult = rows.find(r => r.isPlayer);
-    this.root.innerHTML = `<section class="results-screen">${this.brand('BANDEIRADA')}<div class="results-content"><header><p class="eyebrow">CAMPEÃO DE CASCAVEL</p><h1 style="color:${winner.color}">${winner.name}</h1><p>Sua posição: <b>${playerResult?.position || this.race.resultPosition}º de 6</b></p>${Number.isFinite(playerResult?.bestLap) ? `<p>Melhor volta: <b>${formatTime(playerResult.bestLap)}</b></p>` : ''}<p class="small">Classificação no instante da bandeirada. Tempos apenas de quem concluiu.</p></header><table class="standings"><thead><tr><th scope="col">POS</th><th scope="col">PILOTO / CARRO</th><th scope="col">VOLTA</th><th scope="col">CHEGADA</th></tr></thead><tbody>${rows.map(r => `<tr class="${r.isPlayer ? 'player-row' : ''}" data-result-driver="${r.driver}"><td>${r.position}º</td><th scope="row"><i style="background:${DRIVERS[r.driver].color}"></i>${DRIVERS[r.driver].name}${r.isPlayer ? ' · VOCÊ' : ''}<small>#${DRIVERS[r.driver].number}</small></th><td>${r.laps}/${this.race.config.laps}</td><td>${r.finished ? formatTime(r.finishTime) : 'Não concluiu'}</td></tr>`).join('')}</tbody></table></div><footer class="results-actions"><button class="secondary" id="restart">RECOMEÇAR</button><button class="text-button" id="change-driver">TROCAR PILOTO</button><button class="primary" id="podium" data-confirm>VER PÓDIO</button></footer></section>`;
+    this.root.innerHTML = `<section class="results-screen">${this.brand('BANDEIRADA')}<div class="results-content"><header><p class="eyebrow">CAMPEÃO DE CASCAVEL</p><h1 style="color:${winner.color}">${winner.name}</h1><p>Sua posição: <b>${playerResult?.position || this.race.resultPosition}º de ${this.race.racers.length}</b></p>${Number.isFinite(playerResult?.bestLap) ? `<p>Melhor volta: <b>${formatTime(playerResult.bestLap)}</b></p>` : ''}<p class="small">Classificação no instante da bandeirada. Tempos apenas de quem concluiu.</p></header><table class="standings"><thead><tr><th scope="col">POS</th><th scope="col">PILOTO / CARRO</th><th scope="col">VOLTA</th><th scope="col">CHEGADA</th></tr></thead><tbody>${rows.map(r => `<tr class="${r.isPlayer ? 'player-row' : ''}" data-result-driver="${r.driver}"><td>${r.position}º</td><th scope="row"><i style="background:${DRIVERS[r.driver].color}"></i>${DRIVERS[r.driver].name}${r.isPlayer ? ' · VOCÊ' : ''}${DRIVERS[r.driver].number == null ? '' : `<small>#${DRIVERS[r.driver].number}</small>`}</th><td>${r.laps}/${this.race.config.laps}</td><td>${r.finished ? formatTime(r.finishTime) : 'Não concluiu'}</td></tr>`).join('')}</tbody></table></div><footer class="results-actions"><button class="secondary" id="restart">RECOMEÇAR</button><button class="text-button" id="change-driver">TROCAR PILOTO</button><button class="primary" id="podium" data-confirm>VER PÓDIO</button></footer></section>`;
     this.root.querySelector('#restart').onclick = () => this.showGrid(); this.root.querySelector('#change-driver').onclick = () => this.showDriverSelect(); this.root.querySelector('#podium').onclick = () => this.showPodium();
   }
   showPodium() {

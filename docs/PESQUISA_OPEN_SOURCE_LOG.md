@@ -72,3 +72,12 @@ O pipeline existente Pillow/NumPy foi estendido com componentes conectados SciPy
 
 ## 02/11/2026 — ativação confiável do áudio
 Consultado Howler.js2.2.4 (`goldfire/howler.js`, src/howler.core.js, `_unlockAudio`, licençaMIT) para comparar retomada direta em eventos de ativação confiáveis e repetição de resume; nenhuma biblioteca ou código literal foi importado. A base Web Audio sintetizada própria permanece. A correção trata a troca acidental do primeiro toque para efeitos-only e a promessa de resume bloqueada antes da ativação; política de autoplay do navegador preservada. Teste mede PCM no grafo de saída do GameAudio real e grava somente o som sintetizado pelo jogo, sem microfone. Relatório final em FELIPE_AUDIO_FIX_QA.md.
+
+
+## 03/11/2026 — Marquinhos, caminhão e sete participantes
+
+Consultados antes da implementação: [javascript-racer](https://github.com/jakesgordon/javascript-racer/blob/3e8a060b5900755db27f899612a74a77427c853e/v4.final.html), commit `3e8a060b5900755db27f899612a74a77427c853e`, e LICENSE (MIT). Linhas199–201 usam largura própria de cada carro para colisão;263–285 usam as duas larguras também ao decidir desvio. Adaptação própria: extensão por veículo e soma das meias dimensões no par, inclusive wrap de pista e decisões de passagem. Nenhum sprite, música ou linha de código foi importado. Os assets externos daquele demo não têm autorização de reutilização neste jogo.
+
+Consultados [Phaser Size.js](https://github.com/phaserjs/phaser/blob/v3.90.0/src/gameobjects/components/Size.js) e [LICENSE.md](https://github.com/phaserjs/phaser/blob/v3.90.0/LICENSE.md), tag `v3.90.0`, MIT, correspondente à engine local preservada. `setDisplaySize` define escalas a partir do frame: arquivo maior não garante porte visual maior. Adaptação: fator próprio do caminhão aplicado igualmente nos dois eixos e em todas as vistas, com o aspecto560/512 e pivô comum; escala de câmera comum ao pelotão limita obstrução na tela pequena. O trecho `license.txt` foi consultado inicialmente e não existia; a licença confirmada é LICENSE.md. Nenhum asset de exemplo foi copiado.
+
+Comparação: trocar engine ou importar o demo completo exigiria reescrever a corrida já verificada e não resolveria identidade do caminhão. Foram estendidos os módulos atuais de simulação, render, UI e pódio com os assets próprios preparados. Plano e critérios: `superpowers/plans/2026-11-03-marquinhos-playable.md`. Baseline real47/47Node. Resultados finais serão registrados em V4_QA_REPORT.md após execução.

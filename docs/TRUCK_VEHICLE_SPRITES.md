@@ -29,3 +29,8 @@ A ficha oficial chilena4×2 (6,252m de comprimento,2,550m de largura,3,789m de a
 - Chromium154.0.8037.57 local: PASS em915×412 e430×932 com movimento reduzido. Os seis estados selecionados conferem os pixels dos PNGs; frente e comparação também. Fundo claro/escuro/asfalto, alternar/parar freio e layout sem overflow passaram; zero errosJS/HTTP. Evidência em `work/truck-vehicle-art/browser-qa/` no ambiente.
 - ZIP14487122bytes, SHA256 `36e1cddbfdc48bc83fbbcc6c2867c6d4e1297f23cd2bbd9856611e68dbc02e82`; CRC/caminhos/checksums verificados. Extraído e reexecutado usando o script do próprio pacote: PNGs, frente, atlas, comparação, contatos, HTML, metadata e o ZIP inteiro ficaram byte-idênticos. PASS.
 - Sem reteste de corrida/áudio, publicação, novo competidor ou mudança de `game/src`, `game/assets`, HTML/CSS do jogo. Arte e proporção final aguardam revisão do proprietário; não houve teste em Android físico.
+
+
+## Atualização de integração — 03/11/2026
+
+Após apresentação do pacote, o proprietário respondeu “Otimo” e pediu aplicar tudo ao game, nomeando Marquinhos para capa e seleção jogável. O material preparado é aceito para esse uso; os avisos de revisão e ausência de integração acima descrevem a entrega histórica anterior. A aceitação não confirma medidas, ano, versão ou customizações traseiras não fotografadas. A integração usa IVECO4×2 sem carreta, seis estados e escala uniforme proposta, mantendo as marcas nas posições documentadas. A referência dimensional pública permanece comparativa.

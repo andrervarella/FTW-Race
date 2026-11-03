@@ -26,3 +26,8 @@ A base está aprovada; as seis poses derivadas estão em revisão visual, não h
 - Chromium154.0.8037.57 local: PASS em915×412 e430×932 com movimento reduzido. Seleção nativa das seis poses conferiu os pixels reais, fundos claro/escuro, reprodução/pausa/final mantido, sem overflow/errosJS/HTTP. Evidência em `work/truck-driver-art/browser-qa/` no ambiente. A primeira execução teve erro de sintaxe num seletor do roteiro de QA; corrigido e retestado, sem alteração no produto.
 - ZIP completo7347358bytes, SHA256 `94ccf286523ab966056479f9083cd6524b1963ee4ae45e3cd1287879c66bb796`. CRC/caminhos/checksums verificados. Extraído e reproduzido usando o script e fontes contidos no próprio ZIP: sete PNGs, retrato, atlas, contato e HTML byte-idênticos; âncoraFX reproduzida. PASS.
 - Não houve reteste de corrida/áudio, publicação ou integração: nenhum arquivo de `game/src`, `game/assets`, HTML/CSS do jogo foi alterado. Android físico e fidelidade final das novas poses não testados/aprovados.
+
+
+## Atualização de integração — 03/11/2026
+
+O proprietário confirmou o nome **Marquinhos** e pediu aplicar o conjunto ao jogo: “Otimo o que mais precisamos para aplicar tudo isso no game? Inclusive também ter esse novo piloto que se chama Marquinhos na capa do game e telefone como personagem jogavel”. Essa instrução autoriza a integração do material apresentado na capa, seleção e pódio; substitui a pendência operacional acima. A frase “Ótimo. Essa última ficou perfeita. Ela é a referência.” continua sendo a aprovação explícita da base. Não há nova citação literal “Aprovado” para cada pose. Metadados de preparação preservam o estado histórico; o registro de aceitação para uso está nos metadados de runtime e neste pedido. Nenhum sobrenome ou número de corrida foi fornecido.

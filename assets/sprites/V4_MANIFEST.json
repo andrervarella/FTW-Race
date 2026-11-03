@@ -1,11 +1,13 @@
 {
   "version": "4-preview",
-  "approval": "pilots-and-cover-owner-approved; other-new-art-review-pending",
+  "approval": "Daniel/Felipe original art and cover previously approved; prepared Marquinhos and Felipe title retouch accepted by latest owner integration request; other-new-art-review-pending",
   "details": [
     "game/assets/v4/render-assets.json",
     "game/assets/v4/cars/npc-cars.json",
+    "game/assets/v4/cars/marquinhos.json",
     "game/assets/v4/podium/frames.json",
     "game/assets/v4/drivers/approved-pilots.json",
+    "game/assets/v4/drivers/marquinhos.json",
     "game/assets/v4/title/approval.json"
   ],
   "assets": [
@@ -654,6 +656,556 @@
       ]
     },
     {
+      "path": "assets/previews/v4/truck-driver/master-approved.png",
+      "sha256": "3a02874d742a7c70382d3bc6a1da9a4896882aa68d458248b83cbcdb49773c10",
+      "bytes": 1357367,
+      "status": "preliminary-human-review-pending",
+      "size": [
+        887,
+        1774
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "assets/previews/v4/truck-driver/podium-generated-source.png",
+      "sha256": "ad211b224d3dc7760c7be13fdd16066fe91b267702df89aa66ad4d03369c1002",
+      "bytes": 1378112,
+      "status": "preliminary-human-review-pending",
+      "size": [
+        1086,
+        1448
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "assets/previews/v4/truck-vehicle/front-proposal.png",
+      "sha256": "d1fb027131e8f0570a5a006b9201134f2431bb3cdfc21262473f5266f205d152",
+      "bytes": 1608220,
+      "status": "preliminary-human-review-pending",
+      "size": [
+        1402,
+        1122
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "assets/previews/v4/truck-vehicle/rear-generated-source.png",
+      "sha256": "d2dd93e336c576fa6e3cc68cc85d38f8739037771f37d7de4343260b38414260",
+      "bytes": 1529560,
+      "status": "preliminary-human-review-pending",
+      "size": [
+        1606,
+        979
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "assets/sprites/v4/truck-driver/README.md",
+      "sha256": "ad735142c41cc17d1ab885ebe7525f8222e86c4419247954d4b4c1605f43732a",
+      "bytes": 1097,
+      "status": "prepared-source-owner-requested-integration"
+    },
+    {
+      "path": "assets/sprites/v4/truck-driver/SHA256SUMS",
+      "sha256": "329c5249bf16268330c990b134921629a4e767b745e25eafc254f9150e22db2f",
+      "bytes": 1739,
+      "status": "prepared-source-owner-requested-integration"
+    },
+    {
+      "path": "assets/sprites/v4/truck-driver/contact-sheet.png",
+      "sha256": "5b7fa1970129ecefe56e9c75e0d44d1446e10e485e4a36d2a3965722c34470a7",
+      "bytes": 664009,
+      "status": "prepared-source-owner-requested-integration",
+      "size": [
+        1120,
+        1168
+      ]
+    },
+    {
+      "path": "assets/sprites/v4/truck-driver/frames.json",
+      "sha256": "fe24a62e1442a4ec6b52b95cdc20e4c5cce7d94496257110a1563d302ef47a6a",
+      "bytes": 9966,
+      "status": "prepared-source-owner-requested-integration"
+    },
+    {
+      "path": "assets/sprites/v4/truck-driver/full-body-atlas.json",
+      "sha256": "d56d63573a6c0161bb53f40903471ae77d964345e4121808349f9ff662d0da91",
+      "bytes": 3026,
+      "status": "prepared-source-owner-requested-integration"
+    },
+    {
+      "path": "assets/sprites/v4/truck-driver/full-body-atlas.png",
+      "sha256": "c5c01496b9198b7e6e0988680dd646a3764f42f29d73d3de5a869fb61673253e",
+      "bytes": 676870,
+      "status": "prepared-source-owner-requested-integration",
+      "size": [
+        1792,
+        512
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "assets/sprites/v4/truck-driver/neutral.png",
+      "sha256": "6a69aa4fe4bcfd320b637e48cb820f3aca3fa7df9e8f8fc2c2bb862b26e3bdd0",
+      "bytes": 90135,
+      "status": "prepared-source-owner-requested-integration",
+      "size": [
+        256,
+        512
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "assets/sprites/v4/truck-driver/podium-0.png",
+      "sha256": "eab134daedaa2bc0555117466b7f2a2b5b48c804c2ca5f7b7c62fd934dd61138",
+      "bytes": 88011,
+      "status": "prepared-source-owner-requested-integration",
+      "size": [
+        256,
+        512
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "assets/sprites/v4/truck-driver/podium-1.png",
+      "sha256": "e475d84a219813b196030b7611cf259fad16b33b3db5e9fc20e7fd0b7c3f3e32",
+      "bytes": 93400,
+      "status": "prepared-source-owner-requested-integration",
+      "size": [
+        256,
+        512
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "assets/sprites/v4/truck-driver/podium-2.png",
+      "sha256": "e7e62e85234bb6d706511b96b0e6ac576a08a262975b3cb64942eba71b15da55",
+      "bytes": 102426,
+      "status": "prepared-source-owner-requested-integration",
+      "size": [
+        256,
+        512
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "assets/sprites/v4/truck-driver/podium-3.png",
+      "sha256": "c46fb72c08148728712ed3a4600e9bf853cdd9072243d3d086827c5b36b29970",
+      "bytes": 96168,
+      "status": "prepared-source-owner-requested-integration",
+      "size": [
+        256,
+        512
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "assets/sprites/v4/truck-driver/podium-4.png",
+      "sha256": "bc506a4b223aba86a4247ed11b8f49db910262727de3dcc0e3677fc00a401285",
+      "bytes": 95141,
+      "status": "prepared-source-owner-requested-integration",
+      "size": [
+        256,
+        512
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "assets/sprites/v4/truck-driver/podium-5.png",
+      "sha256": "d7d3ac0371db06085abd0dbb86d8a2986f534e595a5d160e7b4c43dfa1d86a56",
+      "bytes": 113119,
+      "status": "prepared-source-owner-requested-integration",
+      "size": [
+        256,
+        512
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "assets/sprites/v4/truck-driver/portrait.png",
+      "sha256": "c9a238c8b70c204d046adbf2950253e9bbd3d9dfb4503a0e5477b2401fcd59c4",
+      "bytes": 335186,
+      "status": "prepared-source-owner-requested-integration",
+      "size": [
+        512,
+        640
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "assets/sprites/v4/truck-driver/portrait.webp",
+      "sha256": "a01f64349ad7e3bda9b1d5cfad494fb73efdbf93d1ce78f1ae9579dbf0ddc408",
+      "bytes": 243004,
+      "status": "prepared-source-owner-requested-integration",
+      "size": [
+        512,
+        640
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "assets/sprites/v4/truck-driver/prepare.py",
+      "sha256": "4a885aba6d6d354d95cb0f40ebe25a660fbd02922470d2f038f0890b2e858f1a",
+      "bytes": 39977,
+      "status": "prepared-source-owner-requested-integration"
+    },
+    {
+      "path": "assets/sprites/v4/truck-driver/preview.html",
+      "sha256": "3c46d1a9401cbc3f41bfd5dc46ad66b92df4a17f602bcaa27d5815c5a768af80",
+      "bytes": 1372835,
+      "status": "prepared-source-owner-requested-integration"
+    },
+    {
+      "path": "assets/sprites/v4/truck-driver/qa-report.json",
+      "sha256": "a59d27e530663ba9e9fd1113de6c3a1aba6c150d008cc25fa758e9fa92127f32",
+      "bytes": 70454,
+      "status": "prepared-source-owner-requested-integration"
+    },
+    {
+      "path": "assets/sprites/v4/truck-driver/source-crop-review.png",
+      "sha256": "7ea6e38bcc90e6150ce969362c0c3bbf2b371093915396dc22f8bda915d5d577",
+      "bytes": 1068591,
+      "status": "prepared-source-owner-requested-integration",
+      "size": [
+        1086,
+        1448
+      ]
+    },
+    {
+      "path": "assets/sprites/v4/truck-driver/sources/approved-master.png",
+      "sha256": "3a02874d742a7c70382d3bc6a1da9a4896882aa68d458248b83cbcdb49773c10",
+      "bytes": 1357367,
+      "status": "owner-approved-master",
+      "size": [
+        887,
+        1774
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "assets/sprites/v4/truck-driver/sources/generated-podium-sheet.png",
+      "sha256": "ad211b224d3dc7760c7be13fdd16066fe91b267702df89aa66ad4d03369c1002",
+      "bytes": 1378112,
+      "status": "prepared-source-owner-requested-integration",
+      "size": [
+        1086,
+        1448
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "assets/sprites/v4/truck-driver/sources/reviewed-anchors.json",
+      "sha256": "4b2a6de556b61b056f406ee1751014a5eeea79fc3718c57f0cb5495d109bced8",
+      "bytes": 1072,
+      "status": "prepared-source-owner-requested-integration"
+    },
+    {
+      "path": "assets/sprites/v4/truck-vehicle/README.md",
+      "sha256": "58ab5e67732417425626fae05145b0a11f08d2bc8c5f511aaa37f69c9486145e",
+      "bytes": 4644,
+      "status": "prepared-source-owner-requested-integration"
+    },
+    {
+      "path": "assets/sprites/v4/truck-vehicle/SHA256SUMS",
+      "sha256": "812a0085e3e7d44e5bc86df02fe332fa69e945c13d8047ec73964f2bdbdbcf0c",
+      "bytes": 2026,
+      "status": "prepared-source-owner-requested-integration"
+    },
+    {
+      "path": "assets/sprites/v4/truck-vehicle/brake.png",
+      "sha256": "cba23b3436ffdeda5f580c171a2553e6560e7d9f8b8b2c1d39e986f7392ce9a2",
+      "bytes": 214000,
+      "status": "prepared-source-owner-requested-integration",
+      "size": [
+        560,
+        512
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "assets/sprites/v4/truck-vehicle/contact-sheet-asphalt.png",
+      "sha256": "0b64dc1a5f3cbaecf6c045199b4f26b4c05da2a8d95f5cff025bbbeb2ff6a491",
+      "bytes": 1225344,
+      "status": "prepared-source-owner-requested-integration",
+      "size": [
+        1752,
+        1136
+      ]
+    },
+    {
+      "path": "assets/sprites/v4/truck-vehicle/contact-sheet-black.png",
+      "sha256": "768dad6381e45cabd66e396b03738d738cd4e67ad68c3bd6f643fb17d8d70013",
+      "bytes": 1221133,
+      "status": "prepared-source-owner-requested-integration",
+      "size": [
+        1752,
+        1136
+      ]
+    },
+    {
+      "path": "assets/sprites/v4/truck-vehicle/contact-sheet-white.png",
+      "sha256": "1e718c79364a85587fb657d6a3b6135220e043e64dc21e9dea2030e57a860612",
+      "bytes": 1256104,
+      "status": "prepared-source-owner-requested-integration",
+      "size": [
+        1752,
+        1136
+      ]
+    },
+    {
+      "path": "assets/sprites/v4/truck-vehicle/frames.json",
+      "sha256": "e901342eabffcfd066f9d64ec87cf78d6e972e5cb29b4015eb443d5701c58483",
+      "bytes": 12594,
+      "status": "prepared-source-owner-requested-integration"
+    },
+    {
+      "path": "assets/sprites/v4/truck-vehicle/front-menu.png",
+      "sha256": "bfd8726a9a09a0fc5958b0d66969e3cfe9e567efaed78b2a107e9b9a7fd63e74",
+      "bytes": 323755,
+      "status": "prepared-source-owner-requested-integration",
+      "size": [
+        560,
+        512
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "assets/sprites/v4/truck-vehicle/left-brake.png",
+      "sha256": "5c6382d345dd0e8a1967080d60f2c2b43c13d95f18268eb25a58de090a469e09",
+      "bytes": 267375,
+      "status": "prepared-source-owner-requested-integration",
+      "size": [
+        560,
+        512
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "assets/sprites/v4/truck-vehicle/left.png",
+      "sha256": "ad3056b69854c5cad39ab4812b0b158f45b1e4fab3e9334bdbf61f3ea82012f2",
+      "bytes": 265009,
+      "status": "prepared-source-owner-requested-integration",
+      "size": [
+        560,
+        512
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "assets/sprites/v4/truck-vehicle/prepare.py",
+      "sha256": "6dcbcb811bfe276dfcab10d29c4b8296b1149e72e9cb0a5442de5ba6005b5d12",
+      "bytes": 44019,
+      "status": "prepared-source-owner-requested-integration"
+    },
+    {
+      "path": "assets/sprites/v4/truck-vehicle/preview.html",
+      "sha256": "dd32147617f4e45dda06538ec5f7d8b24c306b81393ef488a9a2153f6ce40f5f",
+      "bytes": 3299463,
+      "status": "prepared-source-owner-requested-integration"
+    },
+    {
+      "path": "assets/sprites/v4/truck-vehicle/qa-report.json",
+      "sha256": "f33e48638789939e884df433faaaea47244819c8a8c144204b5404a573d54c4b",
+      "bytes": 49118,
+      "status": "prepared-source-owner-requested-integration"
+    },
+    {
+      "path": "assets/sprites/v4/truck-vehicle/rear.png",
+      "sha256": "1523eb77cd997491868a4ddb326ba0a1ef844776310003e61e363131276e388b",
+      "bytes": 212568,
+      "status": "prepared-source-owner-requested-integration",
+      "size": [
+        560,
+        512
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "assets/sprites/v4/truck-vehicle/requirements.txt",
+      "sha256": "d538ac6c0cbfabc0e95e9f4e026a502d30a60069f2f2026c1e43d5e68b7c8aaf",
+      "bytes": 42,
+      "status": "prepared-source-owner-requested-integration"
+    },
+    {
+      "path": "assets/sprites/v4/truck-vehicle/right-brake.png",
+      "sha256": "8a96872b25cdffae1eedb9b36d18bd9b0e532519c348c308da03c30d36aa7e94",
+      "bytes": 256307,
+      "status": "prepared-source-owner-requested-integration",
+      "size": [
+        560,
+        512
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "assets/sprites/v4/truck-vehicle/right.png",
+      "sha256": "879632502422bc709b641d2877e4e605af5f7eba7d04d62c33ef887e9f62bdc5",
+      "bytes": 254288,
+      "status": "prepared-source-owner-requested-integration",
+      "size": [
+        560,
+        512
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "assets/sprites/v4/truck-vehicle/same-depth-comparison.png",
+      "sha256": "9f45b1db17413ca3557f25710881c410e420ffcbbc64d3a87684ef35d6f6a726",
+      "bytes": 631703,
+      "status": "prepared-source-owner-requested-integration",
+      "size": [
+        1586,
+        968
+      ]
+    },
+    {
+      "path": "assets/sprites/v4/truck-vehicle/source-crop-review.png",
+      "sha256": "9319ef5a97498a1fc27bbc937db03bfb68cfb869d5960c71778053533ccabfe7",
+      "bytes": 1225195,
+      "status": "prepared-source-owner-requested-integration",
+      "size": [
+        1606,
+        979
+      ]
+    },
+    {
+      "path": "assets/sprites/v4/truck-vehicle/sources/front-proposal.png",
+      "sha256": "d1fb027131e8f0570a5a006b9201134f2431bb3cdfc21262473f5266f205d152",
+      "bytes": 1608220,
+      "status": "prepared-source-owner-requested-integration",
+      "size": [
+        1402,
+        1122
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "assets/sprites/v4/truck-vehicle/sources/generated-vehicle-sheet.png",
+      "sha256": "d2dd93e336c576fa6e3cc68cc85d38f8739037771f37d7de4343260b38414260",
+      "bytes": 1529560,
+      "status": "prepared-source-owner-requested-integration",
+      "size": [
+        1606,
+        979
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "assets/sprites/v4/truck-vehicle/sources/mercedes-reference.png",
+      "sha256": "a4356de4182a078432e411b5fd6c68862790a05aa9f631129fd0a99711170e5a",
+      "bytes": 229954,
+      "status": "prepared-source-owner-requested-integration",
+      "size": [
+        512,
+        512
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "assets/sprites/v4/truck-vehicle/sources/reviewed-anchors.json",
+      "sha256": "ffdfc00c265764b40e3345a454338f128e3726bc671d7742566228f766ea651f",
+      "bytes": 2917,
+      "status": "prepared-source-owner-requested-integration"
+    },
+    {
+      "path": "assets/sprites/v4/truck-vehicle/truck-atlas.json",
+      "sha256": "d0755346d6adf2d2301e565e7cfbbd232819f8314de112c5ee1f44abd9da2437",
+      "bytes": 2616,
+      "status": "prepared-source-owner-requested-integration"
+    },
+    {
+      "path": "assets/sprites/v4/truck-vehicle/truck-atlas.png",
+      "sha256": "bc04432380e1c232ad49e319bb507c3d8d2b057ec562703fe47c15f8247e337e",
+      "bytes": 1462588,
+      "status": "prepared-source-owner-requested-integration",
+      "size": [
+        1680,
+        1024
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
       "path": "game/assets/legacy/LICENSE-PHASER.md",
       "sha256": "78055a047d59e5e51f156d2a939d4e468e1b9198ecbe0fdaa468e6ddd73ce558",
       "bytes": 1101,
@@ -805,6 +1357,124 @@
       "size": [
         512,
         512
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "game/assets/v4/cars/marquinhos-brake.png",
+      "sha256": "cba23b3436ffdeda5f580c171a2553e6560e7d9f8b8b2c1d39e986f7392ce9a2",
+      "bytes": 214000,
+      "status": "owner-requested-integration",
+      "size": [
+        560,
+        512
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "game/assets/v4/cars/marquinhos-front.png",
+      "sha256": "bfd8726a9a09a0fc5958b0d66969e3cfe9e567efaed78b2a107e9b9a7fd63e74",
+      "bytes": 323755,
+      "status": "owner-requested-integration",
+      "size": [
+        560,
+        512
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "game/assets/v4/cars/marquinhos-left-brake.png",
+      "sha256": "5c6382d345dd0e8a1967080d60f2c2b43c13d95f18268eb25a58de090a469e09",
+      "bytes": 267375,
+      "status": "owner-requested-integration",
+      "size": [
+        560,
+        512
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "game/assets/v4/cars/marquinhos-left.png",
+      "sha256": "ad3056b69854c5cad39ab4812b0b158f45b1e4fab3e9334bdbf61f3ea82012f2",
+      "bytes": 265009,
+      "status": "owner-requested-integration",
+      "size": [
+        560,
+        512
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "game/assets/v4/cars/marquinhos-rear.png",
+      "sha256": "1523eb77cd997491868a4ddb326ba0a1ef844776310003e61e363131276e388b",
+      "bytes": 212568,
+      "status": "owner-requested-integration",
+      "size": [
+        560,
+        512
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "game/assets/v4/cars/marquinhos-right-brake.png",
+      "sha256": "8a96872b25cdffae1eedb9b36d18bd9b0e532519c348c308da03c30d36aa7e94",
+      "bytes": 256307,
+      "status": "owner-requested-integration",
+      "size": [
+        560,
+        512
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "game/assets/v4/cars/marquinhos-right.png",
+      "sha256": "879632502422bc709b641d2877e4e605af5f7eba7d04d62c33ef887e9f62bdc5",
+      "bytes": 254288,
+      "status": "owner-requested-integration",
+      "size": [
+        560,
+        512
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "game/assets/v4/cars/marquinhos.json",
+      "sha256": "20c3ca2332b2bf02055dc85acb56609976ee0ee351dfdcca4a0137a5beed0ac2",
+      "bytes": 7346,
+      "status": "owner-requested-integration"
+    },
+    {
+      "path": "game/assets/v4/cars/marquinhos.png",
+      "sha256": "bc04432380e1c232ad49e319bb507c3d8d2b057ec562703fe47c15f8247e337e",
+      "bytes": 1462588,
+      "status": "owner-requested-integration",
+      "size": [
+        1680,
+        1024
       ],
       "alphaExtrema": [
         0,
@@ -1398,6 +2068,54 @@
       ]
     },
     {
+      "path": "game/assets/v4/drivers/marquinhos-neutral.png",
+      "sha256": "6a69aa4fe4bcfd320b637e48cb820f3aca3fa7df9e8f8fc2c2bb862b26e3bdd0",
+      "bytes": 90135,
+      "status": "owner-requested-integration",
+      "size": [
+        256,
+        512
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "game/assets/v4/drivers/marquinhos-portrait.png",
+      "sha256": "c9a238c8b70c204d046adbf2950253e9bbd3d9dfb4503a0e5477b2401fcd59c4",
+      "bytes": 335186,
+      "status": "owner-requested-integration",
+      "size": [
+        512,
+        640
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "game/assets/v4/drivers/marquinhos-portrait.webp",
+      "sha256": "a01f64349ad7e3bda9b1d5cfad494fb73efdbf93d1ce78f1ae9579dbf0ddc408",
+      "bytes": 243004,
+      "status": "owner-requested-integration",
+      "size": [
+        512,
+        640
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "game/assets/v4/drivers/marquinhos.json",
+      "sha256": "d5dff34c9b84eae890c386003030773a5e1a54f93c32963ecf0933b23f2005f9",
+      "bytes": 7211,
+      "status": "owner-requested-integration"
+    },
+    {
       "path": "game/assets/v4/fx/effects.png",
       "sha256": "226688f5503cc1ed7ba6491b8bae21b86614e37409e99f9fb9c90d9deb0ba3ab",
       "bytes": 118070,
@@ -1587,9 +2305,93 @@
     },
     {
       "path": "game/assets/v4/podium/frames.json",
-      "sha256": "954acb63217d01b3f9591d2f7421e05719a46b7e79e3bac985bb0d7ef626dc16",
-      "bytes": 28798,
+      "sha256": "b1f390fcb8dbef2ef30c434d0e8bb605a651d621f8b431dea1a87e36a433c21b",
+      "bytes": 36278,
       "status": "derived-or-new-art-human-review-pending"
+    },
+    {
+      "path": "game/assets/v4/podium/marquinhos-0.png",
+      "sha256": "eab134daedaa2bc0555117466b7f2a2b5b48c804c2ca5f7b7c62fd934dd61138",
+      "bytes": 88011,
+      "status": "owner-requested-integration",
+      "size": [
+        256,
+        512
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "game/assets/v4/podium/marquinhos-1.png",
+      "sha256": "e475d84a219813b196030b7611cf259fad16b33b3db5e9fc20e7fd0b7c3f3e32",
+      "bytes": 93400,
+      "status": "owner-requested-integration",
+      "size": [
+        256,
+        512
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "game/assets/v4/podium/marquinhos-2.png",
+      "sha256": "e7e62e85234bb6d706511b96b0e6ac576a08a262975b3cb64942eba71b15da55",
+      "bytes": 102426,
+      "status": "owner-requested-integration",
+      "size": [
+        256,
+        512
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "game/assets/v4/podium/marquinhos-3.png",
+      "sha256": "c46fb72c08148728712ed3a4600e9bf853cdd9072243d3d086827c5b36b29970",
+      "bytes": 96168,
+      "status": "owner-requested-integration",
+      "size": [
+        256,
+        512
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "game/assets/v4/podium/marquinhos-4.png",
+      "sha256": "bc506a4b223aba86a4247ed11b8f49db910262727de3dcc0e3677fc00a401285",
+      "bytes": 95141,
+      "status": "owner-requested-integration",
+      "size": [
+        256,
+        512
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "game/assets/v4/podium/marquinhos-5.png",
+      "sha256": "d7d3ac0371db06085abd0dbb86d8a2986f534e595a5d160e7b4c43dfa1d86a56",
+      "bytes": 113119,
+      "status": "owner-requested-integration",
+      "size": [
+        256,
+        512
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
     },
     {
       "path": "game/assets/v4/podium/npc-blue-0.png",
@@ -1935,8 +2737,8 @@
     },
     {
       "path": "game/assets/v4/title/approval.json",
-      "sha256": "11e84dd2f1f1a0753487379457df7de41a859b9b6848b738519f90a08cb920ca",
-      "bytes": 2374,
+      "sha256": "80e8ea944e3c1184acadecace6d460caa41e250a73ee1f06c00bbcdc3d857b83",
+      "bytes": 4362,
       "status": "owner-approved-derived"
     },
     {
@@ -1999,9 +2801,9 @@
     },
     {
       "path": "game/assets/v4/title/felipe-front-portrait.png",
-      "sha256": "f4b46310e890e7016a0b8b668d8193ae7ebfeb109fe655bf60386259a51aca93",
-      "bytes": 2007308,
-      "status": "owner-approved-derived",
+      "sha256": "98832d1d00feb8f628d76172ad2ace8dcacf75a4a6ea2e7c8af88faf4f7a236b",
+      "bytes": 1903143,
+      "status": "owner-requested-integration",
       "size": [
         1182,
         1331
@@ -2013,9 +2815,9 @@
     },
     {
       "path": "game/assets/v4/title/felipe-front-portrait.webp",
-      "sha256": "aaa2e54ca01ef8644e7e86f0fb034b19aeba4c57db259ffe070646780fe1106b",
-      "bytes": 672048,
-      "status": "owner-approved-derived",
+      "sha256": "d51ff9734b2150833806ea8f988e34ed48d406410626e39c228801935d6a8589",
+      "bytes": 633840,
+      "status": "owner-requested-integration",
       "size": [
         799,
         900
@@ -2064,9 +2866,37 @@
       ]
     },
     {
+      "path": "game/assets/v4/title/marquinhos-front-portrait.png",
+      "sha256": "c9a238c8b70c204d046adbf2950253e9bbd3d9dfb4503a0e5477b2401fcd59c4",
+      "bytes": 335186,
+      "status": "owner-requested-integration",
+      "size": [
+        512,
+        640
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "game/assets/v4/title/marquinhos-front-portrait.webp",
+      "sha256": "a01f64349ad7e3bda9b1d5cfad494fb73efdbf93d1ce78f1ae9579dbf0ddc408",
+      "bytes": 243004,
+      "status": "owner-requested-integration",
+      "size": [
+        512,
+        640
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
       "path": "game/assets/v4/title/web-encodings.json",
-      "sha256": "d2f98ac198e384a01c865c07aa519c989cdd99f30e0d47b0ea2eb7a2ba3f40cb",
-      "bytes": 3434,
+      "sha256": "39947b90f526de25815cefdf1feccb9b068a62b7ae443a3f3169faed046f37e7",
+      "bytes": 4615,
       "status": "owner-approved-derived"
     },
     {

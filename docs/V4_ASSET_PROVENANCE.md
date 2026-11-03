@@ -59,3 +59,10 @@ Source checkout: `f6f6f83c40a3db3cc83cde4fc12702a1a94cc6e1`, `codex/ftw-race-v4-
 - Full suites executed after integration:40/40 assertions PASS (`node --test --test-isolation=none tests/*.test.js` in game). Concurrent other tasks may add further cases; root must rerun final suite.
 - `node --check game/src/render.js`: PASS. Asset verification:20 PNG files, SHA256/dimensions/actual alpha and16FX frames PASS.
 - Full browser/phone rendering, visual owner approval and Android physical device: delegated to root QA; not claimed by this asset pass.
+
+
+## 03/11/2026 — pedido de integração de Marquinhos
+
+O proprietário nomeou o novo piloto **Marquinhos**, respondeu “Otimo” ao material apresentado e pediu “aplicar tudo isso no game”, incluindo capa e personagem jogável. Isso autoriza uso dos retratos/poses e caminhão preparados; não substituir por rostos novos. Base corporal aprovada explicitamente com “Ótimo. Essa última ficou perfeita. Ela é a referência.”; derivadas e caminhão têm aceitação para integração pelo pedido atual, sem inventar outra citação “Aprovado”. Os estados históricos de revisão dos pacotes de preparação são preservados. Registro de uso atual em `game/assets/v4/drivers/marquinhos.json` e `game/assets/v4/cars/marquinhos.json`.
+
+O caminhão é cavalo mecânico vermelho4×2 sem carreta, Diabo Verde no para-brisa e FTW na porta. Modelo/ano exatos não confirmados; vistas traseiras são reconstrução convencional informada pela pesquisa pública, sem copiar fotografias externas ou inventar patrocínios. Nome Marquinhos sem sobrenome/número. A abertura também usa o retoque de Felipe com menos papada já apresentado e recebido com “Ok, Chat, já melhorou muito”, preservando seus outros sprites.

@@ -25,7 +25,7 @@ test('view hysteresis uses wheel inertia and prevents threshold flicker', () => 
   assert.equal(vehicleAppearance({...car,speed:0,braking:true},-1).frame,3);
 });
 test('official cars retain their existing distinct views and square scale', () => {
-  assert.deepEqual(vehicleAppearance({driver:'daniel',wheel:-1,speed:40}),{texture:'daniel-left',frame:null,widthScale:1,turn:-1});
+  assert.deepEqual(vehicleAppearance({driver:'daniel',wheel:-1,speed:40}),{texture:'daniel-left',frame:null,widthScale:1,renderScale:1,turn:-1});
   assert.equal(vehicleAppearance({driver:'felipe',wheel:0,speed:40,braking:true}).texture,'felipe');
 });
 test('runtime preloads four raster atlases with six real frames, no NPC SVG',async()=>{

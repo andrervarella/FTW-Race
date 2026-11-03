@@ -1,8 +1,8 @@
 // Classificação pura: tempos só existem para quem efetivamente cruzou a chegada.
 // Empates usam a ordem canônica, independente da escolha do jogador ou da ordem de atualização.
-import { NPC_KEYS } from './config.js';
+import { NPC_KEYS, PLAYABLE_KEYS } from './config.js';
 
-const ORDER = ['daniel', 'felipe', ...NPC_KEYS];
+const ORDER = [...PLAYABLE_KEYS, ...NPC_KEYS];
 const orderOf = key => ORDER.indexOf(key);
 
 export function getResults(race) {

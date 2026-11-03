@@ -12,6 +12,7 @@ function nearFinish(key = 'daniel') {
   race.phase = 'racing'; race.elapsed = 12;
   race.racers.forEach((d, i) => { d.distance = 100 + i * 30; d.speed = 0; d.lateral = 0; });
   const winner = race.racers.find(d => d.driver === key);
+  assert.ok(winner, `${key} must be a race participant`);
   winner.distance = 999.5; winner.speed = 60; winner.nextCheckpoint = 8;
   return race;
 }
@@ -20,8 +21,8 @@ test('results API exposes pure, detached classification without invented times',
   assert.equal(typeof sim.getResults, 'function');
   const race = nearFinish();
   const rows = sim.getResults(race);
-  assert.equal(rows.length, 6);
-  assert.deepEqual(rows.map(r => r.position), [1, 2, 3, 4, 5, 6]);
+  assert.equal(rows.length, 7);
+  assert.deepEqual(rows.map(r => r.position), [1, 2, 3, 4, 5, 6, 7]);
   assert.equal(rows.filter(r => r.isPlayer).length, 1);
   assert.ok(rows.every(r => r.finishTime === null && !r.finished && r.bestLap === null));
   const snapshot = JSON.stringify(rows);
@@ -30,7 +31,7 @@ test('results API exposes pure, detached classification without invented times',
   assert.equal(JSON.stringify(sim.getResults(race)), snapshot);
 });
 
-for (const key of ['daniel', 'felipe', ...NPC_KEYS]) {
+for (const key of ['daniel', 'felipe', 'marquinhos', ...NPC_KEYS]) {
   test(`real finish and frozen result for ${key}`, () => {
     const race = nearFinish(key);
     sim.stepRace(race, idle, 1 / 60);
@@ -80,7 +81,7 @@ test('ties use canonical driver order, independent of player selection and array
   const a = sim.getResults(race).map(r => r.driver);
   race.racers.reverse();
   assert.deepEqual(sim.getResults(race).map(r => r.driver), a);
-  assert.deepEqual(a, ['daniel', 'felipe', ...NPC_KEYS]);
+  assert.deepEqual(a, ['daniel', 'felipe', 'marquinhos', ...NPC_KEYS]);
 });
 
 test('controlled full race is deterministic with exact laps and unfinished racers un-timed', () => {
@@ -100,13 +101,13 @@ test('contact with lapped traffic preserves each racer lap progress', () => {
   const race = sim.createRace(straight, 'daniel');
   race.player.distance = 2100; race.player.lateral = 0; race.player.speed = 60;
   race.cpu.distance = 1101; race.cpu.lateral = 0; race.cpu.speed = 20;
-  race.extras.forEach((d, i) => { d.distance = 1300 + i * 40; });
+  race.opponents.filter(d => d !== race.cpu).forEach((d, i) => { d.distance = 1300 + i * 40; });
   sim.resolveContact(race);
   assert.equal(race.player.distance, 2092);
   assert.equal(race.cpu.distance, 1101);
 });
 
-test('six-car pile-up does not remain overlapped after repeated contact resolution', () => {
+test('seven-vehicle pile-up does not remain overlapped after repeated contact resolution', () => {
   for (const lateral of [0, -1.65, 1.65]) {
     const race = sim.createRace(straight, 'daniel');
     race.racers.forEach(d => { d.distance = 100; d.lateral = lateral; });

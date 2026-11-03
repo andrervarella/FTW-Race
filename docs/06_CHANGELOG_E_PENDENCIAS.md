@@ -88,3 +88,10 @@ O traçado jogável E o minimapa devem seguir cascavel-mapa-esquematico.png e ca
 
 ## 01/11/2026 — teste V3 seis carros
 Implementados quatro adversários de IA, HUD 1–6, colisão entre todos, sprites 2D sem logos para NPCs. Simulação JavaScript de 12 s executada; Android físico e Phaser real ainda não verificados. Consultar docs/11_TESTE_V3_SEIS_CARROS.md.
+
+
+## 03/11/2026 — Marquinhos e cavalo mecânico jogáveis
+
+Integração solicitada pelo proprietário: Marquinhos entra na capa, seleção e pódio usando o rosto/corpo/roupa preparados. IVECO vermelho4×2 sem carreta, com seis vistas reais e escala uniforme própria; câmera dimensiona o pelotão para manter a pista visível no celular. Colisão e desvio da IA consideram o porte maior. Daniel, Felipe e os quatro rivais existentes continuam correndo: sete participantes, classificação e pódio do vencedor real. Nenhum número/sobrenome foi inventado para Marquinhos. Retoque de Felipe com menos papada aplicado somente ao retrato da abertura.
+
+Baseline47/47Node; integração70/70Node e248arquivos SHA256 conferidos. Testes adicionais de navegador e publicação têm resultados consolidados em V4_QA_REPORT.md; não tratar esta contagem como teste de aparelho Android físico. Plano/contratos em `superpowers/plans/2026-11-03-marquinhos-playable.md`.

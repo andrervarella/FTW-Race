@@ -1,0 +1,202 @@
+{
+  "version": 1,
+  "displayName": "Marquinhos",
+  "key": "marquinhos",
+  "number": null,
+  "sourceMetadata": "assets/sprites/v4/truck-driver/frames.json",
+  "sourceMetadataSha256": "fe24a62e1442a4ec6b52b95cdc20e4c5cce7d94496257110a1563d302ef47a6a",
+  "masterApproval": {
+    "status": "owner-approved-MASTER-only",
+    "quote": "Ótimo. Essa última ficou perfeita. Ela é a referência.",
+    "sha256": "3a02874d742a7c70382d3bc6a1da9a4896882aa68d458248b83cbcdb49773c10"
+  },
+  "integrationAcceptance": {
+    "status": "owner-requested-integration",
+    "date": "2026-11-03",
+    "quote": "Otimo o que mais precisamos para aplicar tudo isso no game? Inclusive também ter esse novo piloto que se chama Marquinhos na capa do game e telefone como personagem jogavel",
+    "scope": "prepared master + six derivative podium poses + truck views; cover and playable character",
+    "interpretation": "latest integration request accepts the prepared artwork for this use; no invented approval quote"
+  },
+  "frameSize": [
+    256,
+    512
+  ],
+  "ground": 500,
+  "pivot": [
+    0.5,
+    0.9765625
+  ],
+  "portrait": {
+    "png": "portrait.png",
+    "webp": "portrait.webp",
+    "sourceCrop": [
+      115,
+      0,
+      747,
+      885
+    ],
+    "size": [
+      512,
+      640
+    ],
+    "sha256Png": "c9a238c8b70c204d046adbf2950253e9bbd3d9dfb4503a0e5477b2401fcd59c4",
+    "sha256Webp": "a01f64349ad7e3bda9b1d5cfad494fb73efdbf93d1ce78f1ae9579dbf0ddc408"
+  },
+  "effects": {
+    "champagneSpray": {
+      "file": "podium-4.png",
+      "sourcePoint": [
+        634,
+        956
+      ],
+      "pixelOrigin": [
+        198.24242424242425,
+        184.07713498622587
+      ],
+      "normalizedOrigin": [
+        0.7743844696969697,
+        0.3595256542699724
+      ],
+      "direction": [
+        0.5,
+        -0.8660254037844386
+      ],
+      "coordinateSystem": "image x-right, y-down",
+      "review": "manually located on source prop; runtime effect not integrated"
+    }
+  },
+  "assets": [
+    {
+      "file": "game/assets/v4/drivers/marquinhos-neutral.png",
+      "source": "assets/sprites/v4/truck-driver/neutral.png",
+      "sha256": "6a69aa4fe4bcfd320b637e48cb820f3aca3fa7df9e8f8fc2c2bb862b26e3bdd0",
+      "sourceSha256": "6a69aa4fe4bcfd320b637e48cb820f3aca3fa7df9e8f8fc2c2bb862b26e3bdd0",
+      "size": [
+        256,
+        512
+      ],
+      "transformation": "byte-identical copy of prepared source",
+      "approval": "owner-requested-integration"
+    },
+    {
+      "file": "game/assets/v4/drivers/marquinhos-portrait.png",
+      "source": "assets/sprites/v4/truck-driver/portrait.png",
+      "sha256": "c9a238c8b70c204d046adbf2950253e9bbd3d9dfb4503a0e5477b2401fcd59c4",
+      "sourceSha256": "c9a238c8b70c204d046adbf2950253e9bbd3d9dfb4503a0e5477b2401fcd59c4",
+      "size": [
+        512,
+        640
+      ],
+      "transformation": "byte-identical copy of prepared source",
+      "approval": "owner-requested-integration"
+    },
+    {
+      "file": "game/assets/v4/drivers/marquinhos-portrait.webp",
+      "source": "assets/sprites/v4/truck-driver/portrait.webp",
+      "sha256": "a01f64349ad7e3bda9b1d5cfad494fb73efdbf93d1ce78f1ae9579dbf0ddc408",
+      "sourceSha256": "a01f64349ad7e3bda9b1d5cfad494fb73efdbf93d1ce78f1ae9579dbf0ddc408",
+      "size": [
+        512,
+        640
+      ],
+      "transformation": "byte-identical copy of prepared source",
+      "approval": "owner-requested-integration"
+    },
+    {
+      "file": "game/assets/v4/title/marquinhos-front-portrait.png",
+      "source": "assets/sprites/v4/truck-driver/portrait.png",
+      "sha256": "c9a238c8b70c204d046adbf2950253e9bbd3d9dfb4503a0e5477b2401fcd59c4",
+      "sourceSha256": "c9a238c8b70c204d046adbf2950253e9bbd3d9dfb4503a0e5477b2401fcd59c4",
+      "size": [
+        512,
+        640
+      ],
+      "transformation": "byte-identical copy of prepared source",
+      "approval": "owner-requested-integration"
+    },
+    {
+      "file": "game/assets/v4/title/marquinhos-front-portrait.webp",
+      "source": "assets/sprites/v4/truck-driver/portrait.webp",
+      "sha256": "a01f64349ad7e3bda9b1d5cfad494fb73efdbf93d1ce78f1ae9579dbf0ddc408",
+      "sourceSha256": "a01f64349ad7e3bda9b1d5cfad494fb73efdbf93d1ce78f1ae9579dbf0ddc408",
+      "size": [
+        512,
+        640
+      ],
+      "transformation": "byte-identical copy of prepared source",
+      "approval": "owner-requested-integration"
+    },
+    {
+      "file": "game/assets/v4/podium/marquinhos-0.png",
+      "source": "assets/sprites/v4/truck-driver/podium-0.png",
+      "sha256": "eab134daedaa2bc0555117466b7f2a2b5b48c804c2ca5f7b7c62fd934dd61138",
+      "sourceSha256": "eab134daedaa2bc0555117466b7f2a2b5b48c804c2ca5f7b7c62fd934dd61138",
+      "size": [
+        256,
+        512
+      ],
+      "transformation": "byte-identical copy of prepared source",
+      "approval": "owner-requested-integration"
+    },
+    {
+      "file": "game/assets/v4/podium/marquinhos-1.png",
+      "source": "assets/sprites/v4/truck-driver/podium-1.png",
+      "sha256": "e475d84a219813b196030b7611cf259fad16b33b3db5e9fc20e7fd0b7c3f3e32",
+      "sourceSha256": "e475d84a219813b196030b7611cf259fad16b33b3db5e9fc20e7fd0b7c3f3e32",
+      "size": [
+        256,
+        512
+      ],
+      "transformation": "byte-identical copy of prepared source",
+      "approval": "owner-requested-integration"
+    },
+    {
+      "file": "game/assets/v4/podium/marquinhos-2.png",
+      "source": "assets/sprites/v4/truck-driver/podium-2.png",
+      "sha256": "e7e62e85234bb6d706511b96b0e6ac576a08a262975b3cb64942eba71b15da55",
+      "sourceSha256": "e7e62e85234bb6d706511b96b0e6ac576a08a262975b3cb64942eba71b15da55",
+      "size": [
+        256,
+        512
+      ],
+      "transformation": "byte-identical copy of prepared source",
+      "approval": "owner-requested-integration"
+    },
+    {
+      "file": "game/assets/v4/podium/marquinhos-3.png",
+      "source": "assets/sprites/v4/truck-driver/podium-3.png",
+      "sha256": "c46fb72c08148728712ed3a4600e9bf853cdd9072243d3d086827c5b36b29970",
+      "sourceSha256": "c46fb72c08148728712ed3a4600e9bf853cdd9072243d3d086827c5b36b29970",
+      "size": [
+        256,
+        512
+      ],
+      "transformation": "byte-identical copy of prepared source",
+      "approval": "owner-requested-integration"
+    },
+    {
+      "file": "game/assets/v4/podium/marquinhos-4.png",
+      "source": "assets/sprites/v4/truck-driver/podium-4.png",
+      "sha256": "bc506a4b223aba86a4247ed11b8f49db910262727de3dcc0e3677fc00a401285",
+      "sourceSha256": "bc506a4b223aba86a4247ed11b8f49db910262727de3dcc0e3677fc00a401285",
+      "size": [
+        256,
+        512
+      ],
+      "transformation": "byte-identical copy of prepared source",
+      "approval": "owner-requested-integration"
+    },
+    {
+      "file": "game/assets/v4/podium/marquinhos-5.png",
+      "source": "assets/sprites/v4/truck-driver/podium-5.png",
+      "sha256": "d7d3ac0371db06085abd0dbb86d8a2986f534e595a5d160e7b4c43dfa1d86a56",
+      "sourceSha256": "d7d3ac0371db06085abd0dbb86d8a2986f534e595a5d160e7b4c43dfa1d86a56",
+      "size": [
+        256,
+        512
+      ],
+      "transformation": "byte-identical copy of prepared source",
+      "approval": "owner-requested-integration"
+    }
+  ]
+}
