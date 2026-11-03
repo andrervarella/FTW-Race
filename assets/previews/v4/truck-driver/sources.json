@@ -1,0 +1,47 @@
+{
+  "status": "base-approved-poses-review-pending",
+  "date": "2026-11-03",
+  "displayName": null,
+  "driverKey": "truck-driver",
+  "ownerApprovalText": "Ótimo. Essa última ficou perfeita. Ela é a referência.",
+  "masterOwnerApproved": true,
+  "podiumPosesOwnerApproved": false,
+  "outfit": "red Mercedes-star cap and dark glasses; red polo/black collar with new FTW logo only; light jeans; gray trainers",
+  "body": "slim legs, moderate arms, small belly; fixed approved master",
+  "requiredStates": [
+    "neutral",
+    "portrait",
+    "entry",
+    "receive",
+    "raise",
+    "open",
+    "spray",
+    "final"
+  ],
+  "helmet": "not generated: always-cap user direction; helmet bodies unused at runtime",
+  "gameIntegration": false,
+  "sources": [
+    {
+      "file": "assets/previews/v4/truck-driver/master-approved.png",
+      "sha256": "3a02874d742a7c70382d3bc6a1da9a4896882aa68d458248b83cbcdb49773c10",
+      "size": [
+        887,
+        1774
+      ],
+      "mode": "RGBA",
+      "originalPath": "/workspace/generated_images/exec-42642325-a27e-42b0-a901-5b995a4ad80b.png",
+      "approvalScope": "owner-approved identity/body/outfit master"
+    },
+    {
+      "file": "assets/previews/v4/truck-driver/podium-generated-source.png",
+      "sha256": "ad211b224d3dc7760c7be13fdd16066fe91b267702df89aa66ad4d03369c1002",
+      "size": [
+        1086,
+        1448
+      ],
+      "mode": "RGBA",
+      "originalPath": "/workspace/generated_images/exec-ac3c4c8f-7a6e-4b2a-9cd9-1149854c448d.png",
+      "approvalScope": "six new full-body podium poses; owner visual review pending"
+    }
+  ]
+}

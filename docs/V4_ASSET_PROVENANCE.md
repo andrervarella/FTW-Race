@@ -1,5 +1,10 @@
 # V4 renderer/asset derivation — 01/11/2026
 
+## Novo motorista — 03/11/2026
+- Base final aprovada explicitamente com “Ótimo. Essa última ficou perfeita. Ela é a referência.”; PNG original preservado sem alteração em `assets/previews/v4/truck-driver/master-approved.png`.
+- A prancha `podium-generated-source.png` contém seis poses reais geradas numa única edição da base: entrada, receber/erguer taça, abrir/borrifar garrafa e comemorar. Novas poses aguardam revisão humana; não são membros recortados/rotacionados. Boné vermelho Mercedes e polo FTW nova em todas.
+- Neutra/retrato derivados tecnicamente da base; atlas/quadros e metadata separados em `assets/sprites/v4/truck-driver/`. Fontes, hashes, aprovação e limitações em `sources.json` e `docs/TRUCK_DRIVER_SPRITES.md`. Nenhuma alteração à arte distribuída dos pilotos existentes ou ao runtime.
+
 ## Atualização aprovada de pilotos e capa — 02/11/2026
 - Âncoras de rosto corrigidas a partir dos closes enviados e aprovadas com “Aprovado”. As primeiras pranchas rejeitadas ficaram fora do runtime. Corpo inteiro/boné/capacete e seis poses de comemoração por piloto foram aprovados posteriormente; capa aprovada separadamente pela resposta “Aprovar a capa”.
 - Cinco PNGs originais gerados preservados em `assets/previews/v4/approved-pilots/`, com hashes e fontes em `sources.json`. Dezesseis recortes úteis (oito por piloto), escala única0,70 e pés em y500 de256×512; os12quadros de pódio substituem apenas Daniel/Felipe. Alpha baixo/partículas de borda removidos; nenhum redesenho de rosto, deformação ou rotação de membros. O cotovelo final do Felipe ultrapassa a célula nominal; seleção por componente conectado recupera223pixels e exclui esses pixels da pose vizinha.

@@ -1,0 +1,416 @@
+{
+  "schemaVersion": 1,
+  "displayName": "Piloto do caminhão",
+  "characterId": "truck-driver",
+  "masterApproval": {
+    "status": "owner-approved-MASTER-only",
+    "quote": "Ótimo. Essa última ficou perfeita. Ela é a referência.",
+    "sha256": "3a02874d742a7c70382d3bc6a1da9a4896882aa68d458248b83cbcdb49773c10"
+  },
+  "derivativePoseApproval": "pending-owner-review",
+  "portraitApproval": "technical-crop-of-approved-master; no-separate-owner-approval",
+  "identity": {
+    "headwear": "red Mercedes cap; never helmet",
+    "eyewear": "black sunglasses",
+    "shirt": "new red FTW polo with black collar",
+    "legs": "slim jeans",
+    "arms": "moderate",
+    "belly": "small"
+  },
+  "frameSize": [
+    256,
+    512
+  ],
+  "ground": 500,
+  "pivot": [
+    0.5,
+    0.9765625
+  ],
+  "stages": [
+    "entry",
+    "receive",
+    "raise",
+    "open",
+    "spray",
+    "final"
+  ],
+  "frameDurationsMs": [
+    1200,
+    1400,
+    1300,
+    1400,
+    2200,
+    null
+  ],
+  "finalFrameHolds": true,
+  "poseCount": 6,
+  "fullBodyFileCount": 7,
+  "sheetGrid": [
+    3,
+    2
+  ],
+  "scale": {
+    "sheetScale": 0.6721763085399449,
+    "masterScale": 0.2294117093992986,
+    "requestedEntryHeight": 410,
+    "actualEntryHeight": 403.3057851239669,
+    "neutralAnatomicalHeight": 403.30578512396704,
+    "commonFitReducedForBodyOrProps": true,
+    "independentPoseFit": false,
+    "allSixSheetTransformsShareScale": true
+  },
+  "sources": {
+    "approvedMaster": {
+      "file": "sources/approved-master.png",
+      "sha256": "3a02874d742a7c70382d3bc6a1da9a4896882aa68d458248b83cbcdb49773c10",
+      "size": [
+        887,
+        1774
+      ]
+    },
+    "derivativeSheet": {
+      "file": "sources/generated-podium-sheet.png",
+      "sha256": "ad211b224d3dc7760c7be13fdd16066fe91b267702df89aa66ad4d03369c1002",
+      "size": [
+        1086,
+        1448
+      ]
+    }
+  },
+  "assets": [
+    {
+      "file": "neutral.png",
+      "sha256": "6a69aa4fe4bcfd320b637e48cb820f3aca3fa7df9e8f8fc2c2bb862b26e3bdd0",
+      "size": [
+        256,
+        512
+      ],
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "ground": 500,
+      "stage": "neutral",
+      "durationMs": null,
+      "source": "sources/approved-master.png",
+      "sourceCrop": [
+        0,
+        0,
+        887,
+        1774
+      ],
+      "sourceAnchor": {
+        "root": [
+          444.5,
+          1764.0
+        ],
+        "rootMethod": "reviewed-explicit-foot-anchor",
+        "capTop": 6,
+        "capTopMethod": "reviewed-explicit-cap-crown",
+        "anatomicalHeight": 1758.0,
+        "anatomicalMeasurement": "measured-cap-to-sole",
+        "visibleBBox": [
+          115,
+          6,
+          747,
+          1764
+        ]
+      },
+      "scale": 0.2294117093992986,
+      "approval": "technical-normalization-of-approved-master; no-separate-owner-approval"
+    },
+    {
+      "file": "podium-0.png",
+      "sha256": "eab134daedaa2bc0555117466b7f2a2b5b48c804c2ca5f7b7c62fd934dd61138",
+      "size": [
+        256,
+        512
+      ],
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "ground": 500,
+      "stage": "entry",
+      "durationMs": 1200,
+      "source": "sources/generated-podium-sheet.png",
+      "sourceCrop": [
+        46,
+        107,
+        347,
+        730
+      ],
+      "sourceAnchor": {
+        "root": [
+          126.0,
+          612.0
+        ],
+        "rootMethod": "reviewed-explicit-foot-anchor",
+        "capTop": 12,
+        "capTopMethod": "reviewed-explicit-cap-crown",
+        "anatomicalHeight": 600.0,
+        "anatomicalMeasurement": "measured-cap-to-sole",
+        "visibleBBox": [
+          12,
+          12,
+          289,
+          612
+        ]
+      },
+      "scale": 0.6721763085399449,
+      "approval": "pending-owner-review"
+    },
+    {
+      "file": "podium-1.png",
+      "sha256": "e475d84a219813b196030b7611cf259fad16b33b3db5e9fc20e7fd0b7c3f3e32",
+      "size": [
+        256,
+        512
+      ],
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "ground": 500,
+      "stage": "receive",
+      "durationMs": 1400,
+      "source": "sources/generated-podium-sheet.png",
+      "sourceCrop": [
+        413,
+        108,
+        660,
+        725
+      ],
+      "sourceAnchor": {
+        "root": [
+          127.5,
+          605.0
+        ],
+        "rootMethod": "midpoint-of-both-feet-extents-in-bottom-12-percent-band",
+        "capTop": null,
+        "capTopMethod": null,
+        "anatomicalHeight": null,
+        "anatomicalMeasurement": "unmeasured-requires-visual-review; shared-scale-only",
+        "visibleBBox": [
+          12,
+          12,
+          235,
+          605
+        ]
+      },
+      "scale": 0.6721763085399449,
+      "approval": "pending-owner-review"
+    },
+    {
+      "file": "podium-2.png",
+      "sha256": "e7e62e85234bb6d706511b96b0e6ac576a08a262975b3cb64942eba71b15da55",
+      "size": [
+        256,
+        512
+      ],
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "ground": 500,
+      "stage": "raise",
+      "durationMs": 1300,
+      "source": "sources/generated-podium-sheet.png",
+      "sourceCrop": [
+        764,
+        2,
+        1007,
+        725
+      ],
+      "sourceAnchor": {
+        "root": [
+          121.5,
+          711.0
+        ],
+        "rootMethod": "midpoint-of-both-feet-extents-in-bottom-12-percent-band",
+        "capTop": null,
+        "capTopMethod": null,
+        "anatomicalHeight": null,
+        "anatomicalMeasurement": "unmeasured-requires-visual-review; shared-scale-only",
+        "visibleBBox": [
+          12,
+          12,
+          231,
+          711
+        ]
+      },
+      "scale": 0.6721763085399449,
+      "approval": "pending-owner-review"
+    },
+    {
+      "file": "podium-3.png",
+      "sha256": "c46fb72c08148728712ed3a4600e9bf853cdd9072243d3d086827c5b36b29970",
+      "size": [
+        256,
+        512
+      ],
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "ground": 500,
+      "stage": "open",
+      "durationMs": 1400,
+      "source": "sources/generated-podium-sheet.png",
+      "sourceCrop": [
+        40,
+        803,
+        312,
+        1440
+      ],
+      "sourceAnchor": {
+        "root": [
+          148.0,
+          625.0
+        ],
+        "rootMethod": "midpoint-of-both-feet-extents-in-bottom-12-percent-band",
+        "capTop": null,
+        "capTopMethod": null,
+        "anatomicalHeight": null,
+        "anatomicalMeasurement": "unmeasured-requires-visual-review; shared-scale-only",
+        "visibleBBox": [
+          12,
+          12,
+          260,
+          625
+        ]
+      },
+      "scale": 0.6721763085399449,
+      "approval": "pending-owner-review"
+    },
+    {
+      "file": "podium-4.png",
+      "sha256": "bc506a4b223aba86a4247ed11b8f49db910262727de3dcc0e3677fc00a401285",
+      "size": [
+        256,
+        512
+      ],
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "ground": 500,
+      "stage": "spray",
+      "durationMs": 2200,
+      "source": "sources/generated-podium-sheet.png",
+      "sourceCrop": [
+        384,
+        809,
+        674,
+        1438
+      ],
+      "sourceAnchor": {
+        "root": [
+          145.5,
+          617.0
+        ],
+        "rootMethod": "midpoint-of-both-feet-extents-in-bottom-12-percent-band",
+        "capTop": null,
+        "capTopMethod": null,
+        "anatomicalHeight": null,
+        "anatomicalMeasurement": "unmeasured-requires-visual-review; shared-scale-only",
+        "visibleBBox": [
+          12,
+          12,
+          278,
+          617
+        ]
+      },
+      "scale": 0.6721763085399449,
+      "approval": "pending-owner-review"
+    },
+    {
+      "file": "podium-5.png",
+      "sha256": "d7d3ac0371db06085abd0dbb86d8a2986f534e595a5d160e7b4c43dfa1d86a56",
+      "size": [
+        256,
+        512
+      ],
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "ground": 500,
+      "stage": "final",
+      "durationMs": null,
+      "source": "sources/generated-podium-sheet.png",
+      "sourceCrop": [
+        708,
+        730,
+        1082,
+        1440
+      ],
+      "sourceAnchor": {
+        "root": [
+          180.5,
+          698.0
+        ],
+        "rootMethod": "midpoint-of-both-feet-extents-in-bottom-12-percent-band",
+        "capTop": null,
+        "capTopMethod": null,
+        "anatomicalHeight": null,
+        "anatomicalMeasurement": "unmeasured-requires-visual-review; shared-scale-only",
+        "visibleBBox": [
+          12,
+          11,
+          362,
+          698
+        ]
+      },
+      "scale": 0.6721763085399449,
+      "approval": "pending-owner-review"
+    }
+  ],
+  "portrait": {
+    "png": "portrait.png",
+    "webp": "portrait.webp",
+    "sourceCrop": [
+      115,
+      0,
+      747,
+      885
+    ],
+    "size": [
+      512,
+      640
+    ],
+    "sha256Png": "c9a238c8b70c204d046adbf2950253e9bbd3d9dfb4503a0e5477b2401fcd59c4",
+    "sha256Webp": "a01f64349ad7e3bda9b1d5cfad494fb73efdbf93d1ce78f1ae9579dbf0ddc408"
+  },
+  "transformPolicy": "Whole authentic bodies only; one shared sheet scale and foot anchors; neutral equivalent to entry anatomy. No generated limbs, part rotations, deformation, recoloring, helmet, champagne drops, or effects.",
+  "visualReviewRequired": [
+    "all six derivative poses and identity",
+    "entry highest point is cap crown if no explicit cap_top",
+    "cap/sole anchors",
+    "source proportions",
+    "genuine trophy/bottle and absence of generated champagne drops"
+  ],
+  "effects": {
+    "champagneSpray": {
+      "file": "podium-4.png",
+      "sourcePoint": [
+        634,
+        956
+      ],
+      "pixelOrigin": [
+        198.24242424242425,
+        184.07713498622587
+      ],
+      "normalizedOrigin": [
+        0.7743844696969697,
+        0.3595256542699724
+      ],
+      "direction": [
+        0.5,
+        -0.8660254037844386
+      ],
+      "coordinateSystem": "image x-right, y-down",
+      "review": "manually located on source prop; runtime effect not integrated"
+    }
+  }
+}

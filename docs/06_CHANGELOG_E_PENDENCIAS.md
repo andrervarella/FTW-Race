@@ -1,4 +1,10 @@
 # Registro e continuidade
+
+## 03/11/2026 — sprites do novo motorista
+- Base final aprovada pelo proprietário após ajuste de braços/pernas e pequena barriga; boné vermelho Mercedes e FTW nova na polo vermelha.
+- Seis poses de pódio geradas juntas a partir da mesma referência; entregues neutra, retrato, sete PNGs256×512, atlas, metadata/âncoraFX, prévia HTML e ZIP. Alpha/pivôs/hashes e reconstrução exata do pacote PASS; prévia Chromium móvel em dois tamanhos PASS.
+- Nome ainda não confirmado. Esta etapa prepara arte; caminhão e integração jogável aguardam suas referências. As novas poses seguem para revisão visual. Ver TRUCK_DRIVER_SPRITES.md.
+
 ## 02/11/2026 — Felipe frontal na capa e correção da ativação do som
 - Nova postura de Felipe aprovada para a abertura, com identidade preservada; retratos da seleção e demais sprites mantidos.
 - Reproduzido primeiro toque no botão de som que desativava a música, apesar de mostrar SOM ON. Corrigidas ativação inicial, retomada e indicação do estado real.

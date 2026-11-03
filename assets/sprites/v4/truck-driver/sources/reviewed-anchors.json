@@ -1,0 +1,41 @@
+{
+  "reviewScope": "Technical crop/anchor review only; derivative artwork still requires owner review.",
+  "sourceSheetSha256": "ad211b224d3dc7760c7be13fdd16066fe91b267702df89aa66ad4d03369c1002",
+  "master": {
+    "root": [
+      444.5,
+      1764
+    ],
+    "cap_top": 6
+  },
+  "cells": [
+    {
+      "root": [
+        126,
+        612
+      ],
+      "cap_top": 12,
+      "reviewNote": "Recovered source crop [46,107,347,730]. Back foot and front foot overlap in x; root is midpoint of both feet extents in the bottom 12 percent, with floor at the lowest sole."
+    },
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "sourceMasterSha256": "3a02874d742a7c70382d3bc6a1da9a4896882aa68d458248b83cbcdb49773c10",
+  "effects": {
+    "champagneSpray": {
+      "stage": "spray",
+      "sourcePoint": [
+        634,
+        956
+      ],
+      "sourceDirection": [
+        0.5,
+        -0.8660254037844386
+      ],
+      "reviewNote": "Visible open glass mouth manually located in original generated sheet; bottle points viewer right/up. No droplets baked into the body."
+    }
+  }
+}
