@@ -1,4 +1,4 @@
-import { NPC_KEYS } from './config.js';
+import { DRIVERS, NPC_KEYS, PLAYABLE_KEYS } from './config.js';
 import { SpriteEffects } from './effects.js';
 import { vehicleAppearance, NPC_FRAME } from './vehicle-visual.js';
 // Renderização Phaser (câmera traseira em pseudo-3D sobre a geometria do circuito).
@@ -17,7 +17,12 @@ export function createRaceScene(Phaser, { assets, track, getRace, onReady, onErr
     preload() {
       this.load.image('horizon', `${V4}cascavel/horizon.png`);
       for (const k of ['tree', 'bush', 'pit', 'stand', 'fence', 'tires', 'barrier', 'forest', 'board50', 'board100']) this.load.image(k, `${V4}cascavel/${k}.png`);
-      for (const d of ['daniel', 'felipe']) {
+      for (const d of PLAYABLE_KEYS) {
+        if (DRIVERS[d].vehicleType === 'truck') {
+          // Native atlas is three columns by two rows, read row-major without mirroring.
+          this.load.spritesheet(d, `${V4}cars/${d}.png`, { frameWidth: NPC_FRAME.width, frameHeight: NPC_FRAME.height });
+          continue;
+        }
         this.load.image(d, `${V4}cars/${d}-rear.png`);
         for (const view of ['left', 'right']) this.load.image(`${d}-${view}`, `${V4}cars/${d}-${view}.png`);
       }
@@ -30,7 +35,7 @@ export function createRaceScene(Phaser, { assets, track, getRace, onReady, onErr
       this.road = this.add.graphics();
       this.scenery = Array.from({ length: 24 }, () => this.add.image(0, 0, 'tree').setOrigin(0.5, 1).setVisible(false));
       this.fxImages = Array.from({ length: this.fxState.limit }, () => this.add.image(0, 0, 'fx', 0).setOrigin(0.5, 110 / 128).setDepth(3000).setVisible(false));
-      this.rivals = Array.from({ length: 5 }, () => this.add.image(0, 0, 'felipe').setOrigin(0.5, 470 / 512).setDepth(1500));
+      this.rivals = Array.from({ length: PLAYABLE_KEYS.length + NPC_KEYS.length - 1 }, () => this.add.image(0, 0, 'felipe').setOrigin(0.5, NPC_FRAME.ground / NPC_FRAME.height).setDepth(1500));
       this.player = this.add.image(0, 0, 'daniel').setOrigin(0.5, 470 / 512).setDepth(2000);
       this.carTurns = new Map();
       onReady();
@@ -123,14 +128,20 @@ export function createRaceScene(Phaser, { assets, track, getRace, onReady, onErr
         this.carTurns.set(car.driver, look.turn);
         sprite.setTexture(look.texture);
         if (look.frame !== null) sprite.setFrame(look.frame);
-        return look.widthScale;
+        return look;
       };
-      const playerWidth = applyCarView(this.player, race.player);
-      const size = Math.min(W * 0.22, H * 0.47);
+      const playerLook = applyCarView(this.player, race.player);
+      // A common camera scale reserves the same viewport budget for the tallest
+      // vehicle. Scaling the entire fleet preserves true relative dimensions at
+      // equal depth, including when the truck is an opponent rather than player.
+      const fleetScale = Math.max(1, ...Object.values(DRIVERS).map(driver => driver.renderScale ?? 1));
+      const size = Math.min(W * 0.22, H * 0.47) / fleetScale;
+      const playerHeight = size * playerLook.renderScale, playerWidth = playerHeight * playerLook.widthScale;
       const bump = !REDUCED && race.player.offRoad && race.phase === 'racing' ? Math.sin(time / 28) * 2.5 : 0;
       const sway = race.player.wheel * W * 0.018;
       const lean = REDUCED ? 0 : clamp(race.player.wheel, -1.5, 1.5);
-      this.player.setVisible(true).setPosition(W * 0.5 + sway, H * 0.91 + bump).setDisplaySize(size * playerWidth, size)
+      const playerX = W * 0.5 + sway, playerY = H * 0.91 + bump;
+      this.player.setVisible(true).setPosition(playerX, playerY).setDisplaySize(playerWidth, playerHeight)
         .setAlpha(1).setAngle(lean).setDepth(2000);
       for (let i = 0; i < this.rivals.length; i++) {
         const car = race.opponents[i], sprite = this.rivals[i];
@@ -140,9 +151,9 @@ export function createRaceScene(Phaser, { assets, track, getRace, onReady, onErr
           const p = project(dist + 8 + ahead, car.lateral * half);
           const sz = Math.min(size * 18 / Math.max(1,p.z), size * 1.6);
           const visibleDistance = segs.length ? segs[segs.length - 1].d - dist + 4 : 0;
-          const widthScale = applyCarView(sprite, car);
+          const look = applyCarView(sprite, car), height = sz * look.renderScale;
           sprite.setVisible(p.z > 4 && p.y > horizonY && ahead < visibleDistance)
-            .setPosition(p.x,p.y).setDisplaySize(sz * widthScale,sz)
+            .setPosition(p.x,p.y).setDisplaySize(height * look.widthScale,height)
             .setDepth(ahead < 0 ? 2500 - ahead : 1500 - p.z).setAngle(REDUCED ? 0 : clamp(car.wheel, -1.5, 1.5));
         } else sprite.setVisible(false);
       }
@@ -159,16 +170,16 @@ export function createRaceScene(Phaser, { assets, track, getRace, onReady, onErr
         this.emitClock += dtf;
         if (this.emitClock > (REDUCED ? 0.2 : LOW ? 0.09 : 0.045)) {
           this.emitClock = 0;
-          if (!REDUCED && race.player.offRoad && race.player.speed > 8) for (const side of [-1, 1]) emit('dust', W * 0.5 + side * size * 0.28, H * 0.91, side * 34, -35, 0.55, size * 0.37);
-          else if (!REDUCED && Math.abs(race.player.wheel) > 0.7 && race.player.speed > 35) for (const side of [-1, 1]) emit('smoke', W * 0.5 + side * size * 0.28, H * 0.89, side * 20, -20, 0.45, size * 0.28);
-          if (race.player.nitroRemaining > 0) for (const side of [-1, 1]) emit('nitro', W * 0.5 + side * size * 0.22, H * 0.92, side * 6, 55, 0.28, size * 0.38);
+          if (!REDUCED && race.player.offRoad && race.player.speed > 8) for (const side of [-1, 1]) emit('dust', playerX + side * playerWidth * 0.28, playerY, side * 34, -35, 0.55, playerHeight * 0.37);
+          else if (!REDUCED && Math.abs(race.player.wheel) > 0.7 && race.player.speed > 35) for (const side of [-1, 1]) emit('smoke', playerX + side * playerWidth * 0.28, playerY - playerHeight * 0.04, side * 20, -20, 0.45, playerHeight * 0.28);
+          if (race.player.nitroRemaining > 0) for (const side of [-1, 1]) emit('nitro', playerX + side * playerWidth * 0.22, playerY + playerHeight * 0.02, side * 6, 55, 0.28, playerHeight * 0.38);
         }
       }
       if (race.hit && race.hit.id !== this.lastFxHit) {
         this.lastFxHit = race.hit.id;
         if (live) for (let i = 0; i < (REDUCED ? 2 : 8); i++) {
           const a = i * Math.PI / 4;
-          emit('spark', W * 0.5 + Math.cos(a) * size * 0.25, H * 0.8, Math.cos(a) * 100, Math.sin(a) * 65 - 25, 0.4, size * 0.3);
+          emit('spark', playerX + Math.cos(a) * playerWidth * 0.25, playerY - playerHeight * 0.23, Math.cos(a) * 100, Math.sin(a) * 65 - 25, 0.4, playerHeight * 0.3);
         }
       }
       if (race.phase === 'finished') this.fxState.clear();

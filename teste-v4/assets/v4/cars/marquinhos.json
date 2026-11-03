@@ -1,0 +1,209 @@
+{
+  "version": 1,
+  "key": "marquinhos",
+  "vehicleType": "truck",
+  "sourceMetadata": "assets/sprites/v4/truck-vehicle/frames.json",
+  "sourceMetadataSha256": "e901342eabffcfd066f9d64ec87cf78d6e972e5cb29b4015eb443d5701c58483",
+  "integrationAcceptance": {
+    "status": "owner-requested-integration",
+    "date": "2026-11-03",
+    "quote": "Otimo o que mais precisamos para aplicar tudo isso no game? Inclusive também ter esse novo piloto que se chama Marquinhos na capa do game e telefone como personagem jogavel",
+    "scope": "prepared master + six derivative podium poses + truck views; cover and playable character",
+    "interpretation": "latest integration request accepts the prepared artwork for this use; no invented approval quote"
+  },
+  "configuration": {
+    "type": "simple-tractor",
+    "axles": 2,
+    "drive": "4x2",
+    "trailer": false
+  },
+  "frameSize": [
+    560,
+    512
+  ],
+  "frameOrder": [
+    "rear",
+    "left",
+    "right",
+    "brake",
+    "left-brake",
+    "right-brake"
+  ],
+  "sheetGrid": [
+    3,
+    2
+  ],
+  "atlasSize": [
+    1680,
+    1024
+  ],
+  "pivot": [
+    0.5,
+    0.91796875
+  ],
+  "ground": 470,
+  "renderScale": 1.7168195718654433,
+  "displayPolicy": "one uniform multiplier on width and height, plus native 560/512 aspect; common fleet camera budget preserves equal-depth ratios",
+  "scaleMeasurements": {
+    "proposedRearUsefulWidthRatio": 1.4,
+    "commonSheetScale": 1.0043859649122806,
+    "desiredSheetScale": 1.722085889570552,
+    "commonFitLimitedRequestedRatio": true,
+    "allSixTransformsShareScale": true,
+    "independentPoseFit": false,
+    "carReferenceUseful": {
+      "bbox": [
+        55,
+        140,
+        456,
+        470
+      ],
+      "width": 401,
+      "height": 330
+    },
+    "carReferenceNativeSize": [
+      512,
+      512
+    ],
+    "carReferenceGround": 470,
+    "truckRearUseful": {
+      "bbox": [
+        117,
+        12,
+        444,
+        470
+      ],
+      "width": 327,
+      "height": 458
+    },
+    "actualRearUsefulWidthRatio": 0.8154613466334164,
+    "actualRearUsefulHeightRatio": 1.387878787878788,
+    "nativeNormalizedRearUsefulWidthRatio": 0.8154613466334164,
+    "nativeNormalizedRearUsefulHeightRatio": 1.387878787878788,
+    "futureUniformDisplayMultiplierForProposedWidth": 1.7168195718654433,
+    "runtimeIntegrationRequired": "current renderer sets equal display height at equal depth; future integration needs an explicit truck vehicle scale; native canvas size alone does not set physical scale",
+    "physicalBenchmark": {
+      "vehicle": "IVECO Chile 4x2 tractor benchmark",
+      "lengthM": 6.252,
+      "widthM": 2.55,
+      "heightM": 3.789,
+      "wheelbaseM": 3.8,
+      "scope": "physical reference only; not a measurement of the FTW truck or Mercedes; not a runtime conversion"
+    },
+    "intendedDisplayComparison": {
+      "sameWorldDepth": true,
+      "carDisplayMultiplier": 1,
+      "truckUniformDisplayMultiplier": 1.7168195718654433,
+      "allTruckViewsUseSameProposedMultiplier": true,
+      "truckAspectPreserved": true,
+      "targetRearUsefulWidthRatio": 1.4,
+      "measuredDisplayedRearUsefulWidthRatio": 1.401496259351621,
+      "intendedRearUsefulHeightRatio": 2.3827374664071908,
+      "sharedGroundOnComparisonPx": 831,
+      "comparisonSize": [
+        1586,
+        968
+      ],
+      "runtimeChangeApplied": false,
+      "interpretation": "intended future vehicle display scale at equal world depth; Mercedes factor1 and one proposed uniform truck factor; not equal image pixel factors"
+    }
+  },
+  "assets": [
+    {
+      "file": "game/assets/v4/cars/marquinhos-rear.png",
+      "source": "assets/sprites/v4/truck-vehicle/rear.png",
+      "sha256": "1523eb77cd997491868a4ddb326ba0a1ef844776310003e61e363131276e388b",
+      "sourceSha256": "1523eb77cd997491868a4ddb326ba0a1ef844776310003e61e363131276e388b",
+      "size": [
+        560,
+        512
+      ],
+      "transformation": "byte-identical copy of prepared source",
+      "approval": "owner-requested-integration"
+    },
+    {
+      "file": "game/assets/v4/cars/marquinhos-left.png",
+      "source": "assets/sprites/v4/truck-vehicle/left.png",
+      "sha256": "ad3056b69854c5cad39ab4812b0b158f45b1e4fab3e9334bdbf61f3ea82012f2",
+      "sourceSha256": "ad3056b69854c5cad39ab4812b0b158f45b1e4fab3e9334bdbf61f3ea82012f2",
+      "size": [
+        560,
+        512
+      ],
+      "transformation": "byte-identical copy of prepared source",
+      "approval": "owner-requested-integration"
+    },
+    {
+      "file": "game/assets/v4/cars/marquinhos-right.png",
+      "source": "assets/sprites/v4/truck-vehicle/right.png",
+      "sha256": "879632502422bc709b641d2877e4e605af5f7eba7d04d62c33ef887e9f62bdc5",
+      "sourceSha256": "879632502422bc709b641d2877e4e605af5f7eba7d04d62c33ef887e9f62bdc5",
+      "size": [
+        560,
+        512
+      ],
+      "transformation": "byte-identical copy of prepared source",
+      "approval": "owner-requested-integration"
+    },
+    {
+      "file": "game/assets/v4/cars/marquinhos-brake.png",
+      "source": "assets/sprites/v4/truck-vehicle/brake.png",
+      "sha256": "cba23b3436ffdeda5f580c171a2553e6560e7d9f8b8b2c1d39e986f7392ce9a2",
+      "sourceSha256": "cba23b3436ffdeda5f580c171a2553e6560e7d9f8b8b2c1d39e986f7392ce9a2",
+      "size": [
+        560,
+        512
+      ],
+      "transformation": "byte-identical copy of prepared source",
+      "approval": "owner-requested-integration"
+    },
+    {
+      "file": "game/assets/v4/cars/marquinhos-left-brake.png",
+      "source": "assets/sprites/v4/truck-vehicle/left-brake.png",
+      "sha256": "5c6382d345dd0e8a1967080d60f2c2b43c13d95f18268eb25a58de090a469e09",
+      "sourceSha256": "5c6382d345dd0e8a1967080d60f2c2b43c13d95f18268eb25a58de090a469e09",
+      "size": [
+        560,
+        512
+      ],
+      "transformation": "byte-identical copy of prepared source",
+      "approval": "owner-requested-integration"
+    },
+    {
+      "file": "game/assets/v4/cars/marquinhos-right-brake.png",
+      "source": "assets/sprites/v4/truck-vehicle/right-brake.png",
+      "sha256": "8a96872b25cdffae1eedb9b36d18bd9b0e532519c348c308da03c30d36aa7e94",
+      "sourceSha256": "8a96872b25cdffae1eedb9b36d18bd9b0e532519c348c308da03c30d36aa7e94",
+      "size": [
+        560,
+        512
+      ],
+      "transformation": "byte-identical copy of prepared source",
+      "approval": "owner-requested-integration"
+    },
+    {
+      "file": "game/assets/v4/cars/marquinhos.png",
+      "source": "assets/sprites/v4/truck-vehicle/truck-atlas.png",
+      "sha256": "bc04432380e1c232ad49e319bb507c3d8d2b057ec562703fe47c15f8247e337e",
+      "sourceSha256": "bc04432380e1c232ad49e319bb507c3d8d2b057ec562703fe47c15f8247e337e",
+      "size": [
+        1680,
+        1024
+      ],
+      "transformation": "byte-identical copy of prepared source",
+      "approval": "owner-requested-integration"
+    },
+    {
+      "file": "game/assets/v4/cars/marquinhos-front.png",
+      "source": "assets/sprites/v4/truck-vehicle/front-menu.png",
+      "sha256": "bfd8726a9a09a0fc5958b0d66969e3cfe9e567efaed78b2a107e9b9a7fd63e74",
+      "sourceSha256": "bfd8726a9a09a0fc5958b0d66969e3cfe9e567efaed78b2a107e9b9a7fd63e74",
+      "size": [
+        560,
+        512
+      ],
+      "transformation": "byte-identical copy of prepared source",
+      "approval": "owner-requested-integration"
+    }
+  ]
+}

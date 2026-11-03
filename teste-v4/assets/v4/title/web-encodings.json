@@ -87,8 +87,8 @@
   {
     "file": "game/assets/v4/title/felipe-front-portrait.webp",
     "source": "game/assets/v4/title/felipe-front-portrait.png",
-    "sourceSha256": "f4b46310e890e7016a0b8b668d8193ae7ebfeb109fe655bf60386259a51aca93",
-    "sha256": "aaa2e54ca01ef8644e7e86f0fb034b19aeba4c57db259ffe070646780fe1106b",
+    "sourceSha256": "98832d1d00feb8f628d76172ad2ace8dcacf75a4a6ea2e7c8af88faf4f7a236b",
+    "sha256": "d51ff9734b2150833806ea8f988e34ed48d406410626e39c228801935d6a8589",
     "originalSize": [
       1182,
       1331
@@ -97,8 +97,42 @@
       799,
       900
     ],
-    "method": "aspect-preserving downsample and lossless WebP; encoded pixels verified exactly",
-    "bytes": 672048,
-    "approval": "owner-approved-design; technical delivery encoding"
+    "method": "byte-identical prepared WebP delivery; source PNG preserved at native size",
+    "bytes": 633840,
+    "approval": "owner-requested-integration; technical delivery encoding"
+  },
+  {
+    "file": "game/assets/v4/title/marquinhos-front-portrait.webp",
+    "source": "game/assets/v4/title/marquinhos-front-portrait.png",
+    "sourceSha256": "c9a238c8b70c204d046adbf2950253e9bbd3d9dfb4503a0e5477b2401fcd59c4",
+    "sha256": "a01f64349ad7e3bda9b1d5cfad494fb73efdbf93d1ce78f1ae9579dbf0ddc408",
+    "originalSize": [
+      512,
+      640
+    ],
+    "size": [
+      512,
+      640
+    ],
+    "bytes": 243004,
+    "method": "byte-identical prepared WebP delivery; source PNG preserved at native size",
+    "approval": "owner-requested-integration; technical delivery encoding"
+  },
+  {
+    "file": "game/assets/v4/drivers/marquinhos-portrait.webp",
+    "source": "game/assets/v4/drivers/marquinhos-portrait.png",
+    "sourceSha256": "c9a238c8b70c204d046adbf2950253e9bbd3d9dfb4503a0e5477b2401fcd59c4",
+    "sha256": "a01f64349ad7e3bda9b1d5cfad494fb73efdbf93d1ce78f1ae9579dbf0ddc408",
+    "originalSize": [
+      512,
+      640
+    ],
+    "size": [
+      512,
+      640
+    ],
+    "bytes": 243004,
+    "method": "byte-identical prepared WebP delivery; source PNG preserved at native size",
+    "approval": "owner-requested-integration; technical delivery encoding"
   }
 ]

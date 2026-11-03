@@ -1,5 +1,5 @@
 // Simulação determinística (sem DOM, sem Phaser). Passo fixo de 1/60 s é responsabilidade do chamador.
-import { DEFAULTS, LATERAL_LIMIT, CHECKPOINTS, CAR_LENGTH, CAR_WIDTH, otherDriver, NPC_KEYS } from './config.js';
+import { DEFAULTS, LATERAL_LIMIT, CHECKPOINTS, CAR_LENGTH, CAR_WIDTH, DRIVERS, PLAYABLE_KEYS, otherDriver, NPC_KEYS } from './config.js';
 import { getResults } from './standings.js';
 export { getResults } from './standings.js';
 
@@ -14,15 +14,21 @@ export function createRace(track, playerKey, options = {}) {
   const config = { ...DEFAULTS, ...options };
   if (!Number.isInteger(config.laps) || config.laps < 1 || !Number.isInteger(config.nitroCharges) || config.nitroCharges < 0)
     throw new Error('Configuração de corrida inválida');
-  const player = makeDriver(playerKey, -0.32, config.nitroCharges);
-  const cpu = makeDriver(otherDriver(playerKey), 0.32, config.nitroCharges); cpu.profile = 1;
+  const player = makeDriver(playerKey, -0.4, config.nitroCharges);
+  // cpu mantém o rival legado para os consumidores existentes; todos os oficiais restantes também correm por IA.
+  const cpu = makeDriver(otherDriver(playerKey), 0.4, config.nitroCharges); cpu.profile = 1;
+  const officials = PLAYABLE_KEYS.filter(key => key !== playerKey && key !== cpu.driver).map(key => {
+    const d = makeDriver(key, -0.4, config.nitroCharges);
+    d.distance = 18; d.profile = 1;
+    return d;
+  });
   const extras = NPC_KEYS.map((key, i) => {
     const d = makeDriver(key, [-0.76, 0.75, -0.14, 0.84][i], 0);
-    d.distance = [18, 35, 52, 69][i];
+    d.distance = [36, 54, 72, 90][i];
     d.profile = [0.93, 0.99, 1.03, 0.91][i];
     return d;
   });
-  const opponents = [cpu, ...extras];
+  const opponents = [cpu, ...officials, ...extras];
   return { track, config, phase: 'countdown', resumePhase: 'countdown', countdown: config.countdown,
     elapsed: 0, winner: null, finishedAt: null, results: null, hit: null, hitCount: 0, player, cpu, extras, opponents,
     racers: [player, ...opponents] };
@@ -87,7 +93,9 @@ export function cpuControls(race, d = race.cpu, rival = race.player) {
   // linha: perto da direita; se o rival está logo à frente e na mesma faixa, procura espaço para ultrapassar
   let line = 0.25;
   const gapAhead = ((rival.distance - d.distance) % L + L) % L;
-  if (gapAhead < 60 && Math.abs(rival.lateral - d.lateral) < 0.9 && d.speed > rival.speed * 0.85) line = rival.lateral > 0 ? rival.lateral - 0.95 : rival.lateral + 0.95;
+  const width = contactSize(d, rival, 'collisionWidthFactor', CAR_WIDTH);
+  if (gapAhead < 60 && Math.abs(rival.lateral - d.lateral) < width + 0.35 && d.speed > rival.speed * 0.85)
+    line = rival.lateral > 0 ? rival.lateral - (width + 0.4) : rival.lateral + (width + 0.4);
   line = clamp(line, -1.2, 1.2);
   const target = (line - d.lateral) * 4 + now * d.speed * d.speed * 0.008 * 1.5;
   let gap = d.distance - rival.distance; // >0: CPU na frente
@@ -103,31 +111,36 @@ export function cpuControls(race, d = race.cpu, rival = race.player) {
 }
 
 
-// Colisão (v0.2): caixas de CAR_LENGTH x CAR_WIDTH. Nunca deixa um carro atravessar o outro.
+// Caixas arcade por veículo: fatores relativos, não medidas físicas do caminhão real.
+// O limite de cada par é a soma das duas meias extensões; carros comuns preservam CAR_LENGTH x CAR_WIDTH.
+const contactSize = (a, b, factor, base) => base * ((DRIVERS[a.driver]?.[factor] ?? 1) + (DRIVERS[b.driver]?.[factor] ?? 1)) / 2;
+// Colisão (v0.2): nunca deixa um veículo atravessar o outro.
 // Encostada lateral: separa os carros e tira um pouco de velocidade dos dois. Traseira: o de trás não passa e perde ritmo.
 const wrapSigned = (v, L) => ((v + L / 2) % L + L) % L - L / 2;
 function resolvePair(race, player, cpu) {
   const { track } = race, L = track.length;
   let gap = wrapSigned(cpu.distance - player.distance, L); // >0: CPU à frente
   let dl = cpu.lateral - player.lateral;
-  if (Math.abs(gap) >= CAR_LENGTH || Math.abs(dl) >= CAR_WIDTH) return;
+  const length = contactSize(player, cpu, 'collisionLengthFactor', CAR_LENGTH);
+  const width = contactSize(player, cpu, 'collisionWidthFactor', CAR_WIDTH);
+  if (Math.abs(gap) >= length || Math.abs(dl) >= width) return;
   const front = gap >= 0 ? cpu : player, back = gap >= 0 ? player : cpu;
-  const penLong = (CAR_LENGTH - Math.abs(gap)) / CAR_LENGTH, penLat = (CAR_WIDTH - Math.abs(dl)) / CAR_WIDTH;
+  const penLong = (length - Math.abs(gap)) / length, penLat = (width - Math.abs(dl)) / width;
   const closing = Math.max(0, back.speed - front.speed);
   let strength = 0;
   if (penLat < penLong) { // lado a lado: empurra para os lados
-    const dir = dl === 0 ? (cpu.lateral > 0 ? 1 : -1) : Math.sign(dl), need = CAR_WIDTH - Math.abs(dl);
+    const dir = dl === 0 ? (cpu.lateral > 0 ? 1 : -1) : Math.sign(dl), need = width - Math.abs(dl);
     cpu.lateral = clamp(cpu.lateral + (dir * need) / 2, -LATERAL_LIMIT, LATERAL_LIMIT);
     player.lateral = clamp(player.lateral - (dir * need) / 2, -LATERAL_LIMIT, LATERAL_LIMIT);
     dl = cpu.lateral - player.lateral;
-    if (Math.abs(dl) < CAR_WIDTH - 1e-6) { // sem espaço (parede): trata como traseira
-      back.distance -= CAR_LENGTH - Math.abs(gap);
+    if (Math.abs(dl) < width - 1e-6) { // sem espaço (parede): trata como traseira
+      back.distance -= length - Math.abs(gap);
     }
     if (back.hitTimer === 0 && front.hitTimer === 0) { player.speed *= 0.94; cpu.speed *= 0.94; strength = 0.4; }
     player.latVel = -dir * 1.2; cpu.latVel = dir * 1.2;
   } else { // traseira: não atravessa
     // gap é circular; usar a distância absoluta do outro apagaria uma volta ao tocar um retardatário.
-    back.distance -= CAR_LENGTH - Math.abs(gap);
+    back.distance -= length - Math.abs(gap);
     if (back.hitTimer === 0) { strength = clamp(0.3 + closing / 30, 0.3, 1); back.speed = Math.max(0, Math.min(back.speed, front.speed) * 0.92 - 3); front.speed += Math.min(4, closing * 0.25); }
     else back.speed = Math.min(back.speed, front.speed);
     const side = back.lateral <= front.lateral ? -1 : 1;
