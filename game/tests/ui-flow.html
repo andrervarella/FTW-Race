@@ -1,4 +1,4 @@
-<!doctype html><html lang="pt-BR"><head><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../podium.css"></head><body><div id="ui"></div><script type="module">
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../podium.css"></head><body><div id="ui"></div><div id="rotate">Gire o celular<span>Jogue na horizontal</span></div><script type="module">
 import { Ui } from '../src/ui.js';
 import { buildTrack } from '../src/track.js';
 window.ui = new Ui(document.querySelector('#ui'), { track: buildTrack(), assets: new URL('../assets/legacy/', import.meta.url).href, onRace: r => window.testRace = r, debug: false });

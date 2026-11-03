@@ -14,7 +14,7 @@ permissions:
 jobs:
   public-chromium:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -30,6 +30,9 @@ jobs:
       - name: Verify live music, engine and effects after trusted activation
         run: |
           python game/tests/audio-live.py https://andrervarella.github.io/FTW-Race/teste-v4/ --output work/v4-live/audio-live
+      - name: Measure the actual truck renderer, all views and larger collision footprint
+        run: |
+          python game/tests/marquinhos-live.py https://andrervarella.github.io/FTW-Race/teste-v4/ --output work/v4-live/marquinhos-live
       - name: Preserve browser screenshots and logs
         if: always()
         uses: actions/upload-artifact@v4

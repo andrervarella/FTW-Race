@@ -1,4 +1,4 @@
-"""Real Web Audio checks, including rendered podium FX and lifecycle silence.
+"""Real Web Audio checks: 7 winners × 3 modes, six podium beats and lifecycle silence.
 Run from repo root: python3 game/tests/audio-v4.py (Chromium needs browser permissions).
 """
 import functools
@@ -21,18 +21,46 @@ try:
         page.goto(f'http://127.0.0.1:{server.server_port}/')
         result = page.evaluate('''async () => {
           const { GameAudio } = await import('/game/src/audio.js');
+          const { podiumMarkup, updatePodium } = await import('/game/src/podium.js');
+          const { createRace } = await import('/game/src/sim.js');
+          const { buildTrack } = await import('/game/src/track.js');
+          const winners = ['daniel', 'felipe', 'marquinhos', 'npc-blue', 'npc-yellow', 'npc-purple', 'npc-silver'];
+          const beatTimes = [0.05, 1.25, 2.65, 3.95, 5.35, 7.55];
+          const track = buildTrack();
           const rendered = [];
           for (const mode of ['tudo', 'efeitos', 'mudo']) {
-            for (let stage = 0; stage < 6; stage++) {
-              const c = new OfflineAudioContext(1, 32000, 16000), a = new GameAudio(c);
-              a.build(); a.setMode(mode); a.podium(stage, 0.05);
+            for (const winner of winners) {
+              const race = createRace(track, 'marquinhos');
+              if (race.racers.length !== 7) throw Error('podium audio requires all seven real participants');
+              race.phase = 'finished'; race.winner = winner;
+              const champion = race.racers.find(racer => racer.driver === winner);
+              champion.finishTime = 80; champion.laps = 3;
+              const root = document.createElement('div');
+              root.innerHTML = podiumMarkup(race, '/game/assets/legacy/');
+              if (root.querySelector('.podium-heading h1').textContent !== (winner === 'marquinhos' ? 'Marquinhos' : root.querySelector('.champion-frame').alt)) throw Error(`wrong podium winner ${winner}`);
+              if (root.textContent.includes('#null')) throw Error(`invented podium number ${winner}`);
+              const c = new OfflineAudioContext(1, 160000, 16000), a = new GameAudio(c);
+              a.build(); a.setMode(mode);
+              const stages = [];
+              const feedback = { podium(stage) { stages.push(stage); a.podium(stage, beatTimes[stage]); } };
+              updatePodium(root, race, 0, feedback);
+              for (let i = 0; i < 80; i++) updatePodium(root, race, 0.1, feedback);
+              if (stages.join(',') !== '0,1,2,3,4,5') throw Error(`podium sequence ${winner}/${mode}: ${stages}`);
+              if (!root.querySelector('.champion-frame').src.endsWith(`/${winner}-5.png`)) throw Error(`wrong final podium frame ${winner}`);
               const buf = await c.startRendering(), samples = buf.getChannelData(0);
               let peak = 0, nonzero = 0;
               for (const v of samples) { if (!Number.isFinite(v)) throw Error('nonfinite podium sample'); peak = Math.max(peak, Math.abs(v)); if (Math.abs(v) > 0.00001) nonzero++; }
-              if (mode === 'mudo' ? peak > 0.000001 : nonzero < 100) throw Error(`podium audio ${mode}/${stage}: peak ${peak}, samples ${nonzero}`);
-              rendered.push({ mode, stage, peak, nonzero });
+              if (mode === 'mudo' ? peak > 0.000001 : nonzero < 100) throw Error(`podium audio ${winner}/${mode}: peak ${peak}, samples ${nonzero}`);
+              const beats = beatTimes.map((at, stage) => {
+                const start = Math.floor(at * 16000), end = Math.min(samples.length, start + 8000);
+                const active = samples.subarray(start, end).some(value => Math.abs(value) > 0.00001);
+                if (active !== (mode !== 'mudo')) throw Error(`podium beat ${winner}/${mode}/${stage}: active ${active}`);
+                return { stage, active };
+              });
+              rendered.push({ winner, mode, stages, beats, peak, nonzero });
             }
           }
+          if (rendered.length !== 21) throw Error(`expected 21 winner/mode combinations, got ${rendered.length}`);
           const c = new OfflineAudioContext(1, 8000, 16000), a = new GameAudio(c);
           a.build(); a.selection(0.02);
           const buf = await c.startRendering();

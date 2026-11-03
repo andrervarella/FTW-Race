@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="data:,">
+  <style>html,body{margin:0;background:#23323d;overflow:hidden}#world{position:fixed;inset:0}#label{position:fixed;top:5px;left:8px;color:#fff;background:#071526dd;font:12px monospace;padding:6px;pointer-events:none}</style>
+</head>
+<body>
+<div id="world"></div><div id="label">Marquinhos — real Phaser render comparison</div>
+<script type="module">
+// Test fixture only. The playable build receives no state mutation or test hooks.
+import { buildTrack } from '../src/track.js';
+import { createRace, stepRace } from '../src/sim.js';
+import { createRaceScene } from '../src/render.js';
+import { DRIVERS } from '../src/config.js';
+const module = await import('../assets/legacy/phaser-Czz4FBZH.js');
+const Phaser = module.g(module.r()), track = buildTrack();
+let race;
+window.marquinhosErrors = [];
+window.renderVehicle = (key, player = false, wheel = 0, braking = false) => {
+  race = createRace(track, player ? key : 'daniel');
+  race.phase = 'paused';
+  race.player.distance = 0; race.player.lateral = 0;
+  for (const [i, car] of race.opponents.entries()) car.distance = 400 + i * 40;
+  const car = player ? race.player : race.opponents.find(car => car.driver === key);
+  if (!car) throw Error('Missing racer: ' + key);
+  if (!player) { car.distance = 24; car.lateral = 0; }
+  Object.assign(car, { speed: 40, wheel, braking });
+  window.renderedVehicle = { key, player };
+  document.querySelector('#label').textContent = `${key} · ${player ? 'player' : 'opponent'} · wheel ${wheel} · brake ${braking}`;
+};
+window.measureRenderedVehicle = () => {
+  const scene = marquinhosGame.scene.getScene('race'), selection = renderedVehicle;
+  const sprite = selection.player ? scene.player : scene.rivals[race.opponents.findIndex(car => car.driver === selection.key)];
+  const bounds = sprite.getBounds();
+  return { key: sprite.texture.key, frame: Number(sprite.frame.name), visible: sprite.visible,
+    x: sprite.x, y: sprite.y, width: sprite.displayWidth, height: sprite.displayHeight,
+    originX: sprite.originX, originY: sprite.originY, flipX: sprite.flipX, flipY: sprite.flipY,
+    bounds: { x: bounds.x, y: bounds.y, width: bounds.width, height: bounds.height },
+    source: { width: sprite.frame.width, height: sprite.frame.height },
+    position: { distance: (selection.player ? race.player : race.opponents.find(car => car.driver === selection.key)).distance,
+      lateral: (selection.player ? race.player : race.opponents.find(car => car.driver === selection.key)).lateral } };
+};
+window.compareCollision = (key, axis) => {
+  const test = createRace(track, key); test.phase = 'racing';
+  for (const [i, car] of test.racers.entries()) Object.assign(car, { distance: 1500 + i * 60, lateral: 0, speed: 0, charges: 0 });
+  Object.assign(test.player, { distance: 1000, lateral: 0 });
+  const target = test.opponents.find(car => car.driver === 'npc-blue');
+  Object.assign(target, { distance: 1000 + (axis === 'length' ? 9.9 : 0), lateral: axis === 'width' ? .605 : 0 });
+  stepRace(test, { left: false, right: false, throttle: false, brake: false, nitro: false }, 1e-6);
+  return { hitCount: test.hitCount, playerHit: test.player.hitTimer, targetHit: target.hitTimer,
+    gap: target.distance - test.player.distance, lateral: target.lateral - test.player.lateral,
+    widthFactor: DRIVERS[key].collisionWidthFactor, lengthFactor: DRIVERS[key].collisionLengthFactor };
+};
+window.renderVehicle('npc-blue');
+const Scene = createRaceScene(Phaser, { assets: new URL('../assets/legacy/', import.meta.url).href,
+  track, getRace: () => race, onReady: () => window.marquinhosReady = true,
+  onError: error => marquinhosErrors.push(String(error)) });
+window.marquinhosGame = new Phaser.Game({ type: Phaser.AUTO, parent: 'world', width: innerWidth,
+  height: innerHeight, audio: { noAudio: true }, scene: [Scene] });
+</script>
+</body>
+</html>

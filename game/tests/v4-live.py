@@ -46,9 +46,16 @@ def verify_approved_art(page, url):
                 for row in pilots['views']]
     expected += [{'path': row['file'].removeprefix('game/'), 'sha256': row['sha256'], 'size': row['size']}
                  for row in encodings]
+    assert len(pilots['views']) == 16 and len(encodings) == 8, 'Original pilot poses and all cover encodings must remain in the served build'
+    for manifest in ['cars/marquinhos.json', 'drivers/marquinhos.json']:
+        prepared = json.loads((game / 'assets/v4' / manifest).read_text())
+        assert prepared['integrationAcceptance']['status'] == 'owner-requested-integration'
+        expected += [{'path': row['file'].removeprefix('game/'), 'sha256': row['sha256'], 'size': row['size']}
+                     for row in prepared['assets']]
     for name in ['ftw-official.png', 'diabo-verde-official.png']:
         data = (game / 'assets/v4/title' / name).read_bytes()
         expected.append({'path': 'assets/v4/title/' + name, 'sha256': hashlib.sha256(data).hexdigest()})
+    expected = list({item['path']: item for item in expected}.values())
     for item in expected:
         item['url'] = urljoin(url, item['path'])
     actual = page.evaluate('''async entries => Promise.all(entries.map(async item => {
@@ -64,11 +71,12 @@ def verify_approved_art(page, url):
         assert got['sha256'] == want['sha256'], 'Served approved art differs: ' + want['path']
         if 'size' in want:
             assert got['size'] == want['size'], 'Unexpected approved art dimensions: ' + want['path']
-    assert len(actual) == 24, '16 pilot poses, 6 title layers and 2 original logos'
     control = page.locator('#press-start').bounding_box()
     assert control['height'] >= 43.9 and control['width'] >= 43.9, 'Physical touch target must remain at least44px'
-    assert page.locator('.cover-hero img').count() == 2
+    assert page.locator('.cover-hero img').count() == 3, 'Cover must include all three playable drivers'
     assert all('portrait.webp' in path for path in page.locator('.cover-hero img').evaluate_all('imgs => imgs.map(i=>i.src)'))
+    assert page.locator('.cover-marquinhos img').count() >= 1, 'Marquinhos must be visible on the cover'
+    assert '7' in page.locator('.cover-field').inner_text(), 'Cover must announce the seven-vehicle roster'
     return {'assets': actual, 'touch_target': control}
 
 
@@ -112,7 +120,7 @@ def verify_viewport(browser, url, output, width, height, reduced):
         assert page.locator('#fatal').is_hidden(), 'Fatal initialization panel must remain hidden'
         loaded_images(page)
         report['approved_art'] = verify_approved_art(page, url)
-        report['checks'].append('24 served approved art hashes/dimensions, original logos and physical title touch target')
+        report['checks'].append(f'{len(report["approved_art"]["assets"])} served accepted art hashes/dimensions, original logos and physical title touch target')
         npc_atlases = page.evaluate('''() => {
           const scene = window.__ftwGame.scene.getScene('race');
           return ['npc-blue','npc-yellow','npc-purple','npc-silver'].map(key => {
@@ -126,6 +134,15 @@ def verify_viewport(browser, url, output, width, height, reduced):
         assert {Path(urlparse(src).path).name for src in report['npc_asset_requests']} == expected_npc_files, 'The served game must request all four new PNG atlases'
         report['npc_atlases'] = npc_atlases
         report['checks'].append('four reference NPC raster atlases with six curve and brake views each')
+        truck_atlas = page.evaluate('''() => {
+          const texture = __ftwGame.scene.getScene('race').textures.get('marquinhos');
+          const image = texture.getSourceImage();
+          return {key:texture.key,src:image.src,size:[image.width,image.height],
+            frames:Array.from({length:6},(_,i)=>{const f=texture.get(i);return [f.width,f.height];})};
+        }''')
+        assert truck_atlas['key'] == 'marquinhos' and truck_atlas['size'] == [1680,1024]
+        assert truck_atlas['frames'] == [[560,512]] * 6, 'All six actual truck views must preload'
+        report['truck_atlas'] = truck_atlas
         screen('title')
         loaded_images(page)
         shot('title')
@@ -134,22 +151,40 @@ def verify_viewport(browser, url, output, width, height, reduced):
             report['checks'].append('reduced-motion title')
         page.get_by_role('button', name='PRESS START', exact=True).tap()
         screen('driverSelect')
-        assert page.locator('[data-driver]').count() == 2
-        page.locator('[data-driver="felipe"]').tap()
-        assert page.locator('[data-driver="felipe"]').get_attribute('aria-pressed') == 'true'
-        assert 'felipe-rear.png' in page.locator('[data-driver="felipe"] .menu-car').get_attribute('src')
+        assert page.locator('[data-driver]').count() == 3
+        assert set(page.locator('[data-driver]').evaluate_all('nodes => nodes.map(n=>n.dataset.driver)')) == {'daniel','felipe','marquinhos'}
+        # Exercise every playable card before choosing the new truck for the race.
+        for key, number in [('daniel','22'),('felipe','25'),('marquinhos',None)]:
+            card = page.locator(f'[data-driver="{key}"]')
+            card.tap()
+            assert card.get_attribute('aria-pressed') == 'true'
+            assert f'{key}-rear.png' in card.locator('.menu-car').get_attribute('src')
+            assert 'null' not in card.inner_text() and 'undefined' not in card.inner_text()
+            if number:
+                assert number in card.inner_text()
+            else:
+                assert '#' not in card.inner_text(), 'Do not invent a number for Marquinhos'
         page.locator('#laps').select_option('1')
         loaded_images(page)
-        shot('felipe-selection')
+        shot('marquinhos-selection')
+        cards = page.locator('[data-driver]').evaluate_all('''nodes => nodes.map(el => {
+          const b=el.getBoundingClientRect();return {driver:el.dataset.driver,x:b.x,y:b.y,width:b.width,height:b.height};
+        })''')
+        assert all(card['x'] >= -1 and card['x'] + card['width'] <= width + 1 and card['y'] >= -1 and card['y'] + card['height'] <= height + 1 for card in cards), cards
+        report['selection_bounds'] = cards
         page.get_by_role('button', name='CONFIRMAR PILOTO', exact=True).tap()
         screen('grid')
-        assert page.locator('.grid-intro h1').inner_text().replace('\n', ' ').strip() == 'FELIPE #25'
-        assert page.locator('.grid-names > span').count() == 6
+        assert page.locator('.grid-intro h1').inner_text().replace('\n', ' ').strip() == 'MARQUINHOS'
+        assert page.locator('.grid-names > span').count() == 7
+        assert 'null' not in page.locator('.grid-screen').inner_text() and 'undefined' not in page.locator('.grid-screen').inner_text()
         shot('grid')
         page.get_by_role('button', name='LARGAR', exact=True).tap()
         screen('race')
         page.wait_for_function('document.querySelector("#ui").dataset.phase === "racing"')
-        report['checks'].append('title, Felipe #25 selection, six-car grid and natural countdown')
+        assert '/ 7' in page.locator('#position').inner_text()
+        assert page.locator('.minimap circle').count() == 7
+        assert page.evaluate('__ftwGame.scene.getScene("race").player.texture.key') == 'marquinhos'
+        report['checks'].append('three playable drivers, Marquinhos selected without number, seven-car grid/HUD/minimap and natural countdown')
         # CDP touch events use hit testing and actual browser input dispatch.
         cdp = context.new_cdp_session(page)
         throttle = page.locator('[data-action="throttle"]').bounding_box()
@@ -182,11 +217,15 @@ def verify_viewport(browser, url, output, width, height, reduced):
         page.get_by_role('button', name='CONTINUAR', exact=True).tap()
         page.wait_for_function('document.querySelector("#ui").dataset.phase === "racing"')
         if not reduced:
-            # Let the six-car simulator finish naturally on the actual served URL.
+            # Let the seven-car simulator finish naturally on the actual served URL.
             page.locator('.results-screen').wait_for(state='visible', timeout=180000)
-            assert page.locator('tbody tr').count() == 6
+            assert page.locator('tbody tr').count() == 7
+            result_keys = page.locator('tbody tr').evaluate_all('rows => rows.map(row=>row.dataset.resultDriver)')
+            assert set(result_keys) == {'daniel','felipe','marquinhos','npc-blue','npc-yellow','npc-purple','npc-silver'}
+            assert page.locator('tbody tr.player-row').get_attribute('data-result-driver') == 'marquinhos'
             winner = page.locator('tbody tr').first.get_attribute('data-result-driver')
-            assert winner in ['daniel', 'felipe', 'npc-blue', 'npc-yellow', 'npc-purple', 'npc-silver']
+            assert winner in result_keys
+            assert 'null' not in page.locator('.results-screen').inner_text() and 'undefined' not in page.locator('.results-screen').inner_text()
             assert page.locator('td', has_text='Não concluiu').count() >= 1
             shot('natural-finish-results')
             page.get_by_role('button', name='VER PÓDIO', exact=True).tap()
@@ -206,8 +245,9 @@ def verify_viewport(browser, url, output, width, height, reduced):
                 overlap = (caption_box['x'] < number['x'] + number['width'] and caption_box['x'] + caption_box['width'] > number['x']
                            and caption_box['y'] < number['y'] + number['height'] and caption_box['y'] + caption_box['height'] > number['y'])
                 assert not overlap, 'Podium runner caption cannot cover its place number'
-            report['checks'].append('natural complete race, six real standings and winner-specific animated champagne podium')
+            report['checks'].append('natural complete race with Marquinhos, seven real standings and actual-winner animated champagne podium')
             report['natural_winner'] = winner
+            report['natural_result_order'] = result_keys
             page.locator('#podium-replay').tap()
             screen('grid')
             page.get_by_role('button', name='LARGAR', exact=True).tap()
@@ -266,7 +306,7 @@ def main():
                 options['executable_path'] = args.executable_path
             browser = p.chromium.launch(**options)
             summary['browser_version'] = browser.version
-            for width, height, reduced in [(915, 412, False), (740, 360, True)]:
+            for width, height, reduced in [(915, 412, False), (740, 360, True), (1440, 900, True)]:
                 report = verify_viewport(browser, args.url, output, width, height, reduced)
                 summary['reports'].append(report)
                 print(width, height, report['status'], flush=True)

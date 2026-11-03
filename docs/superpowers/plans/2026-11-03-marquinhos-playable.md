@@ -32,3 +32,8 @@ Tarefas independentes serão delegadas em paralelo com posse exclusiva de arquiv
 Primeiro registrar testes que falham para a nova funcionalidade, implementar e executar a suíte completa. No Chromium: capa/seleção desktop e celular, corrida natural com Marquinhos e sete participantes, todos os estados visuais, escala em profundidade igual, classificação/pódio de todos os vencedores, áudio liberado no primeiro gesto, pausa e multitoque. Validar caminhos relativos e ausência de 404. Auditar arquivos e origens; não afirmar Android físico ou audição humana sem medi-los.
 
 Após revisão independente e correções: commit local, atualizar apenas `/teste-v4/`, conferir hashes das páginas anteriores, publicar fonte na branch V4 autorizada e verificar CI público e seu artefato. Atualizar changelog/QA com evidências e limitações reais; entregar link após verificação.
+
+## Estado executado
+Integração e QA local concluídos. Suíte70/70, auditoria248SHA, Chromium real e revisão independente passaram; relatório em V4_QA_REPORT.md. Publicação interrompida pela revisão automática, que exige confirmação específica dos novos assets pessoais de Marquinhos no repositório público. Não retomar envios até a confirmação do usuário. Nenhuma ref/implantação movida. O pacote Pages local e o helper de31imagens permanecem preparados.
+
+O proprietário respondeu ao bloqueio: “Ok se depender de mim está liberado”, autorizando o envio desta atualização com as novas artes de Marquinhos, caminhão e capa ao GitHub público e `/teste-v4/`. O bloqueio operacional acima foi superado por essa nova confirmação; publicação e verificação pública ainda serão registradas após ocorrerem.

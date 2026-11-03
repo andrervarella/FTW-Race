@@ -40,16 +40,21 @@ PROBE = r'''(() => {
  const sample = async (output,milliseconds=300) => {
    if (!output) return {peak:0,rms:0,frames:0,context:null};
    const start=performance.now(), before=output.context.currentTime;
-   let peak=0,sum=0,frames=0;
+   let peak=0,sum=0,frames=0,snapshots=0,maxTimerGap=0,lastSnapshot=start;
    do {
+     const now=performance.now();maxTimerGap=Math.max(maxTimerGap,now-lastSnapshot);lastSnapshot=now;snapshots++;
      const data=new Float32Array(output.analyser.fftSize); output.analyser.getFloatTimeDomainData(data);
      for(const value of data){ if(!Number.isFinite(value))throw Error('Nonfinite output sample');peak=Math.max(peak,Math.abs(value));sum+=value*value;frames++; }
      await new Promise(resolve=>setTimeout(resolve,10));
-   } while(performance.now()-start<milliseconds);
+   // One delayed 10ms timer previously ended the wall-clock window after a
+   // single <47ms analyser block. Observe multiple actual output blocks even
+   // when a loaded browser delays timers; never lower the signal threshold.
+   } while((performance.now()-start<milliseconds||snapshots<8)&&performance.now()-start<10000);
    const elapsed=output.context.currentTime-before;
    // Suspended analysers retain the last rendered block; it is not live output.
-   if(output.context.state!=='running'||elapsed===0)return {peak:null,rms:null,frames:0,context:output.context.state,contextElapsed:elapsed};
-   return {peak,rms:Math.sqrt(sum/Math.max(frames,1)),frames,context:output.context.state,contextElapsed:elapsed};
+   if(output.context.state!=='running'||elapsed===0)return {peak:null,rms:null,frames:0,context:output.context.state,contextElapsed:elapsed,snapshots,wallElapsed:performance.now()-start,maxTimerGap};
+   if(snapshots<8)throw Error('Insufficient live audio observations: '+snapshots+' in '+(performance.now()-start)+'ms');
+   return {peak,rms:Math.sqrt(sum/Math.max(frames,1)),frames,context:output.context.state,contextElapsed:elapsed,snapshots,wallElapsed:performance.now()-start,maxTimerGap};
  };
  window.__sampleLiveAudio = milliseconds => sample(__audioOutputs.at(-1),milliseconds);
  window.__sampleAudioBus = async (name,milliseconds=300) => {
@@ -102,12 +107,24 @@ def main():
         server=http.server.ThreadingHTTPServer(('127.0.0.1',0),functools.partial(Quiet,directory=str(root)))
         threading.Thread(target=server.serve_forever,daemon=True).start()
         url=f'http://127.0.0.1:{server.server_port}/game/'
-    report={'url':url,'scope':'real Chromium mobile/touch emulation; live output graph, not physical speakers','cues':[],'errors':[]}
+    report={'url':url,'scope':'real Chromium mobile/touch emulation; live output graph, not physical speakers','cues':[],'errors':[],
+            'http_errors':[],'failed_requests':[],'console_errors':[],'screenshots':[]}
     try:
         with sync_playwright()as p:
             options={'args':['--no-sandbox','--disable-dev-shm-usage','--autoplay-policy=document-user-activation-required'],'ignore_default_args':['--mute-audio']}
             if args.executable_path:options['executable_path']=args.executable_path
             browser=p.chromium.launch(**options);report['browser']=browser.version
+            # A normal first touch must unlock the music, without first visiting
+            # a sound control or injecting an AudioContext resume from automation.
+            gesture_context=browser.new_context(viewport={'width':915,'height':412},is_mobile=True,has_touch=True)
+            gesture=gesture_context.new_page();gesture.add_init_script(PROBE);gesture.goto(url)
+            gesture.wait_for_function('document.body.dataset.ready === "true"')
+            assert gesture.evaluate('__audioContexts.length')==0
+            gesture.locator('#press-start').tap();gesture.wait_for_timeout(450)
+            first_gesture=gesture.evaluate('__sampleLiveAudio(250)')
+            report['first_press_start_touch']=first_gesture
+            assert first_gesture['rms']>0.001 and gesture.evaluate('__audioResumeCalls[0].active'),'The first normal touch must resume Web Audio under trusted activation'
+            gesture_context.close()
             report['keyboard']=[]
             for key in ['Space','Enter']:
                 keyboard_context=browser.new_context(viewport={'width':915,'height':412})
@@ -126,6 +143,9 @@ def main():
             context=browser.new_context(viewport={'width':915,'height':412},is_mobile=True,has_touch=True)
             page=context.new_page();page.add_init_script(PROBE)
             page.on('pageerror',lambda error:report['errors'].append(str(error)))
+            page.on('response',lambda response:report['http_errors'].append({'status':response.status,'url':response.url})if response.status>=400 else None)
+            page.on('requestfailed',lambda request:report['failed_requests'].append({'url':request.url,'failure':request.failure}))
+            page.on('console',lambda message:report['console_errors'].append(message.text)if message.type=='error'else None)
             page.goto(url);page.wait_for_function('document.body.dataset.ready === "true"')
             page.evaluate('''async moduleUrl=>{
               const {GameAudio}=await import(moduleUrl),unlock=GameAudio.prototype.unlock;
@@ -141,6 +161,7 @@ def main():
             first=page.evaluate('__sampleLiveAudio(350)');report['first_sound_tap']=first
             report['first_sound_mode']=page.evaluate('__liveGameAudio.mode')
             assert report['first_sound_mode']=='tudo' and first['rms']>0.001,'First sound tap must enable menu music, not switch to silent effects-only menu'
+            assert page.evaluate('__audioResumeCalls[0].active'),'Initial audio resume must run inside a trusted gesture'
             assert page.locator('#screen-sound').inner_text()!='ATIVAR SOM'
             recording=page.evaluate('__recordLiveAudio(1000)');(out/'menu-live.webm').write_bytes(base64.b64decode(recording.pop('base64')));report['recording']=recording
             page.evaluate("window.dispatchEvent(new Event('blur'))")
@@ -149,9 +170,9 @@ def main():
             control_resume=page.evaluate('__sampleLiveAudio(200)');report['resume_via_sound_control']=control_resume
             assert page.evaluate('__liveGameAudio.mode')=='tudo' and control_resume['rms']>0.001
             page.locator('#screen-sound').tap();page.wait_for_timeout(650)
-            effects=page.evaluate('__sampleLiveAudio(180)');assert page.evaluate('__liveGameAudio.mode')=='efeitos' and effects['rms']<0.0001
+            effects=page.evaluate('__sampleLiveAudio(180)');report['effects_menu_output']=effects;assert page.evaluate('__liveGameAudio.mode')=='efeitos' and effects['rms']<0.0001
             page.locator('#screen-sound').tap();page.wait_for_timeout(450)
-            mute=page.evaluate('__sampleLiveAudio(180)');assert page.evaluate('__liveGameAudio.mode')=='mudo' and mute['rms']<0.0001
+            mute=page.evaluate('__sampleLiveAudio(180)');report['muted_menu_output']=mute;assert page.evaluate('__liveGameAudio.mode')=='mudo' and mute['rms']<0.0001
             page.evaluate("window.dispatchEvent(new Event('blur'))")
             page.wait_for_function('__liveGameAudio.ctx.state === "suspended"')
             location=page.locator('.cover-location').bounding_box()
@@ -165,6 +186,10 @@ def main():
             page.locator('#screen-sound').tap();page.wait_for_timeout(350)
             assert page.evaluate('__liveGameAudio.mode')=='tudo'
             assert page.evaluate('__sampleLiveAudio(200)')['rms']>0.001
+            assert page.locator('[data-driver]').count()==3
+            page.locator('[data-driver="marquinhos"]').tap()
+            assert page.locator('[data-driver="marquinhos"]').get_attribute('aria-pressed')=='true'
+            report['selected_driver']='marquinhos'
             page.locator('#laps').select_option('1');page.get_by_role('button',name='CONFIRMAR PILOTO',exact=True).tap();page.get_by_role('button',name='LARGAR',exact=True).tap()
             page.wait_for_function('document.querySelector("#ui").dataset.phase === "countdown"')
             countdown=page.evaluate('__sampleLiveAudio(500)');report['countdown']=countdown
@@ -173,6 +198,16 @@ def main():
             page.wait_for_timeout(700)
             engine=page.evaluate('__sampleAudioBus("engine",250)');report['engine_bus']=engine;assert engine['rms']>0.001
             music=page.evaluate('__sampleAudioBus("music",250)');report['racing_music_bus']=music;assert music['rms']>0.001
+            page.locator('#sound').tap();page.wait_for_timeout(700)
+            effects_engine=page.evaluate('__sampleAudioBus("engine",200)')
+            effects_music=page.evaluate('__sampleAudioBus("music",200)')
+            report['effects_race_buses']={'engine':effects_engine,'music':effects_music}
+            assert page.evaluate('__liveGameAudio.mode')=='efeitos' and effects_engine['rms']>0.001 and effects_music['rms']<0.0001
+            page.locator('#sound').tap();page.wait_for_timeout(500)
+            muted_race=page.evaluate('__sampleLiveAudio(200)');report['muted_race_output']=muted_race
+            assert page.evaluate('__liveGameAudio.mode')=='mudo' and muted_race['rms']<0.0001
+            page.locator('#sound').tap();page.wait_for_timeout(500)
+            assert page.evaluate('__liveGameAudio.mode')=='tudo' and page.evaluate('__sampleLiveAudio(200)')['rms']>0.001
             cdp=context.new_cdp_session(page)
             nitro_box=page.locator('[data-action="nitro"]').bounding_box()
             throttle_box=page.locator('[data-action="throttle"]').bounding_box()
@@ -181,6 +216,7 @@ def main():
             cdp.send('Input.dispatchTouchEvent',{'type':'touchStart','touchPoints':points})
             page.wait_for_function('document.querySelector("#charges-left").textContent === "1"')
             nitro=page.evaluate('__sampleLiveAudio(300)');report['real_nitro_control']=nitro;assert nitro['rms']>0.001
+            page.screenshot(path=str(out/'marquinhos-live-nitro-audio.png'));report['screenshots'].append('marquinhos-live-nitro-audio.png')
             cdp.send('Input.dispatchTouchEvent',{'type':'touchEnd','touchPoints':[]})
             report['race_cue_calls']=page.evaluate('__liveAudioEvents')
             assert sum(event['method']=='beep'for event in report['race_cue_calls'])>=3
@@ -214,7 +250,7 @@ def main():
             page.evaluate('__liveGameAudio.hit(1);__liveGameAudio.nitro();__liveGameAudio.podium(5)')
             muted=page.evaluate('__sampleLiveAudio(300)');assert muted['rms']<0.0001
             report['resume_calls']=page.evaluate('__audioResumeCalls')
-            assert not report['errors'],report['errors']
+            assert not report['errors'] and not report['http_errors'] and not report['failed_requests'] and not report['console_errors'],report
             report['status']='passed';browser.close()
     except Exception:
         report['status']='failed';report['exception']=traceback.format_exc()

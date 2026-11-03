@@ -1,0 +1,160 @@
+{
+  "date": "2026-11-03",
+  "scope": "local served Pages package; Chromium emulation, not physical Android or public deployment",
+  "baselineCommit": "8f45e72598ad01fcc43091e8501ae7bf01c547c1",
+  "integrationCommit": "ea1ea92adf2700d6f294625660a8a9a90071466b",
+  "node": {
+    "tests": 70,
+    "pass": 70,
+    "fail": 0
+  },
+  "assetAudit": {
+    "sha256Files": 248,
+    "podiumBodies": 42,
+    "byteIdenticalMarquinhosRuntimeImages": 19
+  },
+  "browser": "154.0.8037.57",
+  "viewports": [
+    {
+      "viewport": "915x412",
+      "status": "passed",
+      "checks": [
+        "43 served accepted art hashes/dimensions, original logos and physical title touch target",
+        "four reference NPC raster atlases with six curve and brake views each",
+        "three playable drivers, Marquinhos selected without number, seven-car grid/HUD/minimap and natural countdown",
+        "real held acceleration, two touch pointers and release",
+        "natural complete race with Marquinhos, seven real standings and actual-winner animated champagne podium",
+        "pause/resume, portrait rotation, Daniel #22 and return to title"
+      ],
+      "httpErrors": 0,
+      "jsErrors": 0,
+      "outsideSubfolder": 0
+    },
+    {
+      "viewport": "740x360-reduced",
+      "status": "passed",
+      "checks": [
+        "43 served accepted art hashes/dimensions, original logos and physical title touch target",
+        "four reference NPC raster atlases with six curve and brake views each",
+        "reduced-motion title",
+        "three playable drivers, Marquinhos selected without number, seven-car grid/HUD/minimap and natural countdown",
+        "real held acceleration, two touch pointers and release",
+        "pause/resume, portrait rotation, Daniel #22 and return to title"
+      ],
+      "httpErrors": 0,
+      "jsErrors": 0,
+      "outsideSubfolder": 0
+    },
+    {
+      "viewport": "1440x900-reduced",
+      "status": "passed",
+      "checks": [
+        "43 served accepted art hashes/dimensions, original logos and physical title touch target",
+        "four reference NPC raster atlases with six curve and brake views each",
+        "reduced-motion title",
+        "three playable drivers, Marquinhos selected without number, seven-car grid/HUD/minimap and natural countdown",
+        "real held acceleration, two touch pointers and release",
+        "pause/resume, portrait rotation, Daniel #22 and return to title"
+      ],
+      "httpErrors": 0,
+      "jsErrors": 0,
+      "outsideSubfolder": 0
+    }
+  ],
+  "naturalWinner": "npc-purple",
+  "naturalOrder": [
+    "npc-purple",
+    "npc-yellow",
+    "daniel",
+    "felipe",
+    "npc-silver",
+    "npc-blue",
+    "marquinhos"
+  ],
+  "truckRenderer": {
+    "status": "passed",
+    "statesByRole": 12,
+    "uniformWidthRatio": 1.716819571865443,
+    "uniformHeightRatio": 1.7168195718654433,
+    "collision": {
+      "width": {
+        "car": {
+          "hitCount": 0,
+          "playerHit": 0,
+          "targetHit": 0,
+          "gap": 2.000888343900442e-11,
+          "lateral": 0.605,
+          "widthFactor": 1,
+          "lengthFactor": 1
+        },
+        "truck": {
+          "hitCount": 1,
+          "playerHit": 0.35,
+          "targetHit": 0.35,
+          "gap": 2.000888343900442e-11,
+          "lateral": 0.6600000000000001,
+          "widthFactor": 1.4,
+          "lengthFactor": 1.4
+        }
+      },
+      "length": {
+        "car": {
+          "hitCount": 0,
+          "playerHit": 0,
+          "targetHit": 0,
+          "gap": 9.900000000019986,
+          "lateral": 2.5200023558031235e-17,
+          "widthFactor": 1,
+          "lengthFactor": 1
+        },
+        "truck": {
+          "hitCount": 1,
+          "playerHit": 0.35,
+          "targetHit": 0.35,
+          "gap": 10.800000000000296,
+          "lateral": 2.5200023558031235e-17,
+          "widthFactor": 1.4,
+          "lengthFactor": 1.4
+        }
+      }
+    }
+  },
+  "uiFixtures": {
+    "uiFlow": "PASS; three pilots, seven winners, mobile/desktop/reduced motion and input lifecycle",
+    "podiumLayout": "PASS; seven winners x three viewports; minimum44x44"
+  },
+  "slowBoot": "PASS; delayed asset recovers and genuine load failure remains visible",
+  "liveAudio": {
+    "status": "passed",
+    "browser": "154.0.8037.57",
+    "quality": "normal",
+    "selectedDriver": "marquinhos",
+    "firstPressStartRms": 0.04607182813183643,
+    "firstSoundButtonRms": 0.034302575053390426,
+    "engineRms": 0.07412443741367296,
+    "racingMusicRms": 0.019600169200759465,
+    "effectsModeMusicRms": 0,
+    "mutedRaceRms": 3.2510796621784938e-06,
+    "oneShotCues": 13,
+    "continuousCues": 3,
+    "menuRecordingBytes": 13820,
+    "minimumObservedSnapshots": 8,
+    "sampleDeadlineSeconds": 10,
+    "httpErrors": 0,
+    "jsErrors": 0,
+    "physicalSpeakerListening": false
+  },
+  "independentReview": "No blocking production findings;39 focused tests and three natural headless races passed",
+  "publication": {
+    "status": "OWNER_AUTHORIZED_AWAITING_PUBLISH",
+    "reason": "Reviewer requires explicit trusted user approval for the newly identifiable Marquinhos assets at public GitHub destination; prior broad approval recorded in files was not accepted",
+    "refsMoved": false,
+    "newPublicDeploymentVerified": false,
+    "partialUnreferencedTransferObjects": 13,
+    "sourceHead": "cc8d5b70d0dd9f113fbdd83ddf0814968e54bcdb",
+    "pagesHead": "a5284638a65901cdd9b55e6ede19b17c572f65b3",
+    "transferHead": "740342f8ef0a91149b5382a972efe6a2122391cd",
+    "legacyPagesFilesUnchanged": 46,
+    "specificUserAuthorization": "Ok se depender de mim está liberado"
+  }
+}

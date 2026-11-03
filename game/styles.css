@@ -169,3 +169,7 @@ button:active{filter:brightness(1.2)}
   .cover-footer .icon-button,.cover-footer .cover-fullscreen{font-size:11px;padding:0 9px}
 }
 @media(orientation:portrait){.drivers{grid-template-columns:1fr}.driver{min-height:180px}}
+@media(max-width:760px) and (orientation:landscape){
+  .driver .menu-car{width:36%;height:25%;top:3%;right:2%}
+  .driver[data-vehicle="truck"] .menu-car{width:39%;height:28%;top:3%;right:2%}
+}
