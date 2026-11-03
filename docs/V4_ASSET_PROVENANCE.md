@@ -1,5 +1,10 @@
 # V4 renderer/asset derivation — 01/11/2026
 
+## Cavalo mecânico simples — 03/11/2026
+- Interpretação4×2 comunicada a partir de “E um cavalo mecânico simples”. Proposta frontal e prancha de seis vistas preservadas em `assets/previews/v4/truck-vehicle/`, com hashes e condição de revisão em `sources.json`. Ano/versão exatos não confirmados; fotos do proprietário orientam vermelho/Diabo Verde no para-brisa/FTW nas portas e fontes públicas documentam estrutura convencional, sem carreta.
+- Derivados em `assets/sprites/v4/truck-vehicle/`: seis PNGs560×512, atlas1680×1024, chão470/pivô comum, frente/menu, contatos e comparação de porte. Recortes/âncoras técnicas revisados, escala comum e alpha residual removido sem selecionar cor vermelha. Nenhum espelhamento, rotação ou reconstrução procedural de carroceria.
+- Freios são desenhos gerados quase idênticos; diferenças/Ious registrados, não se afirma diferença só nas lanternas. Porte futuro calibrado por fator uniforme1,71682para largura comparada1,4015×Mercedes; normalização do PNG é separada da escala do jogo. Nenhuma mudança ao runtime. QA e pacote em TRUCK_VEHICLE_SPRITES.md; toda arte do caminhão aguarda revisão humana.
+
 ## Novo motorista — 03/11/2026
 - Base final aprovada explicitamente com “Ótimo. Essa última ficou perfeita. Ela é a referência.”; PNG original preservado sem alteração em `assets/previews/v4/truck-driver/master-approved.png`.
 - A prancha `podium-generated-source.png` contém seis poses reais geradas numa única edição da base: entrada, receber/erguer taça, abrir/borrifar garrafa e comemorar. Novas poses aguardam revisão humana; não são membros recortados/rotacionados. Boné vermelho Mercedes e polo FTW nova em todas.

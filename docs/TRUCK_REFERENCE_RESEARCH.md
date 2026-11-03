@@ -1,5 +1,9 @@
 # Caminhão — referências técnicas pesquisadas
 
+## Atualização de configuração
+
+O proprietário esclareceu depois: “E um cavalo mecânico simples”. A interpretação de dois eixos4×2 foi comunicada e passou a orientar as propostas de sprites. Ano/versão exatos continuam não confirmados. A pergunta anterior sobre eixos não deve continuar bloqueando a preparação. Ver `TRUCK_VEHICLE_SPRITES.md`.
+
 ## Pedido e estado
 
 Em03/11/2026 o proprietário informou não ter fotos traseiras e pediu pesquisa na internet. A pesquisa encontrou fotografias do IVECO S-Way desacoplado e fichas oficiais. A família S-Way corresponde visualmente à cabine enviada; ano, versão e eixos da unidade FTW ainda não estão confirmados. A primeira ilustração frontal continua uma proposta, com traseira provisória.

@@ -1,0 +1,157 @@
+{
+  "frames": {
+    "rear.png": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 560,
+        "h": 512
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 560,
+        "h": 512
+      },
+      "sourceSize": {
+        "w": 560,
+        "h": 512
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.91796875
+      }
+    },
+    "left.png": {
+      "frame": {
+        "x": 560,
+        "y": 0,
+        "w": 560,
+        "h": 512
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 560,
+        "h": 512
+      },
+      "sourceSize": {
+        "w": 560,
+        "h": 512
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.91796875
+      }
+    },
+    "right.png": {
+      "frame": {
+        "x": 1120,
+        "y": 0,
+        "w": 560,
+        "h": 512
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 560,
+        "h": 512
+      },
+      "sourceSize": {
+        "w": 560,
+        "h": 512
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.91796875
+      }
+    },
+    "brake.png": {
+      "frame": {
+        "x": 0,
+        "y": 512,
+        "w": 560,
+        "h": 512
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 560,
+        "h": 512
+      },
+      "sourceSize": {
+        "w": 560,
+        "h": 512
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.91796875
+      }
+    },
+    "left-brake.png": {
+      "frame": {
+        "x": 560,
+        "y": 512,
+        "w": 560,
+        "h": 512
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 560,
+        "h": 512
+      },
+      "sourceSize": {
+        "w": 560,
+        "h": 512
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.91796875
+      }
+    },
+    "right-brake.png": {
+      "frame": {
+        "x": 1120,
+        "y": 512,
+        "w": 560,
+        "h": 512
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 560,
+        "h": 512
+      },
+      "sourceSize": {
+        "w": 560,
+        "h": 512
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.91796875
+      }
+    }
+  },
+  "meta": {
+    "image": "truck-atlas.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 1680,
+      "h": 1024
+    },
+    "scale": "1"
+  }
+}

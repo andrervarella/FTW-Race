@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-03",
+  "status": "art-proposal-for-owner-review",
+  "vehicle": "red IVECO high-cab tractor",
+  "modelFamily": "S-Way visual match/inference; exact year/model not established",
+  "configuration": {
+    "workingType": "4x2",
+    "axles": 2,
+    "rearAxles": 1,
+    "rearDualTires": true,
+    "ownerText": "E um cavalo mecânico simples",
+    "basis": "assistant interpretation communicated to owner; not a decoded vehicle specification"
+  },
+  "trailer": false,
+  "branding": "Diabo Verde on front windshield strip; new FTW on visible doors; no invented rear sponsor graphics",
+  "externalReferenceDoc": "docs/TRUCK_REFERENCE_RESEARCH.md",
+  "sourcePhotos": "three owner-supplied photographs in conversation; external photos used for structural study only, not copied into runtime",
+  "ownerApproval": false,
+  "gameIntegration": false,
+  "sources": [
+    {
+      "file": "assets/previews/v4/truck-vehicle/front-proposal.png",
+      "originalPath": "/workspace/generated_images/exec-904ce894-8ce8-444f-a98a-8ffb1e5ffcd0.png",
+      "view": "front three-quarter",
+      "sha256": "d1fb027131e8f0570a5a006b9201134f2431bb3cdfc21262473f5266f205d152",
+      "size": [
+        1402,
+        1122
+      ],
+      "mode": "RGBA",
+      "ownerApproved": false
+    },
+    {
+      "file": "assets/previews/v4/truck-vehicle/rear-generated-source.png",
+      "originalPath": "/workspace/generated_images/exec-c135c0e6-4e6f-42ce-82a8-216322b1b31d.png",
+      "view": "3x2 rear driving/braking state sheet",
+      "sha256": "d2dd93e336c576fa6e3cc68cc85d38f8739037771f37d7de4343260b38414260",
+      "size": [
+        1606,
+        979
+      ],
+      "mode": "RGBA",
+      "ownerApproved": false
+    }
+  ]
+}

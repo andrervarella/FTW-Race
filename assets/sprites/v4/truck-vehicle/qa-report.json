@@ -1,0 +1,2220 @@
+{
+  "schemaVersion": 1,
+  "status": "technical-checks-passed; all-vehicle-art-pending-owner-review",
+  "issues": [],
+  "sourceHashes": {
+    "source": "d2dd93e336c576fa6e3cc68cc85d38f8739037771f37d7de4343260b38414260",
+    "front": "d1fb027131e8f0570a5a006b9201134f2431bb3cdfc21262473f5266f205d152",
+    "carReference": "a4356de4182a078432e411b5fd6c68862790a05aa9f631129fd0a99711170e5a",
+    "anchors": "ffdfc00c265764b40e3345a454338f128e3726bc671d7742566228f766ea651f"
+  },
+  "preparationScriptSha256": "6dcbcb811bfe276dfcab10d29c4b8296b1149e72e9cb0a5442de5ba6005b5d12",
+  "approval": "all-vehicle-art-pending-owner-review",
+  "software": {
+    "python": "3.12.14",
+    "Pillow": "12.3.0",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "grid": {
+    "layout": [
+      3,
+      2
+    ],
+    "sourceSize": [
+      1606,
+      979
+    ],
+    "boxes": [
+      [
+        113,
+        1,
+        463,
+        481
+      ],
+      [
+        570,
+        0,
+        1024,
+        478
+      ],
+      [
+        1104,
+        0,
+        1541,
+        478
+      ],
+      [
+        113,
+        493,
+        463,
+        973
+      ],
+      [
+        570,
+        492,
+        1024,
+        969
+      ],
+      [
+        1104,
+        492,
+        1542,
+        969
+      ]
+    ],
+    "method": "explicit-reviewed-boxes"
+  },
+  "poses": [
+    {
+      "name": "rear",
+      "sourceCrop": [
+        113,
+        1,
+        463,
+        481
+      ],
+      "cleanup": {
+        "alphaFloorInclusive": 8,
+        "removedLowAlphaPixels": 6325,
+        "removedDetachedVisiblePixels": 40,
+        "tinyComponentAreaLimit": 12,
+        "components": [
+          {
+            "id": 1,
+            "area": 124198,
+            "bbox": [
+              12,
+              12,
+              338,
+              468
+            ],
+            "decision": "keep-main-body"
+          },
+          {
+            "id": 2,
+            "area": 1,
+            "bbox": [
+              225,
+              26,
+              226,
+              27
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 3,
+            "area": 1,
+            "bbox": [
+              52,
+              48,
+              53,
+              49
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 4,
+            "area": 1,
+            "bbox": [
+              52,
+              52,
+              53,
+              53
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 5,
+            "area": 1,
+            "bbox": [
+              297,
+              54,
+              298,
+              55
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 6,
+            "area": 1,
+            "bbox": [
+              43,
+              117,
+              44,
+              118
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 7,
+            "area": 1,
+            "bbox": [
+              307,
+              134,
+              308,
+              135
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 8,
+            "area": 3,
+            "bbox": [
+              307,
+              136,
+              308,
+              139
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 9,
+            "area": 2,
+            "bbox": [
+              42,
+              147,
+              43,
+              149
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 10,
+            "area": 2,
+            "bbox": [
+              42,
+              150,
+              43,
+              152
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 11,
+            "area": 2,
+            "bbox": [
+              310,
+              187,
+              311,
+              189
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 12,
+            "area": 1,
+            "bbox": [
+              329,
+              194,
+              330,
+              195
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 13,
+            "area": 1,
+            "bbox": [
+              320,
+              202,
+              321,
+              203
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 14,
+            "area": 1,
+            "bbox": [
+              35,
+              209,
+              36,
+              210
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 15,
+            "area": 1,
+            "bbox": [
+              309,
+              211,
+              310,
+              212
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 16,
+            "area": 6,
+            "bbox": [
+              311,
+              279,
+              312,
+              285
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 17,
+            "area": 1,
+            "bbox": [
+              311,
+              289,
+              312,
+              290
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 18,
+            "area": 1,
+            "bbox": [
+              311,
+              294,
+              312,
+              295
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 19,
+            "area": 1,
+            "bbox": [
+              333,
+              316,
+              334,
+              317
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 20,
+            "area": 2,
+            "bbox": [
+              119,
+              427,
+              120,
+              429
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 21,
+            "area": 1,
+            "bbox": [
+              20,
+              431,
+              21,
+              432
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 22,
+            "area": 1,
+            "bbox": [
+              236,
+              431,
+              237,
+              432
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 23,
+            "area": 5,
+            "bbox": [
+              332,
+              442,
+              333,
+              447
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 24,
+            "area": 1,
+            "bbox": [
+              331,
+              449,
+              332,
+              450
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 25,
+            "area": 2,
+            "bbox": [
+              22,
+              450,
+              23,
+              452
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          }
+        ],
+        "retainedSourcePixelsUnchanged": true,
+        "usesColorDetector": false
+      },
+      "sourceUseful": {
+        "bbox": [
+          12,
+          12,
+          338,
+          468
+        ],
+        "width": 326,
+        "height": 456
+      },
+      "anchor": {
+        "bbox": [
+          12,
+          12,
+          338,
+          468
+        ],
+        "width": 326,
+        "height": 456,
+        "rearAxle": [
+          175.0,
+          384.0
+        ],
+        "groundY": 468.0,
+        "root": [
+          175.0,
+          468.0
+        ],
+        "method": "explicit-reviewed-rear-axle-and-ground",
+        "axleHeightAboveGround": 84.0
+      }
+    },
+    {
+      "name": "left",
+      "sourceCrop": [
+        570,
+        0,
+        1024,
+        478
+      ],
+      "cleanup": {
+        "alphaFloorInclusive": 8,
+        "removedLowAlphaPixels": 5815,
+        "removedDetachedVisiblePixels": 27,
+        "tinyComponentAreaLimit": 14,
+        "components": [
+          {
+            "id": 1,
+            "area": 145649,
+            "bbox": [
+              12,
+              12,
+              442,
+              466
+            ],
+            "decision": "keep-main-body"
+          },
+          {
+            "id": 2,
+            "area": 1,
+            "bbox": [
+              50,
+              97,
+              51,
+              98
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 3,
+            "area": 1,
+            "bbox": [
+              49,
+              101,
+              50,
+              102
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 4,
+            "area": 1,
+            "bbox": [
+              48,
+              103,
+              49,
+              104
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 5,
+            "area": 2,
+            "bbox": [
+              34,
+              120,
+              35,
+              122
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 6,
+            "area": 1,
+            "bbox": [
+              31,
+              122,
+              32,
+              123
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 7,
+            "area": 2,
+            "bbox": [
+              11,
+              165,
+              12,
+              167
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 8,
+            "area": 1,
+            "bbox": [
+              19,
+              193,
+              20,
+              194
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 9,
+            "area": 1,
+            "bbox": [
+              27,
+              232,
+              28,
+              233
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 10,
+            "area": 13,
+            "bbox": [
+              27,
+              235,
+              28,
+              248
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 11,
+            "area": 1,
+            "bbox": [
+              27,
+              272,
+              28,
+              273
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 12,
+            "area": 1,
+            "bbox": [
+              349,
+              294,
+              350,
+              295
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 13,
+            "area": 1,
+            "bbox": [
+              437,
+              328,
+              438,
+              329
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 14,
+            "area": 1,
+            "bbox": [
+              439,
+              336,
+              440,
+              337
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          }
+        ],
+        "retainedSourcePixelsUnchanged": true,
+        "usesColorDetector": false
+      },
+      "sourceUseful": {
+        "bbox": [
+          12,
+          12,
+          442,
+          466
+        ],
+        "width": 430,
+        "height": 454
+      },
+      "anchor": {
+        "bbox": [
+          12,
+          12,
+          442,
+          466
+        ],
+        "width": 430,
+        "height": 454,
+        "rearAxle": [
+          267.0,
+          386.0
+        ],
+        "groundY": 466.0,
+        "root": [
+          267.0,
+          466.0
+        ],
+        "method": "explicit-reviewed-rear-axle-and-ground",
+        "axleHeightAboveGround": 80.0
+      }
+    },
+    {
+      "name": "right",
+      "sourceCrop": [
+        1104,
+        0,
+        1541,
+        478
+      ],
+      "cleanup": {
+        "alphaFloorInclusive": 8,
+        "removedLowAlphaPixels": 6555,
+        "removedDetachedVisiblePixels": 36,
+        "tinyComponentAreaLimit": 14,
+        "components": [
+          {
+            "id": 1,
+            "area": 141263,
+            "bbox": [
+              12,
+              11,
+              425,
+              466
+            ],
+            "decision": "keep-main-body"
+          },
+          {
+            "id": 2,
+            "area": 1,
+            "bbox": [
+              391,
+              99,
+              392,
+              100
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 3,
+            "area": 3,
+            "bbox": [
+              399,
+              136,
+              400,
+              139
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 4,
+            "area": 2,
+            "bbox": [
+              87,
+              139,
+              88,
+              141
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 5,
+            "area": 5,
+            "bbox": [
+              398,
+              141,
+              399,
+              146
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 6,
+            "area": 3,
+            "bbox": [
+              398,
+              147,
+              399,
+              150
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 7,
+            "area": 1,
+            "bbox": [
+              399,
+              152,
+              400,
+              153
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 8,
+            "area": 4,
+            "bbox": [
+              426,
+              180,
+              427,
+              184
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 9,
+            "area": 3,
+            "bbox": [
+              410,
+              200,
+              411,
+              203
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 10,
+            "area": 1,
+            "bbox": [
+              95,
+              290,
+              96,
+              291
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 11,
+            "area": 1,
+            "bbox": [
+              94,
+              296,
+              95,
+              297
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 12,
+            "area": 1,
+            "bbox": [
+              412,
+              296,
+              413,
+              297
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 13,
+            "area": 5,
+            "bbox": [
+              411,
+              353,
+              412,
+              358
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 14,
+            "area": 1,
+            "bbox": [
+              412,
+              360,
+              413,
+              361
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 15,
+            "area": 2,
+            "bbox": [
+              130,
+              422,
+              131,
+              424
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 16,
+            "area": 1,
+            "bbox": [
+              129,
+              428,
+              130,
+              429
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 17,
+            "area": 2,
+            "bbox": [
+              128,
+              433,
+              129,
+              435
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          }
+        ],
+        "retainedSourcePixelsUnchanged": true,
+        "usesColorDetector": false
+      },
+      "sourceUseful": {
+        "bbox": [
+          12,
+          11,
+          425,
+          466
+        ],
+        "width": 413,
+        "height": 455
+      },
+      "anchor": {
+        "bbox": [
+          12,
+          11,
+          425,
+          466
+        ],
+        "width": 413,
+        "height": 455,
+        "rearAxle": [
+          185.0,
+          386.0
+        ],
+        "groundY": 466.0,
+        "root": [
+          185.0,
+          466.0
+        ],
+        "method": "explicit-reviewed-rear-axle-and-ground",
+        "axleHeightAboveGround": 80.0
+      }
+    },
+    {
+      "name": "brake",
+      "sourceCrop": [
+        113,
+        493,
+        463,
+        973
+      ],
+      "cleanup": {
+        "alphaFloorInclusive": 8,
+        "removedLowAlphaPixels": 6647,
+        "removedDetachedVisiblePixels": 27,
+        "tinyComponentAreaLimit": 12,
+        "components": [
+          {
+            "id": 1,
+            "area": 124154,
+            "bbox": [
+              12,
+              12,
+              338,
+              468
+            ],
+            "decision": "keep-main-body"
+          },
+          {
+            "id": 2,
+            "area": 2,
+            "bbox": [
+              307,
+              135,
+              308,
+              137
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 3,
+            "area": 1,
+            "bbox": [
+              308,
+              140,
+              309,
+              141
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 4,
+            "area": 1,
+            "bbox": [
+              339,
+              169,
+              340,
+              170
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 5,
+            "area": 1,
+            "bbox": [
+              308,
+              170,
+              309,
+              171
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 6,
+            "area": 1,
+            "bbox": [
+              42,
+              172,
+              43,
+              173
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 7,
+            "area": 1,
+            "bbox": [
+              308,
+              172,
+              309,
+              173
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 8,
+            "area": 1,
+            "bbox": [
+              308,
+              174,
+              309,
+              175
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 9,
+            "area": 2,
+            "bbox": [
+              308,
+              176,
+              309,
+              178
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 10,
+            "area": 1,
+            "bbox": [
+              310,
+              176,
+              311,
+              177
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 11,
+            "area": 1,
+            "bbox": [
+              42,
+              178,
+              43,
+              179
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 12,
+            "area": 2,
+            "bbox": [
+              310,
+              178,
+              311,
+              180
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 13,
+            "area": 2,
+            "bbox": [
+              308,
+              180,
+              309,
+              182
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 14,
+            "area": 1,
+            "bbox": [
+              310,
+              182,
+              311,
+              183
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 15,
+            "area": 1,
+            "bbox": [
+              39,
+              211,
+              40,
+              212
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 16,
+            "area": 1,
+            "bbox": [
+              309,
+              246,
+              310,
+              247
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 17,
+            "area": 1,
+            "bbox": [
+              309,
+              270,
+              310,
+              271
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 18,
+            "area": 4,
+            "bbox": [
+              311,
+              292,
+              313,
+              295
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 19,
+            "area": 2,
+            "bbox": [
+              333,
+              314,
+              334,
+              316
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 20,
+            "area": 1,
+            "bbox": [
+              236,
+              429,
+              237,
+              430
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          }
+        ],
+        "retainedSourcePixelsUnchanged": true,
+        "usesColorDetector": false
+      },
+      "sourceUseful": {
+        "bbox": [
+          12,
+          12,
+          338,
+          468
+        ],
+        "width": 326,
+        "height": 456
+      },
+      "anchor": {
+        "bbox": [
+          12,
+          12,
+          338,
+          468
+        ],
+        "width": 326,
+        "height": 456,
+        "rearAxle": [
+          175.0,
+          384.0
+        ],
+        "groundY": 468.0,
+        "root": [
+          175.0,
+          468.0
+        ],
+        "method": "explicit-reviewed-rear-axle-and-ground",
+        "axleHeightAboveGround": 84.0
+      }
+    },
+    {
+      "name": "left-brake",
+      "sourceCrop": [
+        570,
+        492,
+        1024,
+        969
+      ],
+      "cleanup": {
+        "alphaFloorInclusive": 8,
+        "removedLowAlphaPixels": 5907,
+        "removedDetachedVisiblePixels": 32,
+        "tinyComponentAreaLimit": 14,
+        "components": [
+          {
+            "id": 1,
+            "area": 145923,
+            "bbox": [
+              12,
+              12,
+              442,
+              465
+            ],
+            "decision": "keep-main-body"
+          },
+          {
+            "id": 2,
+            "area": 2,
+            "bbox": [
+              50,
+              95,
+              51,
+              97
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 3,
+            "area": 1,
+            "bbox": [
+              42,
+              133,
+              43,
+              134
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 4,
+            "area": 1,
+            "bbox": [
+              44,
+              137,
+              45,
+              138
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 5,
+            "area": 2,
+            "bbox": [
+              43,
+              144,
+              44,
+              146
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 6,
+            "area": 2,
+            "bbox": [
+              11,
+              183,
+              12,
+              185
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 7,
+            "area": 1,
+            "bbox": [
+              19,
+              192,
+              20,
+              193
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 8,
+            "area": 1,
+            "bbox": [
+              27,
+              219,
+              28,
+              220
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 9,
+            "area": 1,
+            "bbox": [
+              27,
+              223,
+              28,
+              224
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 10,
+            "area": 1,
+            "bbox": [
+              27,
+              225,
+              28,
+              226
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 11,
+            "area": 2,
+            "bbox": [
+              27,
+              228,
+              28,
+              230
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 12,
+            "area": 2,
+            "bbox": [
+              409,
+              297,
+              411,
+              298
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 13,
+            "area": 2,
+            "bbox": [
+              350,
+              298,
+              352,
+              299
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 14,
+            "area": 1,
+            "bbox": [
+              436,
+              324,
+              437,
+              325
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 15,
+            "area": 1,
+            "bbox": [
+              21,
+              362,
+              22,
+              363
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 16,
+            "area": 1,
+            "bbox": [
+              42,
+              384,
+              43,
+              385
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 17,
+            "area": 1,
+            "bbox": [
+              44,
+              384,
+              45,
+              385
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 18,
+            "area": 1,
+            "bbox": [
+              45,
+              388,
+              46,
+              389
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 19,
+            "area": 1,
+            "bbox": [
+              46,
+              392,
+              47,
+              393
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 20,
+            "area": 1,
+            "bbox": [
+              47,
+              395,
+              48,
+              396
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 21,
+            "area": 2,
+            "bbox": [
+              107,
+              406,
+              109,
+              407
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 22,
+            "area": 1,
+            "bbox": [
+              120,
+              409,
+              121,
+              410
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 23,
+            "area": 1,
+            "bbox": [
+              63,
+              418,
+              64,
+              419
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 24,
+            "area": 1,
+            "bbox": [
+              322,
+              424,
+              323,
+              425
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 25,
+            "area": 2,
+            "bbox": [
+              434,
+              437,
+              436,
+              438
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          }
+        ],
+        "retainedSourcePixelsUnchanged": true,
+        "usesColorDetector": false
+      },
+      "sourceUseful": {
+        "bbox": [
+          12,
+          12,
+          442,
+          465
+        ],
+        "width": 430,
+        "height": 453
+      },
+      "anchor": {
+        "bbox": [
+          12,
+          12,
+          442,
+          465
+        ],
+        "width": 430,
+        "height": 453,
+        "rearAxle": [
+          267.0,
+          385.0
+        ],
+        "groundY": 465.0,
+        "root": [
+          267.0,
+          465.0
+        ],
+        "method": "explicit-reviewed-rear-axle-and-ground",
+        "axleHeightAboveGround": 80.0
+      }
+    },
+    {
+      "name": "right-brake",
+      "sourceCrop": [
+        1104,
+        492,
+        1542,
+        969
+      ],
+      "cleanup": {
+        "alphaFloorInclusive": 8,
+        "removedLowAlphaPixels": 6066,
+        "removedDetachedVisiblePixels": 42,
+        "tinyComponentAreaLimit": 14,
+        "components": [
+          {
+            "id": 1,
+            "area": 141582,
+            "bbox": [
+              12,
+              12,
+              426,
+              465
+            ],
+            "decision": "keep-main-body"
+          },
+          {
+            "id": 2,
+            "area": 1,
+            "bbox": [
+              384,
+              72,
+              385,
+              73
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 3,
+            "area": 1,
+            "bbox": [
+              386,
+              78,
+              387,
+              79
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 4,
+            "area": 2,
+            "bbox": [
+              399,
+              136,
+              400,
+              138
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 5,
+            "area": 2,
+            "bbox": [
+              399,
+              139,
+              400,
+              141
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 6,
+            "area": 2,
+            "bbox": [
+              399,
+              145,
+              400,
+              147
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 7,
+            "area": 1,
+            "bbox": [
+              426,
+              183,
+              427,
+              184
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 8,
+            "area": 1,
+            "bbox": [
+              412,
+              283,
+              413,
+              284
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 9,
+            "area": 1,
+            "bbox": [
+              413,
+              292,
+              414,
+              293
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 10,
+            "area": 2,
+            "bbox": [
+              50,
+              297,
+              52,
+              298
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 11,
+            "area": 1,
+            "bbox": [
+              93,
+              297,
+              94,
+              298
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 12,
+            "area": 10,
+            "bbox": [
+              413,
+              299,
+              414,
+              309
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 13,
+            "area": 2,
+            "bbox": [
+              413,
+              311,
+              414,
+              313
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 14,
+            "area": 1,
+            "bbox": [
+              413,
+              320,
+              414,
+              321
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 15,
+            "area": 1,
+            "bbox": [
+              413,
+              323,
+              414,
+              324
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 16,
+            "area": 1,
+            "bbox": [
+              413,
+              326,
+              414,
+              327
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 17,
+            "area": 1,
+            "bbox": [
+              15,
+              335,
+              16,
+              336
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 18,
+            "area": 3,
+            "bbox": [
+              412,
+              342,
+              413,
+              345
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 19,
+            "area": 2,
+            "bbox": [
+              11,
+              358,
+              12,
+              360
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 20,
+            "area": 1,
+            "bbox": [
+              395,
+              382,
+              396,
+              383
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 21,
+            "area": 1,
+            "bbox": [
+              337,
+              405,
+              338,
+              406
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 22,
+            "area": 1,
+            "bbox": [
+              133,
+              421,
+              134,
+              422
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 23,
+            "area": 1,
+            "bbox": [
+              129,
+              426,
+              130,
+              427
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          },
+          {
+            "id": 24,
+            "area": 3,
+            "bbox": [
+              128,
+              431,
+              129,
+              434
+            ],
+            "decision": "remove-tiny-isolated-speck"
+          }
+        ],
+        "retainedSourcePixelsUnchanged": true,
+        "usesColorDetector": false
+      },
+      "sourceUseful": {
+        "bbox": [
+          12,
+          12,
+          426,
+          465
+        ],
+        "width": 414,
+        "height": 453
+      },
+      "anchor": {
+        "bbox": [
+          12,
+          12,
+          426,
+          465
+        ],
+        "width": 414,
+        "height": 453,
+        "rearAxle": [
+          185.0,
+          385.0
+        ],
+        "groundY": 465.0,
+        "root": [
+          185.0,
+          465.0
+        ],
+        "method": "explicit-reviewed-rear-axle-and-ground",
+        "axleHeightAboveGround": 80.0
+      }
+    }
+  ],
+  "front": {
+    "sourceCrop": [
+      0,
+      0,
+      1402,
+      1122
+    ],
+    "cleanup": {
+      "alphaFloorInclusive": 8,
+      "removedLowAlphaPixels": 15958,
+      "removedDetachedVisiblePixels": 5,
+      "tinyComponentAreaLimit": 32,
+      "components": [
+        {
+          "id": 1,
+          "area": 994512,
+          "bbox": [
+            85,
+            9,
+            1316,
+            1116
+          ],
+          "decision": "keep-main-body"
+        },
+        {
+          "id": 2,
+          "area": 1,
+          "bbox": [
+            978,
+            93,
+            979,
+            94
+          ],
+          "decision": "remove-tiny-isolated-speck"
+        },
+        {
+          "id": 3,
+          "area": 2,
+          "bbox": [
+            1116,
+            758,
+            1118,
+            759
+          ],
+          "decision": "remove-tiny-isolated-speck"
+        },
+        {
+          "id": 4,
+          "area": 1,
+          "bbox": [
+            1081,
+            997,
+            1082,
+            998
+          ],
+          "decision": "remove-tiny-isolated-speck"
+        },
+        {
+          "id": 5,
+          "area": 1,
+          "bbox": [
+            1262,
+            1022,
+            1263,
+            1023
+          ],
+          "decision": "remove-tiny-isolated-speck"
+        }
+      ],
+      "retainedSourcePixelsUnchanged": true,
+      "usesColorDetector": false
+    },
+    "menuFit": {
+      "sourceUsefulBBox": [
+        85,
+        9,
+        1316,
+        1116
+      ],
+      "scale": 0.4289195775792039,
+      "aspectFit": true,
+      "menuOnly": true,
+      "policy": "whole original front proposal cropped to alpha bounds then proportional aspect-fit; not a race pose"
+    }
+  },
+  "scale": {
+    "proposedRearUsefulWidthRatio": 1.4,
+    "commonSheetScale": 1.0043859649122806,
+    "desiredSheetScale": 1.722085889570552,
+    "commonFitLimitedRequestedRatio": true,
+    "allSixTransformsShareScale": true,
+    "independentPoseFit": false,
+    "carReferenceUseful": {
+      "bbox": [
+        55,
+        140,
+        456,
+        470
+      ],
+      "width": 401,
+      "height": 330
+    },
+    "carReferenceNativeSize": [
+      512,
+      512
+    ],
+    "carReferenceGround": 470,
+    "truckRearUseful": {
+      "bbox": [
+        117,
+        12,
+        444,
+        470
+      ],
+      "width": 327,
+      "height": 458
+    },
+    "actualRearUsefulWidthRatio": 0.8154613466334164,
+    "actualRearUsefulHeightRatio": 1.387878787878788,
+    "nativeNormalizedRearUsefulWidthRatio": 0.8154613466334164,
+    "nativeNormalizedRearUsefulHeightRatio": 1.387878787878788,
+    "futureUniformDisplayMultiplierForProposedWidth": 1.7168195718654433,
+    "runtimeIntegrationRequired": "current renderer sets equal display height at equal depth; future integration needs an explicit truck vehicle scale; native canvas size alone does not set physical scale",
+    "physicalBenchmark": {
+      "vehicle": "IVECO Chile 4x2 tractor benchmark",
+      "lengthM": 6.252,
+      "widthM": 2.55,
+      "heightM": 3.789,
+      "wheelbaseM": 3.8,
+      "scope": "physical reference only; not a measurement of the FTW truck or Mercedes; not a runtime conversion"
+    },
+    "intendedDisplayComparison": {
+      "sameWorldDepth": true,
+      "carDisplayMultiplier": 1,
+      "truckUniformDisplayMultiplier": 1.7168195718654433,
+      "allTruckViewsUseSameProposedMultiplier": true,
+      "truckAspectPreserved": true,
+      "targetRearUsefulWidthRatio": 1.4,
+      "measuredDisplayedRearUsefulWidthRatio": 1.401496259351621,
+      "intendedRearUsefulHeightRatio": 2.3827374664071908,
+      "sharedGroundOnComparisonPx": 831,
+      "comparisonSize": [
+        1586,
+        968
+      ],
+      "runtimeChangeApplied": false,
+      "interpretation": "intended future vehicle display scale at equal world depth; Mercedes factor1 and one proposed uniform truck factor; not equal image pixel factors"
+    }
+  },
+  "brakePairGeometry": [
+    {
+      "normal": "rear",
+      "braking": "brake",
+      "silhouetteIoUAlphaAbove32": 0.9959369139779776,
+      "silhouetteXorPixels": 507,
+      "rgbaChangedPixels": 125156,
+      "brakeToNormalUsefulDimensionRatios": {
+        "width": 1.0,
+        "height": 1.0
+      },
+      "rearAxleHeightDifferenceOutputPx": 0.0,
+      "reviewFlags": [],
+      "sameScaleAndGround": true,
+      "interpretation": "distinct generated source drawings; changed pixels include geometry/color and are not claimed to be lamp-only"
+    },
+    {
+      "normal": "left",
+      "braking": "left-brake",
+      "silhouetteIoUAlphaAbove32": 0.9924123851650222,
+      "silhouetteXorPixels": 1115,
+      "rgbaChangedPixels": 147129,
+      "brakeToNormalUsefulDimensionRatios": {
+        "width": 1.0,
+        "height": 0.9978070175438597
+      },
+      "rearAxleHeightDifferenceOutputPx": 0.0,
+      "reviewFlags": [],
+      "sameScaleAndGround": true,
+      "interpretation": "distinct generated source drawings; changed pixels include geometry/color and are not claimed to be lamp-only"
+    },
+    {
+      "normal": "right",
+      "braking": "right-brake",
+      "silhouetteIoUAlphaAbove32": 0.9932110194692252,
+      "silhouetteXorPixels": 968,
+      "rgbaChangedPixels": 142745,
+      "brakeToNormalUsefulDimensionRatios": {
+        "width": 1.0048309178743962,
+        "height": 0.9978070175438597
+      },
+      "rearAxleHeightDifferenceOutputPx": 0.0,
+      "reviewFlags": [],
+      "sameScaleAndGround": true,
+      "interpretation": "distinct generated source drawings; changed pixels include geometry/color and are not claimed to be lamp-only"
+    }
+  ],
+  "reviewFlags": [],
+  "frames": {
+    "rear": {
+      "rgba": true,
+      "size": [
+        560,
+        512
+      ],
+      "visibleBBox": [
+        116,
+        12,
+        444,
+        470
+      ],
+      "useful": {
+        "bbox": [
+          117,
+          12,
+          444,
+          470
+        ],
+        "width": 327,
+        "height": 458
+      },
+      "marginsPx": [
+        116,
+        12,
+        116,
+        42
+      ],
+      "noOutputClipping": true,
+      "zeroRgbUnderTransparentPixels": true
+    },
+    "left": {
+      "rgba": true,
+      "size": [
+        560,
+        512
+      ],
+      "visibleBBox": [
+        23,
+        14,
+        456,
+        470
+      ],
+      "useful": {
+        "bbox": [
+          24,
+          14,
+          456,
+          470
+        ],
+        "width": 432,
+        "height": 456
+      },
+      "marginsPx": [
+        23,
+        14,
+        104,
+        42
+      ],
+      "noOutputClipping": true,
+      "zeroRgbUnderTransparentPixels": true
+    },
+    "right": {
+      "rgba": true,
+      "size": [
+        560,
+        512
+      ],
+      "visibleBBox": [
+        107,
+        13,
+        522,
+        470
+      ],
+      "useful": {
+        "bbox": [
+          107,
+          14,
+          521,
+          470
+        ],
+        "width": 414,
+        "height": 456
+      },
+      "marginsPx": [
+        107,
+        13,
+        38,
+        42
+      ],
+      "noOutputClipping": true,
+      "zeroRgbUnderTransparentPixels": true
+    },
+    "brake": {
+      "rgba": true,
+      "size": [
+        560,
+        512
+      ],
+      "visibleBBox": [
+        117,
+        12,
+        444,
+        470
+      ],
+      "useful": {
+        "bbox": [
+          117,
+          12,
+          444,
+          470
+        ],
+        "width": 327,
+        "height": 458
+      },
+      "marginsPx": [
+        117,
+        12,
+        116,
+        42
+      ],
+      "noOutputClipping": true,
+      "zeroRgbUnderTransparentPixels": true
+    },
+    "left-brake": {
+      "rgba": true,
+      "size": [
+        560,
+        512
+      ],
+      "visibleBBox": [
+        23,
+        15,
+        456,
+        470
+      ],
+      "useful": {
+        "bbox": [
+          24,
+          15,
+          456,
+          470
+        ],
+        "width": 432,
+        "height": 455
+      },
+      "marginsPx": [
+        23,
+        15,
+        104,
+        42
+      ],
+      "noOutputClipping": true,
+      "zeroRgbUnderTransparentPixels": true
+    },
+    "right-brake": {
+      "rgba": true,
+      "size": [
+        560,
+        512
+      ],
+      "visibleBBox": [
+        106,
+        15,
+        523,
+        470
+      ],
+      "useful": {
+        "bbox": [
+          106,
+          15,
+          522,
+          470
+        ],
+        "width": 416,
+        "height": 455
+      },
+      "marginsPx": [
+        106,
+        15,
+        37,
+        42
+      ],
+      "noOutputClipping": true,
+      "zeroRgbUnderTransparentPixels": true
+    },
+    "front-menu": {
+      "rgba": true,
+      "size": [
+        560,
+        512
+      ],
+      "visibleBBox": [
+        16,
+        18,
+        544,
+        493
+      ],
+      "useful": {
+        "bbox": [
+          16,
+          18,
+          544,
+          493
+        ],
+        "width": 528,
+        "height": 475
+      },
+      "marginsPx": [
+        16,
+        18,
+        16,
+        19
+      ],
+      "noOutputClipping": true,
+      "zeroRgbUnderTransparentPixels": true
+    }
+  },
+  "sameDepthComparison": {
+    "sameWorldDepth": true,
+    "carDisplayMultiplier": 1,
+    "truckUniformDisplayMultiplier": 1.7168195718654433,
+    "allTruckViewsUseSameProposedMultiplier": true,
+    "truckAspectPreserved": true,
+    "targetRearUsefulWidthRatio": 1.4,
+    "measuredDisplayedRearUsefulWidthRatio": 1.401496259351621,
+    "intendedRearUsefulHeightRatio": 2.3827374664071908,
+    "sharedGroundOnComparisonPx": 831,
+    "comparisonSize": [
+      1586,
+      968
+    ],
+    "runtimeChangeApplied": false,
+    "interpretation": "intended future vehicle display scale at equal world depth; Mercedes factor1 and one proposed uniform truck factor; not equal image pixel factors"
+  },
+  "assertions": {
+    "sixRgba560x512RaceFrames": true,
+    "trueAlpha": true,
+    "noOutputClipping": true,
+    "ground470PivotConsistent": true,
+    "oneSharedRaceScale": true,
+    "reviewedRearAxleGroundAnchors": true,
+    "atlas1680x1024PixelExact": true,
+    "frontAspectFitOnly": true,
+    "noColorKeyOrRedDetector": true,
+    "noMirroringRotationRecolorOrSynthesis": true,
+    "sourceCopiesByteExact": true,
+    "originalInputsUnchanged": true,
+    "standalonePreviewEmbedded": true,
+    "noOwnerApprovalClaimed": true
+  },
+  "visualLimitations": "Alpha/geometry checks do not establish identity, actual axle count, wording, authentic rear graphics or owner approval. Brake pairs are independent drawings and are not claimed to differ only in lamps.",
+  "payloadHashes": {
+    "README.md": "58ab5e67732417425626fae05145b0a11f08d2bc8c5f511aaa37f69c9486145e",
+    "brake.png": "cba23b3436ffdeda5f580c171a2553e6560e7d9f8b8b2c1d39e986f7392ce9a2",
+    "contact-sheet-asphalt.png": "0b64dc1a5f3cbaecf6c045199b4f26b4c05da2a8d95f5cff025bbbeb2ff6a491",
+    "contact-sheet-black.png": "768dad6381e45cabd66e396b03738d738cd4e67ad68c3bd6f643fb17d8d70013",
+    "contact-sheet-white.png": "1e718c79364a85587fb657d6a3b6135220e043e64dc21e9dea2030e57a860612",
+    "frames.json": "e901342eabffcfd066f9d64ec87cf78d6e972e5cb29b4015eb443d5701c58483",
+    "front-menu.png": "bfd8726a9a09a0fc5958b0d66969e3cfe9e567efaed78b2a107e9b9a7fd63e74",
+    "left-brake.png": "5c6382d345dd0e8a1967080d60f2c2b43c13d95f18268eb25a58de090a469e09",
+    "left.png": "ad3056b69854c5cad39ab4812b0b158f45b1e4fab3e9334bdbf61f3ea82012f2",
+    "prepare.py": "6dcbcb811bfe276dfcab10d29c4b8296b1149e72e9cb0a5442de5ba6005b5d12",
+    "preview.html": "dd32147617f4e45dda06538ec5f7d8b24c306b81393ef488a9a2153f6ce40f5f",
+    "rear.png": "1523eb77cd997491868a4ddb326ba0a1ef844776310003e61e363131276e388b",
+    "requirements.txt": "d538ac6c0cbfabc0e95e9f4e026a502d30a60069f2f2026c1e43d5e68b7c8aaf",
+    "right-brake.png": "8a96872b25cdffae1eedb9b36d18bd9b0e532519c348c308da03c30d36aa7e94",
+    "right.png": "879632502422bc709b641d2877e4e605af5f7eba7d04d62c33ef887e9f62bdc5",
+    "same-depth-comparison.png": "9f45b1db17413ca3557f25710881c410e420ffcbbc64d3a87684ef35d6f6a726",
+    "source-crop-review.png": "9319ef5a97498a1fc27bbc937db03bfb68cfb869d5960c71778053533ccabfe7",
+    "sources/front-proposal.png": "d1fb027131e8f0570a5a006b9201134f2431bb3cdfc21262473f5266f205d152",
+    "sources/generated-vehicle-sheet.png": "d2dd93e336c576fa6e3cc68cc85d38f8739037771f37d7de4343260b38414260",
+    "sources/mercedes-reference.png": "a4356de4182a078432e411b5fd6c68862790a05aa9f631129fd0a99711170e5a",
+    "sources/reviewed-anchors.json": "ffdfc00c265764b40e3345a454338f128e3726bc671d7742566228f766ea651f",
+    "truck-atlas.json": "d0755346d6adf2d2301e565e7cfbbd232819f8314de112c5ee1f44abd9da2437",
+    "truck-atlas.png": "bc04432380e1c232ad49e319bb507c3d8d2b057ec562703fe47c15f8247e337e"
+  }
+}

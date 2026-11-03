@@ -1,0 +1,522 @@
+{
+  "schemaVersion": 1,
+  "vehicleId": "ftw-truck-proposal",
+  "approval": "all-vehicle-art-pending-owner-review",
+  "configurationProposal": {
+    "type": "simple-tractor",
+    "axles": 2,
+    "drive": "4x2",
+    "trailer": false
+  },
+  "ownerReferencePriorities": [
+    "owner photos and marks dominate",
+    "red cab",
+    "Diabo Verde windshield",
+    "FTW doors",
+    "plain conventional rear; no invented rear sponsor graphics"
+  ],
+  "frameSize": [
+    560,
+    512
+  ],
+  "ground": 470,
+  "pivot": [
+    0.5,
+    0.91796875
+  ],
+  "frameOrder": [
+    "rear",
+    "left",
+    "right",
+    "brake",
+    "left-brake",
+    "right-brake"
+  ],
+  "sheetGrid": [
+    3,
+    2
+  ],
+  "atlasSize": [
+    1680,
+    1024
+  ],
+  "scale": {
+    "proposedRearUsefulWidthRatio": 1.4,
+    "commonSheetScale": 1.0043859649122806,
+    "desiredSheetScale": 1.722085889570552,
+    "commonFitLimitedRequestedRatio": true,
+    "allSixTransformsShareScale": true,
+    "independentPoseFit": false,
+    "carReferenceUseful": {
+      "bbox": [
+        55,
+        140,
+        456,
+        470
+      ],
+      "width": 401,
+      "height": 330
+    },
+    "carReferenceNativeSize": [
+      512,
+      512
+    ],
+    "carReferenceGround": 470,
+    "truckRearUseful": {
+      "bbox": [
+        117,
+        12,
+        444,
+        470
+      ],
+      "width": 327,
+      "height": 458
+    },
+    "actualRearUsefulWidthRatio": 0.8154613466334164,
+    "actualRearUsefulHeightRatio": 1.387878787878788,
+    "nativeNormalizedRearUsefulWidthRatio": 0.8154613466334164,
+    "nativeNormalizedRearUsefulHeightRatio": 1.387878787878788,
+    "futureUniformDisplayMultiplierForProposedWidth": 1.7168195718654433,
+    "runtimeIntegrationRequired": "current renderer sets equal display height at equal depth; future integration needs an explicit truck vehicle scale; native canvas size alone does not set physical scale",
+    "physicalBenchmark": {
+      "vehicle": "IVECO Chile 4x2 tractor benchmark",
+      "lengthM": 6.252,
+      "widthM": 2.55,
+      "heightM": 3.789,
+      "wheelbaseM": 3.8,
+      "scope": "physical reference only; not a measurement of the FTW truck or Mercedes; not a runtime conversion"
+    },
+    "intendedDisplayComparison": {
+      "sameWorldDepth": true,
+      "carDisplayMultiplier": 1,
+      "truckUniformDisplayMultiplier": 1.7168195718654433,
+      "allTruckViewsUseSameProposedMultiplier": true,
+      "truckAspectPreserved": true,
+      "targetRearUsefulWidthRatio": 1.4,
+      "measuredDisplayedRearUsefulWidthRatio": 1.401496259351621,
+      "intendedRearUsefulHeightRatio": 2.3827374664071908,
+      "sharedGroundOnComparisonPx": 831,
+      "comparisonSize": [
+        1586,
+        968
+      ],
+      "runtimeChangeApplied": false,
+      "interpretation": "intended future vehicle display scale at equal world depth; Mercedes factor1 and one proposed uniform truck factor; not equal image pixel factors"
+    }
+  },
+  "sources": {
+    "source": {
+      "file": "sources/generated-vehicle-sheet.png",
+      "sha256": "d2dd93e336c576fa6e3cc68cc85d38f8739037771f37d7de4343260b38414260"
+    },
+    "front": {
+      "file": "sources/front-proposal.png",
+      "sha256": "d1fb027131e8f0570a5a006b9201134f2431bb3cdfc21262473f5266f205d152"
+    },
+    "carReference": {
+      "file": "sources/mercedes-reference.png",
+      "sha256": "a4356de4182a078432e411b5fd6c68862790a05aa9f631129fd0a99711170e5a"
+    },
+    "anchors": {
+      "file": "sources/reviewed-anchors.json",
+      "sha256": "ffdfc00c265764b40e3345a454338f128e3726bc671d7742566228f766ea651f"
+    }
+  },
+  "assets": [
+    {
+      "file": "rear.png",
+      "sha256": "1523eb77cd997491868a4ddb326ba0a1ef844776310003e61e363131276e388b",
+      "source": "sources/generated-vehicle-sheet.png",
+      "sourceCrop": [
+        113,
+        1,
+        463,
+        481
+      ],
+      "sourceAnchor": {
+        "bbox": [
+          12,
+          12,
+          338,
+          468
+        ],
+        "width": 326,
+        "height": 456,
+        "rearAxle": [
+          175.0,
+          384.0
+        ],
+        "groundY": 468.0,
+        "root": [
+          175.0,
+          468.0
+        ],
+        "method": "explicit-reviewed-rear-axle-and-ground",
+        "axleHeightAboveGround": 84.0
+      },
+      "scale": 1.0043859649122806,
+      "ground": 470,
+      "pivot": [
+        0.5,
+        0.91796875
+      ],
+      "outputRearAxle": [
+        280.0,
+        385.63157894736844
+      ],
+      "useful": {
+        "bbox": [
+          117,
+          12,
+          444,
+          470
+        ],
+        "width": 327,
+        "height": 458
+      },
+      "approval": "pending-owner-review"
+    },
+    {
+      "file": "left.png",
+      "sha256": "ad3056b69854c5cad39ab4812b0b158f45b1e4fab3e9334bdbf61f3ea82012f2",
+      "source": "sources/generated-vehicle-sheet.png",
+      "sourceCrop": [
+        570,
+        0,
+        1024,
+        478
+      ],
+      "sourceAnchor": {
+        "bbox": [
+          12,
+          12,
+          442,
+          466
+        ],
+        "width": 430,
+        "height": 454,
+        "rearAxle": [
+          267.0,
+          386.0
+        ],
+        "groundY": 466.0,
+        "root": [
+          267.0,
+          466.0
+        ],
+        "method": "explicit-reviewed-rear-axle-and-ground",
+        "axleHeightAboveGround": 80.0
+      },
+      "scale": 1.0043859649122806,
+      "ground": 470,
+      "pivot": [
+        0.5,
+        0.91796875
+      ],
+      "outputRearAxle": [
+        280.0,
+        389.64912280701753
+      ],
+      "useful": {
+        "bbox": [
+          24,
+          14,
+          456,
+          470
+        ],
+        "width": 432,
+        "height": 456
+      },
+      "approval": "pending-owner-review"
+    },
+    {
+      "file": "right.png",
+      "sha256": "879632502422bc709b641d2877e4e605af5f7eba7d04d62c33ef887e9f62bdc5",
+      "source": "sources/generated-vehicle-sheet.png",
+      "sourceCrop": [
+        1104,
+        0,
+        1541,
+        478
+      ],
+      "sourceAnchor": {
+        "bbox": [
+          12,
+          11,
+          425,
+          466
+        ],
+        "width": 413,
+        "height": 455,
+        "rearAxle": [
+          185.0,
+          386.0
+        ],
+        "groundY": 466.0,
+        "root": [
+          185.0,
+          466.0
+        ],
+        "method": "explicit-reviewed-rear-axle-and-ground",
+        "axleHeightAboveGround": 80.0
+      },
+      "scale": 1.0043859649122806,
+      "ground": 470,
+      "pivot": [
+        0.5,
+        0.91796875
+      ],
+      "outputRearAxle": [
+        280.0,
+        389.64912280701753
+      ],
+      "useful": {
+        "bbox": [
+          107,
+          14,
+          521,
+          470
+        ],
+        "width": 414,
+        "height": 456
+      },
+      "approval": "pending-owner-review"
+    },
+    {
+      "file": "brake.png",
+      "sha256": "cba23b3436ffdeda5f580c171a2553e6560e7d9f8b8b2c1d39e986f7392ce9a2",
+      "source": "sources/generated-vehicle-sheet.png",
+      "sourceCrop": [
+        113,
+        493,
+        463,
+        973
+      ],
+      "sourceAnchor": {
+        "bbox": [
+          12,
+          12,
+          338,
+          468
+        ],
+        "width": 326,
+        "height": 456,
+        "rearAxle": [
+          175.0,
+          384.0
+        ],
+        "groundY": 468.0,
+        "root": [
+          175.0,
+          468.0
+        ],
+        "method": "explicit-reviewed-rear-axle-and-ground",
+        "axleHeightAboveGround": 84.0
+      },
+      "scale": 1.0043859649122806,
+      "ground": 470,
+      "pivot": [
+        0.5,
+        0.91796875
+      ],
+      "outputRearAxle": [
+        280.0,
+        385.63157894736844
+      ],
+      "useful": {
+        "bbox": [
+          117,
+          12,
+          444,
+          470
+        ],
+        "width": 327,
+        "height": 458
+      },
+      "approval": "pending-owner-review"
+    },
+    {
+      "file": "left-brake.png",
+      "sha256": "5c6382d345dd0e8a1967080d60f2c2b43c13d95f18268eb25a58de090a469e09",
+      "source": "sources/generated-vehicle-sheet.png",
+      "sourceCrop": [
+        570,
+        492,
+        1024,
+        969
+      ],
+      "sourceAnchor": {
+        "bbox": [
+          12,
+          12,
+          442,
+          465
+        ],
+        "width": 430,
+        "height": 453,
+        "rearAxle": [
+          267.0,
+          385.0
+        ],
+        "groundY": 465.0,
+        "root": [
+          267.0,
+          465.0
+        ],
+        "method": "explicit-reviewed-rear-axle-and-ground",
+        "axleHeightAboveGround": 80.0
+      },
+      "scale": 1.0043859649122806,
+      "ground": 470,
+      "pivot": [
+        0.5,
+        0.91796875
+      ],
+      "outputRearAxle": [
+        280.0,
+        389.64912280701753
+      ],
+      "useful": {
+        "bbox": [
+          24,
+          15,
+          456,
+          470
+        ],
+        "width": 432,
+        "height": 455
+      },
+      "approval": "pending-owner-review"
+    },
+    {
+      "file": "right-brake.png",
+      "sha256": "8a96872b25cdffae1eedb9b36d18bd9b0e532519c348c308da03c30d36aa7e94",
+      "source": "sources/generated-vehicle-sheet.png",
+      "sourceCrop": [
+        1104,
+        492,
+        1542,
+        969
+      ],
+      "sourceAnchor": {
+        "bbox": [
+          12,
+          12,
+          426,
+          465
+        ],
+        "width": 414,
+        "height": 453,
+        "rearAxle": [
+          185.0,
+          385.0
+        ],
+        "groundY": 465.0,
+        "root": [
+          185.0,
+          465.0
+        ],
+        "method": "explicit-reviewed-rear-axle-and-ground",
+        "axleHeightAboveGround": 80.0
+      },
+      "scale": 1.0043859649122806,
+      "ground": 470,
+      "pivot": [
+        0.5,
+        0.91796875
+      ],
+      "outputRearAxle": [
+        280.0,
+        389.64912280701753
+      ],
+      "useful": {
+        "bbox": [
+          106,
+          15,
+          522,
+          470
+        ],
+        "width": 416,
+        "height": 455
+      },
+      "approval": "pending-owner-review"
+    }
+  ],
+  "frontMenu": {
+    "file": "front-menu.png",
+    "source": "sources/front-proposal.png",
+    "sourceCrop": [
+      0,
+      0,
+      1402,
+      1122
+    ],
+    "sourceUsefulBBox": [
+      85,
+      9,
+      1316,
+      1116
+    ],
+    "scale": 0.4289195775792039,
+    "aspectFit": true,
+    "menuOnly": true,
+    "policy": "whole original front proposal cropped to alpha bounds then proportional aspect-fit; not a race pose",
+    "approval": "pending-owner-review"
+  },
+  "transformPolicy": "whole authentic generated views; one common race scale; reviewed rear-axle/ground translations; no rotation, mirroring, part manipulation, recoloring or art synthesis",
+  "brakePairGeometry": [
+    {
+      "normal": "rear",
+      "braking": "brake",
+      "silhouetteIoUAlphaAbove32": 0.9959369139779776,
+      "silhouetteXorPixels": 507,
+      "rgbaChangedPixels": 125156,
+      "brakeToNormalUsefulDimensionRatios": {
+        "width": 1.0,
+        "height": 1.0
+      },
+      "rearAxleHeightDifferenceOutputPx": 0.0,
+      "reviewFlags": [],
+      "sameScaleAndGround": true,
+      "interpretation": "distinct generated source drawings; changed pixels include geometry/color and are not claimed to be lamp-only"
+    },
+    {
+      "normal": "left",
+      "braking": "left-brake",
+      "silhouetteIoUAlphaAbove32": 0.9924123851650222,
+      "silhouetteXorPixels": 1115,
+      "rgbaChangedPixels": 147129,
+      "brakeToNormalUsefulDimensionRatios": {
+        "width": 1.0,
+        "height": 0.9978070175438597
+      },
+      "rearAxleHeightDifferenceOutputPx": 0.0,
+      "reviewFlags": [],
+      "sameScaleAndGround": true,
+      "interpretation": "distinct generated source drawings; changed pixels include geometry/color and are not claimed to be lamp-only"
+    },
+    {
+      "normal": "right",
+      "braking": "right-brake",
+      "silhouetteIoUAlphaAbove32": 0.9932110194692252,
+      "silhouetteXorPixels": 968,
+      "rgbaChangedPixels": 142745,
+      "brakeToNormalUsefulDimensionRatios": {
+        "width": 1.0048309178743962,
+        "height": 0.9978070175438597
+      },
+      "rearAxleHeightDifferenceOutputPx": 0.0,
+      "reviewFlags": [],
+      "sameScaleAndGround": true,
+      "interpretation": "distinct generated source drawings; changed pixels include geometry/color and are not claimed to be lamp-only"
+    }
+  ],
+  "visualReviewRequired": [
+    "tractor configuration and actual two-axle geometry",
+    "owner identity, marks and text",
+    "plain rear without invented sponsors",
+    "all six source poses",
+    "brake geometry flags",
+    "proposed same-depth car/truck scale"
+  ]
+}

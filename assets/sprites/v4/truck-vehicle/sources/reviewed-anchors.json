@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "reviewed": true,
+  "sourceSha256": "d2dd93e336c576fa6e3cc68cc85d38f8739037771f37d7de4343260b38414260",
+  "frontSha256": "d1fb027131e8f0570a5a006b9201134f2431bb3cdfc21262473f5266f205d152",
+  "carReferenceSha256": "a4356de4182a078432e411b5fd6c68862790a05aa9f631129fd0a99711170e5a",
+  "coordinatePolicy": "box absolute source pixels [left,top,right,bottom); rear_axle/ground_y crop-local; review technical anchors only, not artwork approval",
+  "cells": [
+    {
+      "name": "rear",
+      "box": [
+        113,
+        1,
+        463,
+        481
+      ],
+      "rear_axle": [
+        175,
+        384
+      ],
+      "ground_y": 468,
+      "anchorProposalMethod": "visual estimate of projected midpoint of rear wheel hub/axle line; ground at rear tyre contact; needs independent review"
+    },
+    {
+      "name": "left",
+      "box": [
+        570,
+        0,
+        1024,
+        478
+      ],
+      "rear_axle": [
+        267,
+        386
+      ],
+      "ground_y": 466,
+      "anchorProposalMethod": "visual estimate of projected midpoint of rear wheel hub/axle line; ground at rear tyre contact; needs independent review"
+    },
+    {
+      "name": "right",
+      "box": [
+        1104,
+        0,
+        1541,
+        478
+      ],
+      "rear_axle": [
+        185,
+        386
+      ],
+      "ground_y": 466,
+      "anchorProposalMethod": "visual estimate of projected midpoint of rear wheel hub/axle line; ground at rear tyre contact; needs independent review"
+    },
+    {
+      "name": "brake",
+      "box": [
+        113,
+        493,
+        463,
+        973
+      ],
+      "rear_axle": [
+        175,
+        384
+      ],
+      "ground_y": 468,
+      "anchorProposalMethod": "visual estimate of projected midpoint of rear wheel hub/axle line; ground at rear tyre contact; needs independent review"
+    },
+    {
+      "name": "left-brake",
+      "box": [
+        570,
+        492,
+        1024,
+        969
+      ],
+      "rear_axle": [
+        267,
+        385
+      ],
+      "ground_y": 465,
+      "anchorProposalMethod": "visual estimate of projected midpoint of rear wheel hub/axle line; ground at rear tyre contact; needs independent review"
+    },
+    {
+      "name": "right-brake",
+      "box": [
+        1104,
+        492,
+        1542,
+        969
+      ],
+      "rear_axle": [
+        185,
+        385
+      ],
+      "ground_y": 465,
+      "anchorProposalMethod": "visual estimate of projected midpoint of rear wheel hub/axle line; ground at rear tyre contact; needs independent review"
+    }
+  ],
+  "front": {},
+  "technicalReview": {
+    "reviewer": "root implementation agent",
+    "scope": "source crops, estimated projected rear hub/axle centers and rear tyre-ground lines only",
+    "note": "Root independently reviewed candidate-anchors-overlay.png and all source/crop JSON. This is technical anchor review only; no owner vehicle-art approval is asserted."
+  }
+}

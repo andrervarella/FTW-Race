@@ -1,5 +1,10 @@
 # Registro e continuidade
 
+## 03/11/2026 — sprites do cavalo mecânico simples
+- Adotada interpretação de cavalo4×2 após esclarecimento do proprietário; sem carreta, Diabo Verde no para-brisa e FTW nas portas.
+- Geradas seis vistas traseiras/curvas/frenagem numa única prancha e preservada a proposta frontal. Entregues PNGs560×512, atlas1680×1024, fontes/âncoras/metadata, contatos, HTML e ZIP. QA/atlas/hashes/freio PASS; comparação propõe1,4015×largura do Mercedes, sem deformar. Chromium móvel em dois layouts e reconstrução portátil byte-exata PASS.
+- Arte nova para revisão; piloto/caminhão ainda não registrados como jogáveis. Ver TRUCK_VEHICLE_SPRITES.md.
+
 ## 03/11/2026 — referências da traseira do caminhão
 - A pedido do proprietário, pesquisadas fotos públicas de IVECO S-Way desacoplado (traseira e diagonais), além de fichas oficiais4×2/6×2. Fotos pessoais traseiras deixam de ser dependência obrigatória.
 - Pintura vermelha e logos seguem as fotos recebidas; quantidade de eixos da unidade ainda não confirmada. Referências estruturais não foram incorporadas como fotos ao jogo. Ver TRUCK_REFERENCE_RESEARCH.md.
