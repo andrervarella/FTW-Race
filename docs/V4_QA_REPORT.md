@@ -1,5 +1,11 @@
 # QA V4 — prévia funcional, arte em revisão
 
+## 03/11/2026 — autorização complementar do retrato retocado de Felipe
+
+Após a revisão automática rejeitar o envio do PNG retocado de Felipe usado na capa (`4f55f2a8bf104ddc0ef1442e05f19911ea9bd599`), o proprietário respondeu à confirmação específica: **“Autorizo publicar também o retrato retocado de Felipe no repositório público andrervarella/FTW-Race e em /teste-v4/.”** Esta autorização complementar veio de resposta atual do usuário e cobre o retrato retocado usado na abertura, incluindo seu derivado WebP. A autorização original de Marquinhos, caminhão e capa permanece integralmente registrada na seção seguinte.
+
+As duas confirmações permitem retomar o envio dos arquivos preparados aos destinos nomeados. QA local e runtime permanecem os mesmos; **publicação, implantação e QA público desta atualização continuam pendentes de evidência real**. Este acréscimo altera apenas documentação e conserva o histórico da rejeição, sem afirmar aprovação automática, implantação ou verificação ainda inexistentes.
+
 ## 03/11/2026 — autorização explícita recebida; publicação e QA público pendentes
 
 O proprietário autorizou nesta conversa: **“Autorizo publicar esta atualização, incluindo as novas artes de Marquinhos, do caminhão e da capa, no repositório público andrervarella/FTW-Race e no jogo /teste-v4/.”** A confirmação nomeia as novas artes identificáveis e os dois destinos públicos exigidos na revisão anterior. O histórico dos bloqueios permanece abaixo; esta autorização permite retomar a publicação preparada, mas não comprova envio, implantação ou verificação pública.

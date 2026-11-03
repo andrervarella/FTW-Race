@@ -147,7 +147,7 @@
   "independentReview": "No blocking production findings;39 focused tests and three natural headless races passed",
   "publication": {
     "status": "AUTHORIZED_AWAITING_PUBLICATION_AND_PUBLIC_QA",
-    "reason": "Current trusted user message explicitly authorizes publication of this update, including new Marquinhos, truck and cover art, to public andrervarella/FTW-Race and /teste-v4/; actual publication and public QA remain pending",
+    "reason": "Current trusted user approvals explicitly authorize publication of this update, new Marquinhos, truck and cover art, and the retouched Felipe cover portrait to public andrervarella/FTW-Race and /teste-v4/; actual publication and public QA remain pending",
     "refsMoved": false,
     "newPublicDeploymentVerified": false,
     "partialUnreferencedTransferObjects": 21,
@@ -168,6 +168,25 @@
     "authorizedPagesPrefix": "teste-v4/",
     "preparedRuntimeSourceTree": "5782c16fade29fc4c441bbac61e3dcc6cff3679d",
     "preparedPagesTree": "29b79b1c7b1900c4244b22d6998705bdad108ef1",
-    "recordScope": "Authorization recorded before publication; this documentation update does not change the tested runtime or Pages package"
+    "recordScope": "Authorization recorded before publication; this documentation update does not change the tested runtime or Pages package",
+    "felipeSupplementalAuthorization": {
+      "source": "trusted_current_user_reply",
+      "date": "2026-11-03",
+      "question": "Você autoriza publicar também o retrato retocado de Felipe usado na capa, no repositório público andrervarella/FTW-Race e no jogo /teste-v4/?",
+      "answer": "Autorizo publicar também o retrato retocado de Felipe no repositório público andrervarella/FTW-Race e em /teste-v4/.",
+      "scope": "Retouched Felipe portrait used on the title cover, including its WebP derivative, at the same authorized public repository and /teste-v4/ destination",
+      "artifacts": [
+        {
+          "path": "game/assets/v4/title/felipe-front-portrait.png",
+          "gitBlobSha": "4f55f2a8bf104ddc0ef1442e05f19911ea9bd599"
+        },
+        {
+          "path": "game/assets/v4/title/felipe-front-portrait.webp",
+          "gitBlobSha": "9a012bc3b610bf591d2209e8adc892d32e024ed2"
+        }
+      ],
+      "priorAutomaticReview": "Automatic review rejected transfer of the retouched Felipe cover PNG before this supplemental authorization",
+      "publicationAndPublicQa": "pending_actual_evidence"
+    }
   }
 }
