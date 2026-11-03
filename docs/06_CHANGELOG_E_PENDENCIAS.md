@@ -1,5 +1,9 @@
 # Registro e continuidade
 
+## 03/11/2026 — referências da traseira do caminhão
+- A pedido do proprietário, pesquisadas fotos públicas de IVECO S-Way desacoplado (traseira e diagonais), além de fichas oficiais4×2/6×2. Fotos pessoais traseiras deixam de ser dependência obrigatória.
+- Pintura vermelha e logos seguem as fotos recebidas; quantidade de eixos da unidade ainda não confirmada. Referências estruturais não foram incorporadas como fotos ao jogo. Ver TRUCK_REFERENCE_RESEARCH.md.
+
 ## 03/11/2026 — sprites do novo motorista
 - Base final aprovada pelo proprietário após ajuste de braços/pernas e pequena barriga; boné vermelho Mercedes e FTW nova na polo vermelha.
 - Seis poses de pódio geradas juntas a partir da mesma referência; entregues neutra, retrato, sete PNGs256×512, atlas, metadata/âncoraFX, prévia HTML e ZIP. Alpha/pivôs/hashes e reconstrução exata do pacote PASS; prévia Chromium móvel em dois tamanhos PASS.
