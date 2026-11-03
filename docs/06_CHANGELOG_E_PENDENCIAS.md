@@ -1,5 +1,9 @@
 # Registro e continuidade
 
+## 03/11/2026 — autorização explícita da publicação de Marquinhos
+
+O proprietário confirmou: “Autorizo publicar esta atualização, incluindo as novas artes de Marquinhos, do caminhão e da capa, no repositório público andrervarella/FTW-Race e no jogo /teste-v4/.” A autorização atual permite retomar o envio preparado para a branch V4 e apenas `/teste-v4/`, preservando as versões anteriores. QA local permanece PASS; publicação, implantação e QA público desta atualização ainda pendentes. Este fechamento altera somente documentação e mantém o runtime verificado `357cb810f870b3936c4c4016659f1156b91f0bb2` e o pacote Pages `70b5e734cf9039b0cabf0e52560d03a3a6209cb8`. Histórico dos bloqueios e limitações em `V4_QA_REPORT.md` e `qa/marquinhos-local-2026-11-03.json`.
+
 ## 03/11/2026 — sprites do cavalo mecânico simples
 - Adotada interpretação de cavalo4×2 após esclarecimento do proprietário; sem carreta, Diabo Verde no para-brisa e FTW nas portas.
 - Geradas seis vistas traseiras/curvas/frenagem numa única prancha e preservada a proposta frontal. Entregues PNGs560×512, atlas1680×1024, fontes/âncoras/metadata, contatos, HTML e ZIP. QA/atlas/hashes/freio PASS; comparação propõe1,4015×largura do Mercedes, sem deformar. Chromium móvel em dois layouts e reconstrução portátil byte-exata PASS.

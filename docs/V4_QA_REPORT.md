@@ -1,5 +1,13 @@
 # QA V4 — prévia funcional, arte em revisão
 
+## 03/11/2026 — autorização explícita recebida; publicação e QA público pendentes
+
+O proprietário autorizou nesta conversa: **“Autorizo publicar esta atualização, incluindo as novas artes de Marquinhos, do caminhão e da capa, no repositório público andrervarella/FTW-Race e no jogo /teste-v4/.”** A confirmação nomeia as novas artes identificáveis e os dois destinos públicos exigidos na revisão anterior. O histórico dos bloqueios permanece abaixo; esta autorização permite retomar a publicação preparada, mas não comprova envio, implantação ou verificação pública.
+
+Estado no registro desta confirmação: QA local PASS (70/70 Node, 248 arquivos SHA256, Chromium154, corrida natural com sete participantes, 12 vistas do caminhão e áudio ao vivo); **publicação e QA público desta atualização ainda pendentes**. Fonte de runtime verificada `357cb810f870b3936c4c4016659f1156b91f0bb2`, árvore `5782c16fade29fc4c441bbac61e3dcc6cff3679d`; pacote Pages preparado `70b5e734cf9039b0cabf0e52560d03a3a6209cb8`, árvore `29b79b1c7b1900c4244b22d6998705bdad108ef1`. Este registro altera apenas documentação; o pacote testado continua o mesmo.
+
+Destino autorizado da fonte: `codex/ftw-race-v4-arcade`; publicação Pages restrita a `teste-v4/`, com os 46 arquivos legados preservados. Os commits remotos e a evidência da execução pública serão registrados após existirem. Android físico, alto-falante real e FPS no aparelho continuam não testados.
+
 ## Verificação pública da pose frontal e do áudio — PASS
 
 - URL: https://andrervarella.github.io/FTW-Race/teste-v4/.
