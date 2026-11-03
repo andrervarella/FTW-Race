@@ -146,15 +146,18 @@
   },
   "independentReview": "No blocking production findings;39 focused tests and three natural headless races passed",
   "publication": {
-    "status": "OWNER_AUTHORIZED_AWAITING_PUBLISH",
+    "status": "BLOCKED_AUTOMATIC_REVIEW_REQUIRES_EXPLICIT_NEW_ASSETS_AND_PUBLIC_DESTINATION",
     "reason": "Reviewer requires explicit trusted user approval for the newly identifiable Marquinhos assets at public GitHub destination; prior broad approval recorded in files was not accepted",
     "refsMoved": false,
     "newPublicDeploymentVerified": false,
-    "partialUnreferencedTransferObjects": 13,
+    "partialUnreferencedTransferObjects": 21,
     "sourceHead": "cc8d5b70d0dd9f113fbdd83ddf0814968e54bcdb",
     "pagesHead": "a5284638a65901cdd9b55e6ede19b17c572f65b3",
     "transferHead": "740342f8ef0a91149b5382a972efe6a2122391cd",
     "legacyPagesFilesUnchanged": 46,
-    "specificUserAuthorization": "Ok se depender de mim está liberado"
+    "specificUserAuthorization": "Ok se depender de mim está liberado",
+    "specificUserReplyRejectedByReview": "Ok se depender de mim está liberado",
+    "preparedSourceCommit": "357cb810f870b3936c4c4016659f1156b91f0bb2",
+    "preparedPagesCommit": "70b5e734cf9039b0cabf0e52560d03a3a6209cb8"
   }
 }
