@@ -1,0 +1,113 @@
+{
+  "status": "passed",
+  "pages_commit": "018b14fa95b3b6ef03c37e4618600732d9b07811",
+  "pages_tree": "a78a60cec7394dbc853d3c4c77c0ce46500ef454",
+  "pages_deploy_run": 41793665321,
+  "runtime_release": "31dc249275b884df",
+  "runtime_files": 159,
+  "unchanged_non_html_files": 158,
+  "share_url": "https://andrervarella.github.io/FTW-Race/teste-v4/releases/31dc249275b884df/",
+  "legacy_url": "https://andrervarella.github.io/FTW-Race/teste-v3/",
+  "legacy_paths_preserved": 46,
+  "node_tests": 70,
+  "runtime_resolver_tests": 6,
+  "core": {
+    "status": "passed",
+    "run_id": 41793785508,
+    "run_url": "https://github.com/andrervarella/FTW-Race/actions/runs/41793785508",
+    "run_conclusion": "success",
+    "all_job_steps": "completed/success",
+    "source_commit": "6f1cb94da72fed50fd7cb5ff2fcf0b0cb28477a0",
+    "source_tree": "a325e7fec400466357caba168d31bbcb2e3c6a75",
+    "matching_local_commit": "c818c19",
+    "artifact_id": 13305156575,
+    "artifact_name": "ftw-v4-public-chromium-41793785508",
+    "artifact_bytes": 12012514,
+    "artifact_sha256": "fc03ecf7ac757b1c65840fbb1f7947c21c312d8b25d92c1a590dfe9ec7bc2d29",
+    "zip_crc": "passed",
+    "zip_entries": 42,
+    "runtime_release": "31dc249275b884df",
+    "resolved_runtime_url": "https://andrervarella.github.io/FTW-Race/teste-v4/releases/31dc249275b884df/",
+    "core_checks": {
+      "viewports": 3,
+      "accepted_art_sha256_per_viewport": 43,
+      "natural_race_participants": 7,
+      "truck_rendered_views": 12,
+      "audio_cues": 13,
+      "continuous_audio_cues": 3,
+      "error_arrays": "empty",
+      "outside_runtime": "empty for all three viewports"
+    },
+    "cache_checks": {
+      "rosters": [
+        2,
+        2,
+        3
+      ],
+      "grid": 7,
+      "fresh_canonical_roster": 3
+    },
+    "https_headers": {
+      "requested_document": {
+        "status": 200,
+        "url": "https://andrervarella.github.io/FTW-Race/teste-v4/",
+        "Cache-Control": "max-age=600",
+        "ETag": "\"6aeae106-b98\"",
+        "Last-Modified": "Wed, 04 Nov 2026 07:38:46 GMT"
+      },
+      "runtime_document": {
+        "status": 200,
+        "url": "https://andrervarella.github.io/FTW-Race/teste-v4/releases/31dc249275b884df/",
+        "Cache-Control": "max-age=600",
+        "ETag": "\"6aeae106-b18\"",
+        "Last-Modified": "Wed, 04 Nov 2026 07:38:46 GMT"
+      }
+    },
+    "visual_inspection": "passed for two inspected core screenshots",
+    "visually_inspected_screenshots": [
+      {
+        "path": "915x412-racing-multitouch.png",
+        "observation": "Marquinhos truck rendered on the actual race; seven-position HUD readable; truck and dust remain between the visible left/right controls."
+      },
+      {
+        "path": "740x360-reduced-marquinhos-selection.png",
+        "observation": "Three complete driver cards fit the viewport; Daniel #22, Felipe #25 and Marquinhos without invented number; selected truck card and confirmation control visible."
+      }
+    ],
+    "limits": [
+      "Chromium mobile viewport/touch emulation, no physical Android device",
+      "Audio verified through live Web Audio output graph and recorded WebM; no human speaker listening",
+      "Truck view/collision measurements use a controlled fixture running the actual production renderer/simulator",
+      "Chromium HTTP cache reproduction; no physical WhatsApp app access",
+      "Phaser decoded atlas image.src values are same-origin blob URLs, not original HTTP URLs; NPC original HTTP requests were separately checked"
+    ]
+  },
+  "mobile_layout": {
+    "status": "passed",
+    "run_id": 41793785508,
+    "source_commit": "6f1cb94da72fed50fd7cb5ff2fcf0b0cb28477a0",
+    "artifact_id": 13305181309,
+    "zip_sha256": "a543ec035470fdb3239b35b50f282462e5755fcd91ad437b8eba3fb4c977f5f5",
+    "zip_bytes": 21386176,
+    "zip_crc": "passed",
+    "zip_entries": 97,
+    "browser": "141.0.7390.37",
+    "public_url": "https://andrervarella.github.io/FTW-Race/teste-v4/",
+    "resolved_runtime_url": "https://andrervarella.github.io/FTW-Race/teste-v4/releases/31dc249275b884df/",
+    "layout_states": 576,
+    "screenshots": 96,
+    "minimum_body_control_clearance_px": 7.225969862862769,
+    "original_mercedes_size": "exact",
+    "all_controls_minimum_px": 44,
+    "error_arrays": "all empty",
+    "visual_review": "passed",
+    "limits": [
+      "Chromium mobile viewport/touch emulation, no physical Android or WhatsApp app test"
+    ],
+    "visually_reviewed": [
+      "1024x461-safe0-0-0-daniel.png",
+      "568x320-safe32-44-0-felipe.png",
+      "761x412-safe32-44-0-marquinhos.png"
+    ]
+  }
+}
