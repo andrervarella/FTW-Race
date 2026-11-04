@@ -1,0 +1,838 @@
+{
+  "version": 4,
+  "alphaCleanup": "alpha<40 removed; >240 opaque, original references untouched",
+  "assets": [
+    {
+      "path": "assets/v4/cascavel/title-straight.png",
+      "source": "assets/previews/cascavel/reta-principal.png",
+      "sourceSha256": "96feddd94e48074c567f147e2008c61e8d8444806284d815d2e46007495f063c",
+      "sha256": "c3e4067afc962c9a600d9225f9af7ededed00454f2861f46f67817074387e290",
+      "crop": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "size": [
+        1279,
+        720
+      ],
+      "pivot": [
+        0.5,
+        1
+      ],
+      "alphaRange": [
+        255,
+        255
+      ],
+      "transparentPixels": 0,
+      "opaquePixels": 920880,
+      "frames": null,
+      "status": "derived-preview-human-review-pending",
+      "license": "user-supplied-project-reference"
+    },
+    {
+      "path": "assets/v4/cascavel/horizon.png",
+      "source": "assets/previews/cascavel/curvas-e-mata.png",
+      "sourceSha256": "f8019f8afbd04c35f453c7b94b0f1a293d598ddbb808655a1d470554f0818e62",
+      "sha256": "a33a66635ea663343a7d71859a11ac017b25ceedc6f431bb97e926bcb9bc3c33",
+      "crop": [
+        0,
+        0,
+        1672,
+        190
+      ],
+      "size": [
+        1672,
+        190
+      ],
+      "pivot": [
+        0.5,
+        1
+      ],
+      "alphaRange": [
+        255,
+        255
+      ],
+      "transparentPixels": 0,
+      "opaquePixels": 317680,
+      "frames": null,
+      "status": "derived-preview-human-review-pending",
+      "license": "user-supplied-project-reference"
+    },
+    {
+      "path": "assets/v4/cascavel/tree.png",
+      "source": "assets/previews/cascavel/vegetacao-e-barreiras.png",
+      "sourceSha256": "914d014e54e99e5f2e419c65f79e5b3030e57a211f84453fa72b149c8f6ef543",
+      "sha256": "7fed31afe740ce85fe50d8d5964a8901389bd56a39522e624ef5d8b2844d002b",
+      "crop": [
+        0,
+        0,
+        450,
+        420
+      ],
+      "size": [
+        320,
+        299
+      ],
+      "pivot": [
+        0.5,
+        1
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "transparentPixels": 41243,
+      "opaquePixels": 46901,
+      "frames": null,
+      "status": "derived-preview-human-review-pending",
+      "license": "user-supplied-project-reference"
+    },
+    {
+      "path": "assets/v4/cascavel/bush.png",
+      "source": "assets/previews/cascavel/vegetacao-e-barreiras.png",
+      "sourceSha256": "914d014e54e99e5f2e419c65f79e5b3030e57a211f84453fa72b149c8f6ef543",
+      "sha256": "7a36bbf121f8e156d69da1b12b190ff3cc81b9cdd9525ab5ecc44be1ba5e418e",
+      "crop": [
+        1190,
+        230,
+        1672,
+        420
+      ],
+      "size": [
+        380,
+        130
+      ],
+      "pivot": [
+        0.5,
+        1
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "transparentPixels": 14964,
+      "opaquePixels": 30506,
+      "frames": null,
+      "status": "derived-preview-human-review-pending",
+      "license": "user-supplied-project-reference"
+    },
+    {
+      "path": "assets/v4/cascavel/forest.png",
+      "source": "assets/previews/cascavel/vegetacao-e-barreiras.png",
+      "sourceSha256": "914d014e54e99e5f2e419c65f79e5b3030e57a211f84453fa72b149c8f6ef543",
+      "sha256": "f509ec8ca21b5fb72ac372d23012afeb1a87ffd518c7948c545cfa8b21f3021d",
+      "crop": [
+        0,
+        420,
+        1100,
+        575
+      ],
+      "size": [
+        700,
+        94
+      ],
+      "pivot": [
+        0.5,
+        1
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "transparentPixels": 21017,
+      "opaquePixels": 40111,
+      "frames": null,
+      "status": "derived-preview-human-review-pending",
+      "license": "user-supplied-project-reference"
+    },
+    {
+      "path": "assets/v4/cascavel/fence.png",
+      "source": "assets/previews/cascavel/vegetacao-e-barreiras.png",
+      "sourceSha256": "914d014e54e99e5f2e419c65f79e5b3030e57a211f84453fa72b149c8f6ef543",
+      "sha256": "37cfd8b1a28a7f8701e89e5a7d046277e35ed71d1c694925f35841fca02afb9d",
+      "crop": [
+        480,
+        580,
+        930,
+        760
+      ],
+      "size": [
+        360,
+        129
+      ],
+      "pivot": [
+        0.5,
+        1
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "transparentPixels": 14114,
+      "opaquePixels": 4200,
+      "frames": null,
+      "status": "derived-preview-human-review-pending",
+      "license": "user-supplied-project-reference"
+    },
+    {
+      "path": "assets/v4/cascavel/tires.png",
+      "source": "assets/previews/cascavel/vegetacao-e-barreiras.png",
+      "sourceSha256": "914d014e54e99e5f2e419c65f79e5b3030e57a211f84453fa72b149c8f6ef543",
+      "sha256": "c16e22190464f81f559348c1057cd63062f6c3e301c3792cf244a85434726e8f",
+      "crop": [
+        950,
+        620,
+        1280,
+        760
+      ],
+      "size": [
+        308,
+        102
+      ],
+      "pivot": [
+        0.5,
+        1
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "transparentPixels": 244,
+      "opaquePixels": 29775,
+      "frames": null,
+      "status": "derived-preview-human-review-pending",
+      "license": "user-supplied-project-reference"
+    },
+    {
+      "path": "assets/v4/cascavel/barrier.png",
+      "source": "assets/previews/cascavel/vegetacao-e-barreiras.png",
+      "sourceSha256": "914d014e54e99e5f2e419c65f79e5b3030e57a211f84453fa72b149c8f6ef543",
+      "sha256": "d7a3059c967ad6fb1ce30233622de8086892b43654dcc7f5aee7db8672279a06",
+      "crop": [
+        1290,
+        600,
+        1672,
+        760
+      ],
+      "size": [
+        320,
+        86
+      ],
+      "pivot": [
+        0.5,
+        1
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "transparentPixels": 5506,
+      "opaquePixels": 20709,
+      "frames": null,
+      "status": "derived-preview-human-review-pending",
+      "license": "user-supplied-project-reference"
+    },
+    {
+      "path": "assets/v4/cascavel/pit.png",
+      "source": "assets/previews/cascavel/boxes-e-sinalizacao.png",
+      "sourceSha256": "5710aa85aed77fc9860aa404438fb8e96390258ac82e2c2a44e1d9638d907152",
+      "sha256": "f9f7b423d684e56dc348ec60a7f3862cb0563e99257234e1c0cc7ef1edaf3e6e",
+      "crop": [
+        0,
+        0,
+        1671,
+        393
+      ],
+      "size": [
+        1100,
+        250
+      ],
+      "pivot": [
+        0.5,
+        1
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "transparentPixels": 86175,
+      "opaquePixels": 185257,
+      "frames": null,
+      "status": "derived-preview-human-review-pending",
+      "license": "user-supplied-project-reference"
+    },
+    {
+      "path": "assets/v4/cascavel/stand.png",
+      "source": "assets/previews/cascavel/boxes-e-sinalizacao.png",
+      "sourceSha256": "5710aa85aed77fc9860aa404438fb8e96390258ac82e2c2a44e1d9638d907152",
+      "sha256": "e68b5051faaa4515ad9a5535232b232393ed7e1cf5ac78612c88b788493fd73d",
+      "crop": [
+        20,
+        397,
+        630,
+        640
+      ],
+      "size": [
+        557,
+        229
+      ],
+      "pivot": [
+        0.5,
+        1
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "transparentPixels": 44516,
+      "opaquePixels": 71904,
+      "frames": null,
+      "status": "derived-preview-human-review-pending",
+      "license": "user-supplied-project-reference"
+    },
+    {
+      "path": "assets/v4/cascavel/tent.png",
+      "source": "assets/previews/cascavel/boxes-e-sinalizacao.png",
+      "sourceSha256": "5710aa85aed77fc9860aa404438fb8e96390258ac82e2c2a44e1d9638d907152",
+      "sha256": "048af7cd2c97b38fadff4579e48d527271ec2fc3a120d6353daaec925e0f7375",
+      "crop": [
+        650,
+        395,
+        1150,
+        650
+      ],
+      "size": [
+        479,
+        215
+      ],
+      "pivot": [
+        0.5,
+        1
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "transparentPixels": 32109,
+      "opaquePixels": 67716,
+      "frames": null,
+      "status": "derived-preview-human-review-pending",
+      "license": "user-supplied-project-reference"
+    },
+    {
+      "path": "assets/v4/cascavel/board100.png",
+      "source": "assets/previews/cascavel/boxes-e-sinalizacao.png",
+      "sourceSha256": "5710aa85aed77fc9860aa404438fb8e96390258ac82e2c2a44e1d9638d907152",
+      "sha256": "5a6d228b82a21ca2a20f10d76b06d76a01064245d2b7c8ee7e59218e68f52f42",
+      "crop": [
+        1130,
+        760,
+        1305,
+        920
+      ],
+      "size": [
+        151,
+        113
+      ],
+      "pivot": [
+        0.5,
+        1
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "transparentPixels": 2843,
+      "opaquePixels": 12762,
+      "frames": null,
+      "status": "derived-preview-human-review-pending",
+      "license": "user-supplied-project-reference"
+    },
+    {
+      "path": "assets/v4/cascavel/board50.png",
+      "source": "assets/previews/cascavel/boxes-e-sinalizacao.png",
+      "sourceSha256": "5710aa85aed77fc9860aa404438fb8e96390258ac82e2c2a44e1d9638d907152",
+      "sha256": "d53efc53a6b55bfd9b4b110015da363b412d3516f72e6e3eb3886da452bc9dee",
+      "crop": [
+        1335,
+        785,
+        1500,
+        925
+      ],
+      "size": [
+        138,
+        95
+      ],
+      "pivot": [
+        0.5,
+        1
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "transparentPixels": 1977,
+      "opaquePixels": 9841,
+      "frames": null,
+      "status": "derived-preview-human-review-pending",
+      "license": "user-supplied-project-reference"
+    },
+    {
+      "path": "assets/v4/cars/daniel-left.png",
+      "source": "assets/previews/daniel/carro-traseira.png",
+      "sourceSha256": "65f9128c1570a8b93026b31e84db52d1e24d9aaf5e3f87bfb693dcc956c7acba",
+      "sha256": "5a06122346d61606a90aeaa1759b3621627a3deadf0fa9b0fb8c83962dd39290",
+      "crop": [
+        0,
+        0,
+        790,
+        724
+      ],
+      "size": [
+        512,
+        512
+      ],
+      "pivot": [
+        0.5,
+        0.91796875
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "transparentPixels": 149832,
+      "opaquePixels": 107568,
+      "frames": null,
+      "status": "derived-preview-human-review-pending",
+      "license": "user-supplied-project-reference"
+    },
+    {
+      "path": "assets/v4/cars/daniel-rear.png",
+      "source": "assets/previews/daniel/carro-traseira.png",
+      "sourceSha256": "65f9128c1570a8b93026b31e84db52d1e24d9aaf5e3f87bfb693dcc956c7acba",
+      "sha256": "a4356de4182a078432e411b5fd6c68862790a05aa9f631129fd0a99711170e5a",
+      "crop": [
+        795,
+        0,
+        1378,
+        724
+      ],
+      "size": [
+        512,
+        512
+      ],
+      "pivot": [
+        0.5,
+        0.91796875
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "transparentPixels": 143145,
+      "opaquePixels": 114381,
+      "frames": null,
+      "status": "derived-preview-human-review-pending",
+      "license": "user-supplied-project-reference"
+    },
+    {
+      "path": "assets/v4/cars/daniel-right.png",
+      "source": "assets/previews/daniel/carro-traseira.png",
+      "sourceSha256": "65f9128c1570a8b93026b31e84db52d1e24d9aaf5e3f87bfb693dcc956c7acba",
+      "sha256": "1e994d1eb269c2eab105cae704a88d6dc096b9d1100301835ea8c22dc7745025",
+      "crop": [
+        1380,
+        0,
+        2172,
+        724
+      ],
+      "size": [
+        512,
+        512
+      ],
+      "pivot": [
+        0.5,
+        0.91796875
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "transparentPixels": 150122,
+      "opaquePixels": 107308,
+      "frames": null,
+      "status": "derived-preview-human-review-pending",
+      "license": "user-supplied-project-reference"
+    },
+    {
+      "path": "assets/v4/cars/felipe-left.png",
+      "source": "assets/previews/felipe/carro-traseira.png",
+      "sourceSha256": "7d77ccdcc9488f9e53c9849eb9d4f2c6f1e179720dc23cd9d5de7cf87beb46d1",
+      "sha256": "f0b3ad861d6e649b51915581fd163594b4c26aa1f5a41fc193f90e3e1240f832",
+      "crop": [
+        0,
+        0,
+        790,
+        724
+      ],
+      "size": [
+        512,
+        512
+      ],
+      "pivot": [
+        0.5,
+        0.91796875
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "transparentPixels": 147897,
+      "opaquePixels": 109374,
+      "frames": null,
+      "status": "derived-preview-human-review-pending",
+      "license": "user-supplied-project-reference"
+    },
+    {
+      "path": "assets/v4/cars/felipe-rear.png",
+      "source": "assets/previews/felipe/carro-traseira.png",
+      "sourceSha256": "7d77ccdcc9488f9e53c9849eb9d4f2c6f1e179720dc23cd9d5de7cf87beb46d1",
+      "sha256": "5ee4a063f94fb33cf23ad7905c81b25bcc04d0207b341c8ff33a8655f0dfe4fb",
+      "crop": [
+        795,
+        0,
+        1378,
+        724
+      ],
+      "size": [
+        512,
+        512
+      ],
+      "pivot": [
+        0.5,
+        0.91796875
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "transparentPixels": 144372,
+      "opaquePixels": 112829,
+      "frames": null,
+      "status": "derived-preview-human-review-pending",
+      "license": "user-supplied-project-reference"
+    },
+    {
+      "path": "assets/v4/cars/felipe-right.png",
+      "source": "assets/previews/felipe/carro-traseira.png",
+      "sourceSha256": "7d77ccdcc9488f9e53c9849eb9d4f2c6f1e179720dc23cd9d5de7cf87beb46d1",
+      "sha256": "d7f14cd0d692b74d09cbf015e786a8357df9f281ab27b4be9db16f04bb2b023b",
+      "crop": [
+        1380,
+        0,
+        2172,
+        724
+      ],
+      "size": [
+        512,
+        512
+      ],
+      "pivot": [
+        0.5,
+        0.91796875
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "transparentPixels": 147497,
+      "opaquePixels": 109740,
+      "frames": null,
+      "status": "derived-preview-human-review-pending",
+      "license": "user-supplied-project-reference"
+    },
+    {
+      "path": "assets/v4/fx/effects.png",
+      "source": "assets/previews/fx/estudo-fumaca-poeira-nitro-impacto.png",
+      "sourceSha256": "2134b1868c3c38441a30b7877462319f0d3bec2e5a5e32874c71d19487aaf094",
+      "sha256": "226688f5503cc1ed7ba6491b8bae21b86614e37409e99f9fb9c90d9deb0ba3ab",
+      "crop": null,
+      "size": [
+        512,
+        512
+      ],
+      "pivot": [
+        0.5,
+        0.859375
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "transparentPixels": 225384,
+      "opaquePixels": 25570,
+      "frames": [
+        {
+          "family": "smoke",
+          "frame": 0,
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            128,
+            128
+          ],
+          "durationMs": 100,
+          "pivot": [
+            0.5,
+            0.859375
+          ]
+        },
+        {
+          "family": "smoke",
+          "frame": 1,
+          "index": 1,
+          "rect": [
+            128,
+            0,
+            128,
+            128
+          ],
+          "durationMs": 100,
+          "pivot": [
+            0.5,
+            0.859375
+          ]
+        },
+        {
+          "family": "smoke",
+          "frame": 2,
+          "index": 2,
+          "rect": [
+            256,
+            0,
+            128,
+            128
+          ],
+          "durationMs": 100,
+          "pivot": [
+            0.5,
+            0.859375
+          ]
+        },
+        {
+          "family": "smoke",
+          "frame": 3,
+          "index": 3,
+          "rect": [
+            384,
+            0,
+            128,
+            128
+          ],
+          "durationMs": 100,
+          "pivot": [
+            0.5,
+            0.859375
+          ]
+        },
+        {
+          "family": "dust",
+          "frame": 0,
+          "index": 4,
+          "rect": [
+            0,
+            128,
+            128,
+            128
+          ],
+          "durationMs": 100,
+          "pivot": [
+            0.5,
+            0.859375
+          ]
+        },
+        {
+          "family": "dust",
+          "frame": 1,
+          "index": 5,
+          "rect": [
+            128,
+            128,
+            128,
+            128
+          ],
+          "durationMs": 100,
+          "pivot": [
+            0.5,
+            0.859375
+          ]
+        },
+        {
+          "family": "dust",
+          "frame": 2,
+          "index": 6,
+          "rect": [
+            256,
+            128,
+            128,
+            128
+          ],
+          "durationMs": 100,
+          "pivot": [
+            0.5,
+            0.859375
+          ]
+        },
+        {
+          "family": "dust",
+          "frame": 3,
+          "index": 7,
+          "rect": [
+            384,
+            128,
+            128,
+            128
+          ],
+          "durationMs": 100,
+          "pivot": [
+            0.5,
+            0.859375
+          ]
+        },
+        {
+          "family": "nitro",
+          "frame": 0,
+          "index": 8,
+          "rect": [
+            0,
+            256,
+            128,
+            128
+          ],
+          "durationMs": 100,
+          "pivot": [
+            0.5,
+            0.859375
+          ]
+        },
+        {
+          "family": "nitro",
+          "frame": 1,
+          "index": 9,
+          "rect": [
+            128,
+            256,
+            128,
+            128
+          ],
+          "durationMs": 100,
+          "pivot": [
+            0.5,
+            0.859375
+          ]
+        },
+        {
+          "family": "nitro",
+          "frame": 2,
+          "index": 10,
+          "rect": [
+            256,
+            256,
+            128,
+            128
+          ],
+          "durationMs": 100,
+          "pivot": [
+            0.5,
+            0.859375
+          ]
+        },
+        {
+          "family": "nitro",
+          "frame": 3,
+          "index": 11,
+          "rect": [
+            384,
+            256,
+            128,
+            128
+          ],
+          "durationMs": 100,
+          "pivot": [
+            0.5,
+            0.859375
+          ]
+        },
+        {
+          "family": "spark",
+          "frame": 0,
+          "index": 12,
+          "rect": [
+            0,
+            384,
+            128,
+            128
+          ],
+          "durationMs": 100,
+          "pivot": [
+            0.5,
+            0.859375
+          ]
+        },
+        {
+          "family": "spark",
+          "frame": 1,
+          "index": 13,
+          "rect": [
+            128,
+            384,
+            128,
+            128
+          ],
+          "durationMs": 100,
+          "pivot": [
+            0.5,
+            0.859375
+          ]
+        },
+        {
+          "family": "spark",
+          "frame": 2,
+          "index": 14,
+          "rect": [
+            256,
+            384,
+            128,
+            128
+          ],
+          "durationMs": 100,
+          "pivot": [
+            0.5,
+            0.859375
+          ]
+        },
+        {
+          "family": "spark",
+          "frame": 3,
+          "index": 15,
+          "rect": [
+            384,
+            384,
+            128,
+            128
+          ],
+          "durationMs": 100,
+          "pivot": [
+            0.5,
+            0.859375
+          ]
+        }
+      ],
+      "status": "derived-preview-human-review-pending",
+      "license": "user-supplied-project-reference"
+    }
+  ]
+}

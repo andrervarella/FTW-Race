@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#0b1510">
+<link rel="icon" href="assets/legacy/ftw.png" type="image/png">
+<title>FTW Race — Cascavel · Prévia V4</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="podium.css">
+<script>
+/* Diagnóstico de inicialização (script clássico, roda mesmo se os módulos falharem). */
+window.__boot = {
+  log: [], last: 'página',
+  show: function (msg) {
+    var f = document.getElementById('fatal'), l = document.getElementById('loading');
+    if (f) { f.textContent = msg + '\nÚltima etapa: ' + this.last + '\nMande um print desta mensagem.'; f.hidden = false; }
+    if (l) l.style.display = 'none';
+  },
+  step: function (s) { this.last = s; this.log.push(s); var l = document.getElementById('loading'); if (l) l.textContent = 'Carregando FTW Race… (' + s + ')'; }
+};
+window.addEventListener('error', function (e) {
+  var t = e.target && (e.target.src || e.target.href);
+  window.__boot.show('Erro: ' + (t ? 'falha ao carregar ' + t : (e.message || 'desconhecido') + (e.filename ? ' em ' + e.filename.split('/').pop() + ':' + e.lineno : '')));
+}, true);
+window.addEventListener('unhandledrejection', function (e) { window.__boot.show('Erro: ' + ((e.reason && e.reason.message) || e.reason)); });
+setTimeout(function () {
+  if (document.body.dataset.ready === 'true') return;
+  var loading = document.getElementById('loading'), fatal = document.getElementById('fatal');
+  if (loading && (!fatal || fatal.hidden)) loading.textContent = 'Ainda carregando FTW Race… Em conexão lenta, aguarde o download das imagens.';
+}, 12000);
+</script>
+<meta name="ftw-runtime-base" content="./">
+<meta name="ftw-release" content="31dc249275b884df">
+<link rel="canonical" href="https://andrervarella.github.io/FTW-Race/teste-v4/releases/31dc249275b884df/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="FTW Race — Daniel, Felipe e Marquinhos">
+<meta property="og:description" content="Escolha seu piloto e corra em Cascavel. Marquinhos e seu caminhão também estão na pista.">
+<meta property="og:url" content="https://andrervarella.github.io/FTW-Race/teste-v4/releases/31dc249275b884df/">
+</head>
+<body>
+<div id="world"></div>
+<main id="ui" aria-label="FTW Race"></main>
+<div id="rotate" role="status" aria-live="polite"><div><b>Gire o celular</b><span>FTW Race é jogado na horizontal</span></div></div>
+<div id="loading">Carregando FTW Race…</div>
+<div id="fatal" hidden></div>
+<script>window.__boot.step('página carregada');</script>
+<script type="module" src="src/main.js"></script>
+<noscript>Este jogo precisa de JavaScript.</noscript>
+</body>
+</html>

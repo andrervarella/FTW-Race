@@ -1,0 +1,88 @@
+{
+  "status": "owner-approved-for-integration",
+  "date": "2026-11-02",
+  "approvalText": "Aprovar a capa",
+  "composition": "layered DOM/CSS; original official logo PNGs, preserved Daniel/Felipe art, accepted title-only Felipe retouch and prepared Marquinhos portrait; no mirroring",
+  "assets": [
+    {
+      "file": "game/assets/v4/title/background.png",
+      "source": "/workspace/work/pilot-art-review/cover-background.png",
+      "sha256": "dc6eb16e91c5e38393aa0aeec936a54f39f82b41d3be9c373ea6c2f16ecb2d16",
+      "approval": "owner approved cover; original supplied logo/car files preserved"
+    },
+    {
+      "file": "game/assets/v4/title/daniel-front-sheet.png",
+      "source": "/workspace/FTW-Race/assets/previews/daniel/carro-frente.png",
+      "sha256": "02df8b6c5abb0c1833aa567c707c51c1669b54bf2065989f8de17d190aaa5b38",
+      "approval": "owner approved cover; original supplied logo/car files preserved"
+    },
+    {
+      "file": "game/assets/v4/title/felipe-front-sheet.png",
+      "source": "/workspace/FTW-Race/assets/previews/felipe/carro-frente.png",
+      "sha256": "ce79d1f6a6a1ef2336d4d8ce22248ae8f36693160cea3f40ddcd857ad3fda1bb",
+      "approval": "owner approved cover; original supplied logo/car files preserved"
+    },
+    {
+      "file": "game/assets/v4/title/ftw-official.png",
+      "source": "/workspace/FTW-Race/referencias/marcas-e-produto/ftw_logo_oficial_isolado.png",
+      "sha256": "5ca79b7cadd5d2af407513cf5d2e01ab382dc16064a84ffe219419801ccc0347",
+      "approval": "owner approved cover; original supplied logo/car files preserved"
+    },
+    {
+      "file": "game/assets/v4/title/diabo-verde-official.png",
+      "source": "/workspace/FTW-Race/referencias/marcas-e-produto/diabo_verde_logo_oficial.png",
+      "sha256": "efd50c7ea40dc0c5fe54ae92246249d1230ac6c1d43f5d271f7a1e94267f8137",
+      "approval": "owner approved cover; original supplied logo/car files preserved"
+    },
+    {
+      "file": "game/assets/v4/title/felipe-front-portrait.png",
+      "source": "/workspace/work/felipe-chin-fix/felipe-front-portrait-proposal.png",
+      "sha256": "98832d1d00feb8f628d76172ad2ace8dcacf75a4a6ea2e7c8af88faf4f7a236b",
+      "approval": "owner-requested-integration of accepted title-only less-chin retouch",
+      "scope": "opening portrait PNG/WebP only; other Felipe sprites preserved"
+    },
+    {
+      "file": "game/assets/v4/title/marquinhos-front-portrait.png",
+      "source": "assets/sprites/v4/truck-driver/portrait.png",
+      "sha256": "c9a238c8b70c204d046adbf2950253e9bbd3d9dfb4503a0e5477b2401fcd59c4",
+      "sourceSha256": "c9a238c8b70c204d046adbf2950253e9bbd3d9dfb4503a0e5477b2401fcd59c4",
+      "size": [
+        512,
+        640
+      ],
+      "transformation": "byte-identical copy of prepared source",
+      "approval": "owner-requested-integration"
+    },
+    {
+      "file": "game/assets/v4/title/marquinhos-front-portrait.webp",
+      "source": "assets/sprites/v4/truck-driver/portrait.webp",
+      "sha256": "a01f64349ad7e3bda9b1d5cfad494fb73efdbf93d1ce78f1ae9579dbf0ddc408",
+      "sourceSha256": "a01f64349ad7e3bda9b1d5cfad494fb73efdbf93d1ce78f1ae9579dbf0ddc408",
+      "size": [
+        512,
+        640
+      ],
+      "transformation": "byte-identical copy of prepared source",
+      "approval": "owner-requested-integration"
+    }
+  ],
+  "poseApproval": {
+    "date": "2026-11-02",
+    "text": "Aprovar a pose",
+    "scope": "Felipe opening cover front posture only; retain approved facial identity; selection and podium portraits unchanged"
+  },
+  "integrationAcceptance": {
+    "status": "owner-requested-integration",
+    "date": "2026-11-03",
+    "quote": "Otimo o que mais precisamos para aplicar tudo isso no game? Inclusive também ter esse novo piloto que se chama Marquinhos na capa do game e telefone como personagem jogavel",
+    "scope": "prepared master + six derivative podium poses + truck views; cover and playable character",
+    "interpretation": "latest integration request accepts the prepared artwork for this use; no invented approval quote"
+  },
+  "felipeRetouch": {
+    "date": "2026-11-03",
+    "status": "owner-requested-integration",
+    "request": "Deixe o rosto do Felipe com menos papada e um pouco mais magro ajuste novamente",
+    "scope": "opening portrait only",
+    "sha256": "98832d1d00feb8f628d76172ad2ace8dcacf75a4a6ea2e7c8af88faf4f7a236b"
+  }
+}

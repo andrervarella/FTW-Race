@@ -1,0 +1,962 @@
+{
+  "version": 1,
+  "release": "31dc249275b884df",
+  "runtimeSha256": "31dc249275b884df97a2ca80506052fc0b538dd76d67155704689f33ad449c77",
+  "shareUrl": "https://andrervarella.github.io/FTW-Race/teste-v4/releases/31dc249275b884df/",
+  "files": [
+    {
+      "path": "assets/legacy/LICENSE-PHASER.md",
+      "bytes": 1101,
+      "sha256": "78055a047d59e5e51f156d2a939d4e468e1b9198ecbe0fdaa468e6ddd73ce558",
+      "inputSha256": "78055a047d59e5e51f156d2a939d4e468e1b9198ecbe0fdaa468e6ddd73ce558"
+    },
+    {
+      "path": "assets/legacy/can.png",
+      "bytes": 44376,
+      "sha256": "be6b2c029e36afc5947bb27fadedc383aefad2d867d72399e383a6415889444b",
+      "inputSha256": "be6b2c029e36afc5947bb27fadedc383aefad2d867d72399e383a6415889444b"
+    },
+    {
+      "path": "assets/legacy/daniel-rear.png",
+      "bytes": 176867,
+      "sha256": "93b9068daaf4a89c69778b345b585728ac38ea5767a48b7fd7991bd1de2b4ccd",
+      "inputSha256": "93b9068daaf4a89c69778b345b585728ac38ea5767a48b7fd7991bd1de2b4ccd"
+    },
+    {
+      "path": "assets/legacy/diabo-verde.png",
+      "bytes": 2700,
+      "sha256": "efd50c7ea40dc0c5fe54ae92246249d1230ac6c1d43f5d271f7a1e94267f8137",
+      "inputSha256": "efd50c7ea40dc0c5fe54ae92246249d1230ac6c1d43f5d271f7a1e94267f8137"
+    },
+    {
+      "path": "assets/legacy/felipe-rear.png",
+      "bytes": 159636,
+      "sha256": "8f8000ee9aca7c15da3b9b7ea2b55ff0c3c072f3a6a64ee622a1aeb9e3206706",
+      "inputSha256": "8f8000ee9aca7c15da3b9b7ea2b55ff0c3c072f3a6a64ee622a1aeb9e3206706"
+    },
+    {
+      "path": "assets/legacy/ftw.png",
+      "bytes": 8360,
+      "sha256": "5ca79b7cadd5d2af407513cf5d2e01ab382dc16064a84ffe219419801ccc0347",
+      "inputSha256": "5ca79b7cadd5d2af407513cf5d2e01ab382dc16064a84ffe219419801ccc0347"
+    },
+    {
+      "path": "assets/legacy/phaser-Czz4FBZH.js",
+      "bytes": 1481772,
+      "sha256": "a457e09aa916bbe0c7669ed49cddb5ece24db69f11f0c4a2f96fa7b7e6290051",
+      "inputSha256": "a457e09aa916bbe0c7669ed49cddb5ece24db69f11f0c4a2f96fa7b7e6290051"
+    },
+    {
+      "path": "assets/v4/cars/daniel-left.png",
+      "bytes": 241134,
+      "sha256": "5a06122346d61606a90aeaa1759b3621627a3deadf0fa9b0fb8c83962dd39290",
+      "inputSha256": "5a06122346d61606a90aeaa1759b3621627a3deadf0fa9b0fb8c83962dd39290"
+    },
+    {
+      "path": "assets/v4/cars/daniel-rear.png",
+      "bytes": 229954,
+      "sha256": "a4356de4182a078432e411b5fd6c68862790a05aa9f631129fd0a99711170e5a",
+      "inputSha256": "a4356de4182a078432e411b5fd6c68862790a05aa9f631129fd0a99711170e5a"
+    },
+    {
+      "path": "assets/v4/cars/daniel-right.png",
+      "bytes": 240637,
+      "sha256": "1e994d1eb269c2eab105cae704a88d6dc096b9d1100301835ea8c22dc7745025",
+      "inputSha256": "1e994d1eb269c2eab105cae704a88d6dc096b9d1100301835ea8c22dc7745025"
+    },
+    {
+      "path": "assets/v4/cars/felipe-left.png",
+      "bytes": 232919,
+      "sha256": "f0b3ad861d6e649b51915581fd163594b4c26aa1f5a41fc193f90e3e1240f832",
+      "inputSha256": "f0b3ad861d6e649b51915581fd163594b4c26aa1f5a41fc193f90e3e1240f832"
+    },
+    {
+      "path": "assets/v4/cars/felipe-rear.png",
+      "bytes": 212886,
+      "sha256": "5ee4a063f94fb33cf23ad7905c81b25bcc04d0207b341c8ff33a8655f0dfe4fb",
+      "inputSha256": "5ee4a063f94fb33cf23ad7905c81b25bcc04d0207b341c8ff33a8655f0dfe4fb"
+    },
+    {
+      "path": "assets/v4/cars/felipe-right.png",
+      "bytes": 232557,
+      "sha256": "d7f14cd0d692b74d09cbf015e786a8357df9f281ab27b4be9db16f04bb2b023b",
+      "inputSha256": "d7f14cd0d692b74d09cbf015e786a8357df9f281ab27b4be9db16f04bb2b023b"
+    },
+    {
+      "path": "assets/v4/cars/marquinhos-brake.png",
+      "bytes": 214000,
+      "sha256": "cba23b3436ffdeda5f580c171a2553e6560e7d9f8b8b2c1d39e986f7392ce9a2",
+      "inputSha256": "cba23b3436ffdeda5f580c171a2553e6560e7d9f8b8b2c1d39e986f7392ce9a2"
+    },
+    {
+      "path": "assets/v4/cars/marquinhos-front.png",
+      "bytes": 323755,
+      "sha256": "bfd8726a9a09a0fc5958b0d66969e3cfe9e567efaed78b2a107e9b9a7fd63e74",
+      "inputSha256": "bfd8726a9a09a0fc5958b0d66969e3cfe9e567efaed78b2a107e9b9a7fd63e74"
+    },
+    {
+      "path": "assets/v4/cars/marquinhos-left-brake.png",
+      "bytes": 267375,
+      "sha256": "5c6382d345dd0e8a1967080d60f2c2b43c13d95f18268eb25a58de090a469e09",
+      "inputSha256": "5c6382d345dd0e8a1967080d60f2c2b43c13d95f18268eb25a58de090a469e09"
+    },
+    {
+      "path": "assets/v4/cars/marquinhos-left.png",
+      "bytes": 265009,
+      "sha256": "ad3056b69854c5cad39ab4812b0b158f45b1e4fab3e9334bdbf61f3ea82012f2",
+      "inputSha256": "ad3056b69854c5cad39ab4812b0b158f45b1e4fab3e9334bdbf61f3ea82012f2"
+    },
+    {
+      "path": "assets/v4/cars/marquinhos-rear.png",
+      "bytes": 212568,
+      "sha256": "1523eb77cd997491868a4ddb326ba0a1ef844776310003e61e363131276e388b",
+      "inputSha256": "1523eb77cd997491868a4ddb326ba0a1ef844776310003e61e363131276e388b"
+    },
+    {
+      "path": "assets/v4/cars/marquinhos-right-brake.png",
+      "bytes": 256307,
+      "sha256": "8a96872b25cdffae1eedb9b36d18bd9b0e532519c348c308da03c30d36aa7e94",
+      "inputSha256": "8a96872b25cdffae1eedb9b36d18bd9b0e532519c348c308da03c30d36aa7e94"
+    },
+    {
+      "path": "assets/v4/cars/marquinhos-right.png",
+      "bytes": 254288,
+      "sha256": "879632502422bc709b641d2877e4e605af5f7eba7d04d62c33ef887e9f62bdc5",
+      "inputSha256": "879632502422bc709b641d2877e4e605af5f7eba7d04d62c33ef887e9f62bdc5"
+    },
+    {
+      "path": "assets/v4/cars/marquinhos.json",
+      "bytes": 7346,
+      "sha256": "20c3ca2332b2bf02055dc85acb56609976ee0ee351dfdcca4a0137a5beed0ac2",
+      "inputSha256": "20c3ca2332b2bf02055dc85acb56609976ee0ee351dfdcca4a0137a5beed0ac2"
+    },
+    {
+      "path": "assets/v4/cars/marquinhos.png",
+      "bytes": 1462588,
+      "sha256": "bc04432380e1c232ad49e319bb507c3d8d2b057ec562703fe47c15f8247e337e",
+      "inputSha256": "bc04432380e1c232ad49e319bb507c3d8d2b057ec562703fe47c15f8247e337e"
+    },
+    {
+      "path": "assets/v4/cars/npc-cars.json",
+      "bytes": 12475,
+      "sha256": "149513cd2809ccea8b17a70e679789f0779cee4084069e0ddbfca12f4e1f84b5",
+      "inputSha256": "149513cd2809ccea8b17a70e679789f0779cee4084069e0ddbfca12f4e1f84b5"
+    },
+    {
+      "path": "assets/v4/cars/npc-raster/frames/npc-blue/brake.png",
+      "bytes": 19825,
+      "sha256": "990f21f73f316a706803f50aaff0bcfeed6b5204b59bd2405a9a36655b711135",
+      "inputSha256": "990f21f73f316a706803f50aaff0bcfeed6b5204b59bd2405a9a36655b711135"
+    },
+    {
+      "path": "assets/v4/cars/npc-raster/frames/npc-blue/left-brake.png",
+      "bytes": 22413,
+      "sha256": "28f2afe57cb50df02417dd0f2ae73516051cebb7d2becb03214760d5ab9276e7",
+      "inputSha256": "28f2afe57cb50df02417dd0f2ae73516051cebb7d2becb03214760d5ab9276e7"
+    },
+    {
+      "path": "assets/v4/cars/npc-raster/frames/npc-blue/left.png",
+      "bytes": 22627,
+      "sha256": "d4864fcdde5c8a617dcaa8b5b2d2468d3b1a231c95a70195e973297ecfa536b0",
+      "inputSha256": "d4864fcdde5c8a617dcaa8b5b2d2468d3b1a231c95a70195e973297ecfa536b0"
+    },
+    {
+      "path": "assets/v4/cars/npc-raster/frames/npc-blue/rear.png",
+      "bytes": 19183,
+      "sha256": "98c2849a3aa7423f38ce49695a6b64f6433f3c3be49ec27373c0c08b3c7999d2",
+      "inputSha256": "98c2849a3aa7423f38ce49695a6b64f6433f3c3be49ec27373c0c08b3c7999d2"
+    },
+    {
+      "path": "assets/v4/cars/npc-raster/frames/npc-blue/right-brake.png",
+      "bytes": 22214,
+      "sha256": "1992291735ba27aa479069836a72911824b305b0ca2fa2ed3b0d5b011933c086",
+      "inputSha256": "1992291735ba27aa479069836a72911824b305b0ca2fa2ed3b0d5b011933c086"
+    },
+    {
+      "path": "assets/v4/cars/npc-raster/frames/npc-blue/right.png",
+      "bytes": 22377,
+      "sha256": "dfc530419f64cff33a34e0fea242e17efa5a3bee7c4770c10096fcbfbbeb1ac4",
+      "inputSha256": "dfc530419f64cff33a34e0fea242e17efa5a3bee7c4770c10096fcbfbbeb1ac4"
+    },
+    {
+      "path": "assets/v4/cars/npc-raster/frames/npc-purple/brake.png",
+      "bytes": 19574,
+      "sha256": "8a7fc79cf28164ec05cbe97ac52ebabf2e784c83cce53cb7e51deda02ce4f0e6",
+      "inputSha256": "8a7fc79cf28164ec05cbe97ac52ebabf2e784c83cce53cb7e51deda02ce4f0e6"
+    },
+    {
+      "path": "assets/v4/cars/npc-raster/frames/npc-purple/left-brake.png",
+      "bytes": 23231,
+      "sha256": "eaeeb27bf81e2aeb11ce1f939f8211d8f2bfcfe727d7c47c233d6faae6580602",
+      "inputSha256": "eaeeb27bf81e2aeb11ce1f939f8211d8f2bfcfe727d7c47c233d6faae6580602"
+    },
+    {
+      "path": "assets/v4/cars/npc-raster/frames/npc-purple/left.png",
+      "bytes": 23455,
+      "sha256": "fd8df7d72d94750e36603e3e1db3302f4873b865500b0629021bfeef8c01a949",
+      "inputSha256": "fd8df7d72d94750e36603e3e1db3302f4873b865500b0629021bfeef8c01a949"
+    },
+    {
+      "path": "assets/v4/cars/npc-raster/frames/npc-purple/rear.png",
+      "bytes": 19486,
+      "sha256": "84fede1d395f1b3a3b6822e9f1b08e17ade792888db370a1a3b0c0f445e3c05f",
+      "inputSha256": "84fede1d395f1b3a3b6822e9f1b08e17ade792888db370a1a3b0c0f445e3c05f"
+    },
+    {
+      "path": "assets/v4/cars/npc-raster/frames/npc-purple/right-brake.png",
+      "bytes": 22931,
+      "sha256": "948376fdeec2effd04f46c6b409d308eca758c8e85fcac41de93e6cf4eee13ac",
+      "inputSha256": "948376fdeec2effd04f46c6b409d308eca758c8e85fcac41de93e6cf4eee13ac"
+    },
+    {
+      "path": "assets/v4/cars/npc-raster/frames/npc-purple/right.png",
+      "bytes": 23111,
+      "sha256": "b14de4849e2cef44ae92663412702b2f2ec56bf870efd89fac02a7b942421cb3",
+      "inputSha256": "b14de4849e2cef44ae92663412702b2f2ec56bf870efd89fac02a7b942421cb3"
+    },
+    {
+      "path": "assets/v4/cars/npc-raster/frames/npc-silver/brake.png",
+      "bytes": 19722,
+      "sha256": "0c98339defb147fddff2c957fa7fc698c8b068775fcb67ace401c99794bc0efd",
+      "inputSha256": "0c98339defb147fddff2c957fa7fc698c8b068775fcb67ace401c99794bc0efd"
+    },
+    {
+      "path": "assets/v4/cars/npc-raster/frames/npc-silver/left-brake.png",
+      "bytes": 22531,
+      "sha256": "d19c14e1314514d28140e2f8aa73bf74ecb8dfb1581cfeba059cffe541a62d4b",
+      "inputSha256": "d19c14e1314514d28140e2f8aa73bf74ecb8dfb1581cfeba059cffe541a62d4b"
+    },
+    {
+      "path": "assets/v4/cars/npc-raster/frames/npc-silver/left.png",
+      "bytes": 22756,
+      "sha256": "8edbb0a39bd9457a6b5afea3b3905f8205bb986fb428aed637f779ad31024f9b",
+      "inputSha256": "8edbb0a39bd9457a6b5afea3b3905f8205bb986fb428aed637f779ad31024f9b"
+    },
+    {
+      "path": "assets/v4/cars/npc-raster/frames/npc-silver/rear.png",
+      "bytes": 19106,
+      "sha256": "ee9696dce1dc43ae8748f25e881dd26a6a348aca8da29a2685302a3dc4ddcb34",
+      "inputSha256": "ee9696dce1dc43ae8748f25e881dd26a6a348aca8da29a2685302a3dc4ddcb34"
+    },
+    {
+      "path": "assets/v4/cars/npc-raster/frames/npc-silver/right-brake.png",
+      "bytes": 22533,
+      "sha256": "f95a2b5ff3978b23311c59f9400f2edf14fa437be221db8c4f79cf43260b9065",
+      "inputSha256": "f95a2b5ff3978b23311c59f9400f2edf14fa437be221db8c4f79cf43260b9065"
+    },
+    {
+      "path": "assets/v4/cars/npc-raster/frames/npc-silver/right.png",
+      "bytes": 22659,
+      "sha256": "c9c2bf1e2ad2f1a402b17592885663242de01d839f0ddeb32d6f2776cb7a62dd",
+      "inputSha256": "c9c2bf1e2ad2f1a402b17592885663242de01d839f0ddeb32d6f2776cb7a62dd"
+    },
+    {
+      "path": "assets/v4/cars/npc-raster/frames/npc-yellow/brake.png",
+      "bytes": 19795,
+      "sha256": "a11b942e29ff30ded176b0bd7d1e737e3848d171b27f909b496b347c50ff01d9",
+      "inputSha256": "a11b942e29ff30ded176b0bd7d1e737e3848d171b27f909b496b347c50ff01d9"
+    },
+    {
+      "path": "assets/v4/cars/npc-raster/frames/npc-yellow/left-brake.png",
+      "bytes": 23295,
+      "sha256": "afd10d3088814fa5375a9b4c372f308e00a28d15b47162b8da8fd1ec843a2275",
+      "inputSha256": "afd10d3088814fa5375a9b4c372f308e00a28d15b47162b8da8fd1ec843a2275"
+    },
+    {
+      "path": "assets/v4/cars/npc-raster/frames/npc-yellow/left.png",
+      "bytes": 23381,
+      "sha256": "ce0330f8fc5f2fb03e77266ec690e6c4c56c53f84a9c917ccd693e7deeccc477",
+      "inputSha256": "ce0330f8fc5f2fb03e77266ec690e6c4c56c53f84a9c917ccd693e7deeccc477"
+    },
+    {
+      "path": "assets/v4/cars/npc-raster/frames/npc-yellow/rear.png",
+      "bytes": 19468,
+      "sha256": "2263d0b281fc6af420b2952befef2b4bad9f69b26e23229ced3d449af2a9e9cc",
+      "inputSha256": "2263d0b281fc6af420b2952befef2b4bad9f69b26e23229ced3d449af2a9e9cc"
+    },
+    {
+      "path": "assets/v4/cars/npc-raster/frames/npc-yellow/right-brake.png",
+      "bytes": 22986,
+      "sha256": "833c6b762eef84b667cd777e07adfe9799743c10ae1f0e0f27143a745f12b407",
+      "inputSha256": "833c6b762eef84b667cd777e07adfe9799743c10ae1f0e0f27143a745f12b407"
+    },
+    {
+      "path": "assets/v4/cars/npc-raster/frames/npc-yellow/right.png",
+      "bytes": 23088,
+      "sha256": "9d3538e22494e52daca8f94622bfd732c7ec868ffed120b34106acc4d2c37875",
+      "inputSha256": "9d3538e22494e52daca8f94622bfd732c7ec868ffed120b34106acc4d2c37875"
+    },
+    {
+      "path": "assets/v4/cars/npc-raster/npc-blue.png",
+      "bytes": 119725,
+      "sha256": "eb9f6e112f961d270d033a13cfe7791861caccd36f811d63f3cdc498271c9799",
+      "inputSha256": "eb9f6e112f961d270d033a13cfe7791861caccd36f811d63f3cdc498271c9799"
+    },
+    {
+      "path": "assets/v4/cars/npc-raster/npc-purple.png",
+      "bytes": 122941,
+      "sha256": "a4f1bfc52a9f368a7c0b103ad7d69c90726872aab10f1483ab525223ec2ed46c",
+      "inputSha256": "a4f1bfc52a9f368a7c0b103ad7d69c90726872aab10f1483ab525223ec2ed46c"
+    },
+    {
+      "path": "assets/v4/cars/npc-raster/npc-silver.png",
+      "bytes": 122079,
+      "sha256": "a529d75c25eb603786c5132b1b4d88eab34f39b0a03f50ea0c77fca155a73dfd",
+      "inputSha256": "a529d75c25eb603786c5132b1b4d88eab34f39b0a03f50ea0c77fca155a73dfd"
+    },
+    {
+      "path": "assets/v4/cars/npc-raster/npc-yellow.png",
+      "bytes": 123314,
+      "sha256": "cc7dbd2f47dd23f9e505a73617867e7adc12c19bc38dc577401ef4ae6df73053",
+      "inputSha256": "cc7dbd2f47dd23f9e505a73617867e7adc12c19bc38dc577401ef4ae6df73053"
+    },
+    {
+      "path": "assets/v4/cascavel/barrier.png",
+      "bytes": 43661,
+      "sha256": "d7a3059c967ad6fb1ce30233622de8086892b43654dcc7f5aee7db8672279a06",
+      "inputSha256": "d7a3059c967ad6fb1ce30233622de8086892b43654dcc7f5aee7db8672279a06"
+    },
+    {
+      "path": "assets/v4/cascavel/board100.png",
+      "bytes": 21828,
+      "sha256": "5a6d228b82a21ca2a20f10d76b06d76a01064245d2b7c8ee7e59218e68f52f42",
+      "inputSha256": "5a6d228b82a21ca2a20f10d76b06d76a01064245d2b7c8ee7e59218e68f52f42"
+    },
+    {
+      "path": "assets/v4/cascavel/board50.png",
+      "bytes": 17367,
+      "sha256": "d53efc53a6b55bfd9b4b110015da363b412d3516f72e6e3eb3886da452bc9dee",
+      "inputSha256": "d53efc53a6b55bfd9b4b110015da363b412d3516f72e6e3eb3886da452bc9dee"
+    },
+    {
+      "path": "assets/v4/cascavel/bush.png",
+      "bytes": 92483,
+      "sha256": "7a36bbf121f8e156d69da1b12b190ff3cc81b9cdd9525ab5ecc44be1ba5e418e",
+      "inputSha256": "7a36bbf121f8e156d69da1b12b190ff3cc81b9cdd9525ab5ecc44be1ba5e418e"
+    },
+    {
+      "path": "assets/v4/cascavel/fence.png",
+      "bytes": 103134,
+      "sha256": "37cfd8b1a28a7f8701e89e5a7d046277e35ed71d1c694925f35841fca02afb9d",
+      "inputSha256": "37cfd8b1a28a7f8701e89e5a7d046277e35ed71d1c694925f35841fca02afb9d"
+    },
+    {
+      "path": "assets/v4/cascavel/forest.png",
+      "bytes": 123182,
+      "sha256": "f509ec8ca21b5fb72ac372d23012afeb1a87ffd518c7948c545cfa8b21f3021d",
+      "inputSha256": "f509ec8ca21b5fb72ac372d23012afeb1a87ffd518c7948c545cfa8b21f3021d"
+    },
+    {
+      "path": "assets/v4/cascavel/horizon.png",
+      "bytes": 545528,
+      "sha256": "a33a66635ea663343a7d71859a11ac017b25ceedc6f431bb97e926bcb9bc3c33",
+      "inputSha256": "a33a66635ea663343a7d71859a11ac017b25ceedc6f431bb97e926bcb9bc3c33"
+    },
+    {
+      "path": "assets/v4/cascavel/pit.png",
+      "bytes": 340510,
+      "sha256": "f9f7b423d684e56dc348ec60a7f3862cb0563e99257234e1c0cc7ef1edaf3e6e",
+      "inputSha256": "f9f7b423d684e56dc348ec60a7f3862cb0563e99257234e1c0cc7ef1edaf3e6e"
+    },
+    {
+      "path": "assets/v4/cascavel/stand.png",
+      "bytes": 200818,
+      "sha256": "e68b5051faaa4515ad9a5535232b232393ed7e1cf5ac78612c88b788493fd73d",
+      "inputSha256": "e68b5051faaa4515ad9a5535232b232393ed7e1cf5ac78612c88b788493fd73d"
+    },
+    {
+      "path": "assets/v4/cascavel/tent.png",
+      "bytes": 118551,
+      "sha256": "048af7cd2c97b38fadff4579e48d527271ec2fc3a120d6353daaec925e0f7375",
+      "inputSha256": "048af7cd2c97b38fadff4579e48d527271ec2fc3a120d6353daaec925e0f7375"
+    },
+    {
+      "path": "assets/v4/cascavel/tires.png",
+      "bytes": 65083,
+      "sha256": "c16e22190464f81f559348c1057cd63062f6c3e301c3792cf244a85434726e8f",
+      "inputSha256": "c16e22190464f81f559348c1057cd63062f6c3e301c3792cf244a85434726e8f"
+    },
+    {
+      "path": "assets/v4/cascavel/title-straight.png",
+      "bytes": 1666364,
+      "sha256": "c3e4067afc962c9a600d9225f9af7ededed00454f2861f46f67817074387e290",
+      "inputSha256": "c3e4067afc962c9a600d9225f9af7ededed00454f2861f46f67817074387e290"
+    },
+    {
+      "path": "assets/v4/cascavel/tree.png",
+      "bytes": 148465,
+      "sha256": "7fed31afe740ce85fe50d8d5964a8901389bd56a39522e624ef5d8b2844d002b",
+      "inputSha256": "7fed31afe740ce85fe50d8d5964a8901389bd56a39522e624ef5d8b2844d002b"
+    },
+    {
+      "path": "assets/v4/drivers/approved-pilots.json",
+      "bytes": 22750,
+      "sha256": "a7a1b342fa7f1a5113d3cd965f26b53ed86bcb223d2a55e58384e2b60fc44f55",
+      "inputSha256": "a7a1b342fa7f1a5113d3cd965f26b53ed86bcb223d2a55e58384e2b60fc44f55"
+    },
+    {
+      "path": "assets/v4/drivers/daniel-helmet.png",
+      "bytes": 102216,
+      "sha256": "7f31d2d6b177ff5d1921bd7c69419dad8546d0934fbd60978518b18bc963e3de",
+      "inputSha256": "7f31d2d6b177ff5d1921bd7c69419dad8546d0934fbd60978518b18bc963e3de"
+    },
+    {
+      "path": "assets/v4/drivers/daniel-neutral.png",
+      "bytes": 97649,
+      "sha256": "a570a102c09fc98c346c12dfc94e3dabf3e4a73af4da5113ec0f6ebb71579e59",
+      "inputSha256": "a570a102c09fc98c346c12dfc94e3dabf3e4a73af4da5113ec0f6ebb71579e59"
+    },
+    {
+      "path": "assets/v4/drivers/daniel-portrait.png",
+      "bytes": 1892158,
+      "sha256": "701f3077485d037a72a867fd32473bba182525fb448111a97db0fb19c47d3bcb",
+      "inputSha256": "701f3077485d037a72a867fd32473bba182525fb448111a97db0fb19c47d3bcb"
+    },
+    {
+      "path": "assets/v4/drivers/daniel-portrait.webp",
+      "bytes": 585996,
+      "sha256": "1e64a5077e55042583239070289d30fab10ce4b3b539615ffee83475b793b4b0",
+      "inputSha256": "1e64a5077e55042583239070289d30fab10ce4b3b539615ffee83475b793b4b0"
+    },
+    {
+      "path": "assets/v4/drivers/felipe-helmet.png",
+      "bytes": 110308,
+      "sha256": "44569cb72116deafd5667f470d9f0074d1da2248003b52d9ee05c21083b45c32",
+      "inputSha256": "44569cb72116deafd5667f470d9f0074d1da2248003b52d9ee05c21083b45c32"
+    },
+    {
+      "path": "assets/v4/drivers/felipe-neutral.png",
+      "bytes": 108569,
+      "sha256": "08fd1475f0a46f881580df4dfa4e16c4fb9a57b3098ebbe1d7adc887113310d7",
+      "inputSha256": "08fd1475f0a46f881580df4dfa4e16c4fb9a57b3098ebbe1d7adc887113310d7"
+    },
+    {
+      "path": "assets/v4/drivers/felipe-portrait.png",
+      "bytes": 1870192,
+      "sha256": "d8d6b6cb0db27aee2ea0bc754fd260b3f108a6ba50a43a8c0aafb5c46f0849fd",
+      "inputSha256": "d8d6b6cb0db27aee2ea0bc754fd260b3f108a6ba50a43a8c0aafb5c46f0849fd"
+    },
+    {
+      "path": "assets/v4/drivers/felipe-portrait.webp",
+      "bytes": 620716,
+      "sha256": "210aa3f0498ce5016f0e6f96ae4cbdd692dc3fed49206a41f27628dd190091cd",
+      "inputSha256": "210aa3f0498ce5016f0e6f96ae4cbdd692dc3fed49206a41f27628dd190091cd"
+    },
+    {
+      "path": "assets/v4/drivers/marquinhos-neutral.png",
+      "bytes": 90135,
+      "sha256": "6a69aa4fe4bcfd320b637e48cb820f3aca3fa7df9e8f8fc2c2bb862b26e3bdd0",
+      "inputSha256": "6a69aa4fe4bcfd320b637e48cb820f3aca3fa7df9e8f8fc2c2bb862b26e3bdd0"
+    },
+    {
+      "path": "assets/v4/drivers/marquinhos-portrait.png",
+      "bytes": 335186,
+      "sha256": "c9a238c8b70c204d046adbf2950253e9bbd3d9dfb4503a0e5477b2401fcd59c4",
+      "inputSha256": "c9a238c8b70c204d046adbf2950253e9bbd3d9dfb4503a0e5477b2401fcd59c4"
+    },
+    {
+      "path": "assets/v4/drivers/marquinhos-portrait.webp",
+      "bytes": 243004,
+      "sha256": "a01f64349ad7e3bda9b1d5cfad494fb73efdbf93d1ce78f1ae9579dbf0ddc408",
+      "inputSha256": "a01f64349ad7e3bda9b1d5cfad494fb73efdbf93d1ce78f1ae9579dbf0ddc408"
+    },
+    {
+      "path": "assets/v4/drivers/marquinhos.json",
+      "bytes": 7211,
+      "sha256": "d5dff34c9b84eae890c386003030773a5e1a54f93c32963ecf0933b23f2005f9",
+      "inputSha256": "d5dff34c9b84eae890c386003030773a5e1a54f93c32963ecf0933b23f2005f9"
+    },
+    {
+      "path": "assets/v4/fx/effects.png",
+      "bytes": 118070,
+      "sha256": "226688f5503cc1ed7ba6491b8bae21b86614e37409e99f9fb9c90d9deb0ba3ab",
+      "inputSha256": "226688f5503cc1ed7ba6491b8bae21b86614e37409e99f9fb9c90d9deb0ba3ab"
+    },
+    {
+      "path": "assets/v4/podium/daniel-0.png",
+      "bytes": 94004,
+      "sha256": "43913befab1bc8bd5c3f53c6e0301dd5faa9249850fc2fe68f60ff25be921e10",
+      "inputSha256": "43913befab1bc8bd5c3f53c6e0301dd5faa9249850fc2fe68f60ff25be921e10"
+    },
+    {
+      "path": "assets/v4/podium/daniel-1.png",
+      "bytes": 92845,
+      "sha256": "b686878ab1db198d4e400f0bbe87287985ede4439d2057084223637eb9735402",
+      "inputSha256": "b686878ab1db198d4e400f0bbe87287985ede4439d2057084223637eb9735402"
+    },
+    {
+      "path": "assets/v4/podium/daniel-2.png",
+      "bytes": 98663,
+      "sha256": "38781117df79aeb60de925dbf0bff82c4daddedecb2fa549ba0061e4709ada05",
+      "inputSha256": "38781117df79aeb60de925dbf0bff82c4daddedecb2fa549ba0061e4709ada05"
+    },
+    {
+      "path": "assets/v4/podium/daniel-3.png",
+      "bytes": 86487,
+      "sha256": "1aa1bb6383d20a9ade4423625905d0aadc2e51fdfb45de94803ac0d61d5ba1f9",
+      "inputSha256": "1aa1bb6383d20a9ade4423625905d0aadc2e51fdfb45de94803ac0d61d5ba1f9"
+    },
+    {
+      "path": "assets/v4/podium/daniel-4.png",
+      "bytes": 87777,
+      "sha256": "4d93a17dfdde35ba4a13654a9c6e533ab5f022a50bf6a16c27ef1373054dfbff",
+      "inputSha256": "4d93a17dfdde35ba4a13654a9c6e533ab5f022a50bf6a16c27ef1373054dfbff"
+    },
+    {
+      "path": "assets/v4/podium/daniel-5.png",
+      "bytes": 100711,
+      "sha256": "5314b13595c142b79fd301f22da77c596c1aad8ec0bd0ed74b171afd6d29a081",
+      "inputSha256": "5314b13595c142b79fd301f22da77c596c1aad8ec0bd0ed74b171afd6d29a081"
+    },
+    {
+      "path": "assets/v4/podium/drop.svg",
+      "bytes": 195,
+      "sha256": "926a923fe45edfe794162da32fd820f989de07b27da7de98ef8888ddf66e51a8",
+      "inputSha256": "926a923fe45edfe794162da32fd820f989de07b27da7de98ef8888ddf66e51a8"
+    },
+    {
+      "path": "assets/v4/podium/felipe-0.png",
+      "bytes": 102608,
+      "sha256": "e3b11672fd40420e2d98cbdca876a367ce9f654676dd48ff237a94cfa542d67f",
+      "inputSha256": "e3b11672fd40420e2d98cbdca876a367ce9f654676dd48ff237a94cfa542d67f"
+    },
+    {
+      "path": "assets/v4/podium/felipe-1.png",
+      "bytes": 101467,
+      "sha256": "245241cbb8768643b17d537aa8a1bff4854c8b46a9b61d9814c674fdca307195",
+      "inputSha256": "245241cbb8768643b17d537aa8a1bff4854c8b46a9b61d9814c674fdca307195"
+    },
+    {
+      "path": "assets/v4/podium/felipe-2.png",
+      "bytes": 109743,
+      "sha256": "3661cd9550fc0a47f2c2da5a9aa89ffb8e273a64fee9eb16f32448e3d87f9277",
+      "inputSha256": "3661cd9550fc0a47f2c2da5a9aa89ffb8e273a64fee9eb16f32448e3d87f9277"
+    },
+    {
+      "path": "assets/v4/podium/felipe-3.png",
+      "bytes": 98883,
+      "sha256": "96110ee4c1a72ab3a905c2a163978270ade7ce30c1c91493f06b285949fa6efc",
+      "inputSha256": "96110ee4c1a72ab3a905c2a163978270ade7ce30c1c91493f06b285949fa6efc"
+    },
+    {
+      "path": "assets/v4/podium/felipe-4.png",
+      "bytes": 94603,
+      "sha256": "0809ffb53c8dcc82d7467ab45bd016132c846bf9d48d33b478a4052d7f678c50",
+      "inputSha256": "0809ffb53c8dcc82d7467ab45bd016132c846bf9d48d33b478a4052d7f678c50"
+    },
+    {
+      "path": "assets/v4/podium/felipe-5.png",
+      "bytes": 109632,
+      "sha256": "60ef61f199a5c9946d51bb66da257618300da3121556c95c6d3f8f656118c6d3",
+      "inputSha256": "60ef61f199a5c9946d51bb66da257618300da3121556c95c6d3f8f656118c6d3"
+    },
+    {
+      "path": "assets/v4/podium/frames.json",
+      "bytes": 36278,
+      "sha256": "b1f390fcb8dbef2ef30c434d0e8bb605a651d621f8b431dea1a87e36a433c21b",
+      "inputSha256": "b1f390fcb8dbef2ef30c434d0e8bb605a651d621f8b431dea1a87e36a433c21b"
+    },
+    {
+      "path": "assets/v4/podium/marquinhos-0.png",
+      "bytes": 88011,
+      "sha256": "eab134daedaa2bc0555117466b7f2a2b5b48c804c2ca5f7b7c62fd934dd61138",
+      "inputSha256": "eab134daedaa2bc0555117466b7f2a2b5b48c804c2ca5f7b7c62fd934dd61138"
+    },
+    {
+      "path": "assets/v4/podium/marquinhos-1.png",
+      "bytes": 93400,
+      "sha256": "e475d84a219813b196030b7611cf259fad16b33b3db5e9fc20e7fd0b7c3f3e32",
+      "inputSha256": "e475d84a219813b196030b7611cf259fad16b33b3db5e9fc20e7fd0b7c3f3e32"
+    },
+    {
+      "path": "assets/v4/podium/marquinhos-2.png",
+      "bytes": 102426,
+      "sha256": "e7e62e85234bb6d706511b96b0e6ac576a08a262975b3cb64942eba71b15da55",
+      "inputSha256": "e7e62e85234bb6d706511b96b0e6ac576a08a262975b3cb64942eba71b15da55"
+    },
+    {
+      "path": "assets/v4/podium/marquinhos-3.png",
+      "bytes": 96168,
+      "sha256": "c46fb72c08148728712ed3a4600e9bf853cdd9072243d3d086827c5b36b29970",
+      "inputSha256": "c46fb72c08148728712ed3a4600e9bf853cdd9072243d3d086827c5b36b29970"
+    },
+    {
+      "path": "assets/v4/podium/marquinhos-4.png",
+      "bytes": 95141,
+      "sha256": "bc506a4b223aba86a4247ed11b8f49db910262727de3dcc0e3677fc00a401285",
+      "inputSha256": "bc506a4b223aba86a4247ed11b8f49db910262727de3dcc0e3677fc00a401285"
+    },
+    {
+      "path": "assets/v4/podium/marquinhos-5.png",
+      "bytes": 113119,
+      "sha256": "d7d3ac0371db06085abd0dbb86d8a2986f534e595a5d160e7b4c43dfa1d86a56",
+      "inputSha256": "d7d3ac0371db06085abd0dbb86d8a2986f534e595a5d160e7b4c43dfa1d86a56"
+    },
+    {
+      "path": "assets/v4/podium/npc-blue-0.png",
+      "bytes": 77297,
+      "sha256": "6c2784f5c43bde17bcdbebab966b20a422adccd220895b1f1dea3a6070caddb5",
+      "inputSha256": "6c2784f5c43bde17bcdbebab966b20a422adccd220895b1f1dea3a6070caddb5"
+    },
+    {
+      "path": "assets/v4/podium/npc-blue-1.png",
+      "bytes": 84679,
+      "sha256": "3fba6eed863a2a54976784b719f03d80d55cd9e5b1f79ea91724455c8aa5bd7e",
+      "inputSha256": "3fba6eed863a2a54976784b719f03d80d55cd9e5b1f79ea91724455c8aa5bd7e"
+    },
+    {
+      "path": "assets/v4/podium/npc-blue-2.png",
+      "bytes": 109723,
+      "sha256": "489cfd9d8f4444ba6a2fd836ee684a6633ac1de776117dad1984ccef5e6f5c2e",
+      "inputSha256": "489cfd9d8f4444ba6a2fd836ee684a6633ac1de776117dad1984ccef5e6f5c2e"
+    },
+    {
+      "path": "assets/v4/podium/npc-blue-3.png",
+      "bytes": 87281,
+      "sha256": "fa09c1cef0d18f4aec36de1a40cf400fc1d46016d38bf7cec4d9bbb8b0c07799",
+      "inputSha256": "fa09c1cef0d18f4aec36de1a40cf400fc1d46016d38bf7cec4d9bbb8b0c07799"
+    },
+    {
+      "path": "assets/v4/podium/npc-blue-4.png",
+      "bytes": 87211,
+      "sha256": "95500e937e3cdbe626f5390e7075f36f64cfbc2d87858340c7b3e90d4a877c24",
+      "inputSha256": "95500e937e3cdbe626f5390e7075f36f64cfbc2d87858340c7b3e90d4a877c24"
+    },
+    {
+      "path": "assets/v4/podium/npc-blue-5.png",
+      "bytes": 110368,
+      "sha256": "0ddf4ff83f3a307c5404d3905a3c5fdf5a75a0a7851b3aae1674967cb8eea246",
+      "inputSha256": "0ddf4ff83f3a307c5404d3905a3c5fdf5a75a0a7851b3aae1674967cb8eea246"
+    },
+    {
+      "path": "assets/v4/podium/npc-purple-0.png",
+      "bytes": 79844,
+      "sha256": "d24738394ac9fdebcf78b8da788435f1529f0b6693774beb44bae5301a1e18b1",
+      "inputSha256": "d24738394ac9fdebcf78b8da788435f1529f0b6693774beb44bae5301a1e18b1"
+    },
+    {
+      "path": "assets/v4/podium/npc-purple-1.png",
+      "bytes": 86807,
+      "sha256": "da8e0e62a7cbdbdb615981cf68672594fa8882c6931a4ebc099fecfc62375730",
+      "inputSha256": "da8e0e62a7cbdbdb615981cf68672594fa8882c6931a4ebc099fecfc62375730"
+    },
+    {
+      "path": "assets/v4/podium/npc-purple-2.png",
+      "bytes": 112601,
+      "sha256": "6d33dd7be5edac93a3c152529cf541fb93eb185d54df6cde968db698dd41705a",
+      "inputSha256": "6d33dd7be5edac93a3c152529cf541fb93eb185d54df6cde968db698dd41705a"
+    },
+    {
+      "path": "assets/v4/podium/npc-purple-3.png",
+      "bytes": 90052,
+      "sha256": "5a498ab9ff22da30137ee020c973d0a7f31375b18732d43c48f557b9580c9d00",
+      "inputSha256": "5a498ab9ff22da30137ee020c973d0a7f31375b18732d43c48f557b9580c9d00"
+    },
+    {
+      "path": "assets/v4/podium/npc-purple-4.png",
+      "bytes": 89886,
+      "sha256": "bb3732cce79ae7e918a3908c41514e9b2bd6b669cde8e6fda4083159ba5ebc39",
+      "inputSha256": "bb3732cce79ae7e918a3908c41514e9b2bd6b669cde8e6fda4083159ba5ebc39"
+    },
+    {
+      "path": "assets/v4/podium/npc-purple-5.png",
+      "bytes": 113267,
+      "sha256": "0058268215d5bb365996594137c748cafa34206a0d5a20f05d7774840d4f9ac9",
+      "inputSha256": "0058268215d5bb365996594137c748cafa34206a0d5a20f05d7774840d4f9ac9"
+    },
+    {
+      "path": "assets/v4/podium/npc-silver-0.png",
+      "bytes": 83376,
+      "sha256": "be2a6c9d8c65a5c67bbdcb12e0508fd34c139f1659c832fad5864faf09718aac",
+      "inputSha256": "be2a6c9d8c65a5c67bbdcb12e0508fd34c139f1659c832fad5864faf09718aac"
+    },
+    {
+      "path": "assets/v4/podium/npc-silver-1.png",
+      "bytes": 89643,
+      "sha256": "008691a4cce5d2fe109b89cdcb57783955fd1dcd56c154c572ccf1d43076eba7",
+      "inputSha256": "008691a4cce5d2fe109b89cdcb57783955fd1dcd56c154c572ccf1d43076eba7"
+    },
+    {
+      "path": "assets/v4/podium/npc-silver-2.png",
+      "bytes": 116773,
+      "sha256": "f1417365a53dbaa0e2a48272b30637c84f7644cb3c52586b460cabf7be9b7cc9",
+      "inputSha256": "f1417365a53dbaa0e2a48272b30637c84f7644cb3c52586b460cabf7be9b7cc9"
+    },
+    {
+      "path": "assets/v4/podium/npc-silver-3.png",
+      "bytes": 93682,
+      "sha256": "17397e57414bed0aabb663ec1c579a164785a97b480c73aca5336593acede95c",
+      "inputSha256": "17397e57414bed0aabb663ec1c579a164785a97b480c73aca5336593acede95c"
+    },
+    {
+      "path": "assets/v4/podium/npc-silver-4.png",
+      "bytes": 93306,
+      "sha256": "f75adaaf254722867f239c6b0e37f675ae0f98a088d2a0d96731507b8a420914",
+      "inputSha256": "f75adaaf254722867f239c6b0e37f675ae0f98a088d2a0d96731507b8a420914"
+    },
+    {
+      "path": "assets/v4/podium/npc-silver-5.png",
+      "bytes": 117516,
+      "sha256": "10d4e6f66209212aea3dbdb9461b7ded4d1a0ac8c80fd22905ba9a81bf54fd0e",
+      "inputSha256": "10d4e6f66209212aea3dbdb9461b7ded4d1a0ac8c80fd22905ba9a81bf54fd0e"
+    },
+    {
+      "path": "assets/v4/podium/npc-yellow-0.png",
+      "bytes": 78553,
+      "sha256": "3c3ee0e9d593841db992e9824926a3b13dcdf940e8026d128e54c35c634c4d07",
+      "inputSha256": "3c3ee0e9d593841db992e9824926a3b13dcdf940e8026d128e54c35c634c4d07"
+    },
+    {
+      "path": "assets/v4/podium/npc-yellow-1.png",
+      "bytes": 85594,
+      "sha256": "58b22544dd9861c14135100602a8f0c8fba4ebbc3f19f6b9179b0dc65e851115",
+      "inputSha256": "58b22544dd9861c14135100602a8f0c8fba4ebbc3f19f6b9179b0dc65e851115"
+    },
+    {
+      "path": "assets/v4/podium/npc-yellow-2.png",
+      "bytes": 111163,
+      "sha256": "a917b948a97539ec329fab8244bedb8861aa19100cdb049930a0e643877c48a2",
+      "inputSha256": "a917b948a97539ec329fab8244bedb8861aa19100cdb049930a0e643877c48a2"
+    },
+    {
+      "path": "assets/v4/podium/npc-yellow-3.png",
+      "bytes": 88556,
+      "sha256": "f47e541de241cacf7babf9e552a1575cdd7cb57d9fad4d93dbab01a325f54908",
+      "inputSha256": "f47e541de241cacf7babf9e552a1575cdd7cb57d9fad4d93dbab01a325f54908"
+    },
+    {
+      "path": "assets/v4/podium/npc-yellow-4.png",
+      "bytes": 88565,
+      "sha256": "401d98fc144fa68f7a92776a3209e42d3cb6e3ffddf3f4d11221799cd4cad51a",
+      "inputSha256": "401d98fc144fa68f7a92776a3209e42d3cb6e3ffddf3f4d11221799cd4cad51a"
+    },
+    {
+      "path": "assets/v4/podium/npc-yellow-5.png",
+      "bytes": 111781,
+      "sha256": "ea3db8db5429c74196d417259d1522b5f2766fb0a5d6991f4918de4a9451469d",
+      "inputSha256": "ea3db8db5429c74196d417259d1522b5f2766fb0a5d6991f4918de4a9451469d"
+    },
+    {
+      "path": "assets/v4/render-assets.json",
+      "bytes": 19240,
+      "sha256": "7ebf1488ea80497204861f22b705c4a6def501f14abdeba326981150cfe64128",
+      "inputSha256": "7ebf1488ea80497204861f22b705c4a6def501f14abdeba326981150cfe64128"
+    },
+    {
+      "path": "assets/v4/title/approval.json",
+      "bytes": 4362,
+      "sha256": "80e8ea944e3c1184acadecace6d460caa41e250a73ee1f06c00bbcdc3d857b83",
+      "inputSha256": "80e8ea944e3c1184acadecace6d460caa41e250a73ee1f06c00bbcdc3d857b83"
+    },
+    {
+      "path": "assets/v4/title/background.png",
+      "bytes": 2821411,
+      "sha256": "dc6eb16e91c5e38393aa0aeec936a54f39f82b41d3be9c373ea6c2f16ecb2d16",
+      "inputSha256": "dc6eb16e91c5e38393aa0aeec936a54f39f82b41d3be9c373ea6c2f16ecb2d16"
+    },
+    {
+      "path": "assets/v4/title/background.webp",
+      "bytes": 492732,
+      "sha256": "2b5da48e6d7bc34d9a793ffd5cf3a67edfac8e069110915bad2a96bc9085ba75",
+      "inputSha256": "2b5da48e6d7bc34d9a793ffd5cf3a67edfac8e069110915bad2a96bc9085ba75"
+    },
+    {
+      "path": "assets/v4/title/daniel-front-sheet.png",
+      "bytes": 1805348,
+      "sha256": "02df8b6c5abb0c1833aa567c707c51c1669b54bf2065989f8de17d190aaa5b38",
+      "inputSha256": "02df8b6c5abb0c1833aa567c707c51c1669b54bf2065989f8de17d190aaa5b38"
+    },
+    {
+      "path": "assets/v4/title/daniel-front-sheet.webp",
+      "bytes": 802736,
+      "sha256": "a81767b75c6fe8591032c0c0d10caa59f725321732348ddf16f072dc8e11c33d",
+      "inputSha256": "a81767b75c6fe8591032c0c0d10caa59f725321732348ddf16f072dc8e11c33d"
+    },
+    {
+      "path": "assets/v4/title/diabo-verde-official.png",
+      "bytes": 2700,
+      "sha256": "efd50c7ea40dc0c5fe54ae92246249d1230ac6c1d43f5d271f7a1e94267f8137",
+      "inputSha256": "efd50c7ea40dc0c5fe54ae92246249d1230ac6c1d43f5d271f7a1e94267f8137"
+    },
+    {
+      "path": "assets/v4/title/felipe-front-portrait.png",
+      "bytes": 1903143,
+      "sha256": "98832d1d00feb8f628d76172ad2ace8dcacf75a4a6ea2e7c8af88faf4f7a236b",
+      "inputSha256": "98832d1d00feb8f628d76172ad2ace8dcacf75a4a6ea2e7c8af88faf4f7a236b"
+    },
+    {
+      "path": "assets/v4/title/felipe-front-portrait.webp",
+      "bytes": 633840,
+      "sha256": "d51ff9734b2150833806ea8f988e34ed48d406410626e39c228801935d6a8589",
+      "inputSha256": "d51ff9734b2150833806ea8f988e34ed48d406410626e39c228801935d6a8589"
+    },
+    {
+      "path": "assets/v4/title/felipe-front-sheet.png",
+      "bytes": 1699719,
+      "sha256": "ce79d1f6a6a1ef2336d4d8ce22248ae8f36693160cea3f40ddcd857ad3fda1bb",
+      "inputSha256": "ce79d1f6a6a1ef2336d4d8ce22248ae8f36693160cea3f40ddcd857ad3fda1bb"
+    },
+    {
+      "path": "assets/v4/title/felipe-front-sheet.webp",
+      "bytes": 752916,
+      "sha256": "425a136f721bf7c231f7170823699025c18554ba3b0dfe973c16a2b77378293e",
+      "inputSha256": "425a136f721bf7c231f7170823699025c18554ba3b0dfe973c16a2b77378293e"
+    },
+    {
+      "path": "assets/v4/title/ftw-official.png",
+      "bytes": 8360,
+      "sha256": "5ca79b7cadd5d2af407513cf5d2e01ab382dc16064a84ffe219419801ccc0347",
+      "inputSha256": "5ca79b7cadd5d2af407513cf5d2e01ab382dc16064a84ffe219419801ccc0347"
+    },
+    {
+      "path": "assets/v4/title/marquinhos-front-portrait.png",
+      "bytes": 335186,
+      "sha256": "c9a238c8b70c204d046adbf2950253e9bbd3d9dfb4503a0e5477b2401fcd59c4",
+      "inputSha256": "c9a238c8b70c204d046adbf2950253e9bbd3d9dfb4503a0e5477b2401fcd59c4"
+    },
+    {
+      "path": "assets/v4/title/marquinhos-front-portrait.webp",
+      "bytes": 243004,
+      "sha256": "a01f64349ad7e3bda9b1d5cfad494fb73efdbf93d1ce78f1ae9579dbf0ddc408",
+      "inputSha256": "a01f64349ad7e3bda9b1d5cfad494fb73efdbf93d1ce78f1ae9579dbf0ddc408"
+    },
+    {
+      "path": "assets/v4/title/web-encodings.json",
+      "bytes": 4615,
+      "sha256": "39947b90f526de25815cefdf1feccb9b068a62b7ae443a3f3169faed046f37e7",
+      "inputSha256": "39947b90f526de25815cefdf1feccb9b068a62b7ae443a3f3169faed046f37e7"
+    },
+    {
+      "path": "cars/npc-blue.svg",
+      "bytes": 3547,
+      "sha256": "ebf58d6ccb8c52191757d7441d2a3de4f745b636f0ea170d39c160d3a1721120",
+      "inputSha256": "ebf58d6ccb8c52191757d7441d2a3de4f745b636f0ea170d39c160d3a1721120"
+    },
+    {
+      "path": "cars/npc-purple.svg",
+      "bytes": 3549,
+      "sha256": "bb087709da17f280264b9027a5b726b585f51201cd322eede72f000d808dd2c1",
+      "inputSha256": "bb087709da17f280264b9027a5b726b585f51201cd322eede72f000d808dd2c1"
+    },
+    {
+      "path": "cars/npc-silver.svg",
+      "bytes": 3549,
+      "sha256": "eb14a8859ad9975f65e8b7c1a587b751a665aaf2d15d42e0efe5a12f74db62ca",
+      "inputSha256": "eb14a8859ad9975f65e8b7c1a587b751a665aaf2d15d42e0efe5a12f74db62ca"
+    },
+    {
+      "path": "cars/npc-yellow.svg",
+      "bytes": 3549,
+      "sha256": "e6df11a09c472d578a876341505354dcf92646517f10fc1e55dcd4d2c358ff44",
+      "inputSha256": "e6df11a09c472d578a876341505354dcf92646517f10fc1e55dcd4d2c358ff44"
+    },
+    {
+      "path": "index.html",
+      "bytes": 2840,
+      "sha256": "26fd21250a149969694efb2dd082fda3ddc3f795a6ea9d0ad1d9ec49bf68938f",
+      "inputSha256": "1ca6530c59304c8e426a174ff75bf3ad3aad72881a43bfd8c2b2f5c26f859fb8"
+    },
+    {
+      "path": "podium.css",
+      "bytes": 4160,
+      "sha256": "ebe7c3ebcf6c7330d12928652b8c50c1908a3349f1f4854013067fcff8fc1cb6",
+      "inputSha256": "ebe7c3ebcf6c7330d12928652b8c50c1908a3349f1f4854013067fcff8fc1cb6"
+    },
+    {
+      "path": "src/audio.js",
+      "bytes": 14758,
+      "sha256": "34c9130fe7b8849fe10d46935712d0972e817ebd46a3c718123d3af7bdb502a4",
+      "inputSha256": "34c9130fe7b8849fe10d46935712d0972e817ebd46a3c718123d3af7bdb502a4"
+    },
+    {
+      "path": "src/config.js",
+      "bytes": 2363,
+      "sha256": "dff2793ff2ca22da7b0c5943c187989635e6e59f9d7d050fe75629c49f89294e",
+      "inputSha256": "dff2793ff2ca22da7b0c5943c187989635e6e59f9d7d050fe75629c49f89294e"
+    },
+    {
+      "path": "src/effects.js",
+      "bytes": 776,
+      "sha256": "c247057c51c6c7d81d9905248f96560c92e4a373edb42ac3a105d1317edc997e",
+      "inputSha256": "c247057c51c6c7d81d9905248f96560c92e4a373edb42ac3a105d1317edc997e"
+    },
+    {
+      "path": "src/input.js",
+      "bytes": 755,
+      "sha256": "e003ba0c2d3043f677e559152523189ef6b119d37f16ebca61a0b82c727b9da0",
+      "inputSha256": "e003ba0c2d3043f677e559152523189ef6b119d37f16ebca61a0b82c727b9da0"
+    },
+    {
+      "path": "src/main.js",
+      "bytes": 2666,
+      "sha256": "05c4bbbbb4034efc6053b9a55fe6c05a68e7e4b88142422f8eb14d188f0fe2af",
+      "inputSha256": "05c4bbbbb4034efc6053b9a55fe6c05a68e7e4b88142422f8eb14d188f0fe2af"
+    },
+    {
+      "path": "src/podium.js",
+      "bytes": 4677,
+      "sha256": "2feb8aebfcbfe0f83ce234b856cf59d4c6035d40a00a63732e635c49cdf6736c",
+      "inputSha256": "2feb8aebfcbfe0f83ce234b856cf59d4c6035d40a00a63732e635c49cdf6736c"
+    },
+    {
+      "path": "src/render.js",
+      "bytes": 16388,
+      "sha256": "6e47fe90c8e83d3985b15206a5da0d406ceec7d60be0205204a9525de8e3a525",
+      "inputSha256": "6e47fe90c8e83d3985b15206a5da0d406ceec7d60be0205204a9525de8e3a525"
+    },
+    {
+      "path": "src/sim.js",
+      "bytes": 12593,
+      "sha256": "04f4db13b88c2badc5c0078131e144fcd44474c5243609d303c7a3f3a231dde0",
+      "inputSha256": "04f4db13b88c2badc5c0078131e144fcd44474c5243609d303c7a3f3a231dde0"
+    },
+    {
+      "path": "src/standings.js",
+      "bytes": 1074,
+      "sha256": "ec579802a3c8e12503a119c8ac5e7329de902e1309f37c9b3c2b257103a194df",
+      "inputSha256": "ec579802a3c8e12503a119c8ac5e7329de902e1309f37c9b3c2b257103a194df"
+    },
+    {
+      "path": "src/title.js",
+      "bytes": 5244,
+      "sha256": "d7a22dbc0b7a0aca54b63c394ec46f033b15200af1077b68bcbe0be2eaf36a2c",
+      "inputSha256": "d7a22dbc0b7a0aca54b63c394ec46f033b15200af1077b68bcbe0be2eaf36a2c"
+    },
+    {
+      "path": "src/track.js",
+      "bytes": 3399,
+      "sha256": "8207d523e98953c12311a971c4bc4480832041c18a1e07fd1020464167851215",
+      "inputSha256": "8207d523e98953c12311a971c4bc4480832041c18a1e07fd1020464167851215"
+    },
+    {
+      "path": "src/ui.js",
+      "bytes": 20901,
+      "sha256": "f7362be5076793a2501c596df823071bd524e43d9dc149d5cb69cc10e9276d27",
+      "inputSha256": "f7362be5076793a2501c596df823071bd524e43d9dc149d5cb69cc10e9276d27"
+    },
+    {
+      "path": "src/vehicle-visual.js",
+      "bytes": 1117,
+      "sha256": "66f8d65719d7df6eb1fee628b85f1b3b36bfb2781096ac1095ba0b702a7f2f74",
+      "inputSha256": "66f8d65719d7df6eb1fee628b85f1b3b36bfb2781096ac1095ba0b702a7f2f74"
+    },
+    {
+      "path": "styles.css",
+      "bytes": 26643,
+      "sha256": "8d534d3cbff7ac19f4b2693eabbfc3bb06f5cb0e7b63aaf031997a88bb8794ad",
+      "inputSha256": "8d534d3cbff7ac19f4b2693eabbfc3bb06f5cb0e7b63aaf031997a88bb8794ad"
+    },
+    {
+      "path": "tests/marquinhos-render.html",
+      "bytes": 4007,
+      "sha256": "5ae4c40d4577188f933fb096c1adeec074a0aa5f586639bbd788b88a52bfadd2",
+      "inputSha256": "5ae4c40d4577188f933fb096c1adeec074a0aa5f586639bbd788b88a52bfadd2"
+    },
+    {
+      "path": "tests/mobile-race-layout.html",
+      "bytes": 5356,
+      "sha256": "401291c7f17de503da284f72f23e7a8dfb746714e83b6eadf013e00ddee8e9df",
+      "inputSha256": "401291c7f17de503da284f72f23e7a8dfb746714e83b6eadf013e00ddee8e9df"
+    }
+  ]
+}

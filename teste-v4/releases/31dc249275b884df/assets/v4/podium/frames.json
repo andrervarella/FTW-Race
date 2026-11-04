@@ -1,0 +1,1568 @@
+{
+  "frameDurationsMs": [
+    1200,
+    1400,
+    1300,
+    1400,
+    2200,
+    null
+  ],
+  "stages": [
+    "entry",
+    "receive",
+    "raise",
+    "open",
+    "spray",
+    "final"
+  ],
+  "assets": [
+    {
+      "key": "daniel",
+      "name": "entry",
+      "file": "game/assets/v4/podium/daniel-0.png",
+      "source": "assets/previews/v4/approved-pilots/daniel-full-sprites-corrected.png",
+      "sourceIndex": 2,
+      "sourceCell": [
+        627,
+        0,
+        940,
+        627
+      ],
+      "sourceCrop": [
+        663,
+        13,
+        894,
+        606
+      ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        231,
+        593
+      ],
+      "sourceFootBounds": [
+        729,
+        516,
+        823,
+        606
+      ],
+      "sourceFootAnchor": [
+        776.0,
+        606
+      ],
+      "retainedSourcePixels": 74237,
+      "excludedCellPixels": 0,
+      "recoveredOutsideCellPixels": 0,
+      "size": [
+        256,
+        512
+      ],
+      "usefulBounds": [
+        49,
+        85,
+        211,
+        500
+      ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "43913befab1bc8bd5c3f53c6e0301dd5faa9249850fc2fe68f60ff25be921e10",
+      "frame": 0,
+      "transformation": "alpha>=80; largest cell-seeded connected person; exact common .70 scale; feet midpoint at128,500"
+    },
+    {
+      "key": "daniel",
+      "name": "receive",
+      "file": "game/assets/v4/podium/daniel-1.png",
+      "source": "assets/previews/v4/approved-pilots/daniel-full-sprites-corrected.png",
+      "sourceIndex": 3,
+      "sourceCell": [
+        940,
+        0,
+        1254,
+        627
+      ],
+      "sourceCrop": [
+        981,
+        17,
+        1196,
+        601
+      ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        215,
+        584
+      ],
+      "sourceFootBounds": [
+        998,
+        511,
+        1191,
+        601
+      ],
+      "sourceFootAnchor": [
+        1094.5,
+        601
+      ],
+      "retainedSourcePixels": 72750,
+      "excludedCellPixels": 0,
+      "recoveredOutsideCellPixels": 0,
+      "size": [
+        256,
+        512
+      ],
+      "usefulBounds": [
+        49,
+        91,
+        199,
+        500
+      ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "b686878ab1db198d4e400f0bbe87287985ede4439d2057084223637eb9735402",
+      "frame": 1,
+      "transformation": "alpha>=80; largest cell-seeded connected person; exact common .70 scale; feet midpoint at128,500"
+    },
+    {
+      "key": "daniel",
+      "name": "raise",
+      "file": "game/assets/v4/podium/daniel-2.png",
+      "source": "assets/previews/v4/approved-pilots/daniel-full-sprites-corrected.png",
+      "sourceIndex": 4,
+      "sourceCell": [
+        0,
+        627,
+        314,
+        1254
+      ],
+      "sourceCrop": [
+        28,
+        634,
+        280,
+        1239
+      ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        252,
+        605
+      ],
+      "sourceFootBounds": [
+        67,
+        1149,
+        270,
+        1239
+      ],
+      "sourceFootAnchor": [
+        168.5,
+        1239
+      ],
+      "retainedSourcePixels": 76901,
+      "excludedCellPixels": 0,
+      "recoveredOutsideCellPixels": 0,
+      "size": [
+        256,
+        512
+      ],
+      "usefulBounds": [
+        30,
+        76,
+        206,
+        500
+      ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "38781117df79aeb60de925dbf0bff82c4daddedecb2fa549ba0061e4709ada05",
+      "frame": 2,
+      "transformation": "alpha>=80; largest cell-seeded connected person; exact common .70 scale; feet midpoint at128,500"
+    },
+    {
+      "key": "daniel",
+      "name": "open",
+      "file": "game/assets/v4/podium/daniel-3.png",
+      "source": "assets/previews/v4/approved-pilots/daniel-full-sprites-corrected.png",
+      "sourceIndex": 5,
+      "sourceCell": [
+        314,
+        627,
+        627,
+        1254
+      ],
+      "sourceCrop": [
+        377,
+        678,
+        592,
+        1238
+      ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        215,
+        560
+      ],
+      "sourceFootBounds": [
+        381,
+        1148,
+        583,
+        1238
+      ],
+      "sourceFootAnchor": [
+        482.0,
+        1238
+      ],
+      "retainedSourcePixels": 68030,
+      "excludedCellPixels": 0,
+      "recoveredOutsideCellPixels": 0,
+      "size": [
+        256,
+        512
+      ],
+      "usefulBounds": [
+        54,
+        108,
+        205,
+        500
+      ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "1aa1bb6383d20a9ade4423625905d0aadc2e51fdfb45de94803ac0d61d5ba1f9",
+      "frame": 3,
+      "transformation": "alpha>=80; largest cell-seeded connected person; exact common .70 scale; feet midpoint at128,500"
+    },
+    {
+      "key": "daniel",
+      "name": "spray",
+      "file": "game/assets/v4/podium/daniel-4.png",
+      "source": "assets/previews/v4/approved-pilots/daniel-full-sprites-corrected.png",
+      "sourceIndex": 6,
+      "sourceCell": [
+        627,
+        627,
+        940,
+        1254
+      ],
+      "sourceCrop": [
+        661,
+        677,
+        903,
+        1239
+      ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        242,
+        562
+      ],
+      "sourceFootBounds": [
+        661,
+        1149,
+        903,
+        1239
+      ],
+      "sourceFootAnchor": [
+        782.0,
+        1239
+      ],
+      "retainedSourcePixels": 68995,
+      "excludedCellPixels": 0,
+      "recoveredOutsideCellPixels": 0,
+      "size": [
+        256,
+        512
+      ],
+      "usefulBounds": [
+        43,
+        107,
+        213,
+        500
+      ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "4d93a17dfdde35ba4a13654a9c6e533ab5f022a50bf6a16c27ef1373054dfbff",
+      "frame": 4,
+      "transformation": "alpha>=80; largest cell-seeded connected person; exact common .70 scale; feet midpoint at128,500"
+    },
+    {
+      "key": "daniel",
+      "name": "final",
+      "file": "game/assets/v4/podium/daniel-5.png",
+      "source": "assets/previews/v4/approved-pilots/daniel-full-sprites-corrected.png",
+      "sourceIndex": 7,
+      "sourceCell": [
+        940,
+        627,
+        1254,
+        1254
+      ],
+      "sourceCrop": [
+        949,
+        631,
+        1244,
+        1240
+      ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        295,
+        609
+      ],
+      "sourceFootBounds": [
+        980,
+        1150,
+        1206,
+        1240
+      ],
+      "sourceFootAnchor": [
+        1093.0,
+        1240
+      ],
+      "retainedSourcePixels": 78588,
+      "excludedCellPixels": 0,
+      "recoveredOutsideCellPixels": 0,
+      "size": [
+        256,
+        512
+      ],
+      "usefulBounds": [
+        27,
+        74,
+        234,
+        500
+      ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "5314b13595c142b79fd301f22da77c596c1aad8ec0bd0ed74b171afd6d29a081",
+      "frame": 5,
+      "transformation": "alpha>=80; largest cell-seeded connected person; exact common .70 scale; feet midpoint at128,500"
+    },
+    {
+      "key": "felipe",
+      "name": "entry",
+      "file": "game/assets/v4/podium/felipe-0.png",
+      "source": "assets/previews/v4/approved-pilots/felipe-full-sprites-corrected.png",
+      "sourceIndex": 2,
+      "sourceCell": [
+        627,
+        0,
+        940,
+        627
+      ],
+      "sourceCrop": [
+        667,
+        12,
+        899,
+        609
+      ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        232,
+        597
+      ],
+      "sourceFootBounds": [
+        728,
+        519,
+        827,
+        609
+      ],
+      "sourceFootAnchor": [
+        777.5,
+        609
+      ],
+      "retainedSourcePixels": 76200,
+      "excludedCellPixels": 0,
+      "recoveredOutsideCellPixels": 0,
+      "size": [
+        256,
+        512
+      ],
+      "usefulBounds": [
+        51,
+        82,
+        213,
+        500
+      ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "e3b11672fd40420e2d98cbdca876a367ce9f654676dd48ff237a94cfa542d67f",
+      "frame": 0,
+      "transformation": "alpha>=80; largest cell-seeded connected person; exact common .70 scale; feet midpoint at128,500"
+    },
+    {
+      "key": "felipe",
+      "name": "receive",
+      "file": "game/assets/v4/podium/felipe-1.png",
+      "source": "assets/previews/v4/approved-pilots/felipe-full-sprites-corrected.png",
+      "sourceIndex": 3,
+      "sourceCell": [
+        940,
+        0,
+        1254,
+        627
+      ],
+      "sourceCrop": [
+        962,
+        12,
+        1187,
+        605
+      ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        225,
+        593
+      ],
+      "sourceFootBounds": [
+        976,
+        515,
+        1187,
+        605
+      ],
+      "sourceFootAnchor": [
+        1081.5,
+        605
+      ],
+      "retainedSourcePixels": 75727,
+      "excludedCellPixels": 0,
+      "recoveredOutsideCellPixels": 0,
+      "size": [
+        256,
+        512
+      ],
+      "usefulBounds": [
+        44,
+        85,
+        202,
+        500
+      ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "245241cbb8768643b17d537aa8a1bff4854c8b46a9b61d9814c674fdca307195",
+      "frame": 1,
+      "transformation": "alpha>=80; largest cell-seeded connected person; exact common .70 scale; feet midpoint at128,500"
+    },
+    {
+      "key": "felipe",
+      "name": "raise",
+      "file": "game/assets/v4/podium/felipe-2.png",
+      "source": "assets/previews/v4/approved-pilots/felipe-full-sprites-corrected.png",
+      "sourceIndex": 4,
+      "sourceCell": [
+        0,
+        627,
+        314,
+        1254
+      ],
+      "sourceCrop": [
+        48,
+        635,
+        308,
+        1246
+      ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        260,
+        611
+      ],
+      "sourceFootBounds": [
+        78,
+        1156,
+        298,
+        1246
+      ],
+      "sourceFootAnchor": [
+        188.0,
+        1246
+      ],
+      "retainedSourcePixels": 81566,
+      "excludedCellPixels": 0,
+      "recoveredOutsideCellPixels": 0,
+      "size": [
+        256,
+        512
+      ],
+      "usefulBounds": [
+        30,
+        72,
+        212,
+        500
+      ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "3661cd9550fc0a47f2c2da5a9aa89ffb8e273a64fee9eb16f32448e3d87f9277",
+      "frame": 2,
+      "transformation": "alpha>=80; largest cell-seeded connected person; exact common .70 scale; feet midpoint at128,500"
+    },
+    {
+      "key": "felipe",
+      "name": "open",
+      "file": "game/assets/v4/podium/felipe-3.png",
+      "source": "assets/previews/v4/approved-pilots/felipe-full-sprites-corrected.png",
+      "sourceIndex": 5,
+      "sourceCell": [
+        314,
+        627,
+        627,
+        1254
+      ],
+      "sourceCrop": [
+        345,
+        671,
+        580,
+        1245
+      ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        235,
+        574
+      ],
+      "sourceFootBounds": [
+        369,
+        1155,
+        578,
+        1245
+      ],
+      "sourceFootAnchor": [
+        473.5,
+        1245
+      ],
+      "retainedSourcePixels": 73635,
+      "excludedCellPixels": 0,
+      "recoveredOutsideCellPixels": 0,
+      "size": [
+        256,
+        512
+      ],
+      "usefulBounds": [
+        38,
+        98,
+        203,
+        500
+      ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "96110ee4c1a72ab3a905c2a163978270ade7ce30c1c91493f06b285949fa6efc",
+      "frame": 3,
+      "transformation": "alpha>=80; largest cell-seeded connected person; exact common .70 scale; feet midpoint at128,500"
+    },
+    {
+      "key": "felipe",
+      "name": "spray",
+      "file": "game/assets/v4/podium/felipe-4.png",
+      "source": "assets/previews/v4/approved-pilots/felipe-full-sprites-corrected.png",
+      "sourceIndex": 6,
+      "sourceCell": [
+        627,
+        627,
+        940,
+        1254
+      ],
+      "sourceCrop": [
+        636,
+        671,
+        885,
+        1246
+      ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        249,
+        575
+      ],
+      "sourceFootBounds": [
+        655,
+        1156,
+        885,
+        1246
+      ],
+      "sourceFootAnchor": [
+        770.0,
+        1246
+      ],
+      "retainedSourcePixels": 70295,
+      "excludedCellPixels": 223,
+      "recoveredOutsideCellPixels": 0,
+      "size": [
+        256,
+        512
+      ],
+      "usefulBounds": [
+        34,
+        98,
+        209,
+        500
+      ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "0809ffb53c8dcc82d7467ab45bd016132c846bf9d48d33b478a4052d7f678c50",
+      "frame": 4,
+      "transformation": "alpha>=80; largest cell-seeded connected person; exact common .70 scale; feet midpoint at128,500"
+    },
+    {
+      "key": "felipe",
+      "name": "final",
+      "file": "game/assets/v4/podium/felipe-5.png",
+      "source": "assets/previews/v4/approved-pilots/felipe-full-sprites-corrected.png",
+      "sourceIndex": 7,
+      "sourceCell": [
+        940,
+        627,
+        1254,
+        1254
+      ],
+      "sourceCrop": [
+        935,
+        631,
+        1230,
+        1245
+      ],
+      "sourceUsefulBounds": [
+        0,
+        0,
+        295,
+        614
+      ],
+      "sourceFootBounds": [
+        974,
+        1155,
+        1194,
+        1245
+      ],
+      "sourceFootAnchor": [
+        1084.0,
+        1245
+      ],
+      "retainedSourcePixels": 81587,
+      "excludedCellPixels": 0,
+      "recoveredOutsideCellPixels": 223,
+      "size": [
+        256,
+        512
+      ],
+      "usefulBounds": [
+        24,
+        70,
+        230,
+        500
+      ],
+      "scale": [
+        0.7,
+        0.7
+      ],
+      "rotationDegrees": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "approval": "approved-by-owner",
+      "sha256": "60ef61f199a5c9946d51bb66da257618300da3121556c95c6d3f8f656118c6d3",
+      "frame": 5,
+      "transformation": "alpha>=80; largest cell-seeded connected person; exact common .70 scale; feet midpoint at128,500"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-blue-0.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        0,
+        145,
+        332,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "6c2784f5c43bde17bcdbebab966b20a422adccd220895b1f1dea3a6070caddb5"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-blue-1.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        340,
+        145,
+        652,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 1,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "3fba6eed863a2a54976784b719f03d80d55cd9e5b1f79ea91724455c8aa5bd7e"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-blue-2.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        670,
+        0,
+        977,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 2,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "489cfd9d8f4444ba6a2fd836ee684a6633ac1de776117dad1984ccef5e6f5c2e"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-blue-3.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        1018,
+        145,
+        1320,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 3,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "fa09c1cef0d18f4aec36de1a40cf400fc1d46016d38bf7cec4d9bbb8b0c07799"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-blue-4.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        1380,
+        145,
+        1747,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 4,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "95500e937e3cdbe626f5390e7075f36f64cfbc2d87858340c7b3e90d4a877c24"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-blue-5.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        1775,
+        0,
+        2172,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 5,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "0ddf4ff83f3a307c5404d3905a3c5fdf5a75a0a7851b3aae1674967cb8eea246"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-yellow-0.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        0,
+        145,
+        332,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "3c3ee0e9d593841db992e9824926a3b13dcdf940e8026d128e54c35c634c4d07"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-yellow-1.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        340,
+        145,
+        652,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 1,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "58b22544dd9861c14135100602a8f0c8fba4ebbc3f19f6b9179b0dc65e851115"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-yellow-2.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        670,
+        0,
+        977,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 2,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "a917b948a97539ec329fab8244bedb8861aa19100cdb049930a0e643877c48a2"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-yellow-3.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        1018,
+        145,
+        1320,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 3,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "f47e541de241cacf7babf9e552a1575cdd7cb57d9fad4d93dbab01a325f54908"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-yellow-4.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        1380,
+        145,
+        1747,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 4,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "401d98fc144fa68f7a92776a3209e42d3cb6e3ffddf3f4d11221799cd4cad51a"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-yellow-5.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        1775,
+        0,
+        2172,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 5,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "ea3db8db5429c74196d417259d1522b5f2766fb0a5d6991f4918de4a9451469d"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-purple-0.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        0,
+        145,
+        332,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "d24738394ac9fdebcf78b8da788435f1529f0b6693774beb44bae5301a1e18b1"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-purple-1.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        340,
+        145,
+        652,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 1,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "da8e0e62a7cbdbdb615981cf68672594fa8882c6931a4ebc099fecfc62375730"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-purple-2.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        670,
+        0,
+        977,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 2,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "6d33dd7be5edac93a3c152529cf541fb93eb185d54df6cde968db698dd41705a"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-purple-3.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        1018,
+        145,
+        1320,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 3,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "5a498ab9ff22da30137ee020c973d0a7f31375b18732d43c48f557b9580c9d00"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-purple-4.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        1380,
+        145,
+        1747,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 4,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "bb3732cce79ae7e918a3908c41514e9b2bd6b669cde8e6fda4083159ba5ebc39"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-purple-5.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        1775,
+        0,
+        2172,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 5,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "0058268215d5bb365996594137c748cafa34206a0d5a20f05d7774840d4f9ac9"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-silver-0.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        0,
+        145,
+        332,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "be2a6c9d8c65a5c67bbdcb12e0508fd34c139f1659c832fad5864faf09718aac"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-silver-1.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        340,
+        145,
+        652,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 1,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "008691a4cce5d2fe109b89cdcb57783955fd1dcd56c154c572ccf1d43076eba7"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-silver-2.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        670,
+        0,
+        977,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 2,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "f1417365a53dbaa0e2a48272b30637c84f7644cb3c52586b460cabf7be9b7cc9"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-silver-3.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        1018,
+        145,
+        1320,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 3,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "17397e57414bed0aabb663ec1c579a164785a97b480c73aca5336593acede95c"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-silver-4.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        1380,
+        145,
+        1747,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 4,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "f75adaaf254722867f239c6b0e37f675ae0f98a088d2a0d96731507b8a420914"
+    },
+    {
+      "file": "game/assets/v4/podium/npc-silver-5.png",
+      "source": "assets/previews/v4/npc-podium-generated-source.png",
+      "sourceCrop": [
+        1775,
+        0,
+        2172,
+        706
+      ],
+      "transformation": "neutral suit recolor, no face, common scale .70",
+      "frame": 5,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "size": [
+        320,
+        512
+      ],
+      "approval": "fictional-new-art-review-pending",
+      "sha256": "10d4e6f66209212aea3dbdb9461b7ded4d1a0ac8c80fd22905ba9a81bf54fd0e"
+    },
+    {
+      "file": "game/assets/v4/podium/marquinhos-0.png",
+      "source": "assets/sprites/v4/truck-driver/podium-0.png",
+      "sha256": "eab134daedaa2bc0555117466b7f2a2b5b48c804c2ca5f7b7c62fd934dd61138",
+      "sourceSha256": "eab134daedaa2bc0555117466b7f2a2b5b48c804c2ca5f7b7c62fd934dd61138",
+      "size": [
+        256,
+        512
+      ],
+      "transformation": "byte-identical copy of prepared source",
+      "approval": "owner-requested-integration",
+      "key": "marquinhos",
+      "name": "entry",
+      "frame": 0,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "ground": 500,
+      "sourceCrop": [
+        46,
+        107,
+        347,
+        730
+      ],
+      "sourceAnchor": {
+        "root": [
+          126.0,
+          612.0
+        ],
+        "rootMethod": "reviewed-explicit-foot-anchor",
+        "capTop": 12,
+        "capTopMethod": "reviewed-explicit-cap-crown",
+        "anatomicalHeight": 600.0,
+        "anatomicalMeasurement": "measured-cap-to-sole",
+        "visibleBBox": [
+          12,
+          12,
+          289,
+          612
+        ]
+      },
+      "scale": [
+        0.6721763085399449,
+        0.6721763085399449
+      ],
+      "rotationDegrees": 0
+    },
+    {
+      "file": "game/assets/v4/podium/marquinhos-1.png",
+      "source": "assets/sprites/v4/truck-driver/podium-1.png",
+      "sha256": "e475d84a219813b196030b7611cf259fad16b33b3db5e9fc20e7fd0b7c3f3e32",
+      "sourceSha256": "e475d84a219813b196030b7611cf259fad16b33b3db5e9fc20e7fd0b7c3f3e32",
+      "size": [
+        256,
+        512
+      ],
+      "transformation": "byte-identical copy of prepared source",
+      "approval": "owner-requested-integration",
+      "key": "marquinhos",
+      "name": "receive",
+      "frame": 1,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "ground": 500,
+      "sourceCrop": [
+        413,
+        108,
+        660,
+        725
+      ],
+      "sourceAnchor": {
+        "root": [
+          127.5,
+          605.0
+        ],
+        "rootMethod": "midpoint-of-both-feet-extents-in-bottom-12-percent-band",
+        "capTop": null,
+        "capTopMethod": null,
+        "anatomicalHeight": null,
+        "anatomicalMeasurement": "unmeasured-requires-visual-review; shared-scale-only",
+        "visibleBBox": [
+          12,
+          12,
+          235,
+          605
+        ]
+      },
+      "scale": [
+        0.6721763085399449,
+        0.6721763085399449
+      ],
+      "rotationDegrees": 0
+    },
+    {
+      "file": "game/assets/v4/podium/marquinhos-2.png",
+      "source": "assets/sprites/v4/truck-driver/podium-2.png",
+      "sha256": "e7e62e85234bb6d706511b96b0e6ac576a08a262975b3cb64942eba71b15da55",
+      "sourceSha256": "e7e62e85234bb6d706511b96b0e6ac576a08a262975b3cb64942eba71b15da55",
+      "size": [
+        256,
+        512
+      ],
+      "transformation": "byte-identical copy of prepared source",
+      "approval": "owner-requested-integration",
+      "key": "marquinhos",
+      "name": "raise",
+      "frame": 2,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "ground": 500,
+      "sourceCrop": [
+        764,
+        2,
+        1007,
+        725
+      ],
+      "sourceAnchor": {
+        "root": [
+          121.5,
+          711.0
+        ],
+        "rootMethod": "midpoint-of-both-feet-extents-in-bottom-12-percent-band",
+        "capTop": null,
+        "capTopMethod": null,
+        "anatomicalHeight": null,
+        "anatomicalMeasurement": "unmeasured-requires-visual-review; shared-scale-only",
+        "visibleBBox": [
+          12,
+          12,
+          231,
+          711
+        ]
+      },
+      "scale": [
+        0.6721763085399449,
+        0.6721763085399449
+      ],
+      "rotationDegrees": 0
+    },
+    {
+      "file": "game/assets/v4/podium/marquinhos-3.png",
+      "source": "assets/sprites/v4/truck-driver/podium-3.png",
+      "sha256": "c46fb72c08148728712ed3a4600e9bf853cdd9072243d3d086827c5b36b29970",
+      "sourceSha256": "c46fb72c08148728712ed3a4600e9bf853cdd9072243d3d086827c5b36b29970",
+      "size": [
+        256,
+        512
+      ],
+      "transformation": "byte-identical copy of prepared source",
+      "approval": "owner-requested-integration",
+      "key": "marquinhos",
+      "name": "open",
+      "frame": 3,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "ground": 500,
+      "sourceCrop": [
+        40,
+        803,
+        312,
+        1440
+      ],
+      "sourceAnchor": {
+        "root": [
+          148.0,
+          625.0
+        ],
+        "rootMethod": "midpoint-of-both-feet-extents-in-bottom-12-percent-band",
+        "capTop": null,
+        "capTopMethod": null,
+        "anatomicalHeight": null,
+        "anatomicalMeasurement": "unmeasured-requires-visual-review; shared-scale-only",
+        "visibleBBox": [
+          12,
+          12,
+          260,
+          625
+        ]
+      },
+      "scale": [
+        0.6721763085399449,
+        0.6721763085399449
+      ],
+      "rotationDegrees": 0
+    },
+    {
+      "file": "game/assets/v4/podium/marquinhos-4.png",
+      "source": "assets/sprites/v4/truck-driver/podium-4.png",
+      "sha256": "bc506a4b223aba86a4247ed11b8f49db910262727de3dcc0e3677fc00a401285",
+      "sourceSha256": "bc506a4b223aba86a4247ed11b8f49db910262727de3dcc0e3677fc00a401285",
+      "size": [
+        256,
+        512
+      ],
+      "transformation": "byte-identical copy of prepared source",
+      "approval": "owner-requested-integration",
+      "key": "marquinhos",
+      "name": "spray",
+      "frame": 4,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "ground": 500,
+      "sourceCrop": [
+        384,
+        809,
+        674,
+        1438
+      ],
+      "sourceAnchor": {
+        "root": [
+          145.5,
+          617.0
+        ],
+        "rootMethod": "midpoint-of-both-feet-extents-in-bottom-12-percent-band",
+        "capTop": null,
+        "capTopMethod": null,
+        "anatomicalHeight": null,
+        "anatomicalMeasurement": "unmeasured-requires-visual-review; shared-scale-only",
+        "visibleBBox": [
+          12,
+          12,
+          278,
+          617
+        ]
+      },
+      "scale": [
+        0.6721763085399449,
+        0.6721763085399449
+      ],
+      "rotationDegrees": 0
+    },
+    {
+      "file": "game/assets/v4/podium/marquinhos-5.png",
+      "source": "assets/sprites/v4/truck-driver/podium-5.png",
+      "sha256": "d7d3ac0371db06085abd0dbb86d8a2986f534e595a5d160e7b4c43dfa1d86a56",
+      "sourceSha256": "d7d3ac0371db06085abd0dbb86d8a2986f534e595a5d160e7b4c43dfa1d86a56",
+      "size": [
+        256,
+        512
+      ],
+      "transformation": "byte-identical copy of prepared source",
+      "approval": "owner-requested-integration",
+      "key": "marquinhos",
+      "name": "final",
+      "frame": 5,
+      "pivot": [
+        0.5,
+        0.9765625
+      ],
+      "ground": 500,
+      "sourceCrop": [
+        708,
+        730,
+        1082,
+        1440
+      ],
+      "sourceAnchor": {
+        "root": [
+          180.5,
+          698.0
+        ],
+        "rootMethod": "midpoint-of-both-feet-extents-in-bottom-12-percent-band",
+        "capTop": null,
+        "capTopMethod": null,
+        "anatomicalHeight": null,
+        "anatomicalMeasurement": "unmeasured-requires-visual-review; shared-scale-only",
+        "visibleBBox": [
+          12,
+          11,
+          362,
+          698
+        ]
+      },
+      "scale": [
+        0.6721763085399449,
+        0.6721763085399449
+      ],
+      "rotationDegrees": 0
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<div id="world"></div><div id="ui"></div>
+<script type="module">
+// Controlled state exists only in this fixture; UI, CSS, textures and scene are production code.
+import { buildTrack } from '../src/track.js';
+import { createRace } from '../src/sim.js';
+import { createRaceScene } from '../src/render.js';
+import { Ui } from '../src/ui.js';
+const module = await import('../assets/legacy/phaser-Czz4FBZH.js');
+const Phaser = module.g(module.r()), track = buildTrack();
+let race;
+const ui = new Ui(document.querySelector('#ui'), { track, assets: new URL('../assets/legacy/', import.meta.url).href, onRace(next) { race = next; } });
+window.layoutErrors = [];
+const setSafeArea = (bottom, left, right) => {
+  document.documentElement.style.setProperty('--sab', `${bottom}px`);
+  document.documentElement.style.setProperty('--sal', `${left}px`);
+  document.documentElement.style.setProperty('--sar', `${right}px`);
+};
+window.setLayoutSafeArea = setSafeArea;
+window.selectLayoutVehicle = (driver, wheel = 0, braking = false, bottom = 0, left = 0, right = left) => {
+  setSafeArea(bottom, left, right);
+  race = createRace(track, driver); race.phase = 'racing';
+  Object.assign(race.player, { distance: 0, lateral: 0, wheel, braking, speed: 40 });
+  for (const [index, car] of race.opponents.entries()) car.distance = 400 + index * 40;
+  ui.selected = driver; ui.race = race; ui.transition('race'); ui.raceUi();
+  document.querySelector('#speed').textContent = '40';
+};
+window.showLayoutGrid = () => { setSafeArea(32, 44, 0); ui.selected = 'marquinhos'; ui.showGrid(); };
+window.startLayoutGrid = () => {
+  ui.start(); race.phase = 'racing';
+  Object.assign(race.player, { speed: 40, wheel: -1.5 });
+  for (const [index, car] of race.opponents.entries()) car.distance = 400 + index * 40;
+};
+const alphaCache = new Map();
+window.measureLayout = () => {
+  const scene = layoutGame.scene.getScene('race'), sprite = scene.player, frame = sprite.frame;
+  const key = `${sprite.texture.key}/${frame.name}`;
+  if (!alphaCache.has(key)) {
+    const canvas = document.createElement('canvas'); canvas.width = frame.width; canvas.height = frame.height;
+    const context = canvas.getContext('2d', { willReadFrequently: true });
+    context.drawImage(frame.source.image, frame.cutX, frame.cutY, frame.width, frame.height, 0, 0, frame.width, frame.height);
+    const pixels = context.getImageData(0, 0, frame.width, frame.height).data;
+    let left = frame.width, right = 0, top = frame.height, bottom = 0;
+    for (let y = 0; y < frame.height; y++) for (let x = 0; x < frame.width; x++) {
+      if (pixels[(y * frame.width + x) * 4 + 3] < 40) continue;
+      left = Math.min(left, x); right = Math.max(right, x + 1); top = Math.min(top, y); bottom = Math.max(bottom, y + 1);
+    }
+    alphaCache.set(key, { left, right, top, bottom });
+  }
+  const alpha = alphaCache.get(key), angle = sprite.rotation, cos = Math.cos(angle), sin = Math.sin(angle);
+  const corners = [[alpha.left, alpha.top], [alpha.right, alpha.top], [alpha.left, alpha.bottom], [alpha.right, alpha.bottom]].map(([x, y]) => {
+    x = (x - frame.width * sprite.originX) * sprite.scaleX;
+    y = (y - frame.height * sprite.originY) * sprite.scaleY;
+    return { x: sprite.x + x * cos - y * sin, y: sprite.y + x * sin + y * cos };
+  });
+  const box = { left: Math.min(...corners.map(p => p.x)), right: Math.max(...corners.map(p => p.x)),
+    top: Math.min(...corners.map(p => p.y)), bottom: Math.max(...corners.map(p => p.y)) };
+  box.width = box.right - box.left; box.height = box.bottom - box.top;
+  return { driver: race.player.driver, wheel: race.player.wheel, braking: race.player.braking,
+    frame: Number(frame.name), texture: sprite.texture.key, x: sprite.x, y: sprite.y,
+    canvasWidth: sprite.displayWidth, canvasHeight: sprite.displayHeight, useful: box,
+    controls: [...document.querySelectorAll('.race-ui button')].map(button => {
+      const bounds = button.getBoundingClientRect();
+      return { action: button.dataset.action || button.id, left: bounds.left, right: bounds.right,
+        top: bounds.top, bottom: bounds.bottom, width: bounds.width, height: bounds.height };
+    }), racerCount: race.racers.length };
+};
+window.placeEqualDepthRivals = () => {
+  for (const car of race.opponents) Object.assign(car, { distance: 35, lateral: 0, wheel: 0, speed: 40 });
+};
+window.measureEqualDepthRivals = () => {
+  const scene = layoutGame.scene.getScene('race');
+  return race.opponents.map((car, index) => ({ driver: car.driver, width: scene.rivals[index].displayWidth,
+    height: scene.rivals[index].displayHeight, sourceWidth: scene.rivals[index].frame.width, sourceHeight: scene.rivals[index].frame.height }));
+};
+selectLayoutVehicle('daniel');
+const Scene = createRaceScene(Phaser, { track, getRace: () => race, onReady: () => window.layoutReady = true,
+  onError: error => layoutErrors.push(String(error)) });
+window.layoutGame = new Phaser.Game({ type: Phaser.AUTO, parent: 'world',
+  scale: { mode: Phaser.Scale.RESIZE, width: innerWidth, height: innerHeight }, audio: { noAudio: true }, scene: [Scene] });
+</script>
+</body>
+</html>
