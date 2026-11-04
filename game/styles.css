@@ -170,6 +170,7 @@ button:active{filter:brightness(1.2)}
 }
 @media(orientation:portrait){.drivers{grid-template-columns:1fr}.driver{min-height:180px}}
 @media(max-width:760px) and (orientation:landscape){
+  .driver[data-driver="marquinhos"] .driver-copy strong{font-size:clamp(13px,2.2vw,18px);overflow-wrap:normal;white-space:nowrap}
   .driver .menu-car{width:36%;height:25%;top:3%;right:2%}
   .driver[data-vehicle="truck"] .menu-car{width:39%;height:28%;top:3%;right:2%}
 }

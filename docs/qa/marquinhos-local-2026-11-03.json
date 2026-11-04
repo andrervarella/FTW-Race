@@ -146,10 +146,10 @@
   },
   "independentReview": "No blocking production findings;39 focused tests and three natural headless races passed",
   "publication": {
-    "status": "AUTHORIZED_AWAITING_PUBLICATION_AND_PUBLIC_QA",
+    "status": "PUBLISHED_PUBLIC_QA_PASSED_COMPACT_NAME_REFINEMENT",
     "reason": "Current trusted user approvals explicitly authorize publication of this update, new Marquinhos, truck and cover art, and the retouched Felipe cover portrait to public andrervarella/FTW-Race and /teste-v4/; actual publication and public QA remain pending",
-    "refsMoved": false,
-    "newPublicDeploymentVerified": false,
+    "refsMoved": true,
+    "newPublicDeploymentVerified": true,
     "partialUnreferencedTransferObjects": 21,
     "sourceHead": "cc8d5b70d0dd9f113fbdd83ddf0814968e54bcdb",
     "pagesHead": "a5284638a65901cdd9b55e6ede19b17c572f65b3",
@@ -187,6 +187,47 @@
       ],
       "priorAutomaticReview": "Automatic review rejected transfer of the retouched Felipe cover PNG before this supplemental authorization",
       "publicationAndPublicQa": "pending_actual_evidence"
-    }
+    },
+    "sourceRemote": "37e8712e799f65cf2ed685bf4738cdb70b0abaa2",
+    "pagesRemote": "bcae79a1bf41e8d767bb9142ea4e166b3115a9fd",
+    "pagesDeployRun": 41705902013,
+    "publicQaRun": 41706301881,
+    "publicUrl": "https://andrervarella.github.io/FTW-Race/teste-v4/"
+  },
+  "firstPublicQa": {
+    "status": "passed",
+    "run_id": 41706301881,
+    "source_commit": "37e8712e799f65cf2ed685bf4738cdb70b0abaa2",
+    "artifact_id": 13267135339,
+    "zip_sha256": "4995cfcb6bed1f5851f149349706cd28e87b8c063e537460538637472f2b8a10",
+    "zip_bytes": 11068275,
+    "zip_crc": "passed",
+    "zip_entries": 40,
+    "public_url": "https://andrervarella.github.io/FTW-Race/teste-v4/",
+    "browser": "141.0.7390.37",
+    "viewport_count": 3,
+    "accepted_served_art_hashes_per_viewport": 43,
+    "natural_winner": "npc-purple",
+    "natural_result_order": [
+      "npc-purple",
+      "npc-yellow",
+      "daniel",
+      "felipe",
+      "npc-silver",
+      "npc-blue",
+      "marquinhos"
+    ],
+    "truck_rendered_views": 12,
+    "truck_uniform_scale": 1.716819571865443,
+    "truck_collision_factor": 1.4,
+    "audio_cues": 13,
+    "continuous_audio_cues": 3,
+    "error_arrays": "all empty",
+    "visual_inspection": "pending",
+    "limits": [
+      "Chromium mobile viewport/touch emulation, no physical Android device",
+      "Audio verified through live Web Audio output graph and recorded WebM; no human speaker listening",
+      "Truck view/collision measurements use a controlled fixture running the actual production renderer/simulator"
+    ]
   }
 }
