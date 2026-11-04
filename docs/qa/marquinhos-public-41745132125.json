@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "run_id": 41745132125,
+  "source_commit": "9149e4fd74cbd1fb69fc90d4847e6d9b84f0e4e4",
+  "artifact_id": 13283392674,
+  "zip_sha256": "e0bea201de4cf402f607c2c63b6205d7ddc02ec6d27e44d0521729835aac6947",
+  "zip_bytes": 11053972,
+  "zip_crc": "passed",
+  "zip_entries": 40,
+  "public_url": "https://andrervarella.github.io/FTW-Race/teste-v4/",
+  "browser": "141.0.7390.37",
+  "viewport_count": 3,
+  "accepted_served_art_hashes_per_viewport": 43,
+  "natural_winner": "npc-purple",
+  "natural_result_order": [
+    "npc-purple",
+    "npc-yellow",
+    "daniel",
+    "felipe",
+    "npc-blue",
+    "npc-silver",
+    "marquinhos"
+  ],
+  "truck_rendered_views": 12,
+  "truck_uniform_scale": 1.716819571865443,
+  "truck_collision_factor": 1.4,
+  "audio_cues": 13,
+  "continuous_audio_cues": 3,
+  "error_arrays": "all empty",
+  "visual_inspection": "passed; actual public screenshots reviewed, full Marquinhos name fits on one line at740x360",
+  "limits": [
+    "Chromium mobile viewport/touch emulation, no physical Android device",
+    "Audio verified through live Web Audio output graph and recorded WebM; no human speaker listening",
+    "Truck view/collision measurements use a controlled fixture running the actual production renderer/simulator"
+  ]
+}
