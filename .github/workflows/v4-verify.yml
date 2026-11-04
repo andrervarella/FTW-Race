@@ -14,7 +14,7 @@ permissions:
 jobs:
   public-chromium:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -43,11 +43,24 @@ jobs:
       - name: Measure the actual truck renderer, all views and larger collision footprint
         run: |
           python game/tests/marquinhos-live.py https://andrervarella.github.io/FTW-Race/teste-v4/ --output work/v4-live/marquinhos-live
+      - name: Verify original car size and unobstructed mobile controls
+        run: |
+          python game/tests/mobile-race-layout.py https://andrervarella.github.io/FTW-Race/teste-v4/ --output work/v4-live/mobile-race-layout
       - name: Preserve browser screenshots and logs
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: ftw-v4-public-chromium-${{ github.run_id }}
-          path: work/v4-live/
+          path: |
+            work/v4-live/
+            !work/v4-live/mobile-race-layout/**
+          if-no-files-found: error
+          retention-days: 7
+      - name: Preserve the expanded mobile control screenshots separately
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ftw-v4-mobile-layout-${{ github.run_id }}
+          path: work/v4-live/mobile-race-layout/
           if-no-files-found: error
           retention-days: 7

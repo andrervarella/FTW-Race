@@ -1,0 +1,67 @@
+{
+  "status": "passed",
+  "browser": "154.0.8037.57",
+  "layout_states": 576,
+  "layout_screenshots": 96,
+  "min_body_control_clearance_px": 7.225969862862769,
+  "node_tests": 70,
+  "runtime_resolver_tests": 6,
+  "cache": {
+    "old_roster": 2,
+    "query_only_roster": 2,
+    "new_roster": 3,
+    "grid": 7,
+    "fresh_canonical_roster": 3,
+    "release": "31dc249275b884df"
+  },
+  "boundary_review": {
+    "checks": [
+      {
+        "viewport": [
+          900,
+          412
+        ],
+        "states": 18,
+        "same_size_rotation": "passed"
+      },
+      {
+        "viewport": [
+          901,
+          412
+        ],
+        "states": 18,
+        "same_size_rotation": "passed"
+      },
+      {
+        "viewport": [
+          901,
+          461
+        ],
+        "states": 18,
+        "same_size_rotation": "passed"
+      },
+      {
+        "viewport": [
+          900,
+          600
+        ],
+        "states": 18,
+        "same_size_rotation": "passed"
+      },
+      {
+        "viewport": [
+          901,
+          600
+        ],
+        "states": 18,
+        "same_size_rotation": "passed"
+      }
+    ],
+    "errors": [],
+    "status": "passed"
+  },
+  "limits": [
+    "Real Chromium and Phaser, mobile viewport/touch emulation; no physical Android or WhatsApp app access",
+    "Public deployment verification pending at this source commit"
+  ]
+}

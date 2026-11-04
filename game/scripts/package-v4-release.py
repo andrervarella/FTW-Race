@@ -25,7 +25,8 @@ def runtime_files():
                 raise ValueError(f'Symlink cannot enter release: {path}')
             if path.is_file():
                 files[path.relative_to(GAME).as_posix()] = path
-    files['tests/marquinhos-render.html'] = GAME / 'tests/marquinhos-render.html'
+    for name in ['marquinhos-render.html', 'mobile-race-layout.html']:
+        files['tests/' + name] = GAME / 'tests' / name
     return files
 
 
@@ -82,9 +83,13 @@ def package(output, public_base=PUBLIC):
     (output / 'index.html').write_bytes(page(inputs['index.html'].decode(), relative, share, release_id))
     version_path = output / 'version.json'
     version = json.loads(version_path.read_text()) if version_path.exists() else {}
+    # Replace provenance inherited from the unversioned deployment rather than
+    # retaining an older source tree or unrelated previous Pages commit.
+    version.pop('previousPagesCommit', None)
     version.update({'version': 'V4 Marquinhos · immutable runtime', 'runtimeRelease': release_id,
                     'runtimeSha256': runtime_sha, 'runtimeBase': relative, 'shareUrl': share,
-                    'sourceLocalCommit': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=GAME, text=True).strip()})
+                    'sourceLocalCommit': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=GAME, text=True).strip(),
+                    'sourceTree': subprocess.check_output(['git', 'rev-parse', 'HEAD^{tree}'], cwd=GAME, text=True).strip()})
     version_path.write_text(json.dumps(version, ensure_ascii=False, indent=2) + '\n')
     return manifest
 

@@ -53,22 +53,23 @@ test('scene preloads native truck atlas and allocates all six rivals', () => {
   assert.equal(scene.rivals.length, 6, 'every opponent has a sprite');
 });
 
-test('truck player and AI use the same uniform proportions without covering mobile HUD', () => {
+test('selected camera preserves original cars and uniform truck proportions at equal depth', () => {
   const race = createRace(buildTrack(), 'daniel');
   race.phase = 'racing';
   const scene = sceneHarness(race);
   race.player.wheel = 0; race.player.speed = 40;
   scene.update(0, 16);
   const carHeight = scene.player.displayHeight, carWidth = scene.player.displayWidth;
+  assert.equal(carHeight, Math.min(915 * .22, 412 * .47), 'Mercedes retains its original approved size');
   race.player.driver = 'marquinhos';
   for (const [wheel, braking] of states) {
     Object.assign(race.player, { wheel, braking });
     scene.update(0, 16);
-    assert.ok(Math.abs(scene.player.displayHeight / carHeight - scale) < 1e-10);
-    assert.ok(Math.abs(scene.player.displayWidth / carWidth - scale * 560 / 512) < 1e-10);
+    assert.ok(Math.abs(scene.player.displayHeight / carHeight - scale / 1.2) < 1e-10);
+    assert.ok(Math.abs(scene.player.displayWidth / carWidth - scale / 1.2 * 560 / 512) < 1e-10);
     assert.equal(scene.player.origin[1], 470 / 512);
-    assert.ok(scene.player.displayHeight <= 412 * .47 + 1e-10, 'truck has a viewport height budget');
-    assert.ok(scene.player.y - scene.player.displayHeight * 470 / 512 > 412 * .37, 'truck stays below the horizon');
+    assert.ok(scene.player.displayHeight <= 412 * .68, 'truck has a viewport height budget');
+    assert.ok(scene.player.y - scene.player.displayHeight * 470 / 512 > 412 * .25, 'truck clears the upper HUD');
   }
   race.player.driver = 'daniel';
   // Matching projected positions reveal any player-only truck scale path.

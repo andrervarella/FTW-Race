@@ -131,16 +131,40 @@ export function createRaceScene(Phaser, { assets, track, getRace, onReady, onErr
         return look;
       };
       const playerLook = applyCarView(this.player, race.player);
-      // A common camera scale reserves the same viewport budget for the tallest
-      // vehicle. Scaling the entire fleet preserves true relative dimensions at
-      // equal depth, including when the truck is an opponent rather than player.
-      const fleetScale = Math.max(1, ...Object.values(DRIVERS).map(driver => driver.renderScale ?? 1));
-      const size = Math.min(W * 0.22, H * 0.47) / fleetScale;
+      // Restore the original Mercedes camera. Only selecting the taller truck
+      // pulls the camera back a little; every racer shares that camera, so the
+      // truck retains its authentic uniform proportions at equal world depth.
+      const cameraScale = DRIVERS[race.player.driver].vehicleType === 'truck' ? 1.2 : 1;
+      const size = Math.min(W * 0.22, H * 0.47) / cameraScale;
+      // A live computed-style object detects safe-area changes during a 180°
+      // rotation even when race, DOM and viewport dimensions stay the same.
+      // Geometry is read only when that layout signature changes.
+      const controls = this.controlsElement?.isConnected ? this.controlsElement
+        : typeof document === 'undefined' ? null : document.querySelector('.controls');
+      if (this.controlsElement !== controls) this.controlsStyle = controls ? getComputedStyle(controls) : null;
+      const insets = this.controlsStyle
+        ? `${this.controlsStyle.paddingLeft}/${this.controlsStyle.paddingRight}/${this.controlsStyle.paddingBottom}` : '';
+      if (this.controlsElement !== controls || this.layoutInsets !== insets || this.layoutRace !== race || this.layoutWidth !== W || this.layoutHeight !== H) {
+        this.safeBottom = this.controlsStyle ? Math.max(0, parseFloat(this.controlsStyle.paddingBottom) - 12) : 0;
+        const steering = controls?.querySelector('.steering')?.getBoundingClientRect();
+        const pedals = controls?.querySelector('.pedals')?.getBoundingClientRect();
+        this.vehicleLane = steering && pedals ? { left: steering.right, right: pedals.left } : { left: 0, right: W };
+        this.controlsElement = controls;
+        this.layoutInsets = insets;
+        this.layoutRace = race; this.layoutWidth = W; this.layoutHeight = H;
+      }
       const playerHeight = size * playerLook.renderScale, playerWidth = playerHeight * playerLook.widthScale;
       const bump = !REDUCED && race.player.offRoad && race.phase === 'racing' ? Math.sin(time / 28) * 2.5 : 0;
       const sway = race.player.wheel * W * 0.018;
       const lean = REDUCED ? 0 : clamp(race.player.wheel, -1.5, 1.5);
-      const playerX = W * 0.5 + sway, playerY = H * 0.91 + bump;
+      // The approved useful alpha of all views fits within .53 × sprite height
+      // on either side, including the visual lean. Reserve that body envelope
+      // between the buttons, even beside an asymmetric landscape notch.
+      const bodyHalfWidth = playerHeight * .53 + 6, lane = this.vehicleLane;
+      const laneCenter = (lane.left + lane.right) / 2;
+      const playerX = lane.right - lane.left > bodyHalfWidth * 2
+        ? clamp(laneCenter + sway, lane.left + bodyHalfWidth, lane.right - bodyHalfWidth) : laneCenter;
+      const playerY = Math.min(H * 0.91, H - this.safeBottom - 12) + bump;
       this.player.setVisible(true).setPosition(playerX, playerY).setDisplaySize(playerWidth, playerHeight)
         .setAlpha(1).setAngle(lean).setDepth(2000);
       for (let i = 0; i < this.rivals.length; i++) {
