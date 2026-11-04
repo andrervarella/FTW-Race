@@ -13,6 +13,7 @@ import threading
 import traceback
 from urllib.parse import urljoin
 from playwright.sync_api import sync_playwright
+from published_runtime import inspect_published_runtime, resolve_runtime_base
 
 PROBE = r'''(() => {
  const Original = window.AudioContext;
@@ -110,6 +111,9 @@ def main():
     report={'url':url,'scope':'real Chromium mobile/touch emulation; live output graph, not physical speakers','cues':[],'errors':[],
             'http_errors':[],'failed_requests':[],'console_errors':[],'screenshots':[]}
     try:
+        published=inspect_published_runtime(url)
+        runtime_url=published['resolved_runtime_url']
+        report.update({key:published[key]for key in ['requested_url','resolved_runtime_url','header_diagnostics']})
         with sync_playwright()as p:
             options={'args':['--no-sandbox','--disable-dev-shm-usage','--autoplay-policy=document-user-activation-required'],'ignore_default_args':['--mute-audio']}
             if args.executable_path:options['executable_path']=args.executable_path
@@ -119,6 +123,7 @@ def main():
             gesture_context=browser.new_context(viewport={'width':915,'height':412},is_mobile=True,has_touch=True)
             gesture=gesture_context.new_page();gesture.add_init_script(PROBE);gesture.goto(url)
             gesture.wait_for_function('document.body.dataset.ready === "true"')
+            assert resolve_runtime_base(gesture.content(),gesture.url,urljoin(url,'./'))==runtime_url
             assert gesture.evaluate('__audioContexts.length')==0
             gesture.locator('#press-start').tap();gesture.wait_for_timeout(450)
             first_gesture=gesture.evaluate('__sampleLiveAudio(250)')
@@ -130,10 +135,11 @@ def main():
                 keyboard_context=browser.new_context(viewport={'width':915,'height':412})
                 keyboard=keyboard_context.new_page();keyboard.add_init_script(PROBE);keyboard.goto(url)
                 keyboard.wait_for_function('document.body.dataset.ready === "true"')
+                assert resolve_runtime_base(keyboard.content(),keyboard.url,urljoin(url,'./'))==runtime_url
                 keyboard.evaluate('''async moduleUrl=>{
                   const {GameAudio}=await import(moduleUrl),unlock=GameAudio.prototype.unlock;
                   GameAudio.prototype.unlock=function(...args){window.__liveGameAudio=this;return unlock.apply(this,args);};
-                }''',urljoin(url,'src/audio.js'))
+                }''',urljoin(runtime_url,'src/audio.js'))
                 keyboard.locator('#screen-sound').focus();keyboard.keyboard.press(key);keyboard.wait_for_timeout(350)
                 signal=keyboard.evaluate('__sampleLiveAudio(200)')
                 mode=keyboard.evaluate('__liveGameAudio.mode')
@@ -147,6 +153,7 @@ def main():
             page.on('requestfailed',lambda request:report['failed_requests'].append({'url':request.url,'failure':request.failure}))
             page.on('console',lambda message:report['console_errors'].append(message.text)if message.type=='error'else None)
             page.goto(url);page.wait_for_function('document.body.dataset.ready === "true"')
+            assert resolve_runtime_base(page.content(),page.url,urljoin(url,'./'))==runtime_url,'Audio probe must import the module selected by the actual page'
             page.evaluate('''async moduleUrl=>{
               const {GameAudio}=await import(moduleUrl),unlock=GameAudio.prototype.unlock;
               GameAudio.prototype.unlock=function(...args){window.__liveGameAudio=this;return unlock.apply(this,args);};
@@ -155,7 +162,7 @@ def main():
                 const original=GameAudio.prototype[method];
                 GameAudio.prototype[method]=function(...args){__liveAudioEvents.push({method,args});return original.apply(this,args);};
               }
-            }''',urljoin(url,'src/audio.js'))
+            }''',urljoin(runtime_url,'src/audio.js'))
             assert page.evaluate('__audioContexts.length')==0,'Before a gesture no context should be created'
             page.locator('#screen-sound').tap();page.wait_for_timeout(450)
             first=page.evaluate('__sampleLiveAudio(350)');report['first_sound_tap']=first

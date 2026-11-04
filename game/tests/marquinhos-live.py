@@ -13,6 +13,7 @@ import traceback
 from urllib.parse import urljoin
 
 from playwright.sync_api import sync_playwright
+from published_runtime import inspect_published_runtime
 
 SCALE = 1.7168195718654433
 VIEWS = [(0, 0, False), (1, -1, False), (2, 1, False),
@@ -44,6 +45,9 @@ def main():
               'errors': [], 'http_errors': [], 'console_errors': [], 'failed_requests': [], 'views': [], 'screenshots': []}
     page = None
     try:
+        published = inspect_published_runtime(url)
+        runtime_url = published['resolved_runtime_url']
+        report.update({key: published[key] for key in ['requested_url', 'resolved_runtime_url', 'header_diagnostics']})
         with sync_playwright() as p:
             options = {'args': ['--no-sandbox', '--disable-dev-shm-usage']}
             if args.executable_path:
@@ -55,7 +59,8 @@ def main():
             page.on('response', lambda response: report['http_errors'].append({'status': response.status, 'url': response.url}) if response.status >= 400 else None)
             page.on('console', lambda message: report['console_errors'].append(message.text) if message.type == 'error' else None)
             page.on('requestfailed', lambda request: report['failed_requests'].append({'url': request.url, 'failure': request.failure}))
-            response = page.goto(urljoin(url, 'tests/marquinhos-render.html'))
+            report['fixture_url'] = urljoin(runtime_url, 'tests/marquinhos-render.html')
+            response = page.goto(report['fixture_url'])
             assert response and response.status == 200
             page.wait_for_function('window.marquinhosReady === true')
             assert page.evaluate('!!marquinhosGame.renderer'), 'Actual Phaser renderer must run'

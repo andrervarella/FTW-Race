@@ -107,3 +107,7 @@ A revisão automática voltou a rejeitar um fragmento após a resposta “Ok se 
 Primeira publicação de Marquinhos e QA público41706301881: SUCCESS; ver relatório. Refinamento final da fonte do nome no card compacto, após quebra detectada em740×360; medidas locais568/740/915 passaram. Nenhuma mudança em gameplay/áudio/artes.
 
 Entrega pública concluída: Marquinhos na capa/jogável, IVECO4×2 maior sem carreta, sete competidores, pódio e áudio. Nome inteiro na seleção compacta. Implantação41744987690 e QA público41745132125: SUCCESS; artefato/capturas conferidos e70/70Node após CSS. Nenhuma liberação pendente. Ver docs/V4_QA_REPORT.md.
+
+
+## Correção do compartilhamento no WhatsApp
+Endereço informado pelo usuário era o correto, mas o cache podia manter módulos/CSS antigos, mostrando apenas Daniel/Felipe. Empacotador agora publica o grafo completo em pasta imutável baseada no conteúdo; o HTML canônico e metadados de compartilhamento apontam para essa versão. Novo link exclusivo de Marquinhos evita os caminhos antigos já guardados. Nenhum sprite, rosto, simulação ou áudio foi alterado. Regressão com cache HTTP de um ano reproduziu2pilotos e confirmou3/7 no novo endereço sem limpeza de cache;70/70Node e6testes do resolver passaram. Publicação/QA público serão registrados após execução. V3 antiga continua em `/teste-v3/`.

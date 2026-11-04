@@ -9,20 +9,20 @@ from pathlib import Path
 import time
 import traceback
 from urllib.parse import urljoin, urlparse
-from urllib.request import urlopen
 
 from playwright.sync_api import sync_playwright
+from published_runtime import inspect_published_runtime, resolve_runtime_base
 
 
 def ready(url, seconds):
     deadline = time.monotonic() + seconds
     while True:
         try:
-            with urlopen(url, timeout=15) as response:
-                text = response.read().decode('utf-8')
-                if response.status == 200 and 'V4' in text and 'src/main.js' in text:
-                    return
-                problem = f'Unexpected HTTP {response.status} or missing V4 bootstrap'
+            published = inspect_published_runtime(url)
+            text = published['runtime_html']
+            if 'V4' in text and 'src/main.js' in text:
+                return published
+            problem = 'Missing V4 bootstrap in the resolved runtime HTML'
         except Exception as error:
             problem = str(error)
         if time.monotonic() >= deadline:
@@ -35,7 +35,7 @@ def loaded_images(page):
     page.wait_for_function('''() => [...document.images].every(img => img.complete && img.naturalWidth > 0)''')
 
 
-def verify_approved_art(page, url):
+def verify_approved_art(page, runtime_url):
     """Compare actual served art against the checked-out, owner-approved sources."""
     import hashlib
     game = Path(__file__).resolve().parents[1]
@@ -56,8 +56,9 @@ def verify_approved_art(page, url):
         data = (game / 'assets/v4/title' / name).read_bytes()
         expected.append({'path': 'assets/v4/title/' + name, 'sha256': hashlib.sha256(data).hexdigest()})
     expected = list({item['path']: item for item in expected}.values())
+    assert len(expected) == 43, 'All 43 accepted art files must be verified'
     for item in expected:
-        item['url'] = urljoin(url, item['path'])
+        item['url'] = urljoin(runtime_url, item['path'])
     actual = page.evaluate('''async entries => Promise.all(entries.map(async item => {
       const response = await fetch(item.url);
       if (!response.ok) throw new Error('Approved image HTTP '+response.status+': '+item.path);
@@ -77,14 +78,17 @@ def verify_approved_art(page, url):
     assert all('portrait.webp' in path for path in page.locator('.cover-hero img').evaluate_all('imgs => imgs.map(i=>i.src)'))
     assert page.locator('.cover-marquinhos img').count() >= 1, 'Marquinhos must be visible on the cover'
     assert '7' in page.locator('.cover-field').inner_text(), 'Cover must announce the seven-vehicle roster'
-    return {'assets': actual, 'touch_target': control}
+    image_sources = page.locator('img').evaluate_all('imgs => imgs.map(img => img.src)')
+    assert all(src.startswith(runtime_url) for src in image_sources), 'Visible cover artwork must come from the actual runtime release'
+    return {'assets': actual, 'touch_target': control, 'image_sources': image_sources}
 
 
-def verify_viewport(browser, url, output, width, height, reduced):
+def verify_viewport(browser, url, runtime_url, output, width, height, reduced):
     label = f'{width}x{height}' + ('-reduced' if reduced else '')
     report = {'viewport': label, 'device': 'Chromium mobile emulation; no physical Android',
+              'requested_url': url, 'resolved_runtime_url': runtime_url,
               'errors': [], 'http_errors': [], 'failed_requests': [],
-              'outside_subfolder': [], 'console': [], 'screenshots': [], 'checks': [], 'npc_asset_requests': []}
+              'outside_subfolder': [], 'outside_runtime': [], 'console': [], 'screenshots': [], 'checks': [], 'npc_asset_requests': []}
     context = browser.new_context(viewport={'width': width, 'height': height},
                                   device_scale_factor=1, is_mobile=True, has_touch=True,
                                   reduced_motion='reduce' if reduced else 'no-preference')
@@ -101,6 +105,10 @@ def verify_viewport(browser, url, output, width, height, reduced):
             report['npc_asset_requests'].append(request.url)
         if urlparse(request.url).scheme in ('http', 'https') and not request.url.startswith(allowed):
             report['outside_subfolder'].append(request.url)
+        if (urlparse(request.url).scheme in ('http', 'https')
+                and request.resource_type in ('script', 'stylesheet', 'image')
+                and not request.url.startswith(runtime_url)):
+            report['outside_runtime'].append(request.url)
 
     page.on('request', request_seen)
 
@@ -115,11 +123,12 @@ def verify_viewport(browser, url, output, width, height, reduced):
     try:
         response = page.goto(url, wait_until='networkidle')
         assert response and response.status == 200, 'V4 HTML must return HTTP 200'
+        assert resolve_runtime_base(page.content(), page.url, allowed) == runtime_url, 'Browser HTML must select the inspected immutable runtime'
         page.wait_for_function('document.body.dataset.ready === "true"')
         assert page.evaluate('!!window.__ftwGame?.renderer'), 'Real Phaser renderer must initialize'
         assert page.locator('#fatal').is_hidden(), 'Fatal initialization panel must remain hidden'
         loaded_images(page)
-        report['approved_art'] = verify_approved_art(page, url)
+        report['approved_art'] = verify_approved_art(page, runtime_url)
         report['checks'].append(f'{len(report["approved_art"]["assets"])} served accepted art hashes/dimensions, original logos and physical title touch target')
         npc_atlases = page.evaluate('''() => {
           const scene = window.__ftwGame.scene.getScene('race');
@@ -272,6 +281,7 @@ def verify_viewport(browser, url, output, width, height, reduced):
         assert not report['http_errors'], report['http_errors']
         assert not report['failed_requests'], report['failed_requests']
         assert not report['outside_subfolder'], report['outside_subfolder']
+        assert not report['outside_runtime'], report['outside_runtime']
         console_errors = [item for item in report['console'] if item['type'] == 'error']
         assert not console_errors, console_errors
         report['status'] = 'passed'
@@ -299,7 +309,8 @@ def main():
     output.mkdir(parents=True, exist_ok=True)
     summary = {'url': args.url, 'scope': 'Independent browser; mobile emulation, no physical Android', 'reports': []}
     try:
-        ready(args.url, args.wait_ready)
+        published = ready(args.url, args.wait_ready)
+        summary.update({key: published[key] for key in ['requested_url', 'resolved_runtime_url', 'header_diagnostics']})
         with sync_playwright() as p:
             options = {'args': ['--no-sandbox', '--disable-dev-shm-usage']}
             if args.executable_path:
@@ -307,7 +318,7 @@ def main():
             browser = p.chromium.launch(**options)
             summary['browser_version'] = browser.version
             for width, height, reduced in [(915, 412, False), (740, 360, True), (1440, 900, True)]:
-                report = verify_viewport(browser, args.url, output, width, height, reduced)
+                report = verify_viewport(browser, args.url, published['resolved_runtime_url'], output, width, height, reduced)
                 summary['reports'].append(report)
                 print(width, height, report['status'], flush=True)
             browser.close()
